@@ -1,0 +1,4142 @@
+
+
+================================================================
+== Vivado HLS Report for 'SHA1ProcessMessageBlock'
+================================================================
+* Date:           Thu Sep  1 01:16:17 2016
+
+* Version:        2016.1 (Build 1538259 on Fri Apr 08 16:12:49 MDT 2016)
+* Project:        sha1
+* Solution:       solution8
+* Product family: zynq
+* Target device:  xc7z020clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|      8.40|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |  159|  159|  160|  160|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states: 160
+* Pipeline: 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	3  / true
+3 --> 
+	4  / true
+4 --> 
+	5  / true
+5 --> 
+	6  / true
+6 --> 
+	7  / true
+7 --> 
+	8  / true
+8 --> 
+	9  / true
+9 --> 
+	10  / true
+10 --> 
+	11  / true
+11 --> 
+	12  / true
+12 --> 
+	13  / true
+13 --> 
+	14  / true
+14 --> 
+	15  / true
+15 --> 
+	16  / true
+16 --> 
+	17  / true
+17 --> 
+	18  / true
+18 --> 
+	19  / true
+19 --> 
+	20  / true
+20 --> 
+	21  / true
+21 --> 
+	22  / true
+22 --> 
+	23  / true
+23 --> 
+	24  / true
+24 --> 
+	25  / true
+25 --> 
+	26  / true
+26 --> 
+	27  / true
+27 --> 
+	28  / true
+28 --> 
+	29  / true
+29 --> 
+	30  / true
+30 --> 
+	31  / true
+31 --> 
+	32  / true
+32 --> 
+	33  / true
+33 --> 
+	34  / true
+34 --> 
+	35  / true
+35 --> 
+	36  / true
+36 --> 
+	37  / true
+37 --> 
+	38  / true
+38 --> 
+	39  / true
+39 --> 
+	40  / true
+40 --> 
+	41  / true
+41 --> 
+	42  / true
+42 --> 
+	43  / true
+43 --> 
+	44  / true
+44 --> 
+	45  / true
+45 --> 
+	46  / true
+46 --> 
+	47  / true
+47 --> 
+	48  / true
+48 --> 
+	49  / true
+49 --> 
+	50  / true
+50 --> 
+	51  / true
+51 --> 
+	52  / true
+52 --> 
+	53  / true
+53 --> 
+	54  / true
+54 --> 
+	55  / true
+55 --> 
+	56  / true
+56 --> 
+	57  / true
+57 --> 
+	58  / true
+58 --> 
+	59  / true
+59 --> 
+	60  / true
+60 --> 
+	61  / true
+61 --> 
+	62  / true
+62 --> 
+	63  / true
+63 --> 
+	64  / true
+64 --> 
+	65  / true
+65 --> 
+	66  / true
+66 --> 
+	67  / true
+67 --> 
+	68  / true
+68 --> 
+	69  / true
+69 --> 
+	70  / true
+70 --> 
+	71  / true
+71 --> 
+	72  / true
+72 --> 
+	73  / true
+73 --> 
+	74  / true
+74 --> 
+	75  / true
+75 --> 
+	76  / true
+76 --> 
+	77  / true
+77 --> 
+	78  / true
+78 --> 
+	79  / true
+79 --> 
+	80  / true
+80 --> 
+	81  / true
+81 --> 
+	82  / true
+82 --> 
+	83  / true
+83 --> 
+	84  / true
+84 --> 
+	85  / true
+85 --> 
+	86  / true
+86 --> 
+	87  / true
+87 --> 
+	88  / true
+88 --> 
+	89  / true
+89 --> 
+	90  / true
+90 --> 
+	91  / true
+91 --> 
+	92  / true
+92 --> 
+	93  / true
+93 --> 
+	94  / true
+94 --> 
+	95  / true
+95 --> 
+	96  / true
+96 --> 
+	97  / true
+97 --> 
+	98  / true
+98 --> 
+	99  / true
+99 --> 
+	100  / true
+100 --> 
+	101  / true
+101 --> 
+	102  / true
+102 --> 
+	103  / true
+103 --> 
+	104  / true
+104 --> 
+	105  / true
+105 --> 
+	106  / true
+106 --> 
+	107  / true
+107 --> 
+	108  / true
+108 --> 
+	109  / true
+109 --> 
+	110  / true
+110 --> 
+	111  / true
+111 --> 
+	112  / true
+112 --> 
+	113  / true
+113 --> 
+	114  / true
+114 --> 
+	115  / true
+115 --> 
+	116  / true
+116 --> 
+	117  / true
+117 --> 
+	118  / true
+118 --> 
+	119  / true
+119 --> 
+	120  / true
+120 --> 
+	121  / true
+121 --> 
+	122  / true
+122 --> 
+	123  / true
+123 --> 
+	124  / true
+124 --> 
+	125  / true
+125 --> 
+	126  / true
+126 --> 
+	127  / true
+127 --> 
+	128  / true
+128 --> 
+	129  / true
+129 --> 
+	130  / true
+130 --> 
+	131  / true
+131 --> 
+	132  / true
+132 --> 
+	133  / true
+133 --> 
+	134  / true
+134 --> 
+	135  / true
+135 --> 
+	136  / true
+136 --> 
+	137  / true
+137 --> 
+	138  / true
+138 --> 
+	139  / true
+139 --> 
+	140  / true
+140 --> 
+	141  / true
+141 --> 
+	142  / true
+142 --> 
+	143  / true
+143 --> 
+	144  / true
+144 --> 
+	145  / true
+145 --> 
+	146  / true
+146 --> 
+	147  / true
+147 --> 
+	148  / true
+148 --> 
+	149  / true
+149 --> 
+	150  / true
+150 --> 
+	151  / true
+151 --> 
+	152  / true
+152 --> 
+	153  / true
+153 --> 
+	154  / true
+154 --> 
+	155  / true
+155 --> 
+	156  / true
+156 --> 
+	157  / true
+157 --> 
+	158  / true
+158 --> 
+	159  / true
+159 --> 
+	160  / true
+160 --> 
+* FSM state operations: 
+
+ <State 1>: 7.03ns
+ST_1: context_read [1/1] 0.00ns
+.preheader8.preheader:3  %context_read = call i688 @_ssdm_op_Read.ap_auto.i688P(i688* %context)
+
+ST_1: tmp_1 [1/1] 0.00ns
+.preheader8.preheader:4  %tmp_1 = call i8 @_ssdm_op_PartSelect.i8.i688.i32.i32(i688 %context_read, i32 184, i32 191)
+
+ST_1: tmp_2 [1/1] 0.00ns
+.preheader8.preheader:5  %tmp_2 = call i8 @_ssdm_op_PartSelect.i8.i688.i32.i32(i688 %context_read, i32 192, i32 199)
+
+ST_1: tmp [1/1] 0.00ns
+.preheader8.preheader:6  %tmp = call i8 @_ssdm_op_PartSelect.i8.i688.i32.i32(i688 %context_read, i32 176, i32 183)
+
+ST_1: tmp_7 [1/1] 0.00ns
+.preheader8.preheader:7  %tmp_7 = call i8 @_ssdm_op_PartSelect.i8.i688.i32.i32(i688 %context_read, i32 200, i32 207)
+
+ST_1: tmp_3 [1/1] 0.00ns
+.preheader8.preheader:9  %tmp_3 = call i8 @_ssdm_op_PartSelect.i8.i688.i32.i32(i688 %context_read, i32 216, i32 223)
+
+ST_1: tmp_5 [1/1] 0.00ns
+.preheader8.preheader:10  %tmp_5 = call i8 @_ssdm_op_PartSelect.i8.i688.i32.i32(i688 %context_read, i32 224, i32 231)
+
+ST_1: tmp_s [1/1] 0.00ns
+.preheader8.preheader:11  %tmp_s = call i8 @_ssdm_op_PartSelect.i8.i688.i32.i32(i688 %context_read, i32 208, i32 215)
+
+ST_1: tmp_6 [1/1] 0.00ns
+.preheader8.preheader:12  %tmp_6 = call i8 @_ssdm_op_PartSelect.i8.i688.i32.i32(i688 %context_read, i32 232, i32 239)
+
+ST_1: tmp_8 [1/1] 0.00ns
+.preheader8.preheader:14  %tmp_8 = call i8 @_ssdm_op_PartSelect.i8.i688.i32.i32(i688 %context_read, i32 248, i32 255)
+
+ST_1: tmp_9 [1/1] 0.00ns
+.preheader8.preheader:15  %tmp_9 = call i8 @_ssdm_op_PartSelect.i8.i688.i32.i32(i688 %context_read, i32 256, i32 263)
+
+ST_1: tmp_10 [1/1] 0.00ns
+.preheader8.preheader:16  %tmp_10 = call i8 @_ssdm_op_PartSelect.i8.i688.i32.i32(i688 %context_read, i32 240, i32 247)
+
+ST_1: tmp_11 [1/1] 0.00ns
+.preheader8.preheader:17  %tmp_11 = call i8 @_ssdm_op_PartSelect.i8.i688.i32.i32(i688 %context_read, i32 264, i32 271)
+
+ST_1: tmp_12 [1/1] 0.00ns
+.preheader8.preheader:19  %tmp_12 = call i8 @_ssdm_op_PartSelect.i8.i688.i32.i32(i688 %context_read, i32 280, i32 287)
+
+ST_1: tmp_13 [1/1] 0.00ns
+.preheader8.preheader:20  %tmp_13 = call i8 @_ssdm_op_PartSelect.i8.i688.i32.i32(i688 %context_read, i32 288, i32 295)
+
+ST_1: tmp_14 [1/1] 0.00ns
+.preheader8.preheader:21  %tmp_14 = call i8 @_ssdm_op_PartSelect.i8.i688.i32.i32(i688 %context_read, i32 272, i32 279)
+
+ST_1: tmp_15 [1/1] 0.00ns
+.preheader8.preheader:22  %tmp_15 = call i8 @_ssdm_op_PartSelect.i8.i688.i32.i32(i688 %context_read, i32 296, i32 303)
+
+ST_1: tmp_16 [1/1] 0.00ns
+.preheader8.preheader:24  %tmp_16 = call i8 @_ssdm_op_PartSelect.i8.i688.i32.i32(i688 %context_read, i32 312, i32 319)
+
+ST_1: tmp_17 [1/1] 0.00ns
+.preheader8.preheader:25  %tmp_17 = call i8 @_ssdm_op_PartSelect.i8.i688.i32.i32(i688 %context_read, i32 320, i32 327)
+
+ST_1: tmp_18 [1/1] 0.00ns
+.preheader8.preheader:26  %tmp_18 = call i8 @_ssdm_op_PartSelect.i8.i688.i32.i32(i688 %context_read, i32 304, i32 311)
+
+ST_1: tmp_19 [1/1] 0.00ns
+.preheader8.preheader:27  %tmp_19 = call i8 @_ssdm_op_PartSelect.i8.i688.i32.i32(i688 %context_read, i32 328, i32 335)
+
+ST_1: tmp_20 [1/1] 0.00ns
+.preheader8.preheader:29  %tmp_20 = call i8 @_ssdm_op_PartSelect.i8.i688.i32.i32(i688 %context_read, i32 344, i32 351)
+
+ST_1: tmp_21 [1/1] 0.00ns
+.preheader8.preheader:30  %tmp_21 = call i8 @_ssdm_op_PartSelect.i8.i688.i32.i32(i688 %context_read, i32 352, i32 359)
+
+ST_1: tmp_22 [1/1] 0.00ns
+.preheader8.preheader:31  %tmp_22 = call i8 @_ssdm_op_PartSelect.i8.i688.i32.i32(i688 %context_read, i32 336, i32 343)
+
+ST_1: tmp_23 [1/1] 0.00ns
+.preheader8.preheader:32  %tmp_23 = call i8 @_ssdm_op_PartSelect.i8.i688.i32.i32(i688 %context_read, i32 360, i32 367)
+
+ST_1: tmp_24 [1/1] 0.00ns
+.preheader8.preheader:34  %tmp_24 = call i8 @_ssdm_op_PartSelect.i8.i688.i32.i32(i688 %context_read, i32 376, i32 383)
+
+ST_1: tmp_25 [1/1] 0.00ns
+.preheader8.preheader:35  %tmp_25 = call i8 @_ssdm_op_PartSelect.i8.i688.i32.i32(i688 %context_read, i32 384, i32 391)
+
+ST_1: tmp_26 [1/1] 0.00ns
+.preheader8.preheader:36  %tmp_26 = call i8 @_ssdm_op_PartSelect.i8.i688.i32.i32(i688 %context_read, i32 368, i32 375)
+
+ST_1: tmp_27 [1/1] 0.00ns
+.preheader8.preheader:37  %tmp_27 = call i8 @_ssdm_op_PartSelect.i8.i688.i32.i32(i688 %context_read, i32 392, i32 399)
+
+ST_1: tmp_28 [1/1] 0.00ns
+.preheader8.preheader:39  %tmp_28 = call i8 @_ssdm_op_PartSelect.i8.i688.i32.i32(i688 %context_read, i32 408, i32 415)
+
+ST_1: tmp_29 [1/1] 0.00ns
+.preheader8.preheader:40  %tmp_29 = call i8 @_ssdm_op_PartSelect.i8.i688.i32.i32(i688 %context_read, i32 416, i32 423)
+
+ST_1: tmp_30 [1/1] 0.00ns
+.preheader8.preheader:41  %tmp_30 = call i8 @_ssdm_op_PartSelect.i8.i688.i32.i32(i688 %context_read, i32 400, i32 407)
+
+ST_1: tmp_31 [1/1] 0.00ns
+.preheader8.preheader:42  %tmp_31 = call i8 @_ssdm_op_PartSelect.i8.i688.i32.i32(i688 %context_read, i32 424, i32 431)
+
+ST_1: tmp_32 [1/1] 0.00ns
+.preheader8.preheader:44  %tmp_32 = call i8 @_ssdm_op_PartSelect.i8.i688.i32.i32(i688 %context_read, i32 440, i32 447)
+
+ST_1: tmp_33 [1/1] 0.00ns
+.preheader8.preheader:45  %tmp_33 = call i8 @_ssdm_op_PartSelect.i8.i688.i32.i32(i688 %context_read, i32 448, i32 455)
+
+ST_1: tmp_34 [1/1] 0.00ns
+.preheader8.preheader:46  %tmp_34 = call i8 @_ssdm_op_PartSelect.i8.i688.i32.i32(i688 %context_read, i32 432, i32 439)
+
+ST_1: tmp_35 [1/1] 0.00ns
+.preheader8.preheader:47  %tmp_35 = call i8 @_ssdm_op_PartSelect.i8.i688.i32.i32(i688 %context_read, i32 456, i32 463)
+
+ST_1: tmp_36 [1/1] 0.00ns
+.preheader8.preheader:49  %tmp_36 = call i8 @_ssdm_op_PartSelect.i8.i688.i32.i32(i688 %context_read, i32 472, i32 479)
+
+ST_1: tmp_37 [1/1] 0.00ns
+.preheader8.preheader:50  %tmp_37 = call i8 @_ssdm_op_PartSelect.i8.i688.i32.i32(i688 %context_read, i32 480, i32 487)
+
+ST_1: tmp_38 [1/1] 0.00ns
+.preheader8.preheader:51  %tmp_38 = call i8 @_ssdm_op_PartSelect.i8.i688.i32.i32(i688 %context_read, i32 464, i32 471)
+
+ST_1: tmp_39 [1/1] 0.00ns
+.preheader8.preheader:52  %tmp_39 = call i8 @_ssdm_op_PartSelect.i8.i688.i32.i32(i688 %context_read, i32 488, i32 495)
+
+ST_1: tmp_40 [1/1] 0.00ns
+.preheader8.preheader:54  %tmp_40 = call i8 @_ssdm_op_PartSelect.i8.i688.i32.i32(i688 %context_read, i32 504, i32 511)
+
+ST_1: tmp_41 [1/1] 0.00ns
+.preheader8.preheader:55  %tmp_41 = call i8 @_ssdm_op_PartSelect.i8.i688.i32.i32(i688 %context_read, i32 512, i32 519)
+
+ST_1: tmp_42 [1/1] 0.00ns
+.preheader8.preheader:56  %tmp_42 = call i8 @_ssdm_op_PartSelect.i8.i688.i32.i32(i688 %context_read, i32 496, i32 503)
+
+ST_1: tmp_43 [1/1] 0.00ns
+.preheader8.preheader:57  %tmp_43 = call i8 @_ssdm_op_PartSelect.i8.i688.i32.i32(i688 %context_read, i32 520, i32 527)
+
+ST_1: tmp_44 [1/1] 0.00ns
+.preheader8.preheader:59  %tmp_44 = call i8 @_ssdm_op_PartSelect.i8.i688.i32.i32(i688 %context_read, i32 536, i32 543)
+
+ST_1: tmp_45 [1/1] 0.00ns
+.preheader8.preheader:60  %tmp_45 = call i8 @_ssdm_op_PartSelect.i8.i688.i32.i32(i688 %context_read, i32 544, i32 551)
+
+ST_1: tmp_46 [1/1] 0.00ns
+.preheader8.preheader:61  %tmp_46 = call i8 @_ssdm_op_PartSelect.i8.i688.i32.i32(i688 %context_read, i32 528, i32 535)
+
+ST_1: tmp_47 [1/1] 0.00ns
+.preheader8.preheader:62  %tmp_47 = call i8 @_ssdm_op_PartSelect.i8.i688.i32.i32(i688 %context_read, i32 552, i32 559)
+
+ST_1: tmp_48 [1/1] 0.00ns
+.preheader8.preheader:64  %tmp_48 = call i8 @_ssdm_op_PartSelect.i8.i688.i32.i32(i688 %context_read, i32 568, i32 575)
+
+ST_1: tmp_49 [1/1] 0.00ns
+.preheader8.preheader:65  %tmp_49 = call i8 @_ssdm_op_PartSelect.i8.i688.i32.i32(i688 %context_read, i32 576, i32 583)
+
+ST_1: tmp_50 [1/1] 0.00ns
+.preheader8.preheader:66  %tmp_50 = call i8 @_ssdm_op_PartSelect.i8.i688.i32.i32(i688 %context_read, i32 560, i32 567)
+
+ST_1: tmp_51 [1/1] 0.00ns
+.preheader8.preheader:67  %tmp_51 = call i8 @_ssdm_op_PartSelect.i8.i688.i32.i32(i688 %context_read, i32 584, i32 591)
+
+ST_1: tmp_52 [1/1] 0.00ns
+.preheader8.preheader:69  %tmp_52 = call i8 @_ssdm_op_PartSelect.i8.i688.i32.i32(i688 %context_read, i32 600, i32 607)
+
+ST_1: tmp_53 [1/1] 0.00ns
+.preheader8.preheader:70  %tmp_53 = call i8 @_ssdm_op_PartSelect.i8.i688.i32.i32(i688 %context_read, i32 608, i32 615)
+
+ST_1: tmp_54 [1/1] 0.00ns
+.preheader8.preheader:71  %tmp_54 = call i8 @_ssdm_op_PartSelect.i8.i688.i32.i32(i688 %context_read, i32 592, i32 599)
+
+ST_1: tmp_55 [1/1] 0.00ns
+.preheader8.preheader:72  %tmp_55 = call i8 @_ssdm_op_PartSelect.i8.i688.i32.i32(i688 %context_read, i32 616, i32 623)
+
+ST_1: tmp_56 [1/1] 0.00ns
+.preheader8.preheader:74  %tmp_56 = call i8 @_ssdm_op_PartSelect.i8.i688.i32.i32(i688 %context_read, i32 632, i32 639)
+
+ST_1: tmp_57 [1/1] 0.00ns
+.preheader8.preheader:75  %tmp_57 = call i8 @_ssdm_op_PartSelect.i8.i688.i32.i32(i688 %context_read, i32 640, i32 647)
+
+ST_1: tmp_63 [1/1] 0.00ns
+.preheader8.preheader:76  %tmp_63 = call i8 @_ssdm_op_PartSelect.i8.i688.i32.i32(i688 %context_read, i32 624, i32 631)
+
+ST_1: tmp_64 [1/1] 0.00ns
+.preheader8.preheader:77  %tmp_64 = call i8 @_ssdm_op_PartSelect.i8.i688.i32.i32(i688 %context_read, i32 648, i32 655)
+
+ST_1: tmp_65 [1/1] 0.00ns
+.preheader8.preheader:79  %tmp_65 = call i8 @_ssdm_op_PartSelect.i8.i688.i32.i32(i688 %context_read, i32 664, i32 671)
+
+ST_1: tmp_66 [1/1] 0.00ns
+.preheader8.preheader:80  %tmp_66 = call i8 @_ssdm_op_PartSelect.i8.i688.i32.i32(i688 %context_read, i32 672, i32 679)
+
+ST_1: tmp_67 [1/1] 0.00ns
+.preheader8.preheader:81  %tmp_67 = call i8 @_ssdm_op_PartSelect.i8.i688.i32.i32(i688 %context_read, i32 656, i32 663)
+
+ST_1: tmp_68 [1/1] 0.00ns
+.preheader8.preheader:82  %tmp_68 = call i8 @_ssdm_op_PartSelect.i8.i688.i32.i32(i688 %context_read, i32 680, i32 687)
+
+ST_1: A [1/1] 0.00ns
+.preheader8.preheader:340  %A = trunc i688 %context_read to i32
+
+ST_1: B [1/1] 0.00ns
+.preheader8.preheader:341  %B = call i32 @_ssdm_op_PartSelect.i32.i688.i32.i32(i688 %context_read, i32 32, i32 63)
+
+ST_1: C [1/1] 0.00ns
+.preheader8.preheader:342  %C = call i32 @_ssdm_op_PartSelect.i32.i688.i32.i32(i688 %context_read, i32 64, i32 95)
+
+ST_1: D [1/1] 0.00ns
+.preheader8.preheader:343  %D = call i32 @_ssdm_op_PartSelect.i32.i688.i32.i32(i688 %context_read, i32 96, i32 127)
+
+ST_1: E [1/1] 0.00ns
+.preheader8.preheader:344  %E = call i32 @_ssdm_op_PartSelect.i32.i688.i32.i32(i688 %context_read, i32 128, i32 159)
+
+ST_1: K_load [2/2] 2.39ns
+.preheader8.preheader:345  %K_load = load i32* getelementptr inbounds ([4 x i32]* @K, i64 0, i64 0), align 16
+
+ST_1: tmp_71 [1/1] 7.03ns
+.preheader8.preheader:346  %tmp_71 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 5, i32 %A)
+
+
+ <State 2>: 6.80ns
+ST_2: tmp_4 [1/1] 0.00ns
+.preheader8.preheader:8  %tmp_4 = call i32 @_ssdm_op_BitConcatenate.i32.i8.i8.i8.i8(i8 %tmp, i8 %tmp_1, i8 %tmp_2, i8 %tmp_7)
+
+ST_2: K_load [1/2] 2.39ns
+.preheader8.preheader:345  %K_load = load i32* getelementptr inbounds ([4 x i32]* @K, i64 0, i64 0), align 16
+
+ST_2: tmp_72 [1/1] 0.00ns (grouped into LUT with out node tmp131)
+.preheader8.preheader:347  %tmp_72 = and i32 %B, %C
+
+ST_2: tmp_73 [1/1] 0.00ns (grouped into LUT with out node tmp131)
+.preheader8.preheader:348  %tmp_73 = xor i32 %B, -1
+
+ST_2: tmp_74 [1/1] 0.00ns (grouped into LUT with out node tmp131)
+.preheader8.preheader:349  %tmp_74 = and i32 %D, %tmp_73
+
+ST_2: tmp_75 [1/1] 0.00ns (grouped into LUT with out node tmp131)
+.preheader8.preheader:350  %tmp_75 = or i32 %tmp_72, %tmp_74
+
+ST_2: tmp130 [1/1] 2.44ns
+.preheader8.preheader:351  %tmp130 = add i32 %E, %K_load
+
+ST_2: tmp131 [1/1] 2.44ns (out node of the LUT)
+.preheader8.preheader:352  %tmp131 = add i32 %tmp_4, %tmp_75
+
+ST_2: tmp132 [1/1] 1.97ns
+.preheader8.preheader:353  %tmp132 = add i32 %tmp_71, %tmp131
+
+ST_2: temp [1/1] 1.97ns
+.preheader8.preheader:354  %temp = add i32 %tmp130, %tmp132
+
+
+ <State 3>: 7.03ns
+ST_3: C_1 [1/1] 7.03ns
+.preheader8.preheader:355  %C_1 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 30, i32 %B)
+
+ST_3: tmp_33_1 [1/1] 7.03ns
+.preheader8.preheader:356  %tmp_33_1 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 5, i32 %temp)
+
+
+ <State 4>: 6.38ns
+ST_4: tmp_18_1 [1/1] 0.00ns
+.preheader8.preheader:13  %tmp_18_1 = call i32 @_ssdm_op_BitConcatenate.i32.i8.i8.i8.i8(i8 %tmp_s, i8 %tmp_3, i8 %tmp_5, i8 %tmp_6)
+
+ST_4: tmp_34_1 [1/1] 0.00ns (grouped into LUT with out node tmp134)
+.preheader8.preheader:357  %tmp_34_1 = and i32 %A, %C_1
+
+ST_4: tmp_35_1 [1/1] 0.00ns (grouped into LUT with out node tmp134)
+.preheader8.preheader:358  %tmp_35_1 = xor i32 %A, -1
+
+ST_4: tmp_36_1 [1/1] 0.00ns (grouped into LUT with out node tmp134)
+.preheader8.preheader:359  %tmp_36_1 = and i32 %C, %tmp_35_1
+
+ST_4: tmp_37_1 [1/1] 0.00ns (grouped into LUT with out node tmp134)
+.preheader8.preheader:360  %tmp_37_1 = or i32 %tmp_34_1, %tmp_36_1
+
+ST_4: tmp133 [1/1] 2.44ns
+.preheader8.preheader:361  %tmp133 = add i32 %D, %K_load
+
+ST_4: tmp134 [1/1] 2.44ns (out node of the LUT)
+.preheader8.preheader:362  %tmp134 = add i32 %tmp_18_1, %tmp_37_1
+
+ST_4: tmp135 [1/1] 1.97ns
+.preheader8.preheader:363  %tmp135 = add i32 %tmp_33_1, %tmp134
+
+ST_4: temp_s [1/1] 1.97ns
+.preheader8.preheader:364  %temp_s = add i32 %tmp133, %tmp135
+
+
+ <State 5>: 7.03ns
+ST_5: C_1_1 [1/1] 7.03ns
+.preheader8.preheader:365  %C_1_1 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 30, i32 %A)
+
+ST_5: tmp_33_2 [1/1] 7.03ns
+.preheader8.preheader:366  %tmp_33_2 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 5, i32 %temp_s)
+
+
+ <State 6>: 6.38ns
+ST_6: tmp_18_2 [1/1] 0.00ns
+.preheader8.preheader:18  %tmp_18_2 = call i32 @_ssdm_op_BitConcatenate.i32.i8.i8.i8.i8(i8 %tmp_10, i8 %tmp_8, i8 %tmp_9, i8 %tmp_11)
+
+ST_6: tmp_34_2 [1/1] 0.00ns (grouped into LUT with out node tmp137)
+.preheader8.preheader:367  %tmp_34_2 = and i32 %temp, %C_1_1
+
+ST_6: tmp_35_2 [1/1] 0.00ns (grouped into LUT with out node tmp137)
+.preheader8.preheader:368  %tmp_35_2 = xor i32 %temp, -1
+
+ST_6: tmp_36_2 [1/1] 0.00ns (grouped into LUT with out node tmp137)
+.preheader8.preheader:369  %tmp_36_2 = and i32 %C_1, %tmp_35_2
+
+ST_6: tmp_37_2 [1/1] 0.00ns (grouped into LUT with out node tmp137)
+.preheader8.preheader:370  %tmp_37_2 = or i32 %tmp_34_2, %tmp_36_2
+
+ST_6: tmp136 [1/1] 2.44ns
+.preheader8.preheader:371  %tmp136 = add i32 %C, %K_load
+
+ST_6: tmp137 [1/1] 2.44ns (out node of the LUT)
+.preheader8.preheader:372  %tmp137 = add i32 %tmp_18_2, %tmp_37_2
+
+ST_6: tmp138 [1/1] 1.97ns
+.preheader8.preheader:373  %tmp138 = add i32 %tmp_33_2, %tmp137
+
+ST_6: temp_1 [1/1] 1.97ns
+.preheader8.preheader:374  %temp_1 = add i32 %tmp136, %tmp138
+
+
+ <State 7>: 7.03ns
+ST_7: C_1_2 [1/1] 7.03ns
+.preheader8.preheader:375  %C_1_2 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 30, i32 %temp)
+
+ST_7: tmp_33_3 [1/1] 7.03ns
+.preheader8.preheader:376  %tmp_33_3 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 5, i32 %temp_1)
+
+
+ <State 8>: 6.38ns
+ST_8: tmp_18_3 [1/1] 0.00ns
+.preheader8.preheader:23  %tmp_18_3 = call i32 @_ssdm_op_BitConcatenate.i32.i8.i8.i8.i8(i8 %tmp_14, i8 %tmp_12, i8 %tmp_13, i8 %tmp_15)
+
+ST_8: tmp_34_3 [1/1] 0.00ns (grouped into LUT with out node tmp140)
+.preheader8.preheader:377  %tmp_34_3 = and i32 %temp_s, %C_1_2
+
+ST_8: tmp_35_3 [1/1] 0.00ns (grouped into LUT with out node tmp140)
+.preheader8.preheader:378  %tmp_35_3 = xor i32 %temp_s, -1
+
+ST_8: tmp_36_3 [1/1] 0.00ns (grouped into LUT with out node tmp140)
+.preheader8.preheader:379  %tmp_36_3 = and i32 %C_1_1, %tmp_35_3
+
+ST_8: tmp_37_3 [1/1] 0.00ns (grouped into LUT with out node tmp140)
+.preheader8.preheader:380  %tmp_37_3 = or i32 %tmp_34_3, %tmp_36_3
+
+ST_8: tmp139 [1/1] 2.44ns
+.preheader8.preheader:381  %tmp139 = add i32 %C_1, %K_load
+
+ST_8: tmp140 [1/1] 2.44ns (out node of the LUT)
+.preheader8.preheader:382  %tmp140 = add i32 %tmp_18_3, %tmp_37_3
+
+ST_8: tmp141 [1/1] 1.97ns
+.preheader8.preheader:383  %tmp141 = add i32 %tmp_33_3, %tmp140
+
+ST_8: temp_2 [1/1] 1.97ns
+.preheader8.preheader:384  %temp_2 = add i32 %tmp139, %tmp141
+
+
+ <State 9>: 7.03ns
+ST_9: C_1_3 [1/1] 7.03ns
+.preheader8.preheader:385  %C_1_3 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 30, i32 %temp_s)
+
+ST_9: tmp_33_4 [1/1] 7.03ns
+.preheader8.preheader:386  %tmp_33_4 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 5, i32 %temp_2)
+
+
+ <State 10>: 6.38ns
+ST_10: tmp_18_4 [1/1] 0.00ns
+.preheader8.preheader:28  %tmp_18_4 = call i32 @_ssdm_op_BitConcatenate.i32.i8.i8.i8.i8(i8 %tmp_18, i8 %tmp_16, i8 %tmp_17, i8 %tmp_19)
+
+ST_10: tmp_34_4 [1/1] 0.00ns (grouped into LUT with out node tmp143)
+.preheader8.preheader:387  %tmp_34_4 = and i32 %temp_1, %C_1_3
+
+ST_10: tmp_35_4 [1/1] 0.00ns (grouped into LUT with out node tmp143)
+.preheader8.preheader:388  %tmp_35_4 = xor i32 %temp_1, -1
+
+ST_10: tmp_36_4 [1/1] 0.00ns (grouped into LUT with out node tmp143)
+.preheader8.preheader:389  %tmp_36_4 = and i32 %C_1_2, %tmp_35_4
+
+ST_10: tmp_37_4 [1/1] 0.00ns (grouped into LUT with out node tmp143)
+.preheader8.preheader:390  %tmp_37_4 = or i32 %tmp_34_4, %tmp_36_4
+
+ST_10: tmp142 [1/1] 2.44ns
+.preheader8.preheader:391  %tmp142 = add i32 %C_1_1, %K_load
+
+ST_10: tmp143 [1/1] 2.44ns (out node of the LUT)
+.preheader8.preheader:392  %tmp143 = add i32 %tmp_18_4, %tmp_37_4
+
+ST_10: tmp144 [1/1] 1.97ns
+.preheader8.preheader:393  %tmp144 = add i32 %tmp_33_4, %tmp143
+
+ST_10: temp_4 [1/1] 1.97ns
+.preheader8.preheader:394  %temp_4 = add i32 %tmp142, %tmp144
+
+
+ <State 11>: 7.03ns
+ST_11: C_1_4 [1/1] 7.03ns
+.preheader8.preheader:395  %C_1_4 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 30, i32 %temp_1)
+
+ST_11: tmp_33_5 [1/1] 7.03ns
+.preheader8.preheader:396  %tmp_33_5 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 5, i32 %temp_4)
+
+
+ <State 12>: 6.38ns
+ST_12: tmp_18_5 [1/1] 0.00ns
+.preheader8.preheader:33  %tmp_18_5 = call i32 @_ssdm_op_BitConcatenate.i32.i8.i8.i8.i8(i8 %tmp_22, i8 %tmp_20, i8 %tmp_21, i8 %tmp_23)
+
+ST_12: tmp_34_5 [1/1] 0.00ns (grouped into LUT with out node tmp146)
+.preheader8.preheader:397  %tmp_34_5 = and i32 %temp_2, %C_1_4
+
+ST_12: tmp_35_5 [1/1] 0.00ns (grouped into LUT with out node tmp146)
+.preheader8.preheader:398  %tmp_35_5 = xor i32 %temp_2, -1
+
+ST_12: tmp_36_5 [1/1] 0.00ns (grouped into LUT with out node tmp146)
+.preheader8.preheader:399  %tmp_36_5 = and i32 %C_1_3, %tmp_35_5
+
+ST_12: tmp_37_5 [1/1] 0.00ns (grouped into LUT with out node tmp146)
+.preheader8.preheader:400  %tmp_37_5 = or i32 %tmp_34_5, %tmp_36_5
+
+ST_12: tmp145 [1/1] 2.44ns
+.preheader8.preheader:401  %tmp145 = add i32 %C_1_2, %K_load
+
+ST_12: tmp146 [1/1] 2.44ns (out node of the LUT)
+.preheader8.preheader:402  %tmp146 = add i32 %tmp_18_5, %tmp_37_5
+
+ST_12: tmp147 [1/1] 1.97ns
+.preheader8.preheader:403  %tmp147 = add i32 %tmp_33_5, %tmp146
+
+ST_12: temp_5 [1/1] 1.97ns
+.preheader8.preheader:404  %temp_5 = add i32 %tmp145, %tmp147
+
+
+ <State 13>: 7.03ns
+ST_13: C_1_5 [1/1] 7.03ns
+.preheader8.preheader:405  %C_1_5 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 30, i32 %temp_2)
+
+ST_13: tmp_33_6 [1/1] 7.03ns
+.preheader8.preheader:406  %tmp_33_6 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 5, i32 %temp_5)
+
+
+ <State 14>: 6.38ns
+ST_14: tmp_18_6 [1/1] 0.00ns
+.preheader8.preheader:38  %tmp_18_6 = call i32 @_ssdm_op_BitConcatenate.i32.i8.i8.i8.i8(i8 %tmp_26, i8 %tmp_24, i8 %tmp_25, i8 %tmp_27)
+
+ST_14: tmp_34_6 [1/1] 0.00ns (grouped into LUT with out node tmp149)
+.preheader8.preheader:407  %tmp_34_6 = and i32 %temp_4, %C_1_5
+
+ST_14: tmp_35_6 [1/1] 0.00ns (grouped into LUT with out node tmp149)
+.preheader8.preheader:408  %tmp_35_6 = xor i32 %temp_4, -1
+
+ST_14: tmp_36_6 [1/1] 0.00ns (grouped into LUT with out node tmp149)
+.preheader8.preheader:409  %tmp_36_6 = and i32 %C_1_4, %tmp_35_6
+
+ST_14: tmp_37_6 [1/1] 0.00ns (grouped into LUT with out node tmp149)
+.preheader8.preheader:410  %tmp_37_6 = or i32 %tmp_34_6, %tmp_36_6
+
+ST_14: tmp148 [1/1] 2.44ns
+.preheader8.preheader:411  %tmp148 = add i32 %C_1_3, %K_load
+
+ST_14: tmp149 [1/1] 2.44ns (out node of the LUT)
+.preheader8.preheader:412  %tmp149 = add i32 %tmp_18_6, %tmp_37_6
+
+ST_14: tmp150 [1/1] 1.97ns
+.preheader8.preheader:413  %tmp150 = add i32 %tmp_33_6, %tmp149
+
+ST_14: temp_6 [1/1] 1.97ns
+.preheader8.preheader:414  %temp_6 = add i32 %tmp148, %tmp150
+
+
+ <State 15>: 7.03ns
+ST_15: C_1_6 [1/1] 7.03ns
+.preheader8.preheader:415  %C_1_6 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 30, i32 %temp_4)
+
+ST_15: tmp_33_7 [1/1] 7.03ns
+.preheader8.preheader:416  %tmp_33_7 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 5, i32 %temp_6)
+
+
+ <State 16>: 6.38ns
+ST_16: tmp_18_7 [1/1] 0.00ns
+.preheader8.preheader:43  %tmp_18_7 = call i32 @_ssdm_op_BitConcatenate.i32.i8.i8.i8.i8(i8 %tmp_30, i8 %tmp_28, i8 %tmp_29, i8 %tmp_31)
+
+ST_16: tmp_34_7 [1/1] 0.00ns (grouped into LUT with out node tmp152)
+.preheader8.preheader:417  %tmp_34_7 = and i32 %temp_5, %C_1_6
+
+ST_16: tmp_35_7 [1/1] 0.00ns (grouped into LUT with out node tmp152)
+.preheader8.preheader:418  %tmp_35_7 = xor i32 %temp_5, -1
+
+ST_16: tmp_36_7 [1/1] 0.00ns (grouped into LUT with out node tmp152)
+.preheader8.preheader:419  %tmp_36_7 = and i32 %C_1_5, %tmp_35_7
+
+ST_16: tmp_37_7 [1/1] 0.00ns (grouped into LUT with out node tmp152)
+.preheader8.preheader:420  %tmp_37_7 = or i32 %tmp_34_7, %tmp_36_7
+
+ST_16: tmp151 [1/1] 2.44ns
+.preheader8.preheader:421  %tmp151 = add i32 %C_1_4, %K_load
+
+ST_16: tmp152 [1/1] 2.44ns (out node of the LUT)
+.preheader8.preheader:422  %tmp152 = add i32 %tmp_18_7, %tmp_37_7
+
+ST_16: tmp153 [1/1] 1.97ns
+.preheader8.preheader:423  %tmp153 = add i32 %tmp_33_7, %tmp152
+
+ST_16: temp_7 [1/1] 1.97ns
+.preheader8.preheader:424  %temp_7 = add i32 %tmp151, %tmp153
+
+
+ <State 17>: 7.03ns
+ST_17: C_1_7 [1/1] 7.03ns
+.preheader8.preheader:425  %C_1_7 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 30, i32 %temp_5)
+
+ST_17: tmp_33_8 [1/1] 7.03ns
+.preheader8.preheader:426  %tmp_33_8 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 5, i32 %temp_7)
+
+
+ <State 18>: 6.38ns
+ST_18: tmp_18_8 [1/1] 0.00ns
+.preheader8.preheader:48  %tmp_18_8 = call i32 @_ssdm_op_BitConcatenate.i32.i8.i8.i8.i8(i8 %tmp_34, i8 %tmp_32, i8 %tmp_33, i8 %tmp_35)
+
+ST_18: tmp_34_8 [1/1] 0.00ns (grouped into LUT with out node tmp155)
+.preheader8.preheader:427  %tmp_34_8 = and i32 %temp_6, %C_1_7
+
+ST_18: tmp_35_8 [1/1] 0.00ns (grouped into LUT with out node tmp155)
+.preheader8.preheader:428  %tmp_35_8 = xor i32 %temp_6, -1
+
+ST_18: tmp_36_8 [1/1] 0.00ns (grouped into LUT with out node tmp155)
+.preheader8.preheader:429  %tmp_36_8 = and i32 %C_1_6, %tmp_35_8
+
+ST_18: tmp_37_8 [1/1] 0.00ns (grouped into LUT with out node tmp155)
+.preheader8.preheader:430  %tmp_37_8 = or i32 %tmp_34_8, %tmp_36_8
+
+ST_18: tmp154 [1/1] 2.44ns
+.preheader8.preheader:431  %tmp154 = add i32 %C_1_5, %K_load
+
+ST_18: tmp155 [1/1] 2.44ns (out node of the LUT)
+.preheader8.preheader:432  %tmp155 = add i32 %tmp_18_8, %tmp_37_8
+
+ST_18: tmp156 [1/1] 1.97ns
+.preheader8.preheader:433  %tmp156 = add i32 %tmp_33_8, %tmp155
+
+ST_18: temp_8 [1/1] 1.97ns
+.preheader8.preheader:434  %temp_8 = add i32 %tmp154, %tmp156
+
+
+ <State 19>: 7.03ns
+ST_19: C_1_8 [1/1] 7.03ns
+.preheader8.preheader:435  %C_1_8 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 30, i32 %temp_6)
+
+ST_19: tmp_33_9 [1/1] 7.03ns
+.preheader8.preheader:436  %tmp_33_9 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 5, i32 %temp_8)
+
+
+ <State 20>: 6.38ns
+ST_20: tmp_18_9 [1/1] 0.00ns
+.preheader8.preheader:53  %tmp_18_9 = call i32 @_ssdm_op_BitConcatenate.i32.i8.i8.i8.i8(i8 %tmp_38, i8 %tmp_36, i8 %tmp_37, i8 %tmp_39)
+
+ST_20: tmp_34_9 [1/1] 0.00ns (grouped into LUT with out node tmp158)
+.preheader8.preheader:437  %tmp_34_9 = and i32 %temp_7, %C_1_8
+
+ST_20: tmp_35_9 [1/1] 0.00ns (grouped into LUT with out node tmp158)
+.preheader8.preheader:438  %tmp_35_9 = xor i32 %temp_7, -1
+
+ST_20: tmp_36_9 [1/1] 0.00ns (grouped into LUT with out node tmp158)
+.preheader8.preheader:439  %tmp_36_9 = and i32 %C_1_7, %tmp_35_9
+
+ST_20: tmp_37_9 [1/1] 0.00ns (grouped into LUT with out node tmp158)
+.preheader8.preheader:440  %tmp_37_9 = or i32 %tmp_34_9, %tmp_36_9
+
+ST_20: tmp157 [1/1] 2.44ns
+.preheader8.preheader:441  %tmp157 = add i32 %C_1_6, %K_load
+
+ST_20: tmp158 [1/1] 2.44ns (out node of the LUT)
+.preheader8.preheader:442  %tmp158 = add i32 %tmp_18_9, %tmp_37_9
+
+ST_20: tmp159 [1/1] 1.97ns
+.preheader8.preheader:443  %tmp159 = add i32 %tmp_33_9, %tmp158
+
+ST_20: temp_9 [1/1] 1.97ns
+.preheader8.preheader:444  %temp_9 = add i32 %tmp157, %tmp159
+
+
+ <State 21>: 7.03ns
+ST_21: C_1_9 [1/1] 7.03ns
+.preheader8.preheader:445  %C_1_9 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 30, i32 %temp_7)
+
+ST_21: tmp_33_s [1/1] 7.03ns
+.preheader8.preheader:446  %tmp_33_s = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 5, i32 %temp_9)
+
+
+ <State 22>: 6.38ns
+ST_22: tmp_18_s [1/1] 0.00ns
+.preheader8.preheader:58  %tmp_18_s = call i32 @_ssdm_op_BitConcatenate.i32.i8.i8.i8.i8(i8 %tmp_42, i8 %tmp_40, i8 %tmp_41, i8 %tmp_43)
+
+ST_22: tmp_34_s [1/1] 0.00ns (grouped into LUT with out node tmp161)
+.preheader8.preheader:447  %tmp_34_s = and i32 %temp_8, %C_1_9
+
+ST_22: tmp_35_s [1/1] 0.00ns (grouped into LUT with out node tmp161)
+.preheader8.preheader:448  %tmp_35_s = xor i32 %temp_8, -1
+
+ST_22: tmp_36_s [1/1] 0.00ns (grouped into LUT with out node tmp161)
+.preheader8.preheader:449  %tmp_36_s = and i32 %C_1_8, %tmp_35_s
+
+ST_22: tmp_37_s [1/1] 0.00ns (grouped into LUT with out node tmp161)
+.preheader8.preheader:450  %tmp_37_s = or i32 %tmp_34_s, %tmp_36_s
+
+ST_22: tmp160 [1/1] 2.44ns
+.preheader8.preheader:451  %tmp160 = add i32 %C_1_7, %K_load
+
+ST_22: tmp161 [1/1] 2.44ns (out node of the LUT)
+.preheader8.preheader:452  %tmp161 = add i32 %tmp_18_s, %tmp_37_s
+
+ST_22: tmp162 [1/1] 1.97ns
+.preheader8.preheader:453  %tmp162 = add i32 %tmp_33_s, %tmp161
+
+ST_22: temp_3 [1/1] 1.97ns
+.preheader8.preheader:454  %temp_3 = add i32 %tmp160, %tmp162
+
+
+ <State 23>: 7.03ns
+ST_23: C_1_s [1/1] 7.03ns
+.preheader8.preheader:455  %C_1_s = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 30, i32 %temp_8)
+
+ST_23: tmp_33_10 [1/1] 7.03ns
+.preheader8.preheader:456  %tmp_33_10 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 5, i32 %temp_3)
+
+
+ <State 24>: 6.38ns
+ST_24: tmp_18_10 [1/1] 0.00ns
+.preheader8.preheader:63  %tmp_18_10 = call i32 @_ssdm_op_BitConcatenate.i32.i8.i8.i8.i8(i8 %tmp_46, i8 %tmp_44, i8 %tmp_45, i8 %tmp_47)
+
+ST_24: tmp_34_10 [1/1] 0.00ns (grouped into LUT with out node tmp164)
+.preheader8.preheader:457  %tmp_34_10 = and i32 %temp_9, %C_1_s
+
+ST_24: tmp_35_10 [1/1] 0.00ns (grouped into LUT with out node tmp164)
+.preheader8.preheader:458  %tmp_35_10 = xor i32 %temp_9, -1
+
+ST_24: tmp_36_10 [1/1] 0.00ns (grouped into LUT with out node tmp164)
+.preheader8.preheader:459  %tmp_36_10 = and i32 %C_1_9, %tmp_35_10
+
+ST_24: tmp_37_10 [1/1] 0.00ns (grouped into LUT with out node tmp164)
+.preheader8.preheader:460  %tmp_37_10 = or i32 %tmp_34_10, %tmp_36_10
+
+ST_24: tmp163 [1/1] 2.44ns
+.preheader8.preheader:461  %tmp163 = add i32 %C_1_8, %K_load
+
+ST_24: tmp164 [1/1] 2.44ns (out node of the LUT)
+.preheader8.preheader:462  %tmp164 = add i32 %tmp_18_10, %tmp_37_10
+
+ST_24: tmp165 [1/1] 1.97ns
+.preheader8.preheader:463  %tmp165 = add i32 %tmp_33_10, %tmp164
+
+ST_24: temp_10 [1/1] 1.97ns
+.preheader8.preheader:464  %temp_10 = add i32 %tmp163, %tmp165
+
+
+ <State 25>: 7.03ns
+ST_25: C_1_10 [1/1] 7.03ns
+.preheader8.preheader:465  %C_1_10 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 30, i32 %temp_9)
+
+ST_25: tmp_33_11 [1/1] 7.03ns
+.preheader8.preheader:466  %tmp_33_11 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 5, i32 %temp_10)
+
+
+ <State 26>: 6.38ns
+ST_26: tmp_18_11 [1/1] 0.00ns
+.preheader8.preheader:68  %tmp_18_11 = call i32 @_ssdm_op_BitConcatenate.i32.i8.i8.i8.i8(i8 %tmp_50, i8 %tmp_48, i8 %tmp_49, i8 %tmp_51)
+
+ST_26: tmp_34_11 [1/1] 0.00ns (grouped into LUT with out node tmp167)
+.preheader8.preheader:467  %tmp_34_11 = and i32 %temp_3, %C_1_10
+
+ST_26: tmp_35_11 [1/1] 0.00ns (grouped into LUT with out node tmp167)
+.preheader8.preheader:468  %tmp_35_11 = xor i32 %temp_3, -1
+
+ST_26: tmp_36_11 [1/1] 0.00ns (grouped into LUT with out node tmp167)
+.preheader8.preheader:469  %tmp_36_11 = and i32 %C_1_s, %tmp_35_11
+
+ST_26: tmp_37_11 [1/1] 0.00ns (grouped into LUT with out node tmp167)
+.preheader8.preheader:470  %tmp_37_11 = or i32 %tmp_34_11, %tmp_36_11
+
+ST_26: tmp166 [1/1] 2.44ns
+.preheader8.preheader:471  %tmp166 = add i32 %C_1_9, %K_load
+
+ST_26: tmp167 [1/1] 2.44ns (out node of the LUT)
+.preheader8.preheader:472  %tmp167 = add i32 %tmp_18_11, %tmp_37_11
+
+ST_26: tmp168 [1/1] 1.97ns
+.preheader8.preheader:473  %tmp168 = add i32 %tmp_33_11, %tmp167
+
+ST_26: temp_11 [1/1] 1.97ns
+.preheader8.preheader:474  %temp_11 = add i32 %tmp166, %tmp168
+
+
+ <State 27>: 7.03ns
+ST_27: C_1_11 [1/1] 7.03ns
+.preheader8.preheader:475  %C_1_11 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 30, i32 %temp_3)
+
+ST_27: tmp_33_12 [1/1] 7.03ns
+.preheader8.preheader:476  %tmp_33_12 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 5, i32 %temp_11)
+
+
+ <State 28>: 6.38ns
+ST_28: tmp_18_12 [1/1] 0.00ns
+.preheader8.preheader:73  %tmp_18_12 = call i32 @_ssdm_op_BitConcatenate.i32.i8.i8.i8.i8(i8 %tmp_54, i8 %tmp_52, i8 %tmp_53, i8 %tmp_55)
+
+ST_28: tmp_34_12 [1/1] 0.00ns (grouped into LUT with out node tmp170)
+.preheader8.preheader:477  %tmp_34_12 = and i32 %temp_10, %C_1_11
+
+ST_28: tmp_35_12 [1/1] 0.00ns (grouped into LUT with out node tmp170)
+.preheader8.preheader:478  %tmp_35_12 = xor i32 %temp_10, -1
+
+ST_28: tmp_36_12 [1/1] 0.00ns (grouped into LUT with out node tmp170)
+.preheader8.preheader:479  %tmp_36_12 = and i32 %C_1_10, %tmp_35_12
+
+ST_28: tmp_37_12 [1/1] 0.00ns (grouped into LUT with out node tmp170)
+.preheader8.preheader:480  %tmp_37_12 = or i32 %tmp_34_12, %tmp_36_12
+
+ST_28: tmp169 [1/1] 2.44ns
+.preheader8.preheader:481  %tmp169 = add i32 %C_1_s, %K_load
+
+ST_28: tmp170 [1/1] 2.44ns (out node of the LUT)
+.preheader8.preheader:482  %tmp170 = add i32 %tmp_18_12, %tmp_37_12
+
+ST_28: tmp171 [1/1] 1.97ns
+.preheader8.preheader:483  %tmp171 = add i32 %tmp_33_12, %tmp170
+
+ST_28: temp_12 [1/1] 1.97ns
+.preheader8.preheader:484  %temp_12 = add i32 %tmp169, %tmp171
+
+
+ <State 29>: 7.03ns
+ST_29: C_1_12 [1/1] 7.03ns
+.preheader8.preheader:485  %C_1_12 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 30, i32 %temp_10)
+
+ST_29: tmp_33_13 [1/1] 7.03ns
+.preheader8.preheader:486  %tmp_33_13 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 5, i32 %temp_12)
+
+
+ <State 30>: 6.38ns
+ST_30: tmp_18_13 [1/1] 0.00ns
+.preheader8.preheader:78  %tmp_18_13 = call i32 @_ssdm_op_BitConcatenate.i32.i8.i8.i8.i8(i8 %tmp_63, i8 %tmp_56, i8 %tmp_57, i8 %tmp_64)
+
+ST_30: tmp_34_13 [1/1] 0.00ns (grouped into LUT with out node tmp173)
+.preheader8.preheader:487  %tmp_34_13 = and i32 %temp_11, %C_1_12
+
+ST_30: tmp_35_13 [1/1] 0.00ns (grouped into LUT with out node tmp173)
+.preheader8.preheader:488  %tmp_35_13 = xor i32 %temp_11, -1
+
+ST_30: tmp_36_13 [1/1] 0.00ns (grouped into LUT with out node tmp173)
+.preheader8.preheader:489  %tmp_36_13 = and i32 %C_1_11, %tmp_35_13
+
+ST_30: tmp_37_13 [1/1] 0.00ns (grouped into LUT with out node tmp173)
+.preheader8.preheader:490  %tmp_37_13 = or i32 %tmp_34_13, %tmp_36_13
+
+ST_30: tmp172 [1/1] 2.44ns
+.preheader8.preheader:491  %tmp172 = add i32 %C_1_10, %K_load
+
+ST_30: tmp173 [1/1] 2.44ns (out node of the LUT)
+.preheader8.preheader:492  %tmp173 = add i32 %tmp_18_13, %tmp_37_13
+
+ST_30: tmp174 [1/1] 1.97ns
+.preheader8.preheader:493  %tmp174 = add i32 %tmp_33_13, %tmp173
+
+ST_30: temp_13 [1/1] 1.97ns
+.preheader8.preheader:494  %temp_13 = add i32 %tmp172, %tmp174
+
+
+ <State 31>: 7.03ns
+ST_31: C_1_13 [1/1] 7.03ns
+.preheader8.preheader:495  %C_1_13 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 30, i32 %temp_11)
+
+ST_31: tmp_33_14 [1/1] 7.03ns
+.preheader8.preheader:496  %tmp_33_14 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 5, i32 %temp_13)
+
+
+ <State 32>: 6.38ns
+ST_32: tmp_18_14 [1/1] 0.00ns
+.preheader8.preheader:83  %tmp_18_14 = call i32 @_ssdm_op_BitConcatenate.i32.i8.i8.i8.i8(i8 %tmp_67, i8 %tmp_65, i8 %tmp_66, i8 %tmp_68)
+
+ST_32: tmp_34_14 [1/1] 0.00ns (grouped into LUT with out node tmp176)
+.preheader8.preheader:497  %tmp_34_14 = and i32 %temp_12, %C_1_13
+
+ST_32: tmp_35_14 [1/1] 0.00ns (grouped into LUT with out node tmp176)
+.preheader8.preheader:498  %tmp_35_14 = xor i32 %temp_12, -1
+
+ST_32: tmp_36_14 [1/1] 0.00ns (grouped into LUT with out node tmp176)
+.preheader8.preheader:499  %tmp_36_14 = and i32 %C_1_12, %tmp_35_14
+
+ST_32: tmp_37_14 [1/1] 0.00ns (grouped into LUT with out node tmp176)
+.preheader8.preheader:500  %tmp_37_14 = or i32 %tmp_34_14, %tmp_36_14
+
+ST_32: tmp175 [1/1] 2.44ns
+.preheader8.preheader:501  %tmp175 = add i32 %C_1_11, %K_load
+
+ST_32: tmp176 [1/1] 2.44ns (out node of the LUT)
+.preheader8.preheader:502  %tmp176 = add i32 %tmp_18_14, %tmp_37_14
+
+ST_32: tmp177 [1/1] 1.97ns
+.preheader8.preheader:503  %tmp177 = add i32 %tmp_33_14, %tmp176
+
+ST_32: temp_14 [1/1] 1.97ns
+.preheader8.preheader:504  %temp_14 = add i32 %tmp175, %tmp177
+
+
+ <State 33>: 8.40ns
+ST_33: tmp1 [1/1] 0.00ns (grouped into LUT with out node tmp_69)
+.preheader8.preheader:84  %tmp1 = xor i32 %tmp_18_8, %tmp_18_12
+
+ST_33: tmp2 [1/1] 0.00ns (grouped into LUT with out node tmp_69)
+.preheader8.preheader:85  %tmp2 = xor i32 %tmp_18_2, %tmp_4
+
+ST_33: tmp_69 [1/1] 1.37ns (out node of the LUT)
+.preheader8.preheader:86  %tmp_69 = xor i32 %tmp2, %tmp1
+
+ST_33: tmp_70 [1/1] 7.03ns
+.preheader8.preheader:87  %tmp_70 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 1, i32 %tmp_69)
+
+ST_33: C_1_14 [1/1] 7.03ns
+.preheader8.preheader:505  %C_1_14 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 30, i32 %temp_12)
+
+ST_33: tmp_33_15 [1/1] 7.03ns
+.preheader8.preheader:506  %tmp_33_15 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 5, i32 %temp_14)
+
+
+ <State 34>: 6.38ns
+ST_34: tmp_34_15 [1/1] 0.00ns (grouped into LUT with out node tmp179)
+.preheader8.preheader:507  %tmp_34_15 = and i32 %temp_13, %C_1_14
+
+ST_34: tmp_35_15 [1/1] 0.00ns (grouped into LUT with out node tmp179)
+.preheader8.preheader:508  %tmp_35_15 = xor i32 %temp_13, -1
+
+ST_34: tmp_36_15 [1/1] 0.00ns (grouped into LUT with out node tmp179)
+.preheader8.preheader:509  %tmp_36_15 = and i32 %C_1_13, %tmp_35_15
+
+ST_34: tmp_37_15 [1/1] 0.00ns (grouped into LUT with out node tmp179)
+.preheader8.preheader:510  %tmp_37_15 = or i32 %tmp_34_15, %tmp_36_15
+
+ST_34: tmp178 [1/1] 2.44ns
+.preheader8.preheader:511  %tmp178 = add i32 %C_1_12, %K_load
+
+ST_34: tmp179 [1/1] 2.44ns (out node of the LUT)
+.preheader8.preheader:512  %tmp179 = add i32 %tmp_70, %tmp_37_15
+
+ST_34: tmp180 [1/1] 1.97ns
+.preheader8.preheader:513  %tmp180 = add i32 %tmp_33_15, %tmp179
+
+ST_34: temp_15 [1/1] 1.97ns
+.preheader8.preheader:514  %temp_15 = add i32 %tmp178, %tmp180
+
+
+ <State 35>: 8.40ns
+ST_35: tmp3 [1/1] 0.00ns (grouped into LUT with out node tmp_30_1)
+.preheader8.preheader:88  %tmp3 = xor i32 %tmp_18_9, %tmp_18_13
+
+ST_35: tmp4 [1/1] 0.00ns (grouped into LUT with out node tmp_30_1)
+.preheader8.preheader:89  %tmp4 = xor i32 %tmp_18_3, %tmp_18_1
+
+ST_35: tmp_30_1 [1/1] 1.37ns (out node of the LUT)
+.preheader8.preheader:90  %tmp_30_1 = xor i32 %tmp4, %tmp3
+
+ST_35: tmp_31_1 [1/1] 7.03ns
+.preheader8.preheader:91  %tmp_31_1 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 1, i32 %tmp_30_1)
+
+ST_35: C_1_15 [1/1] 7.03ns
+.preheader8.preheader:515  %C_1_15 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 30, i32 %temp_13)
+
+ST_35: tmp_33_16 [1/1] 7.03ns
+.preheader8.preheader:516  %tmp_33_16 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 5, i32 %temp_15)
+
+
+ <State 36>: 6.38ns
+ST_36: tmp_34_16 [1/1] 0.00ns (grouped into LUT with out node tmp182)
+.preheader8.preheader:517  %tmp_34_16 = and i32 %temp_14, %C_1_15
+
+ST_36: tmp_35_16 [1/1] 0.00ns (grouped into LUT with out node tmp182)
+.preheader8.preheader:518  %tmp_35_16 = xor i32 %temp_14, -1
+
+ST_36: tmp_36_16 [1/1] 0.00ns (grouped into LUT with out node tmp182)
+.preheader8.preheader:519  %tmp_36_16 = and i32 %C_1_14, %tmp_35_16
+
+ST_36: tmp_37_16 [1/1] 0.00ns (grouped into LUT with out node tmp182)
+.preheader8.preheader:520  %tmp_37_16 = or i32 %tmp_34_16, %tmp_36_16
+
+ST_36: tmp181 [1/1] 2.44ns
+.preheader8.preheader:521  %tmp181 = add i32 %C_1_13, %K_load
+
+ST_36: tmp182 [1/1] 2.44ns (out node of the LUT)
+.preheader8.preheader:522  %tmp182 = add i32 %tmp_31_1, %tmp_37_16
+
+ST_36: tmp183 [1/1] 1.97ns
+.preheader8.preheader:523  %tmp183 = add i32 %tmp_33_16, %tmp182
+
+ST_36: temp_16 [1/1] 1.97ns
+.preheader8.preheader:524  %temp_16 = add i32 %tmp181, %tmp183
+
+
+ <State 37>: 8.40ns
+ST_37: tmp5 [1/1] 0.00ns (grouped into LUT with out node tmp_30_2)
+.preheader8.preheader:92  %tmp5 = xor i32 %tmp_18_s, %tmp_18_14
+
+ST_37: tmp6 [1/1] 0.00ns (grouped into LUT with out node tmp_30_2)
+.preheader8.preheader:93  %tmp6 = xor i32 %tmp_18_4, %tmp_18_2
+
+ST_37: tmp_30_2 [1/1] 1.37ns (out node of the LUT)
+.preheader8.preheader:94  %tmp_30_2 = xor i32 %tmp6, %tmp5
+
+ST_37: tmp_31_2 [1/1] 7.03ns
+.preheader8.preheader:95  %tmp_31_2 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 1, i32 %tmp_30_2)
+
+ST_37: C_1_16 [1/1] 7.03ns
+.preheader8.preheader:525  %C_1_16 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 30, i32 %temp_14)
+
+ST_37: tmp_33_17 [1/1] 7.03ns
+.preheader8.preheader:526  %tmp_33_17 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 5, i32 %temp_16)
+
+
+ <State 38>: 6.38ns
+ST_38: tmp_34_17 [1/1] 0.00ns (grouped into LUT with out node tmp185)
+.preheader8.preheader:527  %tmp_34_17 = and i32 %temp_15, %C_1_16
+
+ST_38: tmp_35_17 [1/1] 0.00ns (grouped into LUT with out node tmp185)
+.preheader8.preheader:528  %tmp_35_17 = xor i32 %temp_15, -1
+
+ST_38: tmp_36_17 [1/1] 0.00ns (grouped into LUT with out node tmp185)
+.preheader8.preheader:529  %tmp_36_17 = and i32 %C_1_15, %tmp_35_17
+
+ST_38: tmp_37_17 [1/1] 0.00ns (grouped into LUT with out node tmp185)
+.preheader8.preheader:530  %tmp_37_17 = or i32 %tmp_34_17, %tmp_36_17
+
+ST_38: tmp184 [1/1] 2.44ns
+.preheader8.preheader:531  %tmp184 = add i32 %C_1_14, %K_load
+
+ST_38: tmp185 [1/1] 2.44ns (out node of the LUT)
+.preheader8.preheader:532  %tmp185 = add i32 %tmp_31_2, %tmp_37_17
+
+ST_38: tmp186 [1/1] 1.97ns
+.preheader8.preheader:533  %tmp186 = add i32 %tmp_33_17, %tmp185
+
+ST_38: temp_17 [1/1] 1.97ns
+.preheader8.preheader:534  %temp_17 = add i32 %tmp184, %tmp186
+
+ST_38: tmp187 [1/1] 2.44ns
+.preheader8.preheader:541  %tmp187 = add i32 %C_1_15, %K_load
+
+
+ <State 39>: 8.40ns
+ST_39: tmp7 [1/1] 0.00ns (grouped into LUT with out node tmp_30_3)
+.preheader8.preheader:96  %tmp7 = xor i32 %tmp_18_10, %tmp_70
+
+ST_39: tmp8 [1/1] 0.00ns (grouped into LUT with out node tmp_30_3)
+.preheader8.preheader:97  %tmp8 = xor i32 %tmp_18_5, %tmp_18_3
+
+ST_39: tmp_30_3 [1/1] 1.37ns (out node of the LUT)
+.preheader8.preheader:98  %tmp_30_3 = xor i32 %tmp8, %tmp7
+
+ST_39: tmp_31_3 [1/1] 7.03ns
+.preheader8.preheader:99  %tmp_31_3 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 1, i32 %tmp_30_3)
+
+ST_39: C_1_17 [1/1] 7.03ns
+.preheader8.preheader:535  %C_1_17 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 30, i32 %temp_15)
+
+ST_39: tmp_33_18 [1/1] 7.03ns
+.preheader8.preheader:536  %tmp_33_18 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 5, i32 %temp_17)
+
+
+ <State 40>: 6.38ns
+ST_40: tmp_34_18 [1/1] 0.00ns (grouped into LUT with out node tmp188)
+.preheader8.preheader:537  %tmp_34_18 = and i32 %temp_16, %C_1_17
+
+ST_40: tmp_35_18 [1/1] 0.00ns (grouped into LUT with out node tmp188)
+.preheader8.preheader:538  %tmp_35_18 = xor i32 %temp_16, -1
+
+ST_40: tmp_36_18 [1/1] 0.00ns (grouped into LUT with out node tmp188)
+.preheader8.preheader:539  %tmp_36_18 = and i32 %C_1_16, %tmp_35_18
+
+ST_40: tmp_37_18 [1/1] 0.00ns (grouped into LUT with out node tmp188)
+.preheader8.preheader:540  %tmp_37_18 = or i32 %tmp_34_18, %tmp_36_18
+
+ST_40: tmp188 [1/1] 2.44ns (out node of the LUT)
+.preheader8.preheader:542  %tmp188 = add i32 %tmp_31_3, %tmp_37_18
+
+ST_40: tmp189 [1/1] 1.97ns
+.preheader8.preheader:543  %tmp189 = add i32 %tmp_33_18, %tmp188
+
+ST_40: temp_18 [1/1] 1.97ns
+.preheader8.preheader:544  %temp_18 = add i32 %tmp187, %tmp189
+
+
+ <State 41>: 8.40ns
+ST_41: tmp9 [1/1] 0.00ns (grouped into LUT with out node tmp_30_4)
+.preheader8.preheader:100  %tmp9 = xor i32 %tmp_18_11, %tmp_31_1
+
+ST_41: tmp10 [1/1] 0.00ns (grouped into LUT with out node tmp_30_4)
+.preheader8.preheader:101  %tmp10 = xor i32 %tmp_18_6, %tmp_18_4
+
+ST_41: tmp_30_4 [1/1] 1.37ns (out node of the LUT)
+.preheader8.preheader:102  %tmp_30_4 = xor i32 %tmp10, %tmp9
+
+ST_41: tmp_31_4 [1/1] 7.03ns
+.preheader8.preheader:103  %tmp_31_4 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 1, i32 %tmp_30_4)
+
+ST_41: C_1_18 [1/1] 7.03ns
+.preheader8.preheader:545  %C_1_18 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 30, i32 %temp_16)
+
+ST_41: K_load_1 [2/2] 2.39ns
+.preheader8.preheader:546  %K_load_1 = load i32* getelementptr inbounds ([4 x i32]* @K, i64 0, i64 1), align 4
+
+ST_41: tmp_76 [1/1] 7.03ns
+.preheader8.preheader:547  %tmp_76 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 5, i32 %temp_18)
+
+
+ <State 42>: 6.80ns
+ST_42: K_load_1 [1/2] 2.39ns
+.preheader8.preheader:546  %K_load_1 = load i32* getelementptr inbounds ([4 x i32]* @K, i64 0, i64 1), align 4
+
+ST_42: tmp190 [1/1] 0.00ns (grouped into LUT with out node tmp192)
+.preheader8.preheader:548  %tmp190 = xor i32 %C_1_17, %temp_17
+
+ST_42: tmp_77 [1/1] 0.00ns (grouped into LUT with out node tmp192)
+.preheader8.preheader:549  %tmp_77 = xor i32 %tmp190, %C_1_18
+
+ST_42: tmp191 [1/1] 2.44ns
+.preheader8.preheader:550  %tmp191 = add i32 %C_1_16, %K_load_1
+
+ST_42: tmp192 [1/1] 2.44ns (out node of the LUT)
+.preheader8.preheader:551  %tmp192 = add i32 %tmp_31_4, %tmp_77
+
+ST_42: tmp193 [1/1] 1.97ns
+.preheader8.preheader:552  %tmp193 = add i32 %tmp_76, %tmp192
+
+ST_42: temp_19 [1/1] 1.97ns
+.preheader8.preheader:553  %temp_19 = add i32 %tmp191, %tmp193
+
+
+ <State 43>: 8.40ns
+ST_43: tmp11 [1/1] 0.00ns (grouped into LUT with out node tmp_30_5)
+.preheader8.preheader:104  %tmp11 = xor i32 %tmp_18_12, %tmp_31_2
+
+ST_43: tmp12 [1/1] 0.00ns (grouped into LUT with out node tmp_30_5)
+.preheader8.preheader:105  %tmp12 = xor i32 %tmp_18_7, %tmp_18_5
+
+ST_43: tmp_30_5 [1/1] 1.37ns (out node of the LUT)
+.preheader8.preheader:106  %tmp_30_5 = xor i32 %tmp12, %tmp11
+
+ST_43: tmp_31_5 [1/1] 7.03ns
+.preheader8.preheader:107  %tmp_31_5 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 1, i32 %tmp_30_5)
+
+ST_43: C_2 [1/1] 7.03ns
+.preheader8.preheader:554  %C_2 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 30, i32 %temp_17)
+
+ST_43: tmp_42_1 [1/1] 7.03ns
+.preheader8.preheader:555  %tmp_42_1 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 5, i32 %temp_19)
+
+
+ <State 44>: 6.38ns
+ST_44: tmp194 [1/1] 0.00ns (grouped into LUT with out node tmp196)
+.preheader8.preheader:556  %tmp194 = xor i32 %C_1_18, %temp_18
+
+ST_44: tmp_44_1 [1/1] 0.00ns (grouped into LUT with out node tmp196)
+.preheader8.preheader:557  %tmp_44_1 = xor i32 %tmp194, %C_2
+
+ST_44: tmp195 [1/1] 2.44ns
+.preheader8.preheader:558  %tmp195 = add i32 %C_1_17, %K_load_1
+
+ST_44: tmp196 [1/1] 2.44ns (out node of the LUT)
+.preheader8.preheader:559  %tmp196 = add i32 %tmp_31_5, %tmp_44_1
+
+ST_44: tmp197 [1/1] 1.97ns
+.preheader8.preheader:560  %tmp197 = add i32 %tmp_42_1, %tmp196
+
+ST_44: temp_1_1 [1/1] 1.97ns
+.preheader8.preheader:561  %temp_1_1 = add i32 %tmp195, %tmp197
+
+
+ <State 45>: 8.40ns
+ST_45: tmp13 [1/1] 0.00ns (grouped into LUT with out node tmp_30_6)
+.preheader8.preheader:108  %tmp13 = xor i32 %tmp_18_13, %tmp_31_3
+
+ST_45: tmp14 [1/1] 0.00ns (grouped into LUT with out node tmp_30_6)
+.preheader8.preheader:109  %tmp14 = xor i32 %tmp_18_8, %tmp_18_6
+
+ST_45: tmp_30_6 [1/1] 1.37ns (out node of the LUT)
+.preheader8.preheader:110  %tmp_30_6 = xor i32 %tmp14, %tmp13
+
+ST_45: tmp_31_6 [1/1] 7.03ns
+.preheader8.preheader:111  %tmp_31_6 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 1, i32 %tmp_30_6)
+
+ST_45: C_2_1 [1/1] 7.03ns
+.preheader8.preheader:562  %C_2_1 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 30, i32 %temp_18)
+
+ST_45: tmp_42_2 [1/1] 7.03ns
+.preheader8.preheader:563  %tmp_42_2 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 5, i32 %temp_1_1)
+
+
+ <State 46>: 6.38ns
+ST_46: tmp198 [1/1] 0.00ns (grouped into LUT with out node tmp200)
+.preheader8.preheader:564  %tmp198 = xor i32 %C_2, %temp_19
+
+ST_46: tmp_44_2 [1/1] 0.00ns (grouped into LUT with out node tmp200)
+.preheader8.preheader:565  %tmp_44_2 = xor i32 %tmp198, %C_2_1
+
+ST_46: tmp199 [1/1] 2.44ns
+.preheader8.preheader:566  %tmp199 = add i32 %C_1_18, %K_load_1
+
+ST_46: tmp200 [1/1] 2.44ns (out node of the LUT)
+.preheader8.preheader:567  %tmp200 = add i32 %tmp_31_6, %tmp_44_2
+
+ST_46: tmp201 [1/1] 1.97ns
+.preheader8.preheader:568  %tmp201 = add i32 %tmp_42_2, %tmp200
+
+ST_46: temp_1_2 [1/1] 1.97ns
+.preheader8.preheader:569  %temp_1_2 = add i32 %tmp199, %tmp201
+
+
+ <State 47>: 8.40ns
+ST_47: tmp15 [1/1] 0.00ns (grouped into LUT with out node tmp_30_7)
+.preheader8.preheader:112  %tmp15 = xor i32 %tmp_18_14, %tmp_31_4
+
+ST_47: tmp16 [1/1] 0.00ns (grouped into LUT with out node tmp_30_7)
+.preheader8.preheader:113  %tmp16 = xor i32 %tmp_18_9, %tmp_18_7
+
+ST_47: tmp_30_7 [1/1] 1.37ns (out node of the LUT)
+.preheader8.preheader:114  %tmp_30_7 = xor i32 %tmp16, %tmp15
+
+ST_47: tmp_31_7 [1/1] 7.03ns
+.preheader8.preheader:115  %tmp_31_7 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 1, i32 %tmp_30_7)
+
+ST_47: C_2_2 [1/1] 7.03ns
+.preheader8.preheader:570  %C_2_2 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 30, i32 %temp_19)
+
+ST_47: tmp_42_3 [1/1] 7.03ns
+.preheader8.preheader:571  %tmp_42_3 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 5, i32 %temp_1_2)
+
+
+ <State 48>: 6.38ns
+ST_48: tmp202 [1/1] 0.00ns (grouped into LUT with out node tmp204)
+.preheader8.preheader:572  %tmp202 = xor i32 %C_2_1, %temp_1_1
+
+ST_48: tmp_44_3 [1/1] 0.00ns (grouped into LUT with out node tmp204)
+.preheader8.preheader:573  %tmp_44_3 = xor i32 %tmp202, %C_2_2
+
+ST_48: tmp203 [1/1] 2.44ns
+.preheader8.preheader:574  %tmp203 = add i32 %C_2, %K_load_1
+
+ST_48: tmp204 [1/1] 2.44ns (out node of the LUT)
+.preheader8.preheader:575  %tmp204 = add i32 %tmp_31_7, %tmp_44_3
+
+ST_48: tmp205 [1/1] 1.97ns
+.preheader8.preheader:576  %tmp205 = add i32 %tmp_42_3, %tmp204
+
+ST_48: temp_1_3 [1/1] 1.97ns
+.preheader8.preheader:577  %temp_1_3 = add i32 %tmp203, %tmp205
+
+
+ <State 49>: 8.40ns
+ST_49: tmp17 [1/1] 0.00ns (grouped into LUT with out node tmp_30_8)
+.preheader8.preheader:116  %tmp17 = xor i32 %tmp_70, %tmp_31_5
+
+ST_49: tmp18 [1/1] 0.00ns (grouped into LUT with out node tmp_30_8)
+.preheader8.preheader:117  %tmp18 = xor i32 %tmp_18_s, %tmp_18_8
+
+ST_49: tmp_30_8 [1/1] 1.37ns (out node of the LUT)
+.preheader8.preheader:118  %tmp_30_8 = xor i32 %tmp18, %tmp17
+
+ST_49: tmp_31_8 [1/1] 7.03ns
+.preheader8.preheader:119  %tmp_31_8 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 1, i32 %tmp_30_8)
+
+ST_49: C_2_3 [1/1] 7.03ns
+.preheader8.preheader:578  %C_2_3 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 30, i32 %temp_1_1)
+
+ST_49: tmp_42_4 [1/1] 7.03ns
+.preheader8.preheader:579  %tmp_42_4 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 5, i32 %temp_1_3)
+
+
+ <State 50>: 6.38ns
+ST_50: tmp206 [1/1] 0.00ns (grouped into LUT with out node tmp208)
+.preheader8.preheader:580  %tmp206 = xor i32 %C_2_2, %temp_1_2
+
+ST_50: tmp_44_4 [1/1] 0.00ns (grouped into LUT with out node tmp208)
+.preheader8.preheader:581  %tmp_44_4 = xor i32 %tmp206, %C_2_3
+
+ST_50: tmp207 [1/1] 2.44ns
+.preheader8.preheader:582  %tmp207 = add i32 %C_2_1, %K_load_1
+
+ST_50: tmp208 [1/1] 2.44ns (out node of the LUT)
+.preheader8.preheader:583  %tmp208 = add i32 %tmp_31_8, %tmp_44_4
+
+ST_50: tmp209 [1/1] 1.97ns
+.preheader8.preheader:584  %tmp209 = add i32 %tmp_42_4, %tmp208
+
+ST_50: temp_1_4 [1/1] 1.97ns
+.preheader8.preheader:585  %temp_1_4 = add i32 %tmp207, %tmp209
+
+
+ <State 51>: 8.40ns
+ST_51: tmp19 [1/1] 0.00ns (grouped into LUT with out node tmp_30_9)
+.preheader8.preheader:120  %tmp19 = xor i32 %tmp_31_1, %tmp_31_6
+
+ST_51: tmp20 [1/1] 0.00ns (grouped into LUT with out node tmp_30_9)
+.preheader8.preheader:121  %tmp20 = xor i32 %tmp_18_10, %tmp_18_9
+
+ST_51: tmp_30_9 [1/1] 1.37ns (out node of the LUT)
+.preheader8.preheader:122  %tmp_30_9 = xor i32 %tmp20, %tmp19
+
+ST_51: tmp_31_9 [1/1] 7.03ns
+.preheader8.preheader:123  %tmp_31_9 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 1, i32 %tmp_30_9)
+
+ST_51: C_2_4 [1/1] 7.03ns
+.preheader8.preheader:586  %C_2_4 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 30, i32 %temp_1_2)
+
+ST_51: tmp_42_5 [1/1] 7.03ns
+.preheader8.preheader:587  %tmp_42_5 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 5, i32 %temp_1_4)
+
+
+ <State 52>: 6.38ns
+ST_52: tmp210 [1/1] 0.00ns (grouped into LUT with out node tmp212)
+.preheader8.preheader:588  %tmp210 = xor i32 %C_2_3, %temp_1_3
+
+ST_52: tmp_44_5 [1/1] 0.00ns (grouped into LUT with out node tmp212)
+.preheader8.preheader:589  %tmp_44_5 = xor i32 %tmp210, %C_2_4
+
+ST_52: tmp211 [1/1] 2.44ns
+.preheader8.preheader:590  %tmp211 = add i32 %C_2_2, %K_load_1
+
+ST_52: tmp212 [1/1] 2.44ns (out node of the LUT)
+.preheader8.preheader:591  %tmp212 = add i32 %tmp_31_9, %tmp_44_5
+
+ST_52: tmp213 [1/1] 1.97ns
+.preheader8.preheader:592  %tmp213 = add i32 %tmp_42_5, %tmp212
+
+ST_52: temp_1_5 [1/1] 1.97ns
+.preheader8.preheader:593  %temp_1_5 = add i32 %tmp211, %tmp213
+
+
+ <State 53>: 8.40ns
+ST_53: tmp21 [1/1] 0.00ns (grouped into LUT with out node tmp_30_s)
+.preheader8.preheader:124  %tmp21 = xor i32 %tmp_31_2, %tmp_31_7
+
+ST_53: tmp22 [1/1] 0.00ns (grouped into LUT with out node tmp_30_s)
+.preheader8.preheader:125  %tmp22 = xor i32 %tmp_18_11, %tmp_18_s
+
+ST_53: tmp_30_s [1/1] 1.37ns (out node of the LUT)
+.preheader8.preheader:126  %tmp_30_s = xor i32 %tmp22, %tmp21
+
+ST_53: tmp_31_s [1/1] 7.03ns
+.preheader8.preheader:127  %tmp_31_s = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 1, i32 %tmp_30_s)
+
+ST_53: C_2_5 [1/1] 7.03ns
+.preheader8.preheader:594  %C_2_5 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 30, i32 %temp_1_3)
+
+ST_53: tmp_42_6 [1/1] 7.03ns
+.preheader8.preheader:595  %tmp_42_6 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 5, i32 %temp_1_5)
+
+
+ <State 54>: 6.38ns
+ST_54: tmp214 [1/1] 0.00ns (grouped into LUT with out node tmp216)
+.preheader8.preheader:596  %tmp214 = xor i32 %C_2_4, %temp_1_4
+
+ST_54: tmp_44_6 [1/1] 0.00ns (grouped into LUT with out node tmp216)
+.preheader8.preheader:597  %tmp_44_6 = xor i32 %tmp214, %C_2_5
+
+ST_54: tmp215 [1/1] 2.44ns
+.preheader8.preheader:598  %tmp215 = add i32 %C_2_3, %K_load_1
+
+ST_54: tmp216 [1/1] 2.44ns (out node of the LUT)
+.preheader8.preheader:599  %tmp216 = add i32 %tmp_31_s, %tmp_44_6
+
+ST_54: tmp217 [1/1] 1.97ns
+.preheader8.preheader:600  %tmp217 = add i32 %tmp_42_6, %tmp216
+
+ST_54: temp_1_6 [1/1] 1.97ns
+.preheader8.preheader:601  %temp_1_6 = add i32 %tmp215, %tmp217
+
+
+ <State 55>: 8.40ns
+ST_55: tmp23 [1/1] 0.00ns (grouped into LUT with out node tmp_30_10)
+.preheader8.preheader:128  %tmp23 = xor i32 %tmp_31_3, %tmp_31_8
+
+ST_55: tmp24 [1/1] 0.00ns (grouped into LUT with out node tmp_30_10)
+.preheader8.preheader:129  %tmp24 = xor i32 %tmp_18_12, %tmp_18_10
+
+ST_55: tmp_30_10 [1/1] 1.37ns (out node of the LUT)
+.preheader8.preheader:130  %tmp_30_10 = xor i32 %tmp24, %tmp23
+
+ST_55: tmp_31_10 [1/1] 7.03ns
+.preheader8.preheader:131  %tmp_31_10 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 1, i32 %tmp_30_10)
+
+ST_55: C_2_6 [1/1] 7.03ns
+.preheader8.preheader:602  %C_2_6 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 30, i32 %temp_1_4)
+
+ST_55: tmp_42_7 [1/1] 7.03ns
+.preheader8.preheader:603  %tmp_42_7 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 5, i32 %temp_1_6)
+
+
+ <State 56>: 6.38ns
+ST_56: tmp218 [1/1] 0.00ns (grouped into LUT with out node tmp220)
+.preheader8.preheader:604  %tmp218 = xor i32 %C_2_5, %temp_1_5
+
+ST_56: tmp_44_7 [1/1] 0.00ns (grouped into LUT with out node tmp220)
+.preheader8.preheader:605  %tmp_44_7 = xor i32 %tmp218, %C_2_6
+
+ST_56: tmp219 [1/1] 2.44ns
+.preheader8.preheader:606  %tmp219 = add i32 %C_2_4, %K_load_1
+
+ST_56: tmp220 [1/1] 2.44ns (out node of the LUT)
+.preheader8.preheader:607  %tmp220 = add i32 %tmp_31_10, %tmp_44_7
+
+ST_56: tmp221 [1/1] 1.97ns
+.preheader8.preheader:608  %tmp221 = add i32 %tmp_42_7, %tmp220
+
+ST_56: temp_1_7 [1/1] 1.97ns
+.preheader8.preheader:609  %temp_1_7 = add i32 %tmp219, %tmp221
+
+
+ <State 57>: 8.40ns
+ST_57: tmp25 [1/1] 0.00ns (grouped into LUT with out node tmp_30_11)
+.preheader8.preheader:132  %tmp25 = xor i32 %tmp_31_4, %tmp_31_9
+
+ST_57: tmp26 [1/1] 0.00ns (grouped into LUT with out node tmp_30_11)
+.preheader8.preheader:133  %tmp26 = xor i32 %tmp_18_13, %tmp_18_11
+
+ST_57: tmp_30_11 [1/1] 1.37ns (out node of the LUT)
+.preheader8.preheader:134  %tmp_30_11 = xor i32 %tmp26, %tmp25
+
+ST_57: tmp_31_11 [1/1] 7.03ns
+.preheader8.preheader:135  %tmp_31_11 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 1, i32 %tmp_30_11)
+
+ST_57: C_2_7 [1/1] 7.03ns
+.preheader8.preheader:610  %C_2_7 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 30, i32 %temp_1_5)
+
+ST_57: tmp_42_8 [1/1] 7.03ns
+.preheader8.preheader:611  %tmp_42_8 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 5, i32 %temp_1_7)
+
+
+ <State 58>: 6.38ns
+ST_58: tmp222 [1/1] 0.00ns (grouped into LUT with out node tmp224)
+.preheader8.preheader:612  %tmp222 = xor i32 %C_2_6, %temp_1_6
+
+ST_58: tmp_44_8 [1/1] 0.00ns (grouped into LUT with out node tmp224)
+.preheader8.preheader:613  %tmp_44_8 = xor i32 %tmp222, %C_2_7
+
+ST_58: tmp223 [1/1] 2.44ns
+.preheader8.preheader:614  %tmp223 = add i32 %C_2_5, %K_load_1
+
+ST_58: tmp224 [1/1] 2.44ns (out node of the LUT)
+.preheader8.preheader:615  %tmp224 = add i32 %tmp_31_11, %tmp_44_8
+
+ST_58: tmp225 [1/1] 1.97ns
+.preheader8.preheader:616  %tmp225 = add i32 %tmp_42_8, %tmp224
+
+ST_58: temp_1_8 [1/1] 1.97ns
+.preheader8.preheader:617  %temp_1_8 = add i32 %tmp223, %tmp225
+
+
+ <State 59>: 8.40ns
+ST_59: tmp27 [1/1] 0.00ns (grouped into LUT with out node tmp_30_12)
+.preheader8.preheader:136  %tmp27 = xor i32 %tmp_31_5, %tmp_31_s
+
+ST_59: tmp28 [1/1] 0.00ns (grouped into LUT with out node tmp_30_12)
+.preheader8.preheader:137  %tmp28 = xor i32 %tmp_18_14, %tmp_18_12
+
+ST_59: tmp_30_12 [1/1] 1.37ns (out node of the LUT)
+.preheader8.preheader:138  %tmp_30_12 = xor i32 %tmp28, %tmp27
+
+ST_59: tmp_31_12 [1/1] 7.03ns
+.preheader8.preheader:139  %tmp_31_12 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 1, i32 %tmp_30_12)
+
+ST_59: C_2_8 [1/1] 7.03ns
+.preheader8.preheader:618  %C_2_8 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 30, i32 %temp_1_6)
+
+ST_59: tmp_42_9 [1/1] 7.03ns
+.preheader8.preheader:619  %tmp_42_9 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 5, i32 %temp_1_8)
+
+
+ <State 60>: 6.38ns
+ST_60: tmp226 [1/1] 0.00ns (grouped into LUT with out node tmp228)
+.preheader8.preheader:620  %tmp226 = xor i32 %C_2_7, %temp_1_7
+
+ST_60: tmp_44_9 [1/1] 0.00ns (grouped into LUT with out node tmp228)
+.preheader8.preheader:621  %tmp_44_9 = xor i32 %tmp226, %C_2_8
+
+ST_60: tmp227 [1/1] 2.44ns
+.preheader8.preheader:622  %tmp227 = add i32 %C_2_6, %K_load_1
+
+ST_60: tmp228 [1/1] 2.44ns (out node of the LUT)
+.preheader8.preheader:623  %tmp228 = add i32 %tmp_31_12, %tmp_44_9
+
+ST_60: tmp229 [1/1] 1.97ns
+.preheader8.preheader:624  %tmp229 = add i32 %tmp_42_9, %tmp228
+
+ST_60: temp_1_9 [1/1] 1.97ns
+.preheader8.preheader:625  %temp_1_9 = add i32 %tmp227, %tmp229
+
+
+ <State 61>: 8.40ns
+ST_61: tmp29 [1/1] 0.00ns (grouped into LUT with out node tmp_30_13)
+.preheader8.preheader:140  %tmp29 = xor i32 %tmp_31_6, %tmp_31_10
+
+ST_61: tmp30 [1/1] 0.00ns (grouped into LUT with out node tmp_30_13)
+.preheader8.preheader:141  %tmp30 = xor i32 %tmp_70, %tmp_18_13
+
+ST_61: tmp_30_13 [1/1] 1.37ns (out node of the LUT)
+.preheader8.preheader:142  %tmp_30_13 = xor i32 %tmp30, %tmp29
+
+ST_61: tmp_31_13 [1/1] 7.03ns
+.preheader8.preheader:143  %tmp_31_13 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 1, i32 %tmp_30_13)
+
+ST_61: C_2_9 [1/1] 7.03ns
+.preheader8.preheader:626  %C_2_9 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 30, i32 %temp_1_7)
+
+ST_61: tmp_42_s [1/1] 7.03ns
+.preheader8.preheader:627  %tmp_42_s = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 5, i32 %temp_1_9)
+
+
+ <State 62>: 6.38ns
+ST_62: tmp230 [1/1] 0.00ns (grouped into LUT with out node tmp232)
+.preheader8.preheader:628  %tmp230 = xor i32 %C_2_8, %temp_1_8
+
+ST_62: tmp_44_s [1/1] 0.00ns (grouped into LUT with out node tmp232)
+.preheader8.preheader:629  %tmp_44_s = xor i32 %tmp230, %C_2_9
+
+ST_62: tmp231 [1/1] 2.44ns
+.preheader8.preheader:630  %tmp231 = add i32 %C_2_7, %K_load_1
+
+ST_62: tmp232 [1/1] 2.44ns (out node of the LUT)
+.preheader8.preheader:631  %tmp232 = add i32 %tmp_31_13, %tmp_44_s
+
+ST_62: tmp233 [1/1] 1.97ns
+.preheader8.preheader:632  %tmp233 = add i32 %tmp_42_s, %tmp232
+
+ST_62: temp_1_s [1/1] 1.97ns
+.preheader8.preheader:633  %temp_1_s = add i32 %tmp231, %tmp233
+
+
+ <State 63>: 8.40ns
+ST_63: tmp31 [1/1] 0.00ns (grouped into LUT with out node tmp_30_14)
+.preheader8.preheader:144  %tmp31 = xor i32 %tmp_31_7, %tmp_31_11
+
+ST_63: tmp32 [1/1] 0.00ns (grouped into LUT with out node tmp_30_14)
+.preheader8.preheader:145  %tmp32 = xor i32 %tmp_31_1, %tmp_18_14
+
+ST_63: tmp_30_14 [1/1] 1.37ns (out node of the LUT)
+.preheader8.preheader:146  %tmp_30_14 = xor i32 %tmp32, %tmp31
+
+ST_63: tmp_31_14 [1/1] 7.03ns
+.preheader8.preheader:147  %tmp_31_14 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 1, i32 %tmp_30_14)
+
+ST_63: C_2_s [1/1] 7.03ns
+.preheader8.preheader:634  %C_2_s = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 30, i32 %temp_1_8)
+
+ST_63: tmp_42_10 [1/1] 7.03ns
+.preheader8.preheader:635  %tmp_42_10 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 5, i32 %temp_1_s)
+
+
+ <State 64>: 6.38ns
+ST_64: tmp234 [1/1] 0.00ns (grouped into LUT with out node tmp236)
+.preheader8.preheader:636  %tmp234 = xor i32 %C_2_9, %temp_1_9
+
+ST_64: tmp_44_10 [1/1] 0.00ns (grouped into LUT with out node tmp236)
+.preheader8.preheader:637  %tmp_44_10 = xor i32 %tmp234, %C_2_s
+
+ST_64: tmp235 [1/1] 2.44ns
+.preheader8.preheader:638  %tmp235 = add i32 %C_2_8, %K_load_1
+
+ST_64: tmp236 [1/1] 2.44ns (out node of the LUT)
+.preheader8.preheader:639  %tmp236 = add i32 %tmp_31_14, %tmp_44_10
+
+ST_64: tmp237 [1/1] 1.97ns
+.preheader8.preheader:640  %tmp237 = add i32 %tmp_42_10, %tmp236
+
+ST_64: temp_1_10 [1/1] 1.97ns
+.preheader8.preheader:641  %temp_1_10 = add i32 %tmp235, %tmp237
+
+
+ <State 65>: 8.40ns
+ST_65: tmp33 [1/1] 0.00ns (grouped into LUT with out node tmp_30_15)
+.preheader8.preheader:148  %tmp33 = xor i32 %tmp_31_8, %tmp_31_12
+
+ST_65: tmp34 [1/1] 0.00ns (grouped into LUT with out node tmp_30_15)
+.preheader8.preheader:149  %tmp34 = xor i32 %tmp_31_2, %tmp_70
+
+ST_65: tmp_30_15 [1/1] 1.37ns (out node of the LUT)
+.preheader8.preheader:150  %tmp_30_15 = xor i32 %tmp34, %tmp33
+
+ST_65: tmp_31_15 [1/1] 7.03ns
+.preheader8.preheader:151  %tmp_31_15 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 1, i32 %tmp_30_15)
+
+ST_65: C_2_10 [1/1] 7.03ns
+.preheader8.preheader:642  %C_2_10 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 30, i32 %temp_1_9)
+
+ST_65: tmp_42_11 [1/1] 7.03ns
+.preheader8.preheader:643  %tmp_42_11 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 5, i32 %temp_1_10)
+
+
+ <State 66>: 6.38ns
+ST_66: tmp238 [1/1] 0.00ns (grouped into LUT with out node tmp240)
+.preheader8.preheader:644  %tmp238 = xor i32 %C_2_s, %temp_1_s
+
+ST_66: tmp_44_11 [1/1] 0.00ns (grouped into LUT with out node tmp240)
+.preheader8.preheader:645  %tmp_44_11 = xor i32 %tmp238, %C_2_10
+
+ST_66: tmp239 [1/1] 2.44ns
+.preheader8.preheader:646  %tmp239 = add i32 %C_2_9, %K_load_1
+
+ST_66: tmp240 [1/1] 2.44ns (out node of the LUT)
+.preheader8.preheader:647  %tmp240 = add i32 %tmp_31_15, %tmp_44_11
+
+ST_66: tmp241 [1/1] 1.97ns
+.preheader8.preheader:648  %tmp241 = add i32 %tmp_42_11, %tmp240
+
+ST_66: temp_1_11 [1/1] 1.97ns
+.preheader8.preheader:649  %temp_1_11 = add i32 %tmp239, %tmp241
+
+
+ <State 67>: 8.40ns
+ST_67: tmp35 [1/1] 0.00ns (grouped into LUT with out node tmp_30_16)
+.preheader8.preheader:152  %tmp35 = xor i32 %tmp_31_9, %tmp_31_13
+
+ST_67: tmp36 [1/1] 0.00ns (grouped into LUT with out node tmp_30_16)
+.preheader8.preheader:153  %tmp36 = xor i32 %tmp_31_3, %tmp_31_1
+
+ST_67: tmp_30_16 [1/1] 1.37ns (out node of the LUT)
+.preheader8.preheader:154  %tmp_30_16 = xor i32 %tmp36, %tmp35
+
+ST_67: tmp_31_16 [1/1] 7.03ns
+.preheader8.preheader:155  %tmp_31_16 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 1, i32 %tmp_30_16)
+
+ST_67: C_2_11 [1/1] 7.03ns
+.preheader8.preheader:650  %C_2_11 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 30, i32 %temp_1_s)
+
+ST_67: tmp_42_12 [1/1] 7.03ns
+.preheader8.preheader:651  %tmp_42_12 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 5, i32 %temp_1_11)
+
+
+ <State 68>: 6.38ns
+ST_68: tmp242 [1/1] 0.00ns (grouped into LUT with out node tmp244)
+.preheader8.preheader:652  %tmp242 = xor i32 %C_2_10, %temp_1_10
+
+ST_68: tmp_44_12 [1/1] 0.00ns (grouped into LUT with out node tmp244)
+.preheader8.preheader:653  %tmp_44_12 = xor i32 %tmp242, %C_2_11
+
+ST_68: tmp243 [1/1] 2.44ns
+.preheader8.preheader:654  %tmp243 = add i32 %C_2_s, %K_load_1
+
+ST_68: tmp244 [1/1] 2.44ns (out node of the LUT)
+.preheader8.preheader:655  %tmp244 = add i32 %tmp_31_16, %tmp_44_12
+
+ST_68: tmp245 [1/1] 1.97ns
+.preheader8.preheader:656  %tmp245 = add i32 %tmp_42_12, %tmp244
+
+ST_68: temp_1_12 [1/1] 1.97ns
+.preheader8.preheader:657  %temp_1_12 = add i32 %tmp243, %tmp245
+
+
+ <State 69>: 8.40ns
+ST_69: tmp37 [1/1] 0.00ns (grouped into LUT with out node tmp_30_17)
+.preheader8.preheader:156  %tmp37 = xor i32 %tmp_31_s, %tmp_31_14
+
+ST_69: tmp38 [1/1] 0.00ns (grouped into LUT with out node tmp_30_17)
+.preheader8.preheader:157  %tmp38 = xor i32 %tmp_31_4, %tmp_31_2
+
+ST_69: tmp_30_17 [1/1] 1.37ns (out node of the LUT)
+.preheader8.preheader:158  %tmp_30_17 = xor i32 %tmp38, %tmp37
+
+ST_69: tmp_31_17 [1/1] 7.03ns
+.preheader8.preheader:159  %tmp_31_17 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 1, i32 %tmp_30_17)
+
+ST_69: C_2_12 [1/1] 7.03ns
+.preheader8.preheader:658  %C_2_12 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 30, i32 %temp_1_10)
+
+ST_69: tmp_42_13 [1/1] 7.03ns
+.preheader8.preheader:659  %tmp_42_13 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 5, i32 %temp_1_12)
+
+
+ <State 70>: 6.38ns
+ST_70: tmp246 [1/1] 0.00ns (grouped into LUT with out node tmp248)
+.preheader8.preheader:660  %tmp246 = xor i32 %C_2_11, %temp_1_11
+
+ST_70: tmp_44_13 [1/1] 0.00ns (grouped into LUT with out node tmp248)
+.preheader8.preheader:661  %tmp_44_13 = xor i32 %tmp246, %C_2_12
+
+ST_70: tmp247 [1/1] 2.44ns
+.preheader8.preheader:662  %tmp247 = add i32 %C_2_10, %K_load_1
+
+ST_70: tmp248 [1/1] 2.44ns (out node of the LUT)
+.preheader8.preheader:663  %tmp248 = add i32 %tmp_31_17, %tmp_44_13
+
+ST_70: tmp249 [1/1] 1.97ns
+.preheader8.preheader:664  %tmp249 = add i32 %tmp_42_13, %tmp248
+
+ST_70: temp_1_13 [1/1] 1.97ns
+.preheader8.preheader:665  %temp_1_13 = add i32 %tmp247, %tmp249
+
+
+ <State 71>: 8.40ns
+ST_71: tmp39 [1/1] 0.00ns (grouped into LUT with out node tmp_30_18)
+.preheader8.preheader:160  %tmp39 = xor i32 %tmp_31_10, %tmp_31_15
+
+ST_71: tmp40 [1/1] 0.00ns (grouped into LUT with out node tmp_30_18)
+.preheader8.preheader:161  %tmp40 = xor i32 %tmp_31_5, %tmp_31_3
+
+ST_71: tmp_30_18 [1/1] 1.37ns (out node of the LUT)
+.preheader8.preheader:162  %tmp_30_18 = xor i32 %tmp40, %tmp39
+
+ST_71: tmp_31_18 [1/1] 7.03ns
+.preheader8.preheader:163  %tmp_31_18 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 1, i32 %tmp_30_18)
+
+ST_71: C_2_13 [1/1] 7.03ns
+.preheader8.preheader:666  %C_2_13 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 30, i32 %temp_1_11)
+
+ST_71: tmp_42_14 [1/1] 7.03ns
+.preheader8.preheader:667  %tmp_42_14 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 5, i32 %temp_1_13)
+
+
+ <State 72>: 6.38ns
+ST_72: tmp250 [1/1] 0.00ns (grouped into LUT with out node tmp252)
+.preheader8.preheader:668  %tmp250 = xor i32 %C_2_12, %temp_1_12
+
+ST_72: tmp_44_14 [1/1] 0.00ns (grouped into LUT with out node tmp252)
+.preheader8.preheader:669  %tmp_44_14 = xor i32 %tmp250, %C_2_13
+
+ST_72: tmp251 [1/1] 2.44ns
+.preheader8.preheader:670  %tmp251 = add i32 %C_2_11, %K_load_1
+
+ST_72: tmp252 [1/1] 2.44ns (out node of the LUT)
+.preheader8.preheader:671  %tmp252 = add i32 %tmp_31_18, %tmp_44_14
+
+ST_72: tmp253 [1/1] 1.97ns
+.preheader8.preheader:672  %tmp253 = add i32 %tmp_42_14, %tmp252
+
+ST_72: temp_1_14 [1/1] 1.97ns
+.preheader8.preheader:673  %temp_1_14 = add i32 %tmp251, %tmp253
+
+
+ <State 73>: 8.40ns
+ST_73: tmp41 [1/1] 0.00ns (grouped into LUT with out node tmp_30_19)
+.preheader8.preheader:164  %tmp41 = xor i32 %tmp_31_11, %tmp_31_16
+
+ST_73: tmp42 [1/1] 0.00ns (grouped into LUT with out node tmp_30_19)
+.preheader8.preheader:165  %tmp42 = xor i32 %tmp_31_6, %tmp_31_4
+
+ST_73: tmp_30_19 [1/1] 1.37ns (out node of the LUT)
+.preheader8.preheader:166  %tmp_30_19 = xor i32 %tmp42, %tmp41
+
+ST_73: tmp_31_19 [1/1] 7.03ns
+.preheader8.preheader:167  %tmp_31_19 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 1, i32 %tmp_30_19)
+
+ST_73: C_2_14 [1/1] 7.03ns
+.preheader8.preheader:674  %C_2_14 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 30, i32 %temp_1_12)
+
+ST_73: tmp_42_15 [1/1] 7.03ns
+.preheader8.preheader:675  %tmp_42_15 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 5, i32 %temp_1_14)
+
+
+ <State 74>: 6.38ns
+ST_74: tmp254 [1/1] 0.00ns (grouped into LUT with out node tmp256)
+.preheader8.preheader:676  %tmp254 = xor i32 %C_2_13, %temp_1_13
+
+ST_74: tmp_44_15 [1/1] 0.00ns (grouped into LUT with out node tmp256)
+.preheader8.preheader:677  %tmp_44_15 = xor i32 %tmp254, %C_2_14
+
+ST_74: tmp255 [1/1] 2.44ns
+.preheader8.preheader:678  %tmp255 = add i32 %C_2_12, %K_load_1
+
+ST_74: tmp256 [1/1] 2.44ns (out node of the LUT)
+.preheader8.preheader:679  %tmp256 = add i32 %tmp_31_19, %tmp_44_15
+
+ST_74: tmp257 [1/1] 1.97ns
+.preheader8.preheader:680  %tmp257 = add i32 %tmp_42_15, %tmp256
+
+ST_74: temp_1_15 [1/1] 1.97ns
+.preheader8.preheader:681  %temp_1_15 = add i32 %tmp255, %tmp257
+
+
+ <State 75>: 8.40ns
+ST_75: tmp43 [1/1] 0.00ns (grouped into LUT with out node tmp_30_20)
+.preheader8.preheader:168  %tmp43 = xor i32 %tmp_31_12, %tmp_31_17
+
+ST_75: tmp44 [1/1] 0.00ns (grouped into LUT with out node tmp_30_20)
+.preheader8.preheader:169  %tmp44 = xor i32 %tmp_31_7, %tmp_31_5
+
+ST_75: tmp_30_20 [1/1] 1.37ns (out node of the LUT)
+.preheader8.preheader:170  %tmp_30_20 = xor i32 %tmp44, %tmp43
+
+ST_75: tmp_31_20 [1/1] 7.03ns
+.preheader8.preheader:171  %tmp_31_20 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 1, i32 %tmp_30_20)
+
+ST_75: C_2_15 [1/1] 7.03ns
+.preheader8.preheader:682  %C_2_15 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 30, i32 %temp_1_13)
+
+ST_75: tmp_42_16 [1/1] 7.03ns
+.preheader8.preheader:683  %tmp_42_16 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 5, i32 %temp_1_15)
+
+
+ <State 76>: 6.38ns
+ST_76: tmp258 [1/1] 0.00ns (grouped into LUT with out node tmp260)
+.preheader8.preheader:684  %tmp258 = xor i32 %C_2_14, %temp_1_14
+
+ST_76: tmp_44_16 [1/1] 0.00ns (grouped into LUT with out node tmp260)
+.preheader8.preheader:685  %tmp_44_16 = xor i32 %tmp258, %C_2_15
+
+ST_76: tmp259 [1/1] 2.44ns
+.preheader8.preheader:686  %tmp259 = add i32 %C_2_13, %K_load_1
+
+ST_76: tmp260 [1/1] 2.44ns (out node of the LUT)
+.preheader8.preheader:687  %tmp260 = add i32 %tmp_31_20, %tmp_44_16
+
+ST_76: tmp261 [1/1] 1.97ns
+.preheader8.preheader:688  %tmp261 = add i32 %tmp_42_16, %tmp260
+
+ST_76: temp_1_16 [1/1] 1.97ns
+.preheader8.preheader:689  %temp_1_16 = add i32 %tmp259, %tmp261
+
+
+ <State 77>: 8.40ns
+ST_77: tmp45 [1/1] 0.00ns (grouped into LUT with out node tmp_30_21)
+.preheader8.preheader:172  %tmp45 = xor i32 %tmp_31_13, %tmp_31_18
+
+ST_77: tmp46 [1/1] 0.00ns (grouped into LUT with out node tmp_30_21)
+.preheader8.preheader:173  %tmp46 = xor i32 %tmp_31_8, %tmp_31_6
+
+ST_77: tmp_30_21 [1/1] 1.37ns (out node of the LUT)
+.preheader8.preheader:174  %tmp_30_21 = xor i32 %tmp46, %tmp45
+
+ST_77: tmp_31_21 [1/1] 7.03ns
+.preheader8.preheader:175  %tmp_31_21 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 1, i32 %tmp_30_21)
+
+ST_77: C_2_16 [1/1] 7.03ns
+.preheader8.preheader:690  %C_2_16 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 30, i32 %temp_1_14)
+
+ST_77: tmp_42_17 [1/1] 7.03ns
+.preheader8.preheader:691  %tmp_42_17 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 5, i32 %temp_1_16)
+
+
+ <State 78>: 6.38ns
+ST_78: tmp262 [1/1] 0.00ns (grouped into LUT with out node tmp264)
+.preheader8.preheader:692  %tmp262 = xor i32 %C_2_15, %temp_1_15
+
+ST_78: tmp_44_17 [1/1] 0.00ns (grouped into LUT with out node tmp264)
+.preheader8.preheader:693  %tmp_44_17 = xor i32 %tmp262, %C_2_16
+
+ST_78: tmp263 [1/1] 2.44ns
+.preheader8.preheader:694  %tmp263 = add i32 %C_2_14, %K_load_1
+
+ST_78: tmp264 [1/1] 2.44ns (out node of the LUT)
+.preheader8.preheader:695  %tmp264 = add i32 %tmp_31_21, %tmp_44_17
+
+ST_78: tmp265 [1/1] 1.97ns
+.preheader8.preheader:696  %tmp265 = add i32 %tmp_42_17, %tmp264
+
+ST_78: temp_1_17 [1/1] 1.97ns
+.preheader8.preheader:697  %temp_1_17 = add i32 %tmp263, %tmp265
+
+ST_78: tmp267 [1/1] 2.44ns
+.preheader8.preheader:702  %tmp267 = add i32 %C_2_15, %K_load_1
+
+
+ <State 79>: 8.40ns
+ST_79: tmp47 [1/1] 0.00ns (grouped into LUT with out node tmp_30_22)
+.preheader8.preheader:176  %tmp47 = xor i32 %tmp_31_14, %tmp_31_19
+
+ST_79: tmp48 [1/1] 0.00ns (grouped into LUT with out node tmp_30_22)
+.preheader8.preheader:177  %tmp48 = xor i32 %tmp_31_9, %tmp_31_7
+
+ST_79: tmp_30_22 [1/1] 1.37ns (out node of the LUT)
+.preheader8.preheader:178  %tmp_30_22 = xor i32 %tmp48, %tmp47
+
+ST_79: tmp_31_22 [1/1] 7.03ns
+.preheader8.preheader:179  %tmp_31_22 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 1, i32 %tmp_30_22)
+
+ST_79: C_2_17 [1/1] 7.03ns
+.preheader8.preheader:698  %C_2_17 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 30, i32 %temp_1_15)
+
+ST_79: tmp_42_18 [1/1] 7.03ns
+.preheader8.preheader:699  %tmp_42_18 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 5, i32 %temp_1_17)
+
+
+ <State 80>: 6.38ns
+ST_80: tmp266 [1/1] 0.00ns (grouped into LUT with out node tmp268)
+.preheader8.preheader:700  %tmp266 = xor i32 %C_2_16, %temp_1_16
+
+ST_80: tmp_44_18 [1/1] 0.00ns (grouped into LUT with out node tmp268)
+.preheader8.preheader:701  %tmp_44_18 = xor i32 %tmp266, %C_2_17
+
+ST_80: tmp268 [1/1] 2.44ns (out node of the LUT)
+.preheader8.preheader:703  %tmp268 = add i32 %tmp_31_22, %tmp_44_18
+
+ST_80: tmp269 [1/1] 1.97ns
+.preheader8.preheader:704  %tmp269 = add i32 %tmp_42_18, %tmp268
+
+ST_80: temp_1_18 [1/1] 1.97ns
+.preheader8.preheader:705  %temp_1_18 = add i32 %tmp267, %tmp269
+
+
+ <State 81>: 8.40ns
+ST_81: tmp49 [1/1] 0.00ns (grouped into LUT with out node tmp_30_23)
+.preheader8.preheader:180  %tmp49 = xor i32 %tmp_31_15, %tmp_31_20
+
+ST_81: tmp50 [1/1] 0.00ns (grouped into LUT with out node tmp_30_23)
+.preheader8.preheader:181  %tmp50 = xor i32 %tmp_31_s, %tmp_31_8
+
+ST_81: tmp_30_23 [1/1] 1.37ns (out node of the LUT)
+.preheader8.preheader:182  %tmp_30_23 = xor i32 %tmp50, %tmp49
+
+ST_81: tmp_31_23 [1/1] 7.03ns
+.preheader8.preheader:183  %tmp_31_23 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 1, i32 %tmp_30_23)
+
+ST_81: C_2_18 [1/1] 7.03ns
+.preheader8.preheader:706  %C_2_18 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 30, i32 %temp_1_16)
+
+ST_81: K_load_2 [2/2] 2.39ns
+.preheader8.preheader:707  %K_load_2 = load i32* getelementptr inbounds ([4 x i32]* @K, i64 0, i64 2), align 8
+
+ST_81: tmp_78 [1/1] 7.03ns
+.preheader8.preheader:708  %tmp_78 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 5, i32 %temp_1_18)
+
+
+ <State 82>: 6.80ns
+ST_82: K_load_2 [1/2] 2.39ns
+.preheader8.preheader:707  %K_load_2 = load i32* getelementptr inbounds ([4 x i32]* @K, i64 0, i64 2), align 8
+
+ST_82: tmp_79 [1/1] 0.00ns (grouped into LUT with out node tmp271)
+.preheader8.preheader:709  %tmp_79 = or i32 %C_2_18, %C_2_17
+
+ST_82: tmp_80 [1/1] 0.00ns (grouped into LUT with out node tmp271)
+.preheader8.preheader:710  %tmp_80 = and i32 %temp_1_17, %tmp_79
+
+ST_82: tmp_81 [1/1] 0.00ns (grouped into LUT with out node tmp271)
+.preheader8.preheader:711  %tmp_81 = and i32 %C_2_18, %C_2_17
+
+ST_82: tmp_82 [1/1] 0.00ns (grouped into LUT with out node tmp271)
+.preheader8.preheader:712  %tmp_82 = or i32 %tmp_80, %tmp_81
+
+ST_82: tmp270 [1/1] 2.44ns
+.preheader8.preheader:713  %tmp270 = add i32 %C_2_16, %K_load_2
+
+ST_82: tmp271 [1/1] 2.44ns (out node of the LUT)
+.preheader8.preheader:714  %tmp271 = add i32 %tmp_31_23, %tmp_82
+
+ST_82: tmp272 [1/1] 1.97ns
+.preheader8.preheader:715  %tmp272 = add i32 %tmp_78, %tmp271
+
+ST_82: temp_20 [1/1] 1.97ns
+.preheader8.preheader:716  %temp_20 = add i32 %tmp270, %tmp272
+
+
+ <State 83>: 8.40ns
+ST_83: tmp51 [1/1] 0.00ns (grouped into LUT with out node tmp_30_24)
+.preheader8.preheader:184  %tmp51 = xor i32 %tmp_31_16, %tmp_31_21
+
+ST_83: tmp52 [1/1] 0.00ns (grouped into LUT with out node tmp_30_24)
+.preheader8.preheader:185  %tmp52 = xor i32 %tmp_31_10, %tmp_31_9
+
+ST_83: tmp_30_24 [1/1] 1.37ns (out node of the LUT)
+.preheader8.preheader:186  %tmp_30_24 = xor i32 %tmp52, %tmp51
+
+ST_83: tmp_31_24 [1/1] 7.03ns
+.preheader8.preheader:187  %tmp_31_24 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 1, i32 %tmp_30_24)
+
+ST_83: C_3 [1/1] 7.03ns
+.preheader8.preheader:717  %C_3 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 30, i32 %temp_1_17)
+
+ST_83: tmp_49_1 [1/1] 7.03ns
+.preheader8.preheader:718  %tmp_49_1 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 5, i32 %temp_20)
+
+
+ <State 84>: 6.38ns
+ST_84: tmp_50_1 [1/1] 0.00ns (grouped into LUT with out node tmp274)
+.preheader8.preheader:719  %tmp_50_1 = or i32 %C_3, %C_2_18
+
+ST_84: tmp_51_1 [1/1] 0.00ns (grouped into LUT with out node tmp274)
+.preheader8.preheader:720  %tmp_51_1 = and i32 %temp_1_18, %tmp_50_1
+
+ST_84: tmp_52_1 [1/1] 0.00ns (grouped into LUT with out node tmp274)
+.preheader8.preheader:721  %tmp_52_1 = and i32 %C_3, %C_2_18
+
+ST_84: tmp_53_1 [1/1] 0.00ns (grouped into LUT with out node tmp274)
+.preheader8.preheader:722  %tmp_53_1 = or i32 %tmp_51_1, %tmp_52_1
+
+ST_84: tmp273 [1/1] 2.44ns
+.preheader8.preheader:723  %tmp273 = add i32 %C_2_17, %K_load_2
+
+ST_84: tmp274 [1/1] 2.44ns (out node of the LUT)
+.preheader8.preheader:724  %tmp274 = add i32 %tmp_31_24, %tmp_53_1
+
+ST_84: tmp275 [1/1] 1.97ns
+.preheader8.preheader:725  %tmp275 = add i32 %tmp_49_1, %tmp274
+
+ST_84: temp_2_1 [1/1] 1.97ns
+.preheader8.preheader:726  %temp_2_1 = add i32 %tmp273, %tmp275
+
+
+ <State 85>: 8.40ns
+ST_85: tmp53 [1/1] 0.00ns (grouped into LUT with out node tmp_30_25)
+.preheader8.preheader:188  %tmp53 = xor i32 %tmp_31_17, %tmp_31_22
+
+ST_85: tmp54 [1/1] 0.00ns (grouped into LUT with out node tmp_30_25)
+.preheader8.preheader:189  %tmp54 = xor i32 %tmp_31_11, %tmp_31_s
+
+ST_85: tmp_30_25 [1/1] 1.37ns (out node of the LUT)
+.preheader8.preheader:190  %tmp_30_25 = xor i32 %tmp54, %tmp53
+
+ST_85: tmp_31_25 [1/1] 7.03ns
+.preheader8.preheader:191  %tmp_31_25 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 1, i32 %tmp_30_25)
+
+ST_85: C_3_1 [1/1] 7.03ns
+.preheader8.preheader:727  %C_3_1 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 30, i32 %temp_1_18)
+
+ST_85: tmp_49_2 [1/1] 7.03ns
+.preheader8.preheader:728  %tmp_49_2 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 5, i32 %temp_2_1)
+
+
+ <State 86>: 6.38ns
+ST_86: tmp_50_2 [1/1] 0.00ns (grouped into LUT with out node tmp277)
+.preheader8.preheader:729  %tmp_50_2 = or i32 %C_3_1, %C_3
+
+ST_86: tmp_51_2 [1/1] 0.00ns (grouped into LUT with out node tmp277)
+.preheader8.preheader:730  %tmp_51_2 = and i32 %temp_20, %tmp_50_2
+
+ST_86: tmp_52_2 [1/1] 0.00ns (grouped into LUT with out node tmp277)
+.preheader8.preheader:731  %tmp_52_2 = and i32 %C_3_1, %C_3
+
+ST_86: tmp_53_2 [1/1] 0.00ns (grouped into LUT with out node tmp277)
+.preheader8.preheader:732  %tmp_53_2 = or i32 %tmp_51_2, %tmp_52_2
+
+ST_86: tmp276 [1/1] 2.44ns
+.preheader8.preheader:733  %tmp276 = add i32 %C_2_18, %K_load_2
+
+ST_86: tmp277 [1/1] 2.44ns (out node of the LUT)
+.preheader8.preheader:734  %tmp277 = add i32 %tmp_31_25, %tmp_53_2
+
+ST_86: tmp278 [1/1] 1.97ns
+.preheader8.preheader:735  %tmp278 = add i32 %tmp_49_2, %tmp277
+
+ST_86: temp_2_2 [1/1] 1.97ns
+.preheader8.preheader:736  %temp_2_2 = add i32 %tmp276, %tmp278
+
+
+ <State 87>: 8.40ns
+ST_87: tmp55 [1/1] 0.00ns (grouped into LUT with out node tmp_30_26)
+.preheader8.preheader:192  %tmp55 = xor i32 %tmp_31_18, %tmp_31_23
+
+ST_87: tmp56 [1/1] 0.00ns (grouped into LUT with out node tmp_30_26)
+.preheader8.preheader:193  %tmp56 = xor i32 %tmp_31_12, %tmp_31_10
+
+ST_87: tmp_30_26 [1/1] 1.37ns (out node of the LUT)
+.preheader8.preheader:194  %tmp_30_26 = xor i32 %tmp56, %tmp55
+
+ST_87: tmp_31_26 [1/1] 7.03ns
+.preheader8.preheader:195  %tmp_31_26 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 1, i32 %tmp_30_26)
+
+ST_87: C_3_2 [1/1] 7.03ns
+.preheader8.preheader:737  %C_3_2 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 30, i32 %temp_20)
+
+ST_87: tmp_49_3 [1/1] 7.03ns
+.preheader8.preheader:738  %tmp_49_3 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 5, i32 %temp_2_2)
+
+
+ <State 88>: 6.38ns
+ST_88: tmp_50_3 [1/1] 0.00ns (grouped into LUT with out node tmp280)
+.preheader8.preheader:739  %tmp_50_3 = or i32 %C_3_2, %C_3_1
+
+ST_88: tmp_51_3 [1/1] 0.00ns (grouped into LUT with out node tmp280)
+.preheader8.preheader:740  %tmp_51_3 = and i32 %temp_2_1, %tmp_50_3
+
+ST_88: tmp_52_3 [1/1] 0.00ns (grouped into LUT with out node tmp280)
+.preheader8.preheader:741  %tmp_52_3 = and i32 %C_3_2, %C_3_1
+
+ST_88: tmp_53_3 [1/1] 0.00ns (grouped into LUT with out node tmp280)
+.preheader8.preheader:742  %tmp_53_3 = or i32 %tmp_51_3, %tmp_52_3
+
+ST_88: tmp279 [1/1] 2.44ns
+.preheader8.preheader:743  %tmp279 = add i32 %C_3, %K_load_2
+
+ST_88: tmp280 [1/1] 2.44ns (out node of the LUT)
+.preheader8.preheader:744  %tmp280 = add i32 %tmp_31_26, %tmp_53_3
+
+ST_88: tmp281 [1/1] 1.97ns
+.preheader8.preheader:745  %tmp281 = add i32 %tmp_49_3, %tmp280
+
+ST_88: temp_2_3 [1/1] 1.97ns
+.preheader8.preheader:746  %temp_2_3 = add i32 %tmp279, %tmp281
+
+
+ <State 89>: 8.40ns
+ST_89: tmp57 [1/1] 0.00ns (grouped into LUT with out node tmp_30_27)
+.preheader8.preheader:196  %tmp57 = xor i32 %tmp_31_19, %tmp_31_24
+
+ST_89: tmp58 [1/1] 0.00ns (grouped into LUT with out node tmp_30_27)
+.preheader8.preheader:197  %tmp58 = xor i32 %tmp_31_13, %tmp_31_11
+
+ST_89: tmp_30_27 [1/1] 1.37ns (out node of the LUT)
+.preheader8.preheader:198  %tmp_30_27 = xor i32 %tmp58, %tmp57
+
+ST_89: tmp_31_27 [1/1] 7.03ns
+.preheader8.preheader:199  %tmp_31_27 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 1, i32 %tmp_30_27)
+
+ST_89: C_3_3 [1/1] 7.03ns
+.preheader8.preheader:747  %C_3_3 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 30, i32 %temp_2_1)
+
+ST_89: tmp_49_4 [1/1] 7.03ns
+.preheader8.preheader:748  %tmp_49_4 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 5, i32 %temp_2_3)
+
+
+ <State 90>: 6.38ns
+ST_90: tmp_50_4 [1/1] 0.00ns (grouped into LUT with out node tmp283)
+.preheader8.preheader:749  %tmp_50_4 = or i32 %C_3_3, %C_3_2
+
+ST_90: tmp_51_4 [1/1] 0.00ns (grouped into LUT with out node tmp283)
+.preheader8.preheader:750  %tmp_51_4 = and i32 %temp_2_2, %tmp_50_4
+
+ST_90: tmp_52_4 [1/1] 0.00ns (grouped into LUT with out node tmp283)
+.preheader8.preheader:751  %tmp_52_4 = and i32 %C_3_3, %C_3_2
+
+ST_90: tmp_53_4 [1/1] 0.00ns (grouped into LUT with out node tmp283)
+.preheader8.preheader:752  %tmp_53_4 = or i32 %tmp_51_4, %tmp_52_4
+
+ST_90: tmp282 [1/1] 2.44ns
+.preheader8.preheader:753  %tmp282 = add i32 %C_3_1, %K_load_2
+
+ST_90: tmp283 [1/1] 2.44ns (out node of the LUT)
+.preheader8.preheader:754  %tmp283 = add i32 %tmp_31_27, %tmp_53_4
+
+ST_90: tmp284 [1/1] 1.97ns
+.preheader8.preheader:755  %tmp284 = add i32 %tmp_49_4, %tmp283
+
+ST_90: temp_2_4 [1/1] 1.97ns
+.preheader8.preheader:756  %temp_2_4 = add i32 %tmp282, %tmp284
+
+
+ <State 91>: 8.40ns
+ST_91: tmp59 [1/1] 0.00ns (grouped into LUT with out node tmp_30_28)
+.preheader8.preheader:200  %tmp59 = xor i32 %tmp_31_20, %tmp_31_25
+
+ST_91: tmp60 [1/1] 0.00ns (grouped into LUT with out node tmp_30_28)
+.preheader8.preheader:201  %tmp60 = xor i32 %tmp_31_14, %tmp_31_12
+
+ST_91: tmp_30_28 [1/1] 1.37ns (out node of the LUT)
+.preheader8.preheader:202  %tmp_30_28 = xor i32 %tmp60, %tmp59
+
+ST_91: tmp_31_28 [1/1] 7.03ns
+.preheader8.preheader:203  %tmp_31_28 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 1, i32 %tmp_30_28)
+
+ST_91: C_3_4 [1/1] 7.03ns
+.preheader8.preheader:757  %C_3_4 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 30, i32 %temp_2_2)
+
+ST_91: tmp_49_5 [1/1] 7.03ns
+.preheader8.preheader:758  %tmp_49_5 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 5, i32 %temp_2_4)
+
+
+ <State 92>: 6.38ns
+ST_92: tmp_50_5 [1/1] 0.00ns (grouped into LUT with out node tmp286)
+.preheader8.preheader:759  %tmp_50_5 = or i32 %C_3_4, %C_3_3
+
+ST_92: tmp_51_5 [1/1] 0.00ns (grouped into LUT with out node tmp286)
+.preheader8.preheader:760  %tmp_51_5 = and i32 %temp_2_3, %tmp_50_5
+
+ST_92: tmp_52_5 [1/1] 0.00ns (grouped into LUT with out node tmp286)
+.preheader8.preheader:761  %tmp_52_5 = and i32 %C_3_4, %C_3_3
+
+ST_92: tmp_53_5 [1/1] 0.00ns (grouped into LUT with out node tmp286)
+.preheader8.preheader:762  %tmp_53_5 = or i32 %tmp_51_5, %tmp_52_5
+
+ST_92: tmp285 [1/1] 2.44ns
+.preheader8.preheader:763  %tmp285 = add i32 %C_3_2, %K_load_2
+
+ST_92: tmp286 [1/1] 2.44ns (out node of the LUT)
+.preheader8.preheader:764  %tmp286 = add i32 %tmp_31_28, %tmp_53_5
+
+ST_92: tmp287 [1/1] 1.97ns
+.preheader8.preheader:765  %tmp287 = add i32 %tmp_49_5, %tmp286
+
+ST_92: temp_2_5 [1/1] 1.97ns
+.preheader8.preheader:766  %temp_2_5 = add i32 %tmp285, %tmp287
+
+
+ <State 93>: 8.40ns
+ST_93: tmp61 [1/1] 0.00ns (grouped into LUT with out node tmp_30_29)
+.preheader8.preheader:204  %tmp61 = xor i32 %tmp_31_21, %tmp_31_26
+
+ST_93: tmp62 [1/1] 0.00ns (grouped into LUT with out node tmp_30_29)
+.preheader8.preheader:205  %tmp62 = xor i32 %tmp_31_15, %tmp_31_13
+
+ST_93: tmp_30_29 [1/1] 1.37ns (out node of the LUT)
+.preheader8.preheader:206  %tmp_30_29 = xor i32 %tmp62, %tmp61
+
+ST_93: tmp_31_29 [1/1] 7.03ns
+.preheader8.preheader:207  %tmp_31_29 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 1, i32 %tmp_30_29)
+
+ST_93: C_3_5 [1/1] 7.03ns
+.preheader8.preheader:767  %C_3_5 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 30, i32 %temp_2_3)
+
+ST_93: tmp_49_6 [1/1] 7.03ns
+.preheader8.preheader:768  %tmp_49_6 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 5, i32 %temp_2_5)
+
+
+ <State 94>: 6.38ns
+ST_94: tmp_50_6 [1/1] 0.00ns (grouped into LUT with out node tmp289)
+.preheader8.preheader:769  %tmp_50_6 = or i32 %C_3_5, %C_3_4
+
+ST_94: tmp_51_6 [1/1] 0.00ns (grouped into LUT with out node tmp289)
+.preheader8.preheader:770  %tmp_51_6 = and i32 %temp_2_4, %tmp_50_6
+
+ST_94: tmp_52_6 [1/1] 0.00ns (grouped into LUT with out node tmp289)
+.preheader8.preheader:771  %tmp_52_6 = and i32 %C_3_5, %C_3_4
+
+ST_94: tmp_53_6 [1/1] 0.00ns (grouped into LUT with out node tmp289)
+.preheader8.preheader:772  %tmp_53_6 = or i32 %tmp_51_6, %tmp_52_6
+
+ST_94: tmp288 [1/1] 2.44ns
+.preheader8.preheader:773  %tmp288 = add i32 %C_3_3, %K_load_2
+
+ST_94: tmp289 [1/1] 2.44ns (out node of the LUT)
+.preheader8.preheader:774  %tmp289 = add i32 %tmp_31_29, %tmp_53_6
+
+ST_94: tmp290 [1/1] 1.97ns
+.preheader8.preheader:775  %tmp290 = add i32 %tmp_49_6, %tmp289
+
+ST_94: temp_2_6 [1/1] 1.97ns
+.preheader8.preheader:776  %temp_2_6 = add i32 %tmp288, %tmp290
+
+
+ <State 95>: 8.40ns
+ST_95: tmp63 [1/1] 0.00ns (grouped into LUT with out node tmp_30_30)
+.preheader8.preheader:208  %tmp63 = xor i32 %tmp_31_22, %tmp_31_27
+
+ST_95: tmp64 [1/1] 0.00ns (grouped into LUT with out node tmp_30_30)
+.preheader8.preheader:209  %tmp64 = xor i32 %tmp_31_16, %tmp_31_14
+
+ST_95: tmp_30_30 [1/1] 1.37ns (out node of the LUT)
+.preheader8.preheader:210  %tmp_30_30 = xor i32 %tmp64, %tmp63
+
+ST_95: tmp_31_30 [1/1] 7.03ns
+.preheader8.preheader:211  %tmp_31_30 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 1, i32 %tmp_30_30)
+
+ST_95: C_3_6 [1/1] 7.03ns
+.preheader8.preheader:777  %C_3_6 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 30, i32 %temp_2_4)
+
+ST_95: tmp_49_7 [1/1] 7.03ns
+.preheader8.preheader:778  %tmp_49_7 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 5, i32 %temp_2_6)
+
+
+ <State 96>: 6.38ns
+ST_96: tmp_50_7 [1/1] 0.00ns (grouped into LUT with out node tmp292)
+.preheader8.preheader:779  %tmp_50_7 = or i32 %C_3_6, %C_3_5
+
+ST_96: tmp_51_7 [1/1] 0.00ns (grouped into LUT with out node tmp292)
+.preheader8.preheader:780  %tmp_51_7 = and i32 %temp_2_5, %tmp_50_7
+
+ST_96: tmp_52_7 [1/1] 0.00ns (grouped into LUT with out node tmp292)
+.preheader8.preheader:781  %tmp_52_7 = and i32 %C_3_6, %C_3_5
+
+ST_96: tmp_53_7 [1/1] 0.00ns (grouped into LUT with out node tmp292)
+.preheader8.preheader:782  %tmp_53_7 = or i32 %tmp_51_7, %tmp_52_7
+
+ST_96: tmp291 [1/1] 2.44ns
+.preheader8.preheader:783  %tmp291 = add i32 %C_3_4, %K_load_2
+
+ST_96: tmp292 [1/1] 2.44ns (out node of the LUT)
+.preheader8.preheader:784  %tmp292 = add i32 %tmp_31_30, %tmp_53_7
+
+ST_96: tmp293 [1/1] 1.97ns
+.preheader8.preheader:785  %tmp293 = add i32 %tmp_49_7, %tmp292
+
+ST_96: temp_2_7 [1/1] 1.97ns
+.preheader8.preheader:786  %temp_2_7 = add i32 %tmp291, %tmp293
+
+
+ <State 97>: 8.40ns
+ST_97: tmp65 [1/1] 0.00ns (grouped into LUT with out node tmp_30_31)
+.preheader8.preheader:212  %tmp65 = xor i32 %tmp_31_23, %tmp_31_28
+
+ST_97: tmp66 [1/1] 0.00ns (grouped into LUT with out node tmp_30_31)
+.preheader8.preheader:213  %tmp66 = xor i32 %tmp_31_17, %tmp_31_15
+
+ST_97: tmp_30_31 [1/1] 1.37ns (out node of the LUT)
+.preheader8.preheader:214  %tmp_30_31 = xor i32 %tmp66, %tmp65
+
+ST_97: tmp_31_31 [1/1] 7.03ns
+.preheader8.preheader:215  %tmp_31_31 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 1, i32 %tmp_30_31)
+
+ST_97: C_3_7 [1/1] 7.03ns
+.preheader8.preheader:787  %C_3_7 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 30, i32 %temp_2_5)
+
+ST_97: tmp_49_8 [1/1] 7.03ns
+.preheader8.preheader:788  %tmp_49_8 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 5, i32 %temp_2_7)
+
+
+ <State 98>: 6.38ns
+ST_98: tmp_50_8 [1/1] 0.00ns (grouped into LUT with out node tmp295)
+.preheader8.preheader:789  %tmp_50_8 = or i32 %C_3_7, %C_3_6
+
+ST_98: tmp_51_8 [1/1] 0.00ns (grouped into LUT with out node tmp295)
+.preheader8.preheader:790  %tmp_51_8 = and i32 %temp_2_6, %tmp_50_8
+
+ST_98: tmp_52_8 [1/1] 0.00ns (grouped into LUT with out node tmp295)
+.preheader8.preheader:791  %tmp_52_8 = and i32 %C_3_7, %C_3_6
+
+ST_98: tmp_53_8 [1/1] 0.00ns (grouped into LUT with out node tmp295)
+.preheader8.preheader:792  %tmp_53_8 = or i32 %tmp_51_8, %tmp_52_8
+
+ST_98: tmp294 [1/1] 2.44ns
+.preheader8.preheader:793  %tmp294 = add i32 %C_3_5, %K_load_2
+
+ST_98: tmp295 [1/1] 2.44ns (out node of the LUT)
+.preheader8.preheader:794  %tmp295 = add i32 %tmp_31_31, %tmp_53_8
+
+ST_98: tmp296 [1/1] 1.97ns
+.preheader8.preheader:795  %tmp296 = add i32 %tmp_49_8, %tmp295
+
+ST_98: temp_2_8 [1/1] 1.97ns
+.preheader8.preheader:796  %temp_2_8 = add i32 %tmp294, %tmp296
+
+
+ <State 99>: 8.40ns
+ST_99: tmp67 [1/1] 0.00ns (grouped into LUT with out node tmp_30_32)
+.preheader8.preheader:216  %tmp67 = xor i32 %tmp_31_24, %tmp_31_29
+
+ST_99: tmp68 [1/1] 0.00ns (grouped into LUT with out node tmp_30_32)
+.preheader8.preheader:217  %tmp68 = xor i32 %tmp_31_18, %tmp_31_16
+
+ST_99: tmp_30_32 [1/1] 1.37ns (out node of the LUT)
+.preheader8.preheader:218  %tmp_30_32 = xor i32 %tmp68, %tmp67
+
+ST_99: tmp_31_32 [1/1] 7.03ns
+.preheader8.preheader:219  %tmp_31_32 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 1, i32 %tmp_30_32)
+
+ST_99: C_3_8 [1/1] 7.03ns
+.preheader8.preheader:797  %C_3_8 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 30, i32 %temp_2_6)
+
+ST_99: tmp_49_9 [1/1] 7.03ns
+.preheader8.preheader:798  %tmp_49_9 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 5, i32 %temp_2_8)
+
+
+ <State 100>: 6.38ns
+ST_100: tmp_50_9 [1/1] 0.00ns (grouped into LUT with out node tmp298)
+.preheader8.preheader:799  %tmp_50_9 = or i32 %C_3_8, %C_3_7
+
+ST_100: tmp_51_9 [1/1] 0.00ns (grouped into LUT with out node tmp298)
+.preheader8.preheader:800  %tmp_51_9 = and i32 %temp_2_7, %tmp_50_9
+
+ST_100: tmp_52_9 [1/1] 0.00ns (grouped into LUT with out node tmp298)
+.preheader8.preheader:801  %tmp_52_9 = and i32 %C_3_8, %C_3_7
+
+ST_100: tmp_53_9 [1/1] 0.00ns (grouped into LUT with out node tmp298)
+.preheader8.preheader:802  %tmp_53_9 = or i32 %tmp_51_9, %tmp_52_9
+
+ST_100: tmp297 [1/1] 2.44ns
+.preheader8.preheader:803  %tmp297 = add i32 %C_3_6, %K_load_2
+
+ST_100: tmp298 [1/1] 2.44ns (out node of the LUT)
+.preheader8.preheader:804  %tmp298 = add i32 %tmp_31_32, %tmp_53_9
+
+ST_100: tmp299 [1/1] 1.97ns
+.preheader8.preheader:805  %tmp299 = add i32 %tmp_49_9, %tmp298
+
+ST_100: temp_2_9 [1/1] 1.97ns
+.preheader8.preheader:806  %temp_2_9 = add i32 %tmp297, %tmp299
+
+
+ <State 101>: 8.40ns
+ST_101: tmp69 [1/1] 0.00ns (grouped into LUT with out node tmp_30_33)
+.preheader8.preheader:220  %tmp69 = xor i32 %tmp_31_25, %tmp_31_30
+
+ST_101: tmp70 [1/1] 0.00ns (grouped into LUT with out node tmp_30_33)
+.preheader8.preheader:221  %tmp70 = xor i32 %tmp_31_19, %tmp_31_17
+
+ST_101: tmp_30_33 [1/1] 1.37ns (out node of the LUT)
+.preheader8.preheader:222  %tmp_30_33 = xor i32 %tmp70, %tmp69
+
+ST_101: tmp_31_33 [1/1] 7.03ns
+.preheader8.preheader:223  %tmp_31_33 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 1, i32 %tmp_30_33)
+
+ST_101: C_3_9 [1/1] 7.03ns
+.preheader8.preheader:807  %C_3_9 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 30, i32 %temp_2_7)
+
+ST_101: tmp_49_s [1/1] 7.03ns
+.preheader8.preheader:808  %tmp_49_s = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 5, i32 %temp_2_9)
+
+
+ <State 102>: 6.38ns
+ST_102: tmp_50_s [1/1] 0.00ns (grouped into LUT with out node tmp301)
+.preheader8.preheader:809  %tmp_50_s = or i32 %C_3_9, %C_3_8
+
+ST_102: tmp_51_s [1/1] 0.00ns (grouped into LUT with out node tmp301)
+.preheader8.preheader:810  %tmp_51_s = and i32 %temp_2_8, %tmp_50_s
+
+ST_102: tmp_52_s [1/1] 0.00ns (grouped into LUT with out node tmp301)
+.preheader8.preheader:811  %tmp_52_s = and i32 %C_3_9, %C_3_8
+
+ST_102: tmp_53_s [1/1] 0.00ns (grouped into LUT with out node tmp301)
+.preheader8.preheader:812  %tmp_53_s = or i32 %tmp_51_s, %tmp_52_s
+
+ST_102: tmp300 [1/1] 2.44ns
+.preheader8.preheader:813  %tmp300 = add i32 %C_3_7, %K_load_2
+
+ST_102: tmp301 [1/1] 2.44ns (out node of the LUT)
+.preheader8.preheader:814  %tmp301 = add i32 %tmp_31_33, %tmp_53_s
+
+ST_102: tmp302 [1/1] 1.97ns
+.preheader8.preheader:815  %tmp302 = add i32 %tmp_49_s, %tmp301
+
+ST_102: temp_2_s [1/1] 1.97ns
+.preheader8.preheader:816  %temp_2_s = add i32 %tmp300, %tmp302
+
+
+ <State 103>: 8.40ns
+ST_103: tmp71 [1/1] 0.00ns (grouped into LUT with out node tmp_30_34)
+.preheader8.preheader:224  %tmp71 = xor i32 %tmp_31_26, %tmp_31_31
+
+ST_103: tmp72 [1/1] 0.00ns (grouped into LUT with out node tmp_30_34)
+.preheader8.preheader:225  %tmp72 = xor i32 %tmp_31_20, %tmp_31_18
+
+ST_103: tmp_30_34 [1/1] 1.37ns (out node of the LUT)
+.preheader8.preheader:226  %tmp_30_34 = xor i32 %tmp72, %tmp71
+
+ST_103: tmp_31_34 [1/1] 7.03ns
+.preheader8.preheader:227  %tmp_31_34 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 1, i32 %tmp_30_34)
+
+ST_103: C_3_s [1/1] 7.03ns
+.preheader8.preheader:817  %C_3_s = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 30, i32 %temp_2_8)
+
+ST_103: tmp_49_10 [1/1] 7.03ns
+.preheader8.preheader:818  %tmp_49_10 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 5, i32 %temp_2_s)
+
+
+ <State 104>: 6.38ns
+ST_104: tmp_50_10 [1/1] 0.00ns (grouped into LUT with out node tmp304)
+.preheader8.preheader:819  %tmp_50_10 = or i32 %C_3_s, %C_3_9
+
+ST_104: tmp_51_10 [1/1] 0.00ns (grouped into LUT with out node tmp304)
+.preheader8.preheader:820  %tmp_51_10 = and i32 %temp_2_9, %tmp_50_10
+
+ST_104: tmp_52_10 [1/1] 0.00ns (grouped into LUT with out node tmp304)
+.preheader8.preheader:821  %tmp_52_10 = and i32 %C_3_s, %C_3_9
+
+ST_104: tmp_53_10 [1/1] 0.00ns (grouped into LUT with out node tmp304)
+.preheader8.preheader:822  %tmp_53_10 = or i32 %tmp_51_10, %tmp_52_10
+
+ST_104: tmp303 [1/1] 2.44ns
+.preheader8.preheader:823  %tmp303 = add i32 %C_3_8, %K_load_2
+
+ST_104: tmp304 [1/1] 2.44ns (out node of the LUT)
+.preheader8.preheader:824  %tmp304 = add i32 %tmp_31_34, %tmp_53_10
+
+ST_104: tmp305 [1/1] 1.97ns
+.preheader8.preheader:825  %tmp305 = add i32 %tmp_49_10, %tmp304
+
+ST_104: temp_2_10 [1/1] 1.97ns
+.preheader8.preheader:826  %temp_2_10 = add i32 %tmp303, %tmp305
+
+
+ <State 105>: 8.40ns
+ST_105: tmp73 [1/1] 0.00ns (grouped into LUT with out node tmp_30_35)
+.preheader8.preheader:228  %tmp73 = xor i32 %tmp_31_27, %tmp_31_32
+
+ST_105: tmp74 [1/1] 0.00ns (grouped into LUT with out node tmp_30_35)
+.preheader8.preheader:229  %tmp74 = xor i32 %tmp_31_21, %tmp_31_19
+
+ST_105: tmp_30_35 [1/1] 1.37ns (out node of the LUT)
+.preheader8.preheader:230  %tmp_30_35 = xor i32 %tmp74, %tmp73
+
+ST_105: tmp_31_35 [1/1] 7.03ns
+.preheader8.preheader:231  %tmp_31_35 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 1, i32 %tmp_30_35)
+
+ST_105: C_3_10 [1/1] 7.03ns
+.preheader8.preheader:827  %C_3_10 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 30, i32 %temp_2_9)
+
+ST_105: tmp_49_11 [1/1] 7.03ns
+.preheader8.preheader:828  %tmp_49_11 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 5, i32 %temp_2_10)
+
+
+ <State 106>: 6.38ns
+ST_106: tmp_50_11 [1/1] 0.00ns (grouped into LUT with out node tmp307)
+.preheader8.preheader:829  %tmp_50_11 = or i32 %C_3_10, %C_3_s
+
+ST_106: tmp_51_11 [1/1] 0.00ns (grouped into LUT with out node tmp307)
+.preheader8.preheader:830  %tmp_51_11 = and i32 %temp_2_s, %tmp_50_11
+
+ST_106: tmp_52_11 [1/1] 0.00ns (grouped into LUT with out node tmp307)
+.preheader8.preheader:831  %tmp_52_11 = and i32 %C_3_10, %C_3_s
+
+ST_106: tmp_53_11 [1/1] 0.00ns (grouped into LUT with out node tmp307)
+.preheader8.preheader:832  %tmp_53_11 = or i32 %tmp_51_11, %tmp_52_11
+
+ST_106: tmp306 [1/1] 2.44ns
+.preheader8.preheader:833  %tmp306 = add i32 %C_3_9, %K_load_2
+
+ST_106: tmp307 [1/1] 2.44ns (out node of the LUT)
+.preheader8.preheader:834  %tmp307 = add i32 %tmp_31_35, %tmp_53_11
+
+ST_106: tmp308 [1/1] 1.97ns
+.preheader8.preheader:835  %tmp308 = add i32 %tmp_49_11, %tmp307
+
+ST_106: temp_2_11 [1/1] 1.97ns
+.preheader8.preheader:836  %temp_2_11 = add i32 %tmp306, %tmp308
+
+
+ <State 107>: 8.40ns
+ST_107: tmp75 [1/1] 0.00ns (grouped into LUT with out node tmp_30_36)
+.preheader8.preheader:232  %tmp75 = xor i32 %tmp_31_28, %tmp_31_33
+
+ST_107: tmp76 [1/1] 0.00ns (grouped into LUT with out node tmp_30_36)
+.preheader8.preheader:233  %tmp76 = xor i32 %tmp_31_22, %tmp_31_20
+
+ST_107: tmp_30_36 [1/1] 1.37ns (out node of the LUT)
+.preheader8.preheader:234  %tmp_30_36 = xor i32 %tmp76, %tmp75
+
+ST_107: tmp_31_36 [1/1] 7.03ns
+.preheader8.preheader:235  %tmp_31_36 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 1, i32 %tmp_30_36)
+
+ST_107: C_3_11 [1/1] 7.03ns
+.preheader8.preheader:837  %C_3_11 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 30, i32 %temp_2_s)
+
+ST_107: tmp_49_12 [1/1] 7.03ns
+.preheader8.preheader:838  %tmp_49_12 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 5, i32 %temp_2_11)
+
+
+ <State 108>: 6.38ns
+ST_108: tmp_50_12 [1/1] 0.00ns (grouped into LUT with out node tmp310)
+.preheader8.preheader:839  %tmp_50_12 = or i32 %C_3_11, %C_3_10
+
+ST_108: tmp_51_12 [1/1] 0.00ns (grouped into LUT with out node tmp310)
+.preheader8.preheader:840  %tmp_51_12 = and i32 %temp_2_10, %tmp_50_12
+
+ST_108: tmp_52_12 [1/1] 0.00ns (grouped into LUT with out node tmp310)
+.preheader8.preheader:841  %tmp_52_12 = and i32 %C_3_11, %C_3_10
+
+ST_108: tmp_53_12 [1/1] 0.00ns (grouped into LUT with out node tmp310)
+.preheader8.preheader:842  %tmp_53_12 = or i32 %tmp_51_12, %tmp_52_12
+
+ST_108: tmp309 [1/1] 2.44ns
+.preheader8.preheader:843  %tmp309 = add i32 %C_3_s, %K_load_2
+
+ST_108: tmp310 [1/1] 2.44ns (out node of the LUT)
+.preheader8.preheader:844  %tmp310 = add i32 %tmp_31_36, %tmp_53_12
+
+ST_108: tmp311 [1/1] 1.97ns
+.preheader8.preheader:845  %tmp311 = add i32 %tmp_49_12, %tmp310
+
+ST_108: temp_2_12 [1/1] 1.97ns
+.preheader8.preheader:846  %temp_2_12 = add i32 %tmp309, %tmp311
+
+
+ <State 109>: 8.40ns
+ST_109: tmp77 [1/1] 0.00ns (grouped into LUT with out node tmp_30_37)
+.preheader8.preheader:236  %tmp77 = xor i32 %tmp_31_29, %tmp_31_34
+
+ST_109: tmp78 [1/1] 0.00ns (grouped into LUT with out node tmp_30_37)
+.preheader8.preheader:237  %tmp78 = xor i32 %tmp_31_23, %tmp_31_21
+
+ST_109: tmp_30_37 [1/1] 1.37ns (out node of the LUT)
+.preheader8.preheader:238  %tmp_30_37 = xor i32 %tmp78, %tmp77
+
+ST_109: tmp_31_37 [1/1] 7.03ns
+.preheader8.preheader:239  %tmp_31_37 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 1, i32 %tmp_30_37)
+
+ST_109: C_3_12 [1/1] 7.03ns
+.preheader8.preheader:847  %C_3_12 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 30, i32 %temp_2_10)
+
+ST_109: tmp_49_13 [1/1] 7.03ns
+.preheader8.preheader:848  %tmp_49_13 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 5, i32 %temp_2_12)
+
+
+ <State 110>: 6.38ns
+ST_110: tmp_50_13 [1/1] 0.00ns (grouped into LUT with out node tmp313)
+.preheader8.preheader:849  %tmp_50_13 = or i32 %C_3_12, %C_3_11
+
+ST_110: tmp_51_13 [1/1] 0.00ns (grouped into LUT with out node tmp313)
+.preheader8.preheader:850  %tmp_51_13 = and i32 %temp_2_11, %tmp_50_13
+
+ST_110: tmp_52_13 [1/1] 0.00ns (grouped into LUT with out node tmp313)
+.preheader8.preheader:851  %tmp_52_13 = and i32 %C_3_12, %C_3_11
+
+ST_110: tmp_53_13 [1/1] 0.00ns (grouped into LUT with out node tmp313)
+.preheader8.preheader:852  %tmp_53_13 = or i32 %tmp_51_13, %tmp_52_13
+
+ST_110: tmp312 [1/1] 2.44ns
+.preheader8.preheader:853  %tmp312 = add i32 %C_3_10, %K_load_2
+
+ST_110: tmp313 [1/1] 2.44ns (out node of the LUT)
+.preheader8.preheader:854  %tmp313 = add i32 %tmp_31_37, %tmp_53_13
+
+ST_110: tmp314 [1/1] 1.97ns
+.preheader8.preheader:855  %tmp314 = add i32 %tmp_49_13, %tmp313
+
+ST_110: temp_2_13 [1/1] 1.97ns
+.preheader8.preheader:856  %temp_2_13 = add i32 %tmp312, %tmp314
+
+
+ <State 111>: 8.40ns
+ST_111: tmp79 [1/1] 0.00ns (grouped into LUT with out node tmp_30_38)
+.preheader8.preheader:240  %tmp79 = xor i32 %tmp_31_30, %tmp_31_35
+
+ST_111: tmp80 [1/1] 0.00ns (grouped into LUT with out node tmp_30_38)
+.preheader8.preheader:241  %tmp80 = xor i32 %tmp_31_24, %tmp_31_22
+
+ST_111: tmp_30_38 [1/1] 1.37ns (out node of the LUT)
+.preheader8.preheader:242  %tmp_30_38 = xor i32 %tmp80, %tmp79
+
+ST_111: tmp_31_38 [1/1] 7.03ns
+.preheader8.preheader:243  %tmp_31_38 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 1, i32 %tmp_30_38)
+
+ST_111: C_3_13 [1/1] 7.03ns
+.preheader8.preheader:857  %C_3_13 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 30, i32 %temp_2_11)
+
+ST_111: tmp_49_14 [1/1] 7.03ns
+.preheader8.preheader:858  %tmp_49_14 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 5, i32 %temp_2_13)
+
+
+ <State 112>: 6.38ns
+ST_112: tmp_50_14 [1/1] 0.00ns (grouped into LUT with out node tmp316)
+.preheader8.preheader:859  %tmp_50_14 = or i32 %C_3_13, %C_3_12
+
+ST_112: tmp_51_14 [1/1] 0.00ns (grouped into LUT with out node tmp316)
+.preheader8.preheader:860  %tmp_51_14 = and i32 %temp_2_12, %tmp_50_14
+
+ST_112: tmp_52_14 [1/1] 0.00ns (grouped into LUT with out node tmp316)
+.preheader8.preheader:861  %tmp_52_14 = and i32 %C_3_13, %C_3_12
+
+ST_112: tmp_53_14 [1/1] 0.00ns (grouped into LUT with out node tmp316)
+.preheader8.preheader:862  %tmp_53_14 = or i32 %tmp_51_14, %tmp_52_14
+
+ST_112: tmp315 [1/1] 2.44ns
+.preheader8.preheader:863  %tmp315 = add i32 %C_3_11, %K_load_2
+
+ST_112: tmp316 [1/1] 2.44ns (out node of the LUT)
+.preheader8.preheader:864  %tmp316 = add i32 %tmp_31_38, %tmp_53_14
+
+ST_112: tmp317 [1/1] 1.97ns
+.preheader8.preheader:865  %tmp317 = add i32 %tmp_49_14, %tmp316
+
+ST_112: temp_2_14 [1/1] 1.97ns
+.preheader8.preheader:866  %temp_2_14 = add i32 %tmp315, %tmp317
+
+
+ <State 113>: 8.40ns
+ST_113: tmp81 [1/1] 0.00ns (grouped into LUT with out node tmp_30_39)
+.preheader8.preheader:244  %tmp81 = xor i32 %tmp_31_31, %tmp_31_36
+
+ST_113: tmp82 [1/1] 0.00ns (grouped into LUT with out node tmp_30_39)
+.preheader8.preheader:245  %tmp82 = xor i32 %tmp_31_25, %tmp_31_23
+
+ST_113: tmp_30_39 [1/1] 1.37ns (out node of the LUT)
+.preheader8.preheader:246  %tmp_30_39 = xor i32 %tmp82, %tmp81
+
+ST_113: tmp_31_39 [1/1] 7.03ns
+.preheader8.preheader:247  %tmp_31_39 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 1, i32 %tmp_30_39)
+
+ST_113: C_3_14 [1/1] 7.03ns
+.preheader8.preheader:867  %C_3_14 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 30, i32 %temp_2_12)
+
+ST_113: tmp_49_15 [1/1] 7.03ns
+.preheader8.preheader:868  %tmp_49_15 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 5, i32 %temp_2_14)
+
+
+ <State 114>: 6.38ns
+ST_114: tmp_50_15 [1/1] 0.00ns (grouped into LUT with out node tmp319)
+.preheader8.preheader:869  %tmp_50_15 = or i32 %C_3_14, %C_3_13
+
+ST_114: tmp_51_15 [1/1] 0.00ns (grouped into LUT with out node tmp319)
+.preheader8.preheader:870  %tmp_51_15 = and i32 %temp_2_13, %tmp_50_15
+
+ST_114: tmp_52_15 [1/1] 0.00ns (grouped into LUT with out node tmp319)
+.preheader8.preheader:871  %tmp_52_15 = and i32 %C_3_14, %C_3_13
+
+ST_114: tmp_53_15 [1/1] 0.00ns (grouped into LUT with out node tmp319)
+.preheader8.preheader:872  %tmp_53_15 = or i32 %tmp_51_15, %tmp_52_15
+
+ST_114: tmp318 [1/1] 2.44ns
+.preheader8.preheader:873  %tmp318 = add i32 %C_3_12, %K_load_2
+
+ST_114: tmp319 [1/1] 2.44ns (out node of the LUT)
+.preheader8.preheader:874  %tmp319 = add i32 %tmp_31_39, %tmp_53_15
+
+ST_114: tmp320 [1/1] 1.97ns
+.preheader8.preheader:875  %tmp320 = add i32 %tmp_49_15, %tmp319
+
+ST_114: temp_2_15 [1/1] 1.97ns
+.preheader8.preheader:876  %temp_2_15 = add i32 %tmp318, %tmp320
+
+
+ <State 115>: 8.40ns
+ST_115: tmp83 [1/1] 0.00ns (grouped into LUT with out node tmp_30_40)
+.preheader8.preheader:248  %tmp83 = xor i32 %tmp_31_32, %tmp_31_37
+
+ST_115: tmp84 [1/1] 0.00ns (grouped into LUT with out node tmp_30_40)
+.preheader8.preheader:249  %tmp84 = xor i32 %tmp_31_26, %tmp_31_24
+
+ST_115: tmp_30_40 [1/1] 1.37ns (out node of the LUT)
+.preheader8.preheader:250  %tmp_30_40 = xor i32 %tmp84, %tmp83
+
+ST_115: tmp_31_40 [1/1] 7.03ns
+.preheader8.preheader:251  %tmp_31_40 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 1, i32 %tmp_30_40)
+
+ST_115: C_3_15 [1/1] 7.03ns
+.preheader8.preheader:877  %C_3_15 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 30, i32 %temp_2_13)
+
+ST_115: tmp_49_16 [1/1] 7.03ns
+.preheader8.preheader:878  %tmp_49_16 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 5, i32 %temp_2_15)
+
+
+ <State 116>: 6.38ns
+ST_116: tmp_50_16 [1/1] 0.00ns (grouped into LUT with out node tmp322)
+.preheader8.preheader:879  %tmp_50_16 = or i32 %C_3_15, %C_3_14
+
+ST_116: tmp_51_16 [1/1] 0.00ns (grouped into LUT with out node tmp322)
+.preheader8.preheader:880  %tmp_51_16 = and i32 %temp_2_14, %tmp_50_16
+
+ST_116: tmp_52_16 [1/1] 0.00ns (grouped into LUT with out node tmp322)
+.preheader8.preheader:881  %tmp_52_16 = and i32 %C_3_15, %C_3_14
+
+ST_116: tmp_53_16 [1/1] 0.00ns (grouped into LUT with out node tmp322)
+.preheader8.preheader:882  %tmp_53_16 = or i32 %tmp_51_16, %tmp_52_16
+
+ST_116: tmp321 [1/1] 2.44ns
+.preheader8.preheader:883  %tmp321 = add i32 %C_3_13, %K_load_2
+
+ST_116: tmp322 [1/1] 2.44ns (out node of the LUT)
+.preheader8.preheader:884  %tmp322 = add i32 %tmp_31_40, %tmp_53_16
+
+ST_116: tmp323 [1/1] 1.97ns
+.preheader8.preheader:885  %tmp323 = add i32 %tmp_49_16, %tmp322
+
+ST_116: temp_2_16 [1/1] 1.97ns
+.preheader8.preheader:886  %temp_2_16 = add i32 %tmp321, %tmp323
+
+
+ <State 117>: 8.40ns
+ST_117: tmp85 [1/1] 0.00ns (grouped into LUT with out node tmp_30_41)
+.preheader8.preheader:252  %tmp85 = xor i32 %tmp_31_33, %tmp_31_38
+
+ST_117: tmp86 [1/1] 0.00ns (grouped into LUT with out node tmp_30_41)
+.preheader8.preheader:253  %tmp86 = xor i32 %tmp_31_27, %tmp_31_25
+
+ST_117: tmp_30_41 [1/1] 1.37ns (out node of the LUT)
+.preheader8.preheader:254  %tmp_30_41 = xor i32 %tmp86, %tmp85
+
+ST_117: tmp_31_41 [1/1] 7.03ns
+.preheader8.preheader:255  %tmp_31_41 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 1, i32 %tmp_30_41)
+
+ST_117: C_3_16 [1/1] 7.03ns
+.preheader8.preheader:887  %C_3_16 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 30, i32 %temp_2_14)
+
+ST_117: tmp_49_17 [1/1] 7.03ns
+.preheader8.preheader:888  %tmp_49_17 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 5, i32 %temp_2_16)
+
+
+ <State 118>: 6.38ns
+ST_118: tmp_50_17 [1/1] 0.00ns (grouped into LUT with out node tmp325)
+.preheader8.preheader:889  %tmp_50_17 = or i32 %C_3_16, %C_3_15
+
+ST_118: tmp_51_17 [1/1] 0.00ns (grouped into LUT with out node tmp325)
+.preheader8.preheader:890  %tmp_51_17 = and i32 %temp_2_15, %tmp_50_17
+
+ST_118: tmp_52_17 [1/1] 0.00ns (grouped into LUT with out node tmp325)
+.preheader8.preheader:891  %tmp_52_17 = and i32 %C_3_16, %C_3_15
+
+ST_118: tmp_53_17 [1/1] 0.00ns (grouped into LUT with out node tmp325)
+.preheader8.preheader:892  %tmp_53_17 = or i32 %tmp_51_17, %tmp_52_17
+
+ST_118: tmp324 [1/1] 2.44ns
+.preheader8.preheader:893  %tmp324 = add i32 %C_3_14, %K_load_2
+
+ST_118: tmp325 [1/1] 2.44ns (out node of the LUT)
+.preheader8.preheader:894  %tmp325 = add i32 %tmp_31_41, %tmp_53_17
+
+ST_118: tmp326 [1/1] 1.97ns
+.preheader8.preheader:895  %tmp326 = add i32 %tmp_49_17, %tmp325
+
+ST_118: temp_2_17 [1/1] 1.97ns
+.preheader8.preheader:896  %temp_2_17 = add i32 %tmp324, %tmp326
+
+ST_118: tmp327 [1/1] 2.44ns
+.preheader8.preheader:903  %tmp327 = add i32 %C_3_15, %K_load_2
+
+
+ <State 119>: 8.40ns
+ST_119: tmp87 [1/1] 0.00ns (grouped into LUT with out node tmp_30_42)
+.preheader8.preheader:256  %tmp87 = xor i32 %tmp_31_34, %tmp_31_39
+
+ST_119: tmp88 [1/1] 0.00ns (grouped into LUT with out node tmp_30_42)
+.preheader8.preheader:257  %tmp88 = xor i32 %tmp_31_28, %tmp_31_26
+
+ST_119: tmp_30_42 [1/1] 1.37ns (out node of the LUT)
+.preheader8.preheader:258  %tmp_30_42 = xor i32 %tmp88, %tmp87
+
+ST_119: tmp_31_42 [1/1] 7.03ns
+.preheader8.preheader:259  %tmp_31_42 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 1, i32 %tmp_30_42)
+
+ST_119: C_3_17 [1/1] 7.03ns
+.preheader8.preheader:897  %C_3_17 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 30, i32 %temp_2_15)
+
+ST_119: tmp_49_18 [1/1] 7.03ns
+.preheader8.preheader:898  %tmp_49_18 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 5, i32 %temp_2_17)
+
+
+ <State 120>: 6.38ns
+ST_120: tmp_50_18 [1/1] 0.00ns (grouped into LUT with out node tmp328)
+.preheader8.preheader:899  %tmp_50_18 = or i32 %C_3_17, %C_3_16
+
+ST_120: tmp_51_18 [1/1] 0.00ns (grouped into LUT with out node tmp328)
+.preheader8.preheader:900  %tmp_51_18 = and i32 %temp_2_16, %tmp_50_18
+
+ST_120: tmp_52_18 [1/1] 0.00ns (grouped into LUT with out node tmp328)
+.preheader8.preheader:901  %tmp_52_18 = and i32 %C_3_17, %C_3_16
+
+ST_120: tmp_53_18 [1/1] 0.00ns (grouped into LUT with out node tmp328)
+.preheader8.preheader:902  %tmp_53_18 = or i32 %tmp_51_18, %tmp_52_18
+
+ST_120: tmp328 [1/1] 2.44ns (out node of the LUT)
+.preheader8.preheader:904  %tmp328 = add i32 %tmp_31_42, %tmp_53_18
+
+ST_120: tmp329 [1/1] 1.97ns
+.preheader8.preheader:905  %tmp329 = add i32 %tmp_49_18, %tmp328
+
+ST_120: temp_2_18 [1/1] 1.97ns
+.preheader8.preheader:906  %temp_2_18 = add i32 %tmp327, %tmp329
+
+
+ <State 121>: 8.40ns
+ST_121: tmp89 [1/1] 0.00ns (grouped into LUT with out node tmp_30_43)
+.preheader8.preheader:260  %tmp89 = xor i32 %tmp_31_35, %tmp_31_40
+
+ST_121: tmp90 [1/1] 0.00ns (grouped into LUT with out node tmp_30_43)
+.preheader8.preheader:261  %tmp90 = xor i32 %tmp_31_29, %tmp_31_27
+
+ST_121: tmp_30_43 [1/1] 1.37ns (out node of the LUT)
+.preheader8.preheader:262  %tmp_30_43 = xor i32 %tmp90, %tmp89
+
+ST_121: tmp_31_43 [1/1] 7.03ns
+.preheader8.preheader:263  %tmp_31_43 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 1, i32 %tmp_30_43)
+
+ST_121: C_3_18 [1/1] 7.03ns
+.preheader8.preheader:907  %C_3_18 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 30, i32 %temp_2_16)
+
+ST_121: K_load_3 [2/2] 2.39ns
+.preheader8.preheader:908  %K_load_3 = load i32* getelementptr inbounds ([4 x i32]* @K, i64 0, i64 3), align 4
+
+ST_121: tmp_83 [1/1] 7.03ns
+.preheader8.preheader:909  %tmp_83 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 5, i32 %temp_2_18)
+
+
+ <State 122>: 8.40ns
+ST_122: tmp91 [1/1] 0.00ns (grouped into LUT with out node tmp_30_44)
+.preheader8.preheader:264  %tmp91 = xor i32 %tmp_31_36, %tmp_31_41
+
+ST_122: tmp92 [1/1] 0.00ns (grouped into LUT with out node tmp_30_44)
+.preheader8.preheader:265  %tmp92 = xor i32 %tmp_31_30, %tmp_31_28
+
+ST_122: tmp_30_44 [1/1] 1.37ns (out node of the LUT)
+.preheader8.preheader:266  %tmp_30_44 = xor i32 %tmp92, %tmp91
+
+ST_122: tmp_31_44 [1/1] 7.03ns
+.preheader8.preheader:267  %tmp_31_44 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 1, i32 %tmp_30_44)
+
+ST_122: K_load_3 [1/2] 2.39ns
+.preheader8.preheader:908  %K_load_3 = load i32* getelementptr inbounds ([4 x i32]* @K, i64 0, i64 3), align 4
+
+ST_122: tmp330 [1/1] 0.00ns (grouped into LUT with out node tmp332)
+.preheader8.preheader:910  %tmp330 = xor i32 %C_3_17, %temp_2_17
+
+ST_122: tmp_84 [1/1] 0.00ns (grouped into LUT with out node tmp332)
+.preheader8.preheader:911  %tmp_84 = xor i32 %tmp330, %C_3_18
+
+ST_122: tmp331 [1/1] 2.44ns
+.preheader8.preheader:912  %tmp331 = add i32 %C_3_16, %K_load_3
+
+ST_122: tmp332 [1/1] 2.44ns (out node of the LUT)
+.preheader8.preheader:913  %tmp332 = add i32 %tmp_31_43, %tmp_84
+
+ST_122: tmp333 [1/1] 1.97ns
+.preheader8.preheader:914  %tmp333 = add i32 %tmp_83, %tmp332
+
+ST_122: temp_21 [1/1] 1.97ns
+.preheader8.preheader:915  %temp_21 = add i32 %tmp331, %tmp333
+
+
+ <State 123>: 8.40ns
+ST_123: tmp93 [1/1] 0.00ns (grouped into LUT with out node tmp_30_45)
+.preheader8.preheader:268  %tmp93 = xor i32 %tmp_31_37, %tmp_31_42
+
+ST_123: tmp94 [1/1] 0.00ns (grouped into LUT with out node tmp_30_45)
+.preheader8.preheader:269  %tmp94 = xor i32 %tmp_31_31, %tmp_31_29
+
+ST_123: tmp_30_45 [1/1] 1.37ns (out node of the LUT)
+.preheader8.preheader:270  %tmp_30_45 = xor i32 %tmp94, %tmp93
+
+ST_123: tmp97 [1/1] 0.00ns (grouped into LUT with out node tmp_30_47)
+.preheader8.preheader:276  %tmp97 = xor i32 %tmp_31_39, %tmp_31_44
+
+ST_123: tmp98 [1/1] 0.00ns (grouped into LUT with out node tmp_30_47)
+.preheader8.preheader:277  %tmp98 = xor i32 %tmp_31_33, %tmp_31_31
+
+ST_123: tmp_30_47 [1/1] 1.37ns (out node of the LUT)
+.preheader8.preheader:278  %tmp_30_47 = xor i32 %tmp98, %tmp97
+
+ST_123: tmp_31_47 [1/1] 7.03ns
+.preheader8.preheader:279  %tmp_31_47 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 1, i32 %tmp_30_47)
+
+ST_123: C_4 [1/1] 7.03ns
+.preheader8.preheader:916  %C_4 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 30, i32 %temp_2_17)
+
+ST_123: tmp_63_1 [1/1] 7.03ns
+.preheader8.preheader:917  %tmp_63_1 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 5, i32 %temp_21)
+
+
+ <State 124>: 8.40ns
+ST_124: tmp_31_45 [1/1] 7.03ns
+.preheader8.preheader:271  %tmp_31_45 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 1, i32 %tmp_30_45)
+
+ST_124: tmp95 [1/1] 0.00ns (grouped into LUT with out node tmp_30_46)
+.preheader8.preheader:272  %tmp95 = xor i32 %tmp_31_38, %tmp_31_43
+
+ST_124: tmp96 [1/1] 0.00ns (grouped into LUT with out node tmp_30_46)
+.preheader8.preheader:273  %tmp96 = xor i32 %tmp_31_32, %tmp_31_30
+
+ST_124: tmp_30_46 [1/1] 1.37ns (out node of the LUT)
+.preheader8.preheader:274  %tmp_30_46 = xor i32 %tmp96, %tmp95
+
+ST_124: tmp99 [1/1] 0.00ns (grouped into LUT with out node tmp_30_48)
+.preheader8.preheader:280  %tmp99 = xor i32 %tmp_31_40, %tmp_31_45
+
+ST_124: tmp100 [1/1] 0.00ns (grouped into LUT with out node tmp_30_48)
+.preheader8.preheader:281  %tmp100 = xor i32 %tmp_31_34, %tmp_31_32
+
+ST_124: tmp_30_48 [1/1] 1.37ns (out node of the LUT)
+.preheader8.preheader:282  %tmp_30_48 = xor i32 %tmp100, %tmp99
+
+ST_124: tmp103 [1/1] 0.00ns (grouped into LUT with out node tmp_30_50)
+.preheader8.preheader:288  %tmp103 = xor i32 %tmp_31_42, %tmp_31_47
+
+ST_124: tmp104 [1/1] 0.00ns (grouped into LUT with out node tmp_30_50)
+.preheader8.preheader:289  %tmp104 = xor i32 %tmp_31_36, %tmp_31_34
+
+ST_124: tmp_30_50 [1/1] 1.37ns (out node of the LUT)
+.preheader8.preheader:290  %tmp_30_50 = xor i32 %tmp104, %tmp103
+
+ST_124: tmp_31_50 [1/1] 7.03ns
+.preheader8.preheader:291  %tmp_31_50 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 1, i32 %tmp_30_50)
+
+ST_124: tmp334 [1/1] 0.00ns (grouped into LUT with out node tmp336)
+.preheader8.preheader:918  %tmp334 = xor i32 %C_3_18, %temp_2_18
+
+ST_124: tmp_65_1 [1/1] 0.00ns (grouped into LUT with out node tmp336)
+.preheader8.preheader:919  %tmp_65_1 = xor i32 %tmp334, %C_4
+
+ST_124: tmp335 [1/1] 2.44ns
+.preheader8.preheader:920  %tmp335 = add i32 %C_3_17, %K_load_3
+
+ST_124: tmp336 [1/1] 2.44ns (out node of the LUT)
+.preheader8.preheader:921  %tmp336 = add i32 %tmp_31_44, %tmp_65_1
+
+ST_124: tmp337 [1/1] 1.97ns
+.preheader8.preheader:922  %tmp337 = add i32 %tmp_63_1, %tmp336
+
+ST_124: temp_3_1 [1/1] 1.97ns
+.preheader8.preheader:923  %temp_3_1 = add i32 %tmp335, %tmp337
+
+
+ <State 125>: 8.40ns
+ST_125: tmp_31_46 [1/1] 7.03ns
+.preheader8.preheader:275  %tmp_31_46 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 1, i32 %tmp_30_46)
+
+ST_125: tmp_31_48 [1/1] 7.03ns
+.preheader8.preheader:283  %tmp_31_48 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 1, i32 %tmp_30_48)
+
+ST_125: tmp101 [1/1] 0.00ns (grouped into LUT with out node tmp_30_49)
+.preheader8.preheader:284  %tmp101 = xor i32 %tmp_31_41, %tmp_31_46
+
+ST_125: tmp102 [1/1] 0.00ns (grouped into LUT with out node tmp_30_49)
+.preheader8.preheader:285  %tmp102 = xor i32 %tmp_31_35, %tmp_31_33
+
+ST_125: tmp_30_49 [1/1] 1.37ns (out node of the LUT)
+.preheader8.preheader:286  %tmp_30_49 = xor i32 %tmp102, %tmp101
+
+ST_125: tmp105 [1/1] 0.00ns (grouped into LUT with out node tmp_30_51)
+.preheader8.preheader:292  %tmp105 = xor i32 %tmp_31_43, %tmp_31_48
+
+ST_125: tmp106 [1/1] 0.00ns (grouped into LUT with out node tmp_30_51)
+.preheader8.preheader:293  %tmp106 = xor i32 %tmp_31_37, %tmp_31_35
+
+ST_125: tmp_30_51 [1/1] 1.37ns (out node of the LUT)
+.preheader8.preheader:294  %tmp_30_51 = xor i32 %tmp106, %tmp105
+
+ST_125: tmp109 [1/1] 0.00ns (grouped into LUT with out node tmp_30_53)
+.preheader8.preheader:300  %tmp109 = xor i32 %tmp_31_45, %tmp_31_50
+
+ST_125: tmp110 [1/1] 0.00ns (grouped into LUT with out node tmp_30_53)
+.preheader8.preheader:301  %tmp110 = xor i32 %tmp_31_39, %tmp_31_37
+
+ST_125: tmp_30_53 [1/1] 1.37ns (out node of the LUT)
+.preheader8.preheader:302  %tmp_30_53 = xor i32 %tmp110, %tmp109
+
+ST_125: tmp_31_53 [1/1] 7.03ns
+.preheader8.preheader:303  %tmp_31_53 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 1, i32 %tmp_30_53)
+
+ST_125: C_4_1 [1/1] 7.03ns
+.preheader8.preheader:924  %C_4_1 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 30, i32 %temp_2_18)
+
+ST_125: tmp_63_2 [1/1] 7.03ns
+.preheader8.preheader:925  %tmp_63_2 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 5, i32 %temp_3_1)
+
+
+ <State 126>: 8.40ns
+ST_126: tmp_31_49 [1/1] 7.03ns
+.preheader8.preheader:287  %tmp_31_49 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 1, i32 %tmp_30_49)
+
+ST_126: tmp_31_51 [1/1] 7.03ns
+.preheader8.preheader:295  %tmp_31_51 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 1, i32 %tmp_30_51)
+
+ST_126: tmp107 [1/1] 0.00ns (grouped into LUT with out node tmp_30_52)
+.preheader8.preheader:296  %tmp107 = xor i32 %tmp_31_44, %tmp_31_49
+
+ST_126: tmp108 [1/1] 0.00ns (grouped into LUT with out node tmp_30_52)
+.preheader8.preheader:297  %tmp108 = xor i32 %tmp_31_38, %tmp_31_36
+
+ST_126: tmp_30_52 [1/1] 1.37ns (out node of the LUT)
+.preheader8.preheader:298  %tmp_30_52 = xor i32 %tmp108, %tmp107
+
+ST_126: tmp111 [1/1] 0.00ns (grouped into LUT with out node tmp_30_54)
+.preheader8.preheader:304  %tmp111 = xor i32 %tmp_31_46, %tmp_31_51
+
+ST_126: tmp112 [1/1] 0.00ns (grouped into LUT with out node tmp_30_54)
+.preheader8.preheader:305  %tmp112 = xor i32 %tmp_31_40, %tmp_31_38
+
+ST_126: tmp_30_54 [1/1] 1.37ns (out node of the LUT)
+.preheader8.preheader:306  %tmp_30_54 = xor i32 %tmp112, %tmp111
+
+ST_126: tmp115 [1/1] 0.00ns (grouped into LUT with out node tmp_30_56)
+.preheader8.preheader:312  %tmp115 = xor i32 %tmp_31_48, %tmp_31_53
+
+ST_126: tmp116 [1/1] 0.00ns (grouped into LUT with out node tmp_30_56)
+.preheader8.preheader:313  %tmp116 = xor i32 %tmp_31_42, %tmp_31_40
+
+ST_126: tmp_30_56 [1/1] 1.37ns (out node of the LUT)
+.preheader8.preheader:314  %tmp_30_56 = xor i32 %tmp116, %tmp115
+
+ST_126: tmp_31_56 [1/1] 7.03ns
+.preheader8.preheader:315  %tmp_31_56 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 1, i32 %tmp_30_56)
+
+ST_126: tmp338 [1/1] 0.00ns (grouped into LUT with out node tmp340)
+.preheader8.preheader:926  %tmp338 = xor i32 %C_4, %temp_21
+
+ST_126: tmp_65_2 [1/1] 0.00ns (grouped into LUT with out node tmp340)
+.preheader8.preheader:927  %tmp_65_2 = xor i32 %tmp338, %C_4_1
+
+ST_126: tmp339 [1/1] 2.44ns
+.preheader8.preheader:928  %tmp339 = add i32 %C_3_18, %K_load_3
+
+ST_126: tmp340 [1/1] 2.44ns (out node of the LUT)
+.preheader8.preheader:929  %tmp340 = add i32 %tmp_31_45, %tmp_65_2
+
+ST_126: tmp341 [1/1] 1.97ns
+.preheader8.preheader:930  %tmp341 = add i32 %tmp_63_2, %tmp340
+
+ST_126: temp_3_2 [1/1] 1.97ns
+.preheader8.preheader:931  %temp_3_2 = add i32 %tmp339, %tmp341
+
+
+ <State 127>: 8.40ns
+ST_127: tmp_31_52 [1/1] 7.03ns
+.preheader8.preheader:299  %tmp_31_52 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 1, i32 %tmp_30_52)
+
+ST_127: tmp_31_54 [1/1] 7.03ns
+.preheader8.preheader:307  %tmp_31_54 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 1, i32 %tmp_30_54)
+
+ST_127: tmp113 [1/1] 0.00ns (grouped into LUT with out node tmp_30_55)
+.preheader8.preheader:308  %tmp113 = xor i32 %tmp_31_47, %tmp_31_52
+
+ST_127: tmp114 [1/1] 0.00ns (grouped into LUT with out node tmp_30_55)
+.preheader8.preheader:309  %tmp114 = xor i32 %tmp_31_41, %tmp_31_39
+
+ST_127: tmp_30_55 [1/1] 1.37ns (out node of the LUT)
+.preheader8.preheader:310  %tmp_30_55 = xor i32 %tmp114, %tmp113
+
+ST_127: tmp117 [1/1] 0.00ns (grouped into LUT with out node tmp_30_57)
+.preheader8.preheader:316  %tmp117 = xor i32 %tmp_31_49, %tmp_31_54
+
+ST_127: tmp118 [1/1] 0.00ns (grouped into LUT with out node tmp_30_57)
+.preheader8.preheader:317  %tmp118 = xor i32 %tmp_31_43, %tmp_31_41
+
+ST_127: tmp_30_57 [1/1] 1.37ns (out node of the LUT)
+.preheader8.preheader:318  %tmp_30_57 = xor i32 %tmp118, %tmp117
+
+ST_127: tmp121 [1/1] 0.00ns (grouped into LUT with out node tmp_30_59)
+.preheader8.preheader:324  %tmp121 = xor i32 %tmp_31_51, %tmp_31_56
+
+ST_127: tmp122 [1/1] 0.00ns (grouped into LUT with out node tmp_30_59)
+.preheader8.preheader:325  %tmp122 = xor i32 %tmp_31_45, %tmp_31_43
+
+ST_127: tmp_30_59 [1/1] 1.37ns (out node of the LUT)
+.preheader8.preheader:326  %tmp_30_59 = xor i32 %tmp122, %tmp121
+
+ST_127: tmp_31_59 [1/1] 7.03ns
+.preheader8.preheader:327  %tmp_31_59 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 1, i32 %tmp_30_59)
+
+ST_127: C_4_2 [1/1] 7.03ns
+.preheader8.preheader:932  %C_4_2 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 30, i32 %temp_21)
+
+ST_127: tmp_63_3 [1/1] 7.03ns
+.preheader8.preheader:933  %tmp_63_3 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 5, i32 %temp_3_2)
+
+
+ <State 128>: 8.40ns
+ST_128: tmp_31_55 [1/1] 7.03ns
+.preheader8.preheader:311  %tmp_31_55 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 1, i32 %tmp_30_55)
+
+ST_128: tmp_31_57 [1/1] 7.03ns
+.preheader8.preheader:319  %tmp_31_57 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 1, i32 %tmp_30_57)
+
+ST_128: tmp119 [1/1] 0.00ns (grouped into LUT with out node tmp_30_58)
+.preheader8.preheader:320  %tmp119 = xor i32 %tmp_31_50, %tmp_31_55
+
+ST_128: tmp120 [1/1] 0.00ns (grouped into LUT with out node tmp_30_58)
+.preheader8.preheader:321  %tmp120 = xor i32 %tmp_31_44, %tmp_31_42
+
+ST_128: tmp_30_58 [1/1] 1.37ns (out node of the LUT)
+.preheader8.preheader:322  %tmp_30_58 = xor i32 %tmp120, %tmp119
+
+ST_128: tmp123 [1/1] 0.00ns (grouped into LUT with out node tmp_30_60)
+.preheader8.preheader:328  %tmp123 = xor i32 %tmp_31_52, %tmp_31_57
+
+ST_128: tmp124 [1/1] 0.00ns (grouped into LUT with out node tmp_30_60)
+.preheader8.preheader:329  %tmp124 = xor i32 %tmp_31_46, %tmp_31_44
+
+ST_128: tmp_30_60 [1/1] 1.37ns (out node of the LUT)
+.preheader8.preheader:330  %tmp_30_60 = xor i32 %tmp124, %tmp123
+
+ST_128: tmp127 [1/1] 0.00ns (grouped into LUT with out node tmp_30_62)
+.preheader8.preheader:336  %tmp127 = xor i32 %tmp_31_54, %tmp_31_59
+
+ST_128: tmp128 [1/1] 0.00ns (grouped into LUT with out node tmp_30_62)
+.preheader8.preheader:337  %tmp128 = xor i32 %tmp_31_48, %tmp_31_46
+
+ST_128: tmp_30_62 [1/1] 1.37ns (out node of the LUT)
+.preheader8.preheader:338  %tmp_30_62 = xor i32 %tmp128, %tmp127
+
+ST_128: tmp_31_62 [1/1] 7.03ns
+.preheader8.preheader:339  %tmp_31_62 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 1, i32 %tmp_30_62)
+
+ST_128: tmp342 [1/1] 0.00ns (grouped into LUT with out node tmp344)
+.preheader8.preheader:934  %tmp342 = xor i32 %C_4_1, %temp_3_1
+
+ST_128: tmp_65_3 [1/1] 0.00ns (grouped into LUT with out node tmp344)
+.preheader8.preheader:935  %tmp_65_3 = xor i32 %tmp342, %C_4_2
+
+ST_128: tmp343 [1/1] 2.44ns
+.preheader8.preheader:936  %tmp343 = add i32 %C_4, %K_load_3
+
+ST_128: tmp344 [1/1] 2.44ns (out node of the LUT)
+.preheader8.preheader:937  %tmp344 = add i32 %tmp_31_46, %tmp_65_3
+
+ST_128: tmp345 [1/1] 1.97ns
+.preheader8.preheader:938  %tmp345 = add i32 %tmp_63_3, %tmp344
+
+ST_128: temp_3_3 [1/1] 1.97ns
+.preheader8.preheader:939  %temp_3_3 = add i32 %tmp343, %tmp345
+
+
+ <State 129>: 7.03ns
+ST_129: C_4_3 [1/1] 7.03ns
+.preheader8.preheader:940  %C_4_3 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 30, i32 %temp_3_1)
+
+ST_129: tmp_63_4 [1/1] 7.03ns
+.preheader8.preheader:941  %tmp_63_4 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 5, i32 %temp_3_3)
+
+ST_129: tmp409 [1/1] 2.44ns
+.preheader8.preheader:1067  %tmp409 = add i32 %A, %tmp_31_62
+
+
+ <State 130>: 8.40ns
+ST_130: tmp_31_58 [1/1] 7.03ns
+.preheader8.preheader:323  %tmp_31_58 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 1, i32 %tmp_30_58)
+
+ST_130: tmp125 [1/1] 0.00ns (grouped into LUT with out node tmp_30_61)
+.preheader8.preheader:332  %tmp125 = xor i32 %tmp_31_53, %tmp_31_58
+
+ST_130: tmp126 [1/1] 0.00ns (grouped into LUT with out node tmp_30_61)
+.preheader8.preheader:333  %tmp126 = xor i32 %tmp_31_47, %tmp_31_45
+
+ST_130: tmp_30_61 [1/1] 1.37ns (out node of the LUT)
+.preheader8.preheader:334  %tmp_30_61 = xor i32 %tmp126, %tmp125
+
+ST_130: tmp346 [1/1] 0.00ns (grouped into LUT with out node tmp348)
+.preheader8.preheader:942  %tmp346 = xor i32 %C_4_2, %temp_3_2
+
+ST_130: tmp_65_4 [1/1] 0.00ns (grouped into LUT with out node tmp348)
+.preheader8.preheader:943  %tmp_65_4 = xor i32 %tmp346, %C_4_3
+
+ST_130: tmp347 [1/1] 2.44ns
+.preheader8.preheader:944  %tmp347 = add i32 %C_4_1, %K_load_3
+
+ST_130: tmp348 [1/1] 2.44ns (out node of the LUT)
+.preheader8.preheader:945  %tmp348 = add i32 %tmp_31_47, %tmp_65_4
+
+ST_130: tmp349 [1/1] 1.97ns
+.preheader8.preheader:946  %tmp349 = add i32 %tmp_63_4, %tmp348
+
+ST_130: temp_3_4 [1/1] 1.97ns
+.preheader8.preheader:947  %temp_3_4 = add i32 %tmp347, %tmp349
+
+
+ <State 131>: 7.03ns
+ST_131: C_4_4 [1/1] 7.03ns
+.preheader8.preheader:948  %C_4_4 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 30, i32 %temp_3_2)
+
+ST_131: tmp_63_5 [1/1] 7.03ns
+.preheader8.preheader:949  %tmp_63_5 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 5, i32 %temp_3_4)
+
+
+ <State 132>: 6.38ns
+ST_132: tmp350 [1/1] 0.00ns (grouped into LUT with out node tmp352)
+.preheader8.preheader:950  %tmp350 = xor i32 %C_4_3, %temp_3_3
+
+ST_132: tmp_65_5 [1/1] 0.00ns (grouped into LUT with out node tmp352)
+.preheader8.preheader:951  %tmp_65_5 = xor i32 %tmp350, %C_4_4
+
+ST_132: tmp351 [1/1] 2.44ns
+.preheader8.preheader:952  %tmp351 = add i32 %C_4_2, %K_load_3
+
+ST_132: tmp352 [1/1] 2.44ns (out node of the LUT)
+.preheader8.preheader:953  %tmp352 = add i32 %tmp_31_48, %tmp_65_5
+
+ST_132: tmp353 [1/1] 1.97ns
+.preheader8.preheader:954  %tmp353 = add i32 %tmp_63_5, %tmp352
+
+ST_132: temp_3_5 [1/1] 1.97ns
+.preheader8.preheader:955  %temp_3_5 = add i32 %tmp351, %tmp353
+
+
+ <State 133>: 7.03ns
+ST_133: C_4_5 [1/1] 7.03ns
+.preheader8.preheader:956  %C_4_5 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 30, i32 %temp_3_3)
+
+ST_133: tmp_63_6 [1/1] 7.03ns
+.preheader8.preheader:957  %tmp_63_6 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 5, i32 %temp_3_5)
+
+
+ <State 134>: 6.38ns
+ST_134: tmp354 [1/1] 0.00ns (grouped into LUT with out node tmp356)
+.preheader8.preheader:958  %tmp354 = xor i32 %C_4_4, %temp_3_4
+
+ST_134: tmp_65_6 [1/1] 0.00ns (grouped into LUT with out node tmp356)
+.preheader8.preheader:959  %tmp_65_6 = xor i32 %tmp354, %C_4_5
+
+ST_134: tmp355 [1/1] 2.44ns
+.preheader8.preheader:960  %tmp355 = add i32 %C_4_3, %K_load_3
+
+ST_134: tmp356 [1/1] 2.44ns (out node of the LUT)
+.preheader8.preheader:961  %tmp356 = add i32 %tmp_31_49, %tmp_65_6
+
+ST_134: tmp357 [1/1] 1.97ns
+.preheader8.preheader:962  %tmp357 = add i32 %tmp_63_6, %tmp356
+
+ST_134: temp_3_6 [1/1] 1.97ns
+.preheader8.preheader:963  %temp_3_6 = add i32 %tmp355, %tmp357
+
+
+ <State 135>: 7.03ns
+ST_135: C_4_6 [1/1] 7.03ns
+.preheader8.preheader:964  %C_4_6 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 30, i32 %temp_3_4)
+
+ST_135: tmp_63_7 [1/1] 7.03ns
+.preheader8.preheader:965  %tmp_63_7 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 5, i32 %temp_3_6)
+
+
+ <State 136>: 6.38ns
+ST_136: tmp358 [1/1] 0.00ns (grouped into LUT with out node tmp360)
+.preheader8.preheader:966  %tmp358 = xor i32 %C_4_5, %temp_3_5
+
+ST_136: tmp_65_7 [1/1] 0.00ns (grouped into LUT with out node tmp360)
+.preheader8.preheader:967  %tmp_65_7 = xor i32 %tmp358, %C_4_6
+
+ST_136: tmp359 [1/1] 2.44ns
+.preheader8.preheader:968  %tmp359 = add i32 %C_4_4, %K_load_3
+
+ST_136: tmp360 [1/1] 2.44ns (out node of the LUT)
+.preheader8.preheader:969  %tmp360 = add i32 %tmp_31_50, %tmp_65_7
+
+ST_136: tmp361 [1/1] 1.97ns
+.preheader8.preheader:970  %tmp361 = add i32 %tmp_63_7, %tmp360
+
+ST_136: temp_3_7 [1/1] 1.97ns
+.preheader8.preheader:971  %temp_3_7 = add i32 %tmp359, %tmp361
+
+
+ <State 137>: 7.03ns
+ST_137: C_4_7 [1/1] 7.03ns
+.preheader8.preheader:972  %C_4_7 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 30, i32 %temp_3_5)
+
+ST_137: tmp_63_8 [1/1] 7.03ns
+.preheader8.preheader:973  %tmp_63_8 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 5, i32 %temp_3_7)
+
+
+ <State 138>: 6.38ns
+ST_138: tmp362 [1/1] 0.00ns (grouped into LUT with out node tmp364)
+.preheader8.preheader:974  %tmp362 = xor i32 %C_4_6, %temp_3_6
+
+ST_138: tmp_65_8 [1/1] 0.00ns (grouped into LUT with out node tmp364)
+.preheader8.preheader:975  %tmp_65_8 = xor i32 %tmp362, %C_4_7
+
+ST_138: tmp363 [1/1] 2.44ns
+.preheader8.preheader:976  %tmp363 = add i32 %C_4_5, %K_load_3
+
+ST_138: tmp364 [1/1] 2.44ns (out node of the LUT)
+.preheader8.preheader:977  %tmp364 = add i32 %tmp_31_51, %tmp_65_8
+
+ST_138: tmp365 [1/1] 1.97ns
+.preheader8.preheader:978  %tmp365 = add i32 %tmp_63_8, %tmp364
+
+ST_138: temp_3_8 [1/1] 1.97ns
+.preheader8.preheader:979  %temp_3_8 = add i32 %tmp363, %tmp365
+
+
+ <State 139>: 7.03ns
+ST_139: C_4_8 [1/1] 7.03ns
+.preheader8.preheader:980  %C_4_8 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 30, i32 %temp_3_6)
+
+ST_139: tmp_63_9 [1/1] 7.03ns
+.preheader8.preheader:981  %tmp_63_9 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 5, i32 %temp_3_8)
+
+
+ <State 140>: 6.38ns
+ST_140: tmp366 [1/1] 0.00ns (grouped into LUT with out node tmp368)
+.preheader8.preheader:982  %tmp366 = xor i32 %C_4_7, %temp_3_7
+
+ST_140: tmp_65_9 [1/1] 0.00ns (grouped into LUT with out node tmp368)
+.preheader8.preheader:983  %tmp_65_9 = xor i32 %tmp366, %C_4_8
+
+ST_140: tmp367 [1/1] 2.44ns
+.preheader8.preheader:984  %tmp367 = add i32 %C_4_6, %K_load_3
+
+ST_140: tmp368 [1/1] 2.44ns (out node of the LUT)
+.preheader8.preheader:985  %tmp368 = add i32 %tmp_31_52, %tmp_65_9
+
+ST_140: tmp369 [1/1] 1.97ns
+.preheader8.preheader:986  %tmp369 = add i32 %tmp_63_9, %tmp368
+
+ST_140: temp_3_9 [1/1] 1.97ns
+.preheader8.preheader:987  %temp_3_9 = add i32 %tmp367, %tmp369
+
+
+ <State 141>: 7.03ns
+ST_141: C_4_9 [1/1] 7.03ns
+.preheader8.preheader:988  %C_4_9 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 30, i32 %temp_3_7)
+
+ST_141: tmp_63_s [1/1] 7.03ns
+.preheader8.preheader:989  %tmp_63_s = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 5, i32 %temp_3_9)
+
+
+ <State 142>: 6.38ns
+ST_142: tmp370 [1/1] 0.00ns (grouped into LUT with out node tmp372)
+.preheader8.preheader:990  %tmp370 = xor i32 %C_4_8, %temp_3_8
+
+ST_142: tmp_65_s [1/1] 0.00ns (grouped into LUT with out node tmp372)
+.preheader8.preheader:991  %tmp_65_s = xor i32 %tmp370, %C_4_9
+
+ST_142: tmp371 [1/1] 2.44ns
+.preheader8.preheader:992  %tmp371 = add i32 %C_4_7, %K_load_3
+
+ST_142: tmp372 [1/1] 2.44ns (out node of the LUT)
+.preheader8.preheader:993  %tmp372 = add i32 %tmp_31_53, %tmp_65_s
+
+ST_142: tmp373 [1/1] 1.97ns
+.preheader8.preheader:994  %tmp373 = add i32 %tmp_63_s, %tmp372
+
+ST_142: temp_3_s [1/1] 1.97ns
+.preheader8.preheader:995  %temp_3_s = add i32 %tmp371, %tmp373
+
+
+ <State 143>: 7.03ns
+ST_143: C_4_s [1/1] 7.03ns
+.preheader8.preheader:996  %C_4_s = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 30, i32 %temp_3_8)
+
+ST_143: tmp_63_10 [1/1] 7.03ns
+.preheader8.preheader:997  %tmp_63_10 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 5, i32 %temp_3_s)
+
+
+ <State 144>: 6.38ns
+ST_144: tmp374 [1/1] 0.00ns (grouped into LUT with out node tmp376)
+.preheader8.preheader:998  %tmp374 = xor i32 %C_4_9, %temp_3_9
+
+ST_144: tmp_65_10 [1/1] 0.00ns (grouped into LUT with out node tmp376)
+.preheader8.preheader:999  %tmp_65_10 = xor i32 %tmp374, %C_4_s
+
+ST_144: tmp375 [1/1] 2.44ns
+.preheader8.preheader:1000  %tmp375 = add i32 %C_4_8, %K_load_3
+
+ST_144: tmp376 [1/1] 2.44ns (out node of the LUT)
+.preheader8.preheader:1001  %tmp376 = add i32 %tmp_31_54, %tmp_65_10
+
+ST_144: tmp377 [1/1] 1.97ns
+.preheader8.preheader:1002  %tmp377 = add i32 %tmp_63_10, %tmp376
+
+ST_144: temp_3_10 [1/1] 1.97ns
+.preheader8.preheader:1003  %temp_3_10 = add i32 %tmp375, %tmp377
+
+
+ <State 145>: 7.03ns
+ST_145: C_4_10 [1/1] 7.03ns
+.preheader8.preheader:1004  %C_4_10 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 30, i32 %temp_3_9)
+
+ST_145: tmp_63_11 [1/1] 7.03ns
+.preheader8.preheader:1005  %tmp_63_11 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 5, i32 %temp_3_10)
+
+
+ <State 146>: 6.38ns
+ST_146: tmp378 [1/1] 0.00ns (grouped into LUT with out node tmp380)
+.preheader8.preheader:1006  %tmp378 = xor i32 %C_4_s, %temp_3_s
+
+ST_146: tmp_65_11 [1/1] 0.00ns (grouped into LUT with out node tmp380)
+.preheader8.preheader:1007  %tmp_65_11 = xor i32 %tmp378, %C_4_10
+
+ST_146: tmp379 [1/1] 2.44ns
+.preheader8.preheader:1008  %tmp379 = add i32 %C_4_9, %K_load_3
+
+ST_146: tmp380 [1/1] 2.44ns (out node of the LUT)
+.preheader8.preheader:1009  %tmp380 = add i32 %tmp_31_55, %tmp_65_11
+
+ST_146: tmp381 [1/1] 1.97ns
+.preheader8.preheader:1010  %tmp381 = add i32 %tmp_63_11, %tmp380
+
+ST_146: temp_3_11 [1/1] 1.97ns
+.preheader8.preheader:1011  %temp_3_11 = add i32 %tmp379, %tmp381
+
+
+ <State 147>: 7.03ns
+ST_147: C_4_11 [1/1] 7.03ns
+.preheader8.preheader:1012  %C_4_11 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 30, i32 %temp_3_s)
+
+ST_147: tmp_63_12 [1/1] 7.03ns
+.preheader8.preheader:1013  %tmp_63_12 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 5, i32 %temp_3_11)
+
+
+ <State 148>: 6.38ns
+ST_148: tmp382 [1/1] 0.00ns (grouped into LUT with out node tmp384)
+.preheader8.preheader:1014  %tmp382 = xor i32 %C_4_10, %temp_3_10
+
+ST_148: tmp_65_12 [1/1] 0.00ns (grouped into LUT with out node tmp384)
+.preheader8.preheader:1015  %tmp_65_12 = xor i32 %tmp382, %C_4_11
+
+ST_148: tmp383 [1/1] 2.44ns
+.preheader8.preheader:1016  %tmp383 = add i32 %C_4_s, %K_load_3
+
+ST_148: tmp384 [1/1] 2.44ns (out node of the LUT)
+.preheader8.preheader:1017  %tmp384 = add i32 %tmp_31_56, %tmp_65_12
+
+ST_148: tmp385 [1/1] 1.97ns
+.preheader8.preheader:1018  %tmp385 = add i32 %tmp_63_12, %tmp384
+
+ST_148: temp_3_12 [1/1] 1.97ns
+.preheader8.preheader:1019  %temp_3_12 = add i32 %tmp383, %tmp385
+
+
+ <State 149>: 7.03ns
+ST_149: C_4_12 [1/1] 7.03ns
+.preheader8.preheader:1020  %C_4_12 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 30, i32 %temp_3_10)
+
+ST_149: tmp_63_13 [1/1] 7.03ns
+.preheader8.preheader:1021  %tmp_63_13 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 5, i32 %temp_3_12)
+
+
+ <State 150>: 6.38ns
+ST_150: tmp386 [1/1] 0.00ns (grouped into LUT with out node tmp388)
+.preheader8.preheader:1022  %tmp386 = xor i32 %C_4_11, %temp_3_11
+
+ST_150: tmp_65_13 [1/1] 0.00ns (grouped into LUT with out node tmp388)
+.preheader8.preheader:1023  %tmp_65_13 = xor i32 %tmp386, %C_4_12
+
+ST_150: tmp387 [1/1] 2.44ns
+.preheader8.preheader:1024  %tmp387 = add i32 %C_4_10, %K_load_3
+
+ST_150: tmp388 [1/1] 2.44ns (out node of the LUT)
+.preheader8.preheader:1025  %tmp388 = add i32 %tmp_31_57, %tmp_65_13
+
+ST_150: tmp389 [1/1] 1.97ns
+.preheader8.preheader:1026  %tmp389 = add i32 %tmp_63_13, %tmp388
+
+ST_150: temp_3_13 [1/1] 1.97ns
+.preheader8.preheader:1027  %temp_3_13 = add i32 %tmp387, %tmp389
+
+
+ <State 151>: 7.03ns
+ST_151: C_4_13 [1/1] 7.03ns
+.preheader8.preheader:1028  %C_4_13 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 30, i32 %temp_3_11)
+
+ST_151: tmp_63_14 [1/1] 7.03ns
+.preheader8.preheader:1029  %tmp_63_14 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 5, i32 %temp_3_13)
+
+
+ <State 152>: 7.03ns
+ST_152: tmp390 [1/1] 0.00ns (grouped into LUT with out node tmp392)
+.preheader8.preheader:1030  %tmp390 = xor i32 %C_4_12, %temp_3_12
+
+ST_152: tmp_65_14 [1/1] 0.00ns (grouped into LUT with out node tmp392)
+.preheader8.preheader:1031  %tmp_65_14 = xor i32 %tmp390, %C_4_13
+
+ST_152: tmp391 [1/1] 2.44ns
+.preheader8.preheader:1032  %tmp391 = add i32 %C_4_11, %K_load_3
+
+ST_152: tmp392 [1/1] 2.44ns (out node of the LUT)
+.preheader8.preheader:1033  %tmp392 = add i32 %tmp_31_58, %tmp_65_14
+
+ST_152: tmp393 [1/1] 1.97ns
+.preheader8.preheader:1034  %tmp393 = add i32 %tmp_63_14, %tmp392
+
+ST_152: temp_3_14 [1/1] 1.97ns
+.preheader8.preheader:1035  %temp_3_14 = add i32 %tmp391, %tmp393
+
+ST_152: C_4_14 [1/1] 7.03ns
+.preheader8.preheader:1036  %C_4_14 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 30, i32 %temp_3_12)
+
+
+ <State 153>: 7.03ns
+ST_153: tmp_31_60 [1/1] 7.03ns
+.preheader8.preheader:331  %tmp_31_60 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 1, i32 %tmp_30_60)
+
+ST_153: tmp_63_15 [1/1] 7.03ns
+.preheader8.preheader:1037  %tmp_63_15 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 5, i32 %temp_3_14)
+
+ST_153: tmp394 [1/1] 0.00ns (grouped into LUT with out node tmp396)
+.preheader8.preheader:1038  %tmp394 = xor i32 %C_4_13, %temp_3_13
+
+ST_153: tmp_65_15 [1/1] 0.00ns (grouped into LUT with out node tmp396)
+.preheader8.preheader:1039  %tmp_65_15 = xor i32 %tmp394, %C_4_14
+
+ST_153: tmp396 [1/1] 2.44ns (out node of the LUT)
+.preheader8.preheader:1041  %tmp396 = add i32 %tmp_31_59, %tmp_65_15
+
+ST_153: C_4_15 [1/1] 7.03ns
+.preheader8.preheader:1044  %C_4_15 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 30, i32 %temp_3_13)
+
+
+ <State 154>: 7.03ns
+ST_154: tmp_31_61 [1/1] 7.03ns
+.preheader8.preheader:335  %tmp_31_61 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 1, i32 %tmp_30_61)
+
+ST_154: tmp395 [1/1] 2.44ns
+.preheader8.preheader:1040  %tmp395 = add i32 %C_4_12, %K_load_3
+
+ST_154: tmp397 [1/1] 1.97ns
+.preheader8.preheader:1042  %tmp397 = add i32 %tmp_63_15, %tmp396
+
+ST_154: temp_3_15 [1/1] 1.97ns
+.preheader8.preheader:1043  %temp_3_15 = add i32 %tmp395, %tmp397
+
+ST_154: tmp398 [1/1] 0.00ns (grouped into LUT with out node tmp400)
+.preheader8.preheader:1046  %tmp398 = xor i32 %C_4_14, %temp_3_14
+
+ST_154: tmp_65_16 [1/1] 0.00ns (grouped into LUT with out node tmp400)
+.preheader8.preheader:1047  %tmp_65_16 = xor i32 %tmp398, %C_4_15
+
+ST_154: tmp400 [1/1] 2.44ns (out node of the LUT)
+.preheader8.preheader:1049  %tmp400 = add i32 %tmp_31_60, %tmp_65_16
+
+ST_154: C_4_16 [1/1] 7.03ns
+.preheader8.preheader:1052  %C_4_16 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 30, i32 %temp_3_14)
+
+
+ <State 155>: 7.03ns
+ST_155: tmp_63_16 [1/1] 7.03ns
+.preheader8.preheader:1045  %tmp_63_16 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 5, i32 %temp_3_15)
+
+ST_155: tmp402 [1/1] 0.00ns (grouped into LUT with out node tmp404)
+.preheader8.preheader:1054  %tmp402 = xor i32 %C_4_15, %temp_3_15
+
+ST_155: tmp_65_17 [1/1] 0.00ns (grouped into LUT with out node tmp404)
+.preheader8.preheader:1055  %tmp_65_17 = xor i32 %tmp402, %C_4_16
+
+ST_155: tmp404 [1/1] 2.44ns (out node of the LUT)
+.preheader8.preheader:1057  %tmp404 = add i32 %tmp_31_61, %tmp_65_17
+
+ST_155: C_4_17 [1/1] 7.03ns
+.preheader8.preheader:1060  %C_4_17 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 30, i32 %temp_3_15)
+
+
+ <State 156>: 5.78ns
+ST_156: tmp399 [1/1] 2.44ns
+.preheader8.preheader:1048  %tmp399 = add i32 %C_4_13, %K_load_3
+
+ST_156: tmp401 [1/1] 1.97ns
+.preheader8.preheader:1050  %tmp401 = add i32 %tmp_63_16, %tmp400
+
+ST_156: temp_3_16 [1/1] 1.97ns
+.preheader8.preheader:1051  %temp_3_16 = add i32 %tmp399, %tmp401
+
+ST_156: tmp406 [1/1] 0.00ns (grouped into LUT with out node tmp_65_18)
+.preheader8.preheader:1062  %tmp406 = xor i32 %C_4_16, %temp_3_16
+
+ST_156: tmp_65_18 [1/1] 1.37ns (out node of the LUT)
+.preheader8.preheader:1063  %tmp_65_18 = xor i32 %tmp406, %C_4_17
+
+ST_156: tmp_61 [1/1] 2.44ns
+.preheader8.preheader:1072  %tmp_61 = add i32 %C_4_17, %D
+
+ST_156: tmp_62 [1/1] 2.44ns
+.preheader8.preheader:1073  %tmp_62 = add i32 %C_4_16, %E
+
+
+ <State 157>: 7.03ns
+ST_157: tmp_63_17 [1/1] 7.03ns
+.preheader8.preheader:1053  %tmp_63_17 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 5, i32 %temp_3_16)
+
+ST_157: tmp403 [1/1] 2.44ns
+.preheader8.preheader:1056  %tmp403 = add i32 %C_4_14, %K_load_3
+
+ST_157: C_4_18 [1/1] 7.03ns
+.preheader8.preheader:1064  %C_4_18 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 30, i32 %temp_3_16)
+
+ST_157: tmp407 [1/1] 1.97ns
+.preheader8.preheader:1065  %tmp407 = add i32 %C_4_15, %tmp_65_18
+
+ST_157: tmp408 [1/1] 1.97ns
+.preheader8.preheader:1066  %tmp408 = add i32 %K_load_3, %tmp407
+
+
+ <State 158>: 3.94ns
+ST_158: tmp405 [1/1] 1.97ns
+.preheader8.preheader:1058  %tmp405 = add i32 %tmp_63_17, %tmp404
+
+ST_158: temp_3_17 [1/1] 1.97ns
+.preheader8.preheader:1059  %temp_3_17 = add i32 %tmp403, %tmp405
+
+ST_158: tmp_60 [1/1] 2.44ns
+.preheader8.preheader:1071  %tmp_60 = add i32 %C_4_18, %C
+
+
+ <State 159>: 7.03ns
+ST_159: tmp_63_18 [1/1] 7.03ns
+.preheader8.preheader:1061  %tmp_63_18 = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 5, i32 %temp_3_17)
+
+ST_159: tmp_59 [1/1] 2.44ns
+.preheader8.preheader:1070  %tmp_59 = add i32 %temp_3_17, %B
+
+
+ <State 160>: 3.94ns
+ST_160: stg_1234 [1/1] 0.00ns
+.preheader8.preheader:0  call void (...)* @_ssdm_op_SpecBitsMap(i688* %context), !map !13
+
+ST_160: stg_1235 [1/1] 0.00ns
+.preheader8.preheader:1  call void (...)* @_ssdm_op_SpecTopModule([24 x i8]* @SHA1ProcessMessageBlock_str) nounwind
+
+ST_160: stg_1236 [1/1] 0.00ns
+.preheader8.preheader:2  call void (...)* @_ssdm_op_SpecMemCore([4 x i32]* @K, [1 x i8]* @p_str, [12 x i8]* @p_str1, [1 x i8]* @p_str, i32 -1, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str)
+
+ST_160: tmp410 [1/1] 1.97ns
+.preheader8.preheader:1068  %tmp410 = add i32 %tmp_63_18, %tmp409
+
+ST_160: tmp_58 [1/1] 1.97ns
+.preheader8.preheader:1069  %tmp_58 = add i32 %tmp408, %tmp410
+
+ST_160: tmp_85 [1/1] 0.00ns
+.preheader8.preheader:1074  %tmp_85 = call i176 @_ssdm_op_BitConcatenate.i176.i16.i32.i32.i32.i32.i32(i16 0, i32 %tmp_62, i32 %tmp_61, i32 %tmp_60, i32 %tmp_59, i32 %tmp_58)
+
+ST_160: context56_part_set [1/1] 0.00ns
+.preheader8.preheader:1075  %context56_part_set = call i688 @_ssdm_op_PartSet.i688.i688.i176.i32.i32(i688 %context_read, i176 %tmp_85, i32 0, i32 175)
+
+ST_160: stg_1241 [1/1] 0.00ns
+.preheader8.preheader:1076  call void @_ssdm_op_Write.ap_auto.i688P(i688* %context, i688 %context56_part_set)
+
+ST_160: stg_1242 [1/1] 0.00ns
+.preheader8.preheader:1077  ret void
+
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ No timing violations. 
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+	State 17
+	State 18
+	State 19
+	State 20
+	State 21
+	State 22
+	State 23
+	State 24
+	State 25
+	State 26
+	State 27
+	State 28
+	State 29
+	State 30
+	State 31
+	State 32
+	State 33
+	State 34
+	State 35
+	State 36
+	State 37
+	State 38
+	State 39
+	State 40
+	State 41
+	State 42
+	State 43
+	State 44
+	State 45
+	State 46
+	State 47
+	State 48
+	State 49
+	State 50
+	State 51
+	State 52
+	State 53
+	State 54
+	State 55
+	State 56
+	State 57
+	State 58
+	State 59
+	State 60
+	State 61
+	State 62
+	State 63
+	State 64
+	State 65
+	State 66
+	State 67
+	State 68
+	State 69
+	State 70
+	State 71
+	State 72
+	State 73
+	State 74
+	State 75
+	State 76
+	State 77
+	State 78
+	State 79
+	State 80
+	State 81
+	State 82
+	State 83
+	State 84
+	State 85
+	State 86
+	State 87
+	State 88
+	State 89
+	State 90
+	State 91
+	State 92
+	State 93
+	State 94
+	State 95
+	State 96
+	State 97
+	State 98
+	State 99
+	State 100
+	State 101
+	State 102
+	State 103
+	State 104
+	State 105
+	State 106
+	State 107
+	State 108
+	State 109
+	State 110
+	State 111
+	State 112
+	State 113
+	State 114
+	State 115
+	State 116
+	State 117
+	State 118
+	State 119
+	State 120
+	State 121
+	State 122
+	State 123
+	State 124
+	State 125
+	State 126
+	State 127
+	State 128
+	State 129
+	State 130
+	State 131
+	State 132
+	State 133
+	State 134
+	State 135
+	State 136
+	State 137
+	State 138
+	State 139
+	State 140
+	State 141
+	State 142
+	State 143
+	State 144
+	State 145
+	State 146
+	State 147
+	State 148
+	State 149
+	State 150
+	State 151
+	State 152
+	State 153
+	State 154
+	State 155
+	State 156
+	State 157
+	State 158
+	State 159
+	State 160
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

@@ -1,3 +1,10 @@
+.vivado*
+.apc/
+.reference/
+.cproject
+.project
+.settings/
+
 # Object files
 *.o
 *.ko

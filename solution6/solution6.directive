@@ -1,0 +1,46 @@
+<AutoPilot:ProjectResources xmlns:AutoPilot="com.autoesl.autopilot.ui.directiveView">
+    <sourceFile name="">
+        <directive functionName="SHA1ProcessMessageBlock" label="loop4" functionLabel="">
+            <pragma name="UNROLL"/>
+        </directive>
+        <directive functionName="SHA1ProcessMessageBlock" label="loop1" functionLabel="">
+            <pragma name="UNROLL"/>
+        </directive>
+        <directive functionName="SHA1ProcessMessageBlock" label="loop2" functionLabel="">
+            <pragma name="UNROLL"/>
+        </directive>
+        <directive functionName="SHA1ProcessMessageBlock" label="loop6" functionLabel="">
+            <pragma name="UNROLL"/>
+        </directive>
+        <directive functionName="SHA1ProcessMessageBlock" label="loop3" functionLabel="">
+            <pragma name="UNROLL"/>
+        </directive>
+        <directive functionName="SHA1ProcessMessageBlock" label="loop5" functionLabel="">
+            <pragma name="UNROLL"/>
+        </directive>
+        <directive functionName="SHA1ProcessMessageBlock" label="" functionLabel="">
+            <pragma name="DATA_PACK">
+                <option name="variable" value="context" positionalBoolean="4"/>
+            </pragma>
+        </directive>
+        <directive functionName="SHA1ProcessMessageBlock" label="loop2" functionLabel="">
+            <pragma name="LOOP_TRIPCOUNT"/>
+        </directive>
+        <directive functionName="SHA1ProcessMessageBlock" label="loop5" functionLabel="">
+            <pragma name="LOOP_TRIPCOUNT"/>
+        </directive>
+        <directive functionName="SHA1ProcessMessageBlock" label="loop4" functionLabel="">
+            <pragma name="LOOP_TRIPCOUNT"/>
+        </directive>
+        <directive functionName="SHA1ProcessMessageBlock" label="loop6" functionLabel="">
+            <pragma name="LOOP_TRIPCOUNT"/>
+        </directive>
+        <directive functionName="SHA1ProcessMessageBlock" label="loop3" functionLabel="">
+            <pragma name="LOOP_TRIPCOUNT"/>
+        </directive>
+        <directive functionName="SHA1ProcessMessageBlock" label="loop1" functionLabel="">
+            <pragma name="LOOP_TRIPCOUNT"/>
+        </directive>
+    </sourceFile>
+</AutoPilot:ProjectResources>
+
