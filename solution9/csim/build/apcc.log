@@ -1,6 +1,0 @@
-INFO: [HLS 200-10] Running '/opt/Xilinx/Vivado_HLS/2016.1/bin/unwrapped/lnx64.o/apcc'
-INFO: [HLS 200-10] For user 'matt' on host 'xps' (Linux_x86_64 version 4.7.2-1-ARCH) on Thu Sep 01 13:49:55 ART 2016
-INFO: [HLS 200-10] On os "Arch Linux"
-INFO: [HLS 200-10] In directory '/home/matt/workspace/sha1/solution9/csim/build'
-INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_matt/40871472748595352470
-INFO: [APCC 202-1] APCC is done.

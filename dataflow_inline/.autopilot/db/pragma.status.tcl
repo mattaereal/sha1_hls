@@ -1,0 +1,6 @@
+lappend pragmaStatus0 {pragma "DATAFLOW" source "/home/matt/workspace/sha1_hls/sha1.c" location "SHA1ProcessMessageBlock" found 1 funcFound 1 applied 1 ambiguous 0 reason "null"}
+lappend pragmaStatus1 {pragma "INLINE" source "/home/matt/workspace/sha1_hls/sha1.c" location "Swapping" found 1 funcFound 1 applied 1 ambiguous 0 reason "null"}
+lappend pragmaStatus2 {pragma "INLINE" source "/home/matt/workspace/sha1_hls/sha1.c" location "SHA1CircularShift" found 1 funcFound 1 applied 1 ambiguous 0 reason "null"}
+lappend pragmaStatus0 {pragma "DATAFLOW" source "/home/matt/workspace/sha1_hls/sha1_original.c" location "SHA1ProcessMessageBlock" found 0 funcFound 0 applied 0 ambiguous 0 reason "Directive 'DATAFLOW' cannot be applied: Function 'SHA1ProcessMessageBlock' does not exist in any synthesis source file."}
+lappend pragmaStatus1 {pragma "INLINE" source "/home/matt/workspace/sha1_hls/sha1_original.c" location "Swapping" found 0 funcFound 0 applied 0 ambiguous 0 reason "Directive 'INLINE' cannot be applied: Function 'Swapping' does not exist in any synthesis source file."}
+lappend pragmaStatus2 {pragma "INLINE" source "/home/matt/workspace/sha1_hls/sha1_original.c" location "SHA1CircularShift" found 0 funcFound 0 applied 0 ambiguous 0 reason "Directive 'INLINE' cannot be applied: Function 'SHA1CircularShift' does not exist in any synthesis source file."}

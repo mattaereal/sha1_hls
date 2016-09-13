@@ -1,0 +1,4 @@
+#!/bin/sh
+lli=${LLVMINTERP-lli}
+exec $lli \
+    /home/matt/workspace/sha1_hls/old_solution7/.autopilot/db/a.g.pre.bc ${1+"$@"}

@@ -1,0 +1,150 @@
+
+
+================================================================
+== Vivado HLS Report for 'SHA1ProcessMessageBlock'
+================================================================
+* Date:           Tue Sep 13 00:41:54 2016
+
+* Version:        2016.1 (Build 1538259 on Fri Apr 08 16:12:49 MDT 2016)
+* Project:        sha1_hls
+* Solution:       dataflow_inline
+* Product family: zynq
+* Target device:  xc7z020clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|      7.28|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+----------+
+    |  Latency  |  Interval | Pipeline |
+    | min | max | min | max |   Type   |
+    +-----+-----+-----+-----+----------+
+    |  412|  412|  243|  243| dataflow |
+    +-----+-----+-----+-----+----------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states: 4
+* Pipeline: 0
+* Dataflow Pipeline: 1
+  DF-Pipeline-0: Size = 4, States = { 1 2 3 4 }
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	3  / true
+3 --> 
+	4  / true
+4 --> 
+* FSM state operations: 
+
+ <State 1>: 0.00ns
+ST_1: W [1/1] 0.00ns
+codeRepl:5  %W = alloca [80 x i32], align 16
+
+ST_1: stg_6 [2/2] 0.00ns
+codeRepl:6  call fastcc void @SHA1ProcessMessageBlock_Loop_loop1_proc([64 x i8]* %context_Message_Block, [80 x i32]* %W)
+
+
+ <State 2>: 0.00ns
+ST_2: stg_7 [1/2] 0.00ns
+codeRepl:6  call fastcc void @SHA1ProcessMessageBlock_Loop_loop1_proc([64 x i8]* %context_Message_Block, [80 x i32]* %W)
+
+
+ <State 3>: 0.00ns
+ST_3: stg_8 [2/2] 0.00ns
+codeRepl:7  call fastcc void @SHA1ProcessMessageBlock_Block__proc([5 x i32]* %context_Intermediate_Hash, [80 x i32]* %W, i16* %context_Message_Block_Index)
+
+
+ <State 4>: 0.00ns
+ST_4: stg_9 [1/1] 0.00ns
+codeRepl:0  call void (...)* @_ssdm_op_SpecDataflowPipeline(i32 -1, [1 x i8]* @p_str) nounwind
+
+ST_4: stg_10 [1/1] 0.00ns
+codeRepl:1  call void (...)* @_ssdm_op_SpecBitsMap([5 x i32]* %context_Intermediate_Hash), !map !19
+
+ST_4: stg_11 [1/1] 0.00ns
+codeRepl:2  call void (...)* @_ssdm_op_SpecBitsMap(i16* %context_Message_Block_Index), !map !25
+
+ST_4: stg_12 [1/1] 0.00ns
+codeRepl:3  call void (...)* @_ssdm_op_SpecBitsMap([64 x i8]* %context_Message_Block), !map !31
+
+ST_4: stg_13 [1/1] 0.00ns
+codeRepl:4  call void (...)* @_ssdm_op_SpecTopModule([24 x i8]* @SHA1ProcessMessageBlock_str) nounwind
+
+ST_4: stg_14 [1/2] 0.00ns
+codeRepl:7  call fastcc void @SHA1ProcessMessageBlock_Block__proc([5 x i32]* %context_Intermediate_Hash, [80 x i32]* %W, i16* %context_Message_Block_Index)
+
+ST_4: stg_15 [1/1] 0.00ns
+codeRepl:8  ret void
+
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ No timing violations. 
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

@@ -1,0 +1,556 @@
+
+
+================================================================
+== Vivado HLS Report for 'SHA1ProcessMessageBlock_Swapping'
+================================================================
+* Date:           Tue Sep 13 01:56:37 2016
+
+* Version:        2016.1 (Build 1538259 on Fri Apr 08 16:12:49 MDT 2016)
+* Project:        sha1_hls
+* Solution:       old_solution7
+* Product family: zynq
+* Target device:  xc7z020clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|      2.47|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |    0|    0|    0|    0|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 0
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states: 1
+* Pipeline: 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+* FSM state operations: 
+
+ <State 1>: 2.47ns
+ST_1: temp_read_1 [1/1] 2.47ns
+:0  %temp_read_1 = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %temp_read)
+
+ST_1: D_read_1 [1/1] 2.47ns
+:1  %D_read_1 = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %D_read)
+
+ST_1: C_read_1 [1/1] 2.47ns
+:2  %C_read_1 = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %C_read)
+
+ST_1: B_read_1 [1/1] 2.47ns
+:3  %B_read_1 = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %B_r)
+
+ST_1: A_read_1 [1/1] 2.47ns
+:4  %A_read_1 = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %A_read)
+
+ST_1: tmp [1/1] 0.00ns
+:5  %tmp = trunc i32 %B_read_1 to i2
+
+ST_1: tmp_64_i [1/1] 0.00ns
+:6  %tmp_64_i = call i30 @_ssdm_op_PartSelect.i30.i32.i32.i32(i32 %B_read_1, i32 2, i32 31)
+
+ST_1: C_write_assign [1/1] 0.00ns
+:7  %C_write_assign = call i32 @_ssdm_op_BitConcatenate.i32.i2.i30(i2 %tmp, i30 %tmp_64_i)
+
+ST_1: mrv [1/1] 0.00ns
+:8  %mrv = insertvalue { i32, i32, i32, i32, i32 } undef, i32 %D_read_1, 0
+
+ST_1: mrv_1 [1/1] 0.00ns
+:9  %mrv_1 = insertvalue { i32, i32, i32, i32, i32 } %mrv, i32 %temp_read_1, 1
+
+ST_1: mrv_2 [1/1] 0.00ns
+:10  %mrv_2 = insertvalue { i32, i32, i32, i32, i32 } %mrv_1, i32 %A_read_1, 2
+
+ST_1: mrv_3 [1/1] 0.00ns
+:11  %mrv_3 = insertvalue { i32, i32, i32, i32, i32 } %mrv_2, i32 %C_write_assign, 3
+
+ST_1: mrv_4 [1/1] 0.00ns
+:12  %mrv_4 = insertvalue { i32, i32, i32, i32, i32 } %mrv_3, i32 %C_read_1, 4
+
+ST_1: stg_15 [1/1] 0.00ns
+:13  ret { i32, i32, i32, i32, i32 } %mrv_4
+
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+STG Binding: 
+---------------- STG Properties BEGIN ----------------
+- Is combinational: 1
+- Is one-state seq: 0
+- Is datapath-only: 0
+- Is clock enabled: 0
+- Is pipelined: 0
+- Is top level: 0
+Port [ Return ] is wired: 1; IO mode=ap_ctrl_hs:ce=0
+Port [ B]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ B_r]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ D]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ E]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ A]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+---------------- STG Properties END ------------------
+
+---------------- Datapath Model BEGIN ----------------
+
+<LifeTime>
+<method=bitvector/>
+temp_read_1    (read          ) [ 00]
+D_read_1       (read          ) [ 00]
+C_read_1       (read          ) [ 00]
+B_read_1       (read          ) [ 00]
+A_read_1       (read          ) [ 00]
+tmp            (trunc         ) [ 00]
+tmp_64_i       (partselect    ) [ 00]
+C_write_assign (bitconcatenate) [ 00]
+mrv            (insertvalue   ) [ 00]
+mrv_1          (insertvalue   ) [ 00]
+mrv_2          (insertvalue   ) [ 00]
+mrv_3          (insertvalue   ) [ 00]
+mrv_4          (insertvalue   ) [ 00]
+stg_15         (ret           ) [ 00]
+</LifeTime>
+
+<model>
+
+<comp_list>
+<comp id="0" class="1000" name="B">
+<pin_list>
+<pin id="1" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="B"/></StgValue>
+</bind>
+</comp>
+
+<comp id="2" class="1000" name="B_r">
+<pin_list>
+<pin id="3" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="B_r"/></StgValue>
+</bind>
+</comp>
+
+<comp id="4" class="1000" name="D">
+<pin_list>
+<pin id="5" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="D"/></StgValue>
+</bind>
+</comp>
+
+<comp id="6" class="1000" name="E">
+<pin_list>
+<pin id="7" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="E"/></StgValue>
+</bind>
+</comp>
+
+<comp id="8" class="1000" name="A">
+<pin_list>
+<pin id="9" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="A"/></StgValue>
+</bind>
+</comp>
+
+<comp id="10" class="1001" name="const_10">
+<pin_list>
+<pin id="11" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_Read.ap_auto.i32"/></StgValue>
+</bind>
+</comp>
+
+<comp id="12" class="1001" name="const_12">
+<pin_list>
+<pin id="13" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_PartSelect.i30.i32.i32.i32"/></StgValue>
+</bind>
+</comp>
+
+<comp id="14" class="1001" name="const_14">
+<pin_list>
+<pin id="15" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="16" class="1001" name="const_16">
+<pin_list>
+<pin id="17" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="18" class="1001" name="const_18">
+<pin_list>
+<pin id="19" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_BitConcatenate.i32.i2.i30"/></StgValue>
+</bind>
+</comp>
+
+<comp id="20" class="1001" name="const_20">
+<pin_list>
+<pin id="21" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="22" class="1004" name="temp_read_1_read_fu_22">
+<pin_list>
+<pin id="23" dir="0" index="0" bw="32" slack="0"/>
+<pin id="24" dir="0" index="1" bw="32" slack="0"/>
+<pin id="25" dir="1" index="2" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="read(1150) " fcode="read"/>
+<opset="temp_read_1/1 "/>
+</bind>
+</comp>
+
+<comp id="28" class="1004" name="D_read_1_read_fu_28">
+<pin_list>
+<pin id="29" dir="0" index="0" bw="32" slack="0"/>
+<pin id="30" dir="0" index="1" bw="32" slack="0"/>
+<pin id="31" dir="1" index="2" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="read(1150) " fcode="read"/>
+<opset="D_read_1/1 "/>
+</bind>
+</comp>
+
+<comp id="34" class="1004" name="C_read_1_read_fu_34">
+<pin_list>
+<pin id="35" dir="0" index="0" bw="32" slack="0"/>
+<pin id="36" dir="0" index="1" bw="32" slack="0"/>
+<pin id="37" dir="1" index="2" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="read(1150) " fcode="read"/>
+<opset="C_read_1/1 "/>
+</bind>
+</comp>
+
+<comp id="40" class="1004" name="B_read_1_read_fu_40">
+<pin_list>
+<pin id="41" dir="0" index="0" bw="32" slack="0"/>
+<pin id="42" dir="0" index="1" bw="32" slack="0"/>
+<pin id="43" dir="1" index="2" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="read(1150) " fcode="read"/>
+<opset="B_read_1/1 "/>
+</bind>
+</comp>
+
+<comp id="46" class="1004" name="A_read_1_read_fu_46">
+<pin_list>
+<pin id="47" dir="0" index="0" bw="32" slack="0"/>
+<pin id="48" dir="0" index="1" bw="32" slack="0"/>
+<pin id="49" dir="1" index="2" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="read(1150) " fcode="read"/>
+<opset="A_read_1/1 "/>
+</bind>
+</comp>
+
+<comp id="52" class="1004" name="tmp_fu_52">
+<pin_list>
+<pin id="53" dir="0" index="0" bw="32" slack="0"/>
+<pin id="54" dir="1" index="1" bw="2" slack="0"/>
+</pin_list>
+<bind>
+<opcode="trunc(33) " fcode="trunc"/>
+<opset="tmp/1 "/>
+</bind>
+</comp>
+
+<comp id="56" class="1004" name="tmp_64_i_fu_56">
+<pin_list>
+<pin id="57" dir="0" index="0" bw="30" slack="0"/>
+<pin id="58" dir="0" index="1" bw="32" slack="0"/>
+<pin id="59" dir="0" index="2" bw="3" slack="0"/>
+<pin id="60" dir="0" index="3" bw="6" slack="0"/>
+<pin id="61" dir="1" index="4" bw="30" slack="0"/>
+</pin_list>
+<bind>
+<opcode="partselect(1002) " fcode="partselect"/>
+<opset="tmp_64_i/1 "/>
+</bind>
+</comp>
+
+<comp id="66" class="1004" name="C_write_assign_fu_66">
+<pin_list>
+<pin id="67" dir="0" index="0" bw="32" slack="0"/>
+<pin id="68" dir="0" index="1" bw="2" slack="0"/>
+<pin id="69" dir="0" index="2" bw="30" slack="0"/>
+<pin id="70" dir="1" index="3" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="bitconcatenate(1004) " fcode="bitconcatenate"/>
+<opset="C_write_assign/1 "/>
+</bind>
+</comp>
+
+<comp id="74" class="1004" name="mrv_fu_74">
+<pin_list>
+<pin id="75" dir="0" index="0" bw="160" slack="0"/>
+<pin id="76" dir="0" index="1" bw="32" slack="0"/>
+<pin id="77" dir="1" index="2" bw="160" slack="0"/>
+</pin_list>
+<bind>
+<opcode="insertvalue(57) " fcode="insertvalue"/>
+<opset="mrv/1 "/>
+</bind>
+</comp>
+
+<comp id="80" class="1004" name="mrv_1_fu_80">
+<pin_list>
+<pin id="81" dir="0" index="0" bw="160" slack="0"/>
+<pin id="82" dir="0" index="1" bw="32" slack="0"/>
+<pin id="83" dir="1" index="2" bw="160" slack="0"/>
+</pin_list>
+<bind>
+<opcode="insertvalue(57) " fcode="insertvalue"/>
+<opset="mrv_1/1 "/>
+</bind>
+</comp>
+
+<comp id="86" class="1004" name="mrv_2_fu_86">
+<pin_list>
+<pin id="87" dir="0" index="0" bw="160" slack="0"/>
+<pin id="88" dir="0" index="1" bw="32" slack="0"/>
+<pin id="89" dir="1" index="2" bw="160" slack="0"/>
+</pin_list>
+<bind>
+<opcode="insertvalue(57) " fcode="insertvalue"/>
+<opset="mrv_2/1 "/>
+</bind>
+</comp>
+
+<comp id="92" class="1004" name="mrv_3_fu_92">
+<pin_list>
+<pin id="93" dir="0" index="0" bw="160" slack="0"/>
+<pin id="94" dir="0" index="1" bw="32" slack="0"/>
+<pin id="95" dir="1" index="2" bw="160" slack="0"/>
+</pin_list>
+<bind>
+<opcode="insertvalue(57) " fcode="insertvalue"/>
+<opset="mrv_3/1 "/>
+</bind>
+</comp>
+
+<comp id="98" class="1004" name="mrv_4_fu_98">
+<pin_list>
+<pin id="99" dir="0" index="0" bw="160" slack="0"/>
+<pin id="100" dir="0" index="1" bw="32" slack="0"/>
+<pin id="101" dir="1" index="2" bw="160" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="insertvalue(57) " fcode="insertvalue"/>
+<opset="mrv_4/1 "/>
+</bind>
+</comp>
+
+</comp_list>
+
+<net_list>
+<net id="26"><net_src comp="10" pin="0"/><net_sink comp="22" pin=0"/></net>
+
+<net id="27"><net_src comp="8" pin="0"/><net_sink comp="22" pin=1"/></net>
+
+<net id="32"><net_src comp="10" pin="0"/><net_sink comp="28" pin=0"/></net>
+
+<net id="33"><net_src comp="6" pin="0"/><net_sink comp="28" pin=1"/></net>
+
+<net id="38"><net_src comp="10" pin="0"/><net_sink comp="34" pin=0"/></net>
+
+<net id="39"><net_src comp="4" pin="0"/><net_sink comp="34" pin=1"/></net>
+
+<net id="44"><net_src comp="10" pin="0"/><net_sink comp="40" pin=0"/></net>
+
+<net id="45"><net_src comp="2" pin="0"/><net_sink comp="40" pin=1"/></net>
+
+<net id="50"><net_src comp="10" pin="0"/><net_sink comp="46" pin=0"/></net>
+
+<net id="51"><net_src comp="0" pin="0"/><net_sink comp="46" pin=1"/></net>
+
+<net id="55"><net_src comp="40" pin="2"/><net_sink comp="52" pin=0"/></net>
+
+<net id="62"><net_src comp="12" pin="0"/><net_sink comp="56" pin=0"/></net>
+
+<net id="63"><net_src comp="40" pin="2"/><net_sink comp="56" pin=1"/></net>
+
+<net id="64"><net_src comp="14" pin="0"/><net_sink comp="56" pin=2"/></net>
+
+<net id="65"><net_src comp="16" pin="0"/><net_sink comp="56" pin=3"/></net>
+
+<net id="71"><net_src comp="18" pin="0"/><net_sink comp="66" pin=0"/></net>
+
+<net id="72"><net_src comp="52" pin="1"/><net_sink comp="66" pin=1"/></net>
+
+<net id="73"><net_src comp="56" pin="4"/><net_sink comp="66" pin=2"/></net>
+
+<net id="78"><net_src comp="20" pin="0"/><net_sink comp="74" pin=0"/></net>
+
+<net id="79"><net_src comp="28" pin="2"/><net_sink comp="74" pin=1"/></net>
+
+<net id="84"><net_src comp="74" pin="2"/><net_sink comp="80" pin=0"/></net>
+
+<net id="85"><net_src comp="22" pin="2"/><net_sink comp="80" pin=1"/></net>
+
+<net id="90"><net_src comp="80" pin="2"/><net_sink comp="86" pin=0"/></net>
+
+<net id="91"><net_src comp="46" pin="2"/><net_sink comp="86" pin=1"/></net>
+
+<net id="96"><net_src comp="86" pin="2"/><net_sink comp="92" pin=0"/></net>
+
+<net id="97"><net_src comp="66" pin="3"/><net_sink comp="92" pin=1"/></net>
+
+<net id="102"><net_src comp="92" pin="2"/><net_sink comp="98" pin=0"/></net>
+
+<net id="103"><net_src comp="34" pin="2"/><net_sink comp="98" pin=1"/></net>
+
+</net_list>
+
+</model> 
+---------------- Datapath Model END ------------------
+
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+	Port: SHA1ProcessMessageBlock_Swapping : B | {1 }
+	Port: SHA1ProcessMessageBlock_Swapping : B_r | {1 }
+	Port: SHA1ProcessMessageBlock_Swapping : D | {1 }
+	Port: SHA1ProcessMessageBlock_Swapping : E | {1 }
+	Port: SHA1ProcessMessageBlock_Swapping : A | {1 }
+  - Chain level:
+	State 1
+		C_write_assign : 1
+		mrv_1 : 1
+		mrv_2 : 2
+		mrv_3 : 3
+		mrv_4 : 4
+		stg_15 : 5
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+
+* Functional unit list:
+|----------|------------------------|
+| Operation|     Functional Unit    |
+|----------|------------------------|
+|          | temp_read_1_read_fu_22 |
+|          |   D_read_1_read_fu_28  |
+|   read   |   C_read_1_read_fu_34  |
+|          |   B_read_1_read_fu_40  |
+|          |   A_read_1_read_fu_46  |
+|----------|------------------------|
+|   trunc  |        tmp_fu_52       |
+|----------|------------------------|
+|partselect|     tmp_64_i_fu_56     |
+|----------|------------------------|
+|bitconcatenate|  C_write_assign_fu_66  |
+|----------|------------------------|
+|          |        mrv_fu_74       |
+|          |       mrv_1_fu_80      |
+|insertvalue|       mrv_2_fu_86      |
+|          |       mrv_3_fu_92      |
+|          |       mrv_4_fu_98      |
+|----------|------------------------|
+|   Total  |                        |
+|----------|------------------------|
+
+Memories:
+N/A
+
+* Register list:
+N/A
+
+* Multiplexer (MUX) list: 
+|--------|------|------|------|--------|
+|  Comp  |  Pin | Size |  BW  | S x BW |
+|--------|------|------|------|--------|
+|  Total |      |      |      |    0   |
+|--------|------|------|------|--------|
+
+
+
+* Summary:
++-----------+
+|           |
++-----------+
+|  Function |
+|   Memory  |
+|Multiplexer|
+|  Register |
++-----------+
+|   Total   |
++-----------+

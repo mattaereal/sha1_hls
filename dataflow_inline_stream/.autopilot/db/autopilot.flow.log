@@ -1,0 +1,825 @@
+@I [HLS-0] Workspace /home/matt/workspace/sha1_hls/dataflow_inline_stream opened at Tue Sep 13 00:40:42 ART 2016
+@I [HLS-100] Command "config_clock -quiet -name default -period 10 -default=false "
+@I [SYN-201] Setting up clock 'default' with a period of 10ns.
+@I [HLS-100] Command 'config_clock' returned 0; elapsed 0.000442Total elapsed time: 0.821 sec.
+@I [HLS-100] Command "open_platform DefaultPlatform "
+@I [HLS-100] Command 'open_platform' returned 0; elapsed 0.000125Total elapsed time: 0.824 sec.
+@I [HLS-100] Command "import_lib /opt/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/zynq/zynq "
+@I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/common/xilinx.lib "
+@I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/interface/xilinx_interface.lib "
+@I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/interface/plb46.lib "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000852Total elapsed time: 0.826 sec.
+@I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/interface/fsl.lib "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000449Total elapsed time: 0.827 sec.
+@I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/interface/axi4.lib "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.0006Total elapsed time: 0.828 sec.
+@I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/interface/maxi.lib "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000523Total elapsed time: 0.829 sec.
+@I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/interface/saxilite.lib "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000373Total elapsed time: 0.830 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.005378Total elapsed time: 0.830 sec.
+@I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/common/dsp48.lib "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000377Total elapsed time: 0.831 sec.
+@I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/ip/xfir.lib "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000234Total elapsed time: 0.832 sec.
+@I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/ip/dds_compiler.lib "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000218Total elapsed time: 0.833 sec.
+@I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/ip/xfft.lib "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.0002Total elapsed time: 0.833 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.015489Total elapsed time: 0.840 sec.
+@I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/common/xilinx_old.lib "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.00222Total elapsed time: 0.847 sec.
+@I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/common/xilinx_vivado.lib "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.002161Total elapsed time: 0.850 sec.
+@I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/common/xilinx.hlp "
+@I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/common/target_info.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000361Total elapsed time: 0.857 sec.
+@I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/interface/xilinx_interface.hlp "
+@I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/interface/maxi.hlp "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000331Total elapsed time: 0.858 sec.
+@I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/interface/saxilite.hlp "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000244Total elapsed time: 0.859 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.001598Total elapsed time: 0.859 sec.
+@I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/common/dsp48.hlp "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.001637Total elapsed time: 0.862 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.007909Total elapsed time: 0.864 sec.
+@I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/zynq/dsp48e1.hlp "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000223Total elapsed time: 0.864 sec.
+@I [HLS-100] Command "get_default_platform "
+@I [HLS-100] Command 'get_default_platform' returned 0; elapsed 1.5e-05Total elapsed time: 0.865 sec.
+@I [HLS-100] Command "config_chip_info -quiet -resource  {SLICE 13300}  {LUT 53200}     {FF 106400} {DSP48E 220}   {BRAM 280}  "
+@I [HLS-100] Command 'config_chip_info' returned 0; elapsed 5.1e-05Total elapsed time: 0.866 sec.
+@I [HLS-100] Command "config_chip_info -quiet -speed medium "
+@I [HLS-100] Command 'config_chip_info' returned 0; elapsed 1.7e-05Total elapsed time: 0.866 sec.
+@I [HLS-100] Command 'import_lib' returned 0; elapsed 0.047158Total elapsed time: 0.871 sec.
+@I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/zynq/zynq.gen "
+@I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/common/virtex.gen "
+@I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/common/xilinx.gen "
+@I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/interface/plb46.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.003254Total elapsed time: 0.877 sec.
+@I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/interface/fsl.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.001224Total elapsed time: 0.878 sec.
+@I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/interface/axi4.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.005981Total elapsed time: 0.885 sec.
+@I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/interface/nativeAXI4.gen "
+@I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/interface/saxilite.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.01048Total elapsed time: 0.896 sec.
+@I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/interface/maxi.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.022662Total elapsed time: 0.919 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.034458Total elapsed time: 0.920 sec.
+@I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/scripts/xilinxcoregen.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.029045Total elapsed time: 0.949 sec.
+@I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/interface/XilEDKCoreGen.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.023894Total elapsed time: 0.974 sec.
+@I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/ip/util.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.00043Total elapsed time: 0.975 sec.
+@I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/ip/xfir.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.002018Total elapsed time: 0.978 sec.
+@I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/ip/dds_compiler.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.009914Total elapsed time: 0.988 sec.
+@I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/ip/xfft.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.354915Total elapsed time: 1.343 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.470746Total elapsed time: 1.344 sec.
+@I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/common/dsp48.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000383Total elapsed time: 1.349 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.477993Total elapsed time: 1.350 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.478664Total elapsed time: 1.351 sec.
+@I [HLS-100] Command "open_platform DefaultPlatform "
+@I [HLS-100] Command 'open_platform' returned 0; elapsed 1.8e-05Total elapsed time: 1.351 sec.
+@I [HLS-100] Command "import_lib /opt/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/zynq/zynq_fpv6 "
+@I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/common/xilinx_fpv7.lib "
+@I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/common/xilinx_hp.lib "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.001985Total elapsed time: 1.355 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.011124Total elapsed time: 1.363 sec.
+@I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/common/xilinx_fpv.hlp "
+@I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/common/xilinx.hlp "
+@I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/common/target_info.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000427Total elapsed time: 1.383 sec.
+@I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/interface/xilinx_interface.hlp "
+@I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/interface/maxi.hlp "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000336Total elapsed time: 1.384 sec.
+@I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/interface/saxilite.hlp "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000252Total elapsed time: 1.384 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.001427Total elapsed time: 1.385 sec.
+@I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/common/dsp48.hlp "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.001647Total elapsed time: 1.388 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.007569Total elapsed time: 1.389 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.00947Total elapsed time: 1.391 sec.
+@I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/zynq/zynq_hp.hlp "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.002476Total elapsed time: 1.394 sec.
+@I [HLS-100] Command 'import_lib' returned 0; elapsed 0.057819Total elapsed time: 1.409 sec.
+@I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/zynq/zynq_fpv6.gen "
+@I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/common/xilinx_fpv6.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.004697Total elapsed time: 1.415 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.005427Total elapsed time: 1.416 sec.
+@I [HLS-100] Command "set_part xc7z020clg484-1 "
+@I [HLS-100] Command "add_library xilinx/zynq/zynq:xc7z020:clg484:-1 "
+@I [HLS-100] Command "get_default_platform "
+@I [HLS-100] Command 'get_default_platform' returned 0; elapsed 1.5e-05Total elapsed time: 1.427 sec.
+@I [HLS-100] Command "license_isbetapart xc7z020 "
+@I [HLS-100] Command 'license_isbetapart' returned 1; elapsed 0.018575Total elapsed time: 1.448 sec.
+@I [HLS-100] Command "get_default_platform "
+@I [HLS-100] Command 'get_default_platform' returned 0; elapsed 1.7e-05Total elapsed time: 1.450 sec.
+@I [HLS-100] Command "config_chip_info -quiet -resource  {SLICE 13300}  {LUT 53200}     {FF 106400} {DSP48E 220}   {BRAM 280}  "
+@I [HLS-100] Command 'config_chip_info' returned 0; elapsed 4e-05Total elapsed time: 1.451 sec.
+@I [HLS-100] Command "config_chip_info -quiet -speed slow "
+@I [HLS-100] Command 'config_chip_info' returned 0; elapsed 1.7e-05Total elapsed time: 1.451 sec.
+@I [HLS-100] Command 'add_library' returned 0; elapsed 0.028427Total elapsed time: 1.454 sec.
+@I [HLS-100] Command "add_library xilinx/zynq/zynq_fpv6 "
+@I [HLS-100] Command "get_default_platform "
+@I [HLS-100] Command 'get_default_platform' returned 0; elapsed 1.1e-05Total elapsed time: 1.456 sec.
+@I [HLS-100] Command 'add_library' returned 0; elapsed 0.004248Total elapsed time: 1.459 sec.
+@I [HLS-10] Setting target device to 'xc7z020clg484-1'
+@I [HLS-100] Command 'set_part' returned 0; elapsed 0.042198Total elapsed time: 1.460 sec.
+@I [HLS-100] Command "get_default_platform "
+@I [HLS-100] Command 'get_default_platform' returned 0; elapsed 1.1e-05Total elapsed time: 1.460 sec.
+@I [HLS-100] Command "config_chip_info -quiet -resource  {SLICE 13300}  {LUT 53200}     {FF 106400} {DSP48E 220}   {BRAM 280}  "
+@I [HLS-100] Command 'config_chip_info' returned 0; elapsed 3e-05Total elapsed time: 1.461 sec.
+@I [HLS-100] Command "config_chip_info -quiet -speed slow "
+@I [HLS-100] Command 'config_chip_info' returned 0; elapsed 1.4e-05Total elapsed time: 1.461 sec.
+@I [HLS-100] Command "config_bind -effort=high "
+@I [HLS-100] Command 'config_bind' returned 0; elapsed 0.00215Total elapsed time: 1.465 sec.
+@I [HLS-100] Command 'open_solution' returned 0; elapsed 0.661909Total elapsed time: 1.466 sec.
+@I [HLS-100] Command "set_part xc7z020clg484-1 "
+@I [HLS-100] Command "add_library xilinx/zynq/zynq:xc7z020:clg484:-1 "
+@I [HLS-100] Command "get_default_platform "
+@I [HLS-100] Command 'get_default_platform' returned 0; elapsed 1.3e-05Total elapsed time: 1.471 sec.
+@I [HLS-100] Command "license_isbetapart xc7z020 "
+@I [HLS-100] Command 'license_isbetapart' returned 1; elapsed 9.4e-05Total elapsed time: 1.473 sec.
+@I [HLS-100] Command "get_default_platform "
+@I [HLS-100] Command 'get_default_platform' returned 0; elapsed 1.3e-05Total elapsed time: 1.475 sec.
+@I [HLS-100] Command "config_chip_info -quiet -resource  {SLICE 13300}  {LUT 53200}     {FF 106400} {DSP48E 220}   {BRAM 280}  "
+@I [HLS-100] Command 'config_chip_info' returned 0; elapsed 3.4e-05Total elapsed time: 1.475 sec.
+@I [HLS-100] Command "config_chip_info -quiet -speed slow "
+@I [HLS-100] Command 'config_chip_info' returned 0; elapsed 1.5e-05Total elapsed time: 1.476 sec.
+@I [HLS-100] Command 'add_library' returned 0; elapsed 0.007646Total elapsed time: 1.478 sec.
+@I [HLS-100] Command "add_library xilinx/zynq/zynq_fpv6 "
+@I [HLS-100] Command "get_default_platform "
+@I [HLS-100] Command 'get_default_platform' returned 0; elapsed 1.2e-05Total elapsed time: 1.479 sec.
+@I [HLS-100] Command 'add_library' returned 0; elapsed 0.004055Total elapsed time: 1.482 sec.
+@I [HLS-100] Command 'set_part' returned 0; elapsed 0.016124Total elapsed time: 1.482 sec.
+@I [HLS-100] Command "create_clock -period 10 -name default "
+@I [HLS-100] Command 'create_clock' returned 0; elapsed 0.00286Total elapsed time: 1.486 sec.
+@I [HLS-100] Command "config_bind -effort high "
+@I [HLS-100] Command 'config_bind' returned 0; elapsed 0.001556Total elapsed time: 1.488 sec.
+@I [HLS-100] Command "source ./sha1_hls/dataflow_inline_stream/directives.tcl "
+@I [HLS-100] Command "set_directive_dataflow SHA1ProcessMessageBlock "
+@I [HLS-0] Setting directive 'DATAFLOW' 
+@I [HLS-100] Command 'set_directive_dataflow' returned 0; elapsed 0.002279Total elapsed time: 1.491 sec.
+@I [HLS-100] Command "set_directive_inline Swapping "
+@I [HLS-0] Setting directive 'DATAFLOW' 
+@I [HLS-0] Setting directive 'INLINE' 
+@I [HLS-100] Command 'set_directive_inline' returned 0; elapsed 0.001719Total elapsed time: 1.493 sec.
+@I [HLS-100] Command "set_directive_inline SHA1CircularShift "
+@I [HLS-0] Setting directive 'DATAFLOW' 
+@I [HLS-0] Setting directive 'INLINE' 
+@I [HLS-0] Setting directive 'INLINE' 
+@I [HLS-100] Command 'set_directive_inline' returned 0; elapsed 0.002099Total elapsed time: 1.496 sec.
+@I [HLS-100] Command "set_directive_stream -dim 1 SHA1ProcessMessageBlock context->Message_Block_Index "
+@I [HLS-0] Setting directive 'DATAFLOW' 
+@I [HLS-0] Setting directive 'INLINE' 
+@I [HLS-0] Setting directive 'INLINE' 
+@I [HLS-0] Setting directive 'STREAM' variable=positionBooleanTextRequiredcontext->Message_Block_Index dim=1 
+@I [HLS-100] Command 'set_directive_stream' returned 0; elapsed 0.003214Total elapsed time: 1.500 sec.
+@I [HLS-100] Command "set_directive_stream -dim 1 SHA1ProcessMessageBlock K "
+@I [HLS-0] Setting directive 'DATAFLOW' 
+@I [HLS-0] Setting directive 'INLINE' 
+@I [HLS-0] Setting directive 'INLINE' 
+@I [HLS-0] Setting directive 'STREAM' variable=positionBooleanTextRequiredcontext->Message_Block_Index dim=1 
+@I [HLS-0] Setting directive 'STREAM' variable=positionBooleanTextRequiredK dim=1 
+@I [HLS-100] Command 'set_directive_stream' returned 0; elapsed 0.003345Total elapsed time: 1.503 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.015313Total elapsed time: 1.504 sec.
+@I [HLS-100] Command "csynth_design "
+@I [HLS-100] Command "elaborate -effort=medium -skip_syncheck=0 -keep_printf=0 -lm=0 -skip_cdt=0 -skip_transform=0 -ng=0 -g=0 -opt_fp=0 "
+@I [HLS-10] Analyzing design file 'sha1_hls/sha1.c' ... 
+@0 [HLS-0] Analyzing design file 'sha1_hls/sha1.c' ... 
+@I [HLS-0] Compiling one TU...
+@I [HLS-0] 
+Checking before pre-process: exec clang -fno-limit-debug-info -gcc-toolchain "/opt/Xilinx/Vivado_HLS/2016.1/lnx64/tools/gcc" -hls    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -std=gnu89   -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/opt/Xilinx/Vivado_HLS/2016.1/common/technology/autopilot" -I "/opt/Xilinx/Vivado_HLS/2016.1/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h  "sha1_hls/sha1.c"  -o "/home/matt/workspace/sha1_hls/dataflow_inline_stream/.autopilot/db/sha1.pp.00.o"
+
+@I [HLS-100] Command "is_encrypted /home/matt/workspace/sha1_hls/dataflow_inline_stream/.autopilot/db/sha1.pp.00.o "
+@I [HLS-100] Command 'is_encrypted' returned 0; elapsed 0.000195Total elapsed time: 1.889 sec.
+@I [HLS-0] Syntax Checker time: 0 seconds per iteration
+@I [HLS-0] 
+Source preprocessing: exec clang -fno-limit-debug-info -gcc-toolchain "/opt/Xilinx/Vivado_HLS/2016.1/lnx64/tools/gcc" -hls -fno-exceptions  -D__llvm__  -CC -E "sha1_hls/sha1.c"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -std=gnu89   -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/opt/Xilinx/Vivado_HLS/2016.1/common/technology/autopilot" -I "/opt/Xilinx/Vivado_HLS/2016.1/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h  -o "/home/matt/workspace/sha1_hls/dataflow_inline_stream/.autopilot/db/sha1.pp.0.c"
+
+@I [HLS-0] GCC PP time: 0 seconds per iteration
+@I [HLS-0] Setting directive 'DATAFLOW' 
+@I [HLS-0] Setting directive 'INLINE' 
+@I [HLS-0] Setting directive 'INLINE' 
+@I [HLS-0] Setting directive 'STREAM' variable=positionBooleanTextRequiredcontext->Message_Block_Index dim=1 
+@I [HLS-0] Setting directive 'STREAM' variable=positionBooleanTextRequiredK dim=1 
+@I [HLS-100] Command "list_core -type functional_unit "
+@I [HLS-100] Command 'list_core' returned 0; elapsed 0.000304Total elapsed time: 2.189 sec.
+@I [HLS-0] Marker-Pragma convertor: /home/matt/workspace/sha1_hls/dataflow_inline_stream/.autopilot/db/sha1.pp.0.c /home/matt/workspace/sha1_hls/dataflow_inline_stream/.autopilot/db/sha1.pp.0.c.ap-line.c /home/matt/workspace/sha1_hls/dataflow_inline_stream/.autopilot/db/sha1.pp.0.c.ap-line.c.CXX 1
+@I [HLS-0] 
+Source processor: exec /opt/Xilinx/Vivado_HLS/2016.1/tps/lnx64/jre/bin/java -Xmx512m -classpath   "/opt/Xilinx/Vivado_HLS/2016.1/lib/classes/autopilot.sourceprocessor.jar:/opt/Xilinx/Vivado_HLS/2016.1/lib/classes/org.eclipse.cdt.core_5.3.0.xilinx_patch.jar:/opt/Xilinx/Vivado_HLS/2016.1/lib/classes/org.eclipse.core.runtime_3.7.0.v20110110.jar:/opt/Xilinx/Vivado_HLS/2016.1/lib/classes/org.eclipse.equinox.common_3.6.0.v20110523.jar:/opt/Xilinx/Vivado_HLS/2016.1/lib/classes/com.ibm.icu_4.4.2.v20110208.jar:/opt/Xilinx/Vivado_HLS/2016.1/lib/classes/jargs.jar:/opt/Xilinx/Vivado_HLS/2016.1/lnx64/tools/eclipse/plugins/org.eclipse.emf.common_2.10.1.v20150123-0348.jar:/opt/Xilinx/Vivado_HLS/2016.1/lnx64/tools/eclipse/plugins/org.eclipse.emf.ecore_2.10.2.v20150123-0348.jar:/opt/Xilinx/Vivado_HLS/2016.1/lnx64/tools/eclipse/plugins/org.eclipse.emf.ecore.xmi_2.10.2.v20150123-0348.jar:/opt/Xilinx/Vivado_HLS/2016.1/lnx64/tools/eclipse/plugins/com.autoesl.autopilot.ui.directiveFileModel_1.0.0.jar:/opt/Xilinx/Vivado_HLS/2016.1/lnx64/tools/eclipse/plugins/com.autoesl.autopilot.ui.common_1.0.0.jar"  autopilot.sourceprocessor.CParser  "/home/matt/workspace/sha1_hls/dataflow_inline_stream/.autopilot/db/sha1.pp.0.c.ap-line.c"  -m "SHA1ProcessMessageBlock" -o "/home/matt/workspace/sha1_hls/dataflow_inline_stream/.autopilot/db/sha1.pp.0.c.ap-cdt.c" -c --pp --directive /home/matt/workspace/sha1_hls/dataflow_inline_stream/dataflow_inline_stream.directive --source /home/matt/workspace/sha1_hls/sha1.c --error /home/matt/workspace/sha1_hls/dataflow_inline_stream/.autopilot/db --funcunit "AddSub AddSub_DSP AddSubnS DAddSub_fulldsp DAddSub_nodsp DDiv DExp_fulldsp DExp_meddsp DExp_nodsp DLog_fulldsp DLog_meddsp DLog_nodsp DMul_fulldsp DMul_maxdsp DMul_meddsp DMul_nodsp DRSqrt DRecip DSqrt DivnS FAddSub_fulldsp FAddSub_nodsp FDiv FExp_fulldsp FExp_meddsp FExp_nodsp FLog_fulldsp FLog_meddsp FLog_nodsp FMul_fulldsp FMul_maxdsp FMul_meddsp FMul_nodsp FRSqrt_fulldsp FRSqrt_nodsp FRecip_fulldsp FRecip_nodsp FSqrt HAddSub_nodsp HDiv HMul_fulldsp HMul_maxdsp HMul_nodsp HSqrt Mul Mul2S Mul3S Mul4S Mul5S Mul6S Mul_LUT MulnS MuxnS" --ca --gf --pd --p2d /home/matt/workspace/sha1_hls/dataflow_inline_stream/.autopilot/db --sd --scff /home/matt/workspace/sha1_hls/dataflow_inline_stream/.autopilot/db/.systemc_flag --ad
+
+@I [HLS-0] Marker-Pragma convertor: /home/matt/workspace/sha1_hls/dataflow_inline_stream/.autopilot/db/sha1.pp.0.c.ap-cdt.c /home/matt/workspace/sha1_hls/dataflow_inline_stream/.autopilot/db/sha1.pragma.0.c /home/matt/workspace/sha1_hls/dataflow_inline_stream/.autopilot/db/sha1.pragma.0.c.ap-line.CXX 0
+@I [HLS-100] Command "source /home/matt/workspace/sha1_hls/dataflow_inline_stream/.autopilot/db/pragma.status.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000392Total elapsed time: 6.904 sec.
+@I [HLS-0] CDT processor time: 4 seconds per iteration
+@I [HLS-0] Pragma handling time: 0 seconds per iteration
+@I [HLS-0] 
+Source preprocessing: exec clang -fno-limit-debug-info -gcc-toolchain "/opt/Xilinx/Vivado_HLS/2016.1/lnx64/tools/gcc" -hls -fno-exceptions  -D__llvm__  -CC -E "/home/matt/workspace/sha1_hls/dataflow_inline_stream/.autopilot/db/sha1.pragma.1.c"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -std=gnu89   -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/opt/Xilinx/Vivado_HLS/2016.1/common/technology/autopilot" -I "/opt/Xilinx/Vivado_HLS/2016.1/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h  -o "/home/matt/workspace/sha1_hls/dataflow_inline_stream/.autopilot/db/sha1.pragma.2.c"
+
+@I [HLS-0] exec clang -fno-limit-debug-info -gcc-toolchain /opt/Xilinx/Vivado_HLS/2016.1/lnx64/tools/gcc -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions  -D__llvm__  -w  "/home/matt/workspace/sha1_hls/dataflow_inline_stream/.autopilot/db/sha1.pragma.2.c"    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -std=gnu89  -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/opt/Xilinx/Vivado_HLS/2016.1/common/technology/autopilot" -I "/opt/Xilinx/Vivado_HLS/2016.1/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -g -o "/home/matt/workspace/sha1_hls/dataflow_inline_stream/.autopilot/db/sha1.g.bc"
+@I [HLS-10] Analyzing design file 'sha1_hls/sha1_original.c' ... 
+@0 [HLS-0] Analyzing design file 'sha1_hls/sha1_original.c' ... 
+@I [HLS-0] Compiling one TU...
+@I [HLS-0] 
+Checking before pre-process: exec clang -fno-limit-debug-info -gcc-toolchain "/opt/Xilinx/Vivado_HLS/2016.1/lnx64/tools/gcc" -hls    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -std=gnu89   -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/opt/Xilinx/Vivado_HLS/2016.1/common/technology/autopilot" -I "/opt/Xilinx/Vivado_HLS/2016.1/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h  "sha1_hls/sha1_original.c"  -o "/home/matt/workspace/sha1_hls/dataflow_inline_stream/.autopilot/db/sha1_original.pp.00.o"
+
+@I [HLS-100] Command "is_encrypted /home/matt/workspace/sha1_hls/dataflow_inline_stream/.autopilot/db/sha1_original.pp.00.o "
+@I [HLS-100] Command 'is_encrypted' returned 0; elapsed 0.00022Total elapsed time: 7.849 sec.
+@I [HLS-0] Syntax Checker time: 0 seconds per iteration
+@I [HLS-0] 
+Source preprocessing: exec clang -fno-limit-debug-info -gcc-toolchain "/opt/Xilinx/Vivado_HLS/2016.1/lnx64/tools/gcc" -hls -fno-exceptions  -D__llvm__  -CC -E "sha1_hls/sha1_original.c"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -std=gnu89   -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/opt/Xilinx/Vivado_HLS/2016.1/common/technology/autopilot" -I "/opt/Xilinx/Vivado_HLS/2016.1/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h  -o "/home/matt/workspace/sha1_hls/dataflow_inline_stream/.autopilot/db/sha1_original.pp.0.c"
+
+@I [HLS-0] GCC PP time: 0 seconds per iteration
+@I [HLS-0] Setting directive 'DATAFLOW' 
+@I [HLS-0] Setting directive 'INLINE' 
+@I [HLS-0] Setting directive 'INLINE' 
+@I [HLS-0] Setting directive 'STREAM' variable=positionBooleanTextRequiredcontext->Message_Block_Index dim=1 
+@I [HLS-0] Setting directive 'STREAM' variable=positionBooleanTextRequiredK dim=1 
+@I [HLS-100] Command "list_core -type functional_unit "
+@I [HLS-100] Command 'list_core' returned 0; elapsed 0.000233Total elapsed time: 8.7 sec.
+@I [HLS-0] Marker-Pragma convertor: /home/matt/workspace/sha1_hls/dataflow_inline_stream/.autopilot/db/sha1_original.pp.0.c /home/matt/workspace/sha1_hls/dataflow_inline_stream/.autopilot/db/sha1_original.pp.0.c.ap-line.c /home/matt/workspace/sha1_hls/dataflow_inline_stream/.autopilot/db/sha1_original.pp.0.c.ap-line.c.CXX 1
+@I [HLS-0] 
+Source processor: exec /opt/Xilinx/Vivado_HLS/2016.1/tps/lnx64/jre/bin/java -Xmx512m -classpath   "/opt/Xilinx/Vivado_HLS/2016.1/lib/classes/autopilot.sourceprocessor.jar:/opt/Xilinx/Vivado_HLS/2016.1/lib/classes/org.eclipse.cdt.core_5.3.0.xilinx_patch.jar:/opt/Xilinx/Vivado_HLS/2016.1/lib/classes/org.eclipse.core.runtime_3.7.0.v20110110.jar:/opt/Xilinx/Vivado_HLS/2016.1/lib/classes/org.eclipse.equinox.common_3.6.0.v20110523.jar:/opt/Xilinx/Vivado_HLS/2016.1/lib/classes/com.ibm.icu_4.4.2.v20110208.jar:/opt/Xilinx/Vivado_HLS/2016.1/lib/classes/jargs.jar:/opt/Xilinx/Vivado_HLS/2016.1/lnx64/tools/eclipse/plugins/org.eclipse.emf.common_2.10.1.v20150123-0348.jar:/opt/Xilinx/Vivado_HLS/2016.1/lnx64/tools/eclipse/plugins/org.eclipse.emf.ecore_2.10.2.v20150123-0348.jar:/opt/Xilinx/Vivado_HLS/2016.1/lnx64/tools/eclipse/plugins/org.eclipse.emf.ecore.xmi_2.10.2.v20150123-0348.jar:/opt/Xilinx/Vivado_HLS/2016.1/lnx64/tools/eclipse/plugins/com.autoesl.autopilot.ui.directiveFileModel_1.0.0.jar:/opt/Xilinx/Vivado_HLS/2016.1/lnx64/tools/eclipse/plugins/com.autoesl.autopilot.ui.common_1.0.0.jar"  autopilot.sourceprocessor.CParser  "/home/matt/workspace/sha1_hls/dataflow_inline_stream/.autopilot/db/sha1_original.pp.0.c.ap-line.c"  -m "SHA1ProcessMessageBlock" -o "/home/matt/workspace/sha1_hls/dataflow_inline_stream/.autopilot/db/sha1_original.pp.0.c.ap-cdt.c" -c --pp --directive /home/matt/workspace/sha1_hls/dataflow_inline_stream/dataflow_inline_stream.directive --source /home/matt/workspace/sha1_hls/sha1_original.c --error /home/matt/workspace/sha1_hls/dataflow_inline_stream/.autopilot/db --funcunit "AddSub AddSub_DSP AddSubnS DAddSub_fulldsp DAddSub_nodsp DDiv DExp_fulldsp DExp_meddsp DExp_nodsp DLog_fulldsp DLog_meddsp DLog_nodsp DMul_fulldsp DMul_maxdsp DMul_meddsp DMul_nodsp DRSqrt DRecip DSqrt DivnS FAddSub_fulldsp FAddSub_nodsp FDiv FExp_fulldsp FExp_meddsp FExp_nodsp FLog_fulldsp FLog_meddsp FLog_nodsp FMul_fulldsp FMul_maxdsp FMul_meddsp FMul_nodsp FRSqrt_fulldsp FRSqrt_nodsp FRecip_fulldsp FRecip_nodsp FSqrt HAddSub_nodsp HDiv HMul_fulldsp HMul_maxdsp HMul_nodsp HSqrt Mul Mul2S Mul3S Mul4S Mul5S Mul6S Mul_LUT MulnS MuxnS" --ca --gf --pd --p2d /home/matt/workspace/sha1_hls/dataflow_inline_stream/.autopilot/db --sd --scff /home/matt/workspace/sha1_hls/dataflow_inline_stream/.autopilot/db/.systemc_flag --ad
+
+@I [HLS-0] Marker-Pragma convertor: /home/matt/workspace/sha1_hls/dataflow_inline_stream/.autopilot/db/sha1_original.pp.0.c.ap-cdt.c /home/matt/workspace/sha1_hls/dataflow_inline_stream/.autopilot/db/sha1_original.pragma.0.c /home/matt/workspace/sha1_hls/dataflow_inline_stream/.autopilot/db/sha1_original.pragma.0.c.ap-line.CXX 0
+@I [HLS-100] Command "source /home/matt/workspace/sha1_hls/dataflow_inline_stream/.autopilot/db/pragma.status.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000483Total elapsed time: 10.731 sec.
+@I [HLS-0] CDT processor time: 2 seconds per iteration
+@I [HLS-0] Pragma handling time: 0 seconds per iteration
+@I [HLS-0] 
+Source preprocessing: exec clang -fno-limit-debug-info -gcc-toolchain "/opt/Xilinx/Vivado_HLS/2016.1/lnx64/tools/gcc" -hls -fno-exceptions  -D__llvm__  -CC -E "/home/matt/workspace/sha1_hls/dataflow_inline_stream/.autopilot/db/sha1_original.pragma.1.c"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -std=gnu89   -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/opt/Xilinx/Vivado_HLS/2016.1/common/technology/autopilot" -I "/opt/Xilinx/Vivado_HLS/2016.1/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h  -o "/home/matt/workspace/sha1_hls/dataflow_inline_stream/.autopilot/db/sha1_original.pragma.2.c"
+
+@I [HLS-0] exec clang -fno-limit-debug-info -gcc-toolchain /opt/Xilinx/Vivado_HLS/2016.1/lnx64/tools/gcc -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions  -D__llvm__  -w  "/home/matt/workspace/sha1_hls/dataflow_inline_stream/.autopilot/db/sha1_original.pragma.2.c"    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -std=gnu89  -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/opt/Xilinx/Vivado_HLS/2016.1/common/technology/autopilot" -I "/opt/Xilinx/Vivado_HLS/2016.1/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -g -o "/home/matt/workspace/sha1_hls/dataflow_inline_stream/.autopilot/db/sha1_original.g.bc"
+@I [HLS-10] Validating synthesis directives ...
+@0 [HLS-0] Validating synthesis directives ...
+@I [HLS-100] Command "source /home/matt/workspace/sha1_hls/dataflow_inline_stream/.autopilot/db/pragma.status.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000446Total elapsed time: 11.103 sec.
+@I [HLS-0] Linking all ...
+@I [HLS-0] exec llvm-ld  "/home/matt/workspace/sha1_hls/dataflow_inline_stream/.autopilot/db/sha1.bc" "/home/matt/workspace/sha1_hls/dataflow_inline_stream/.autopilot/db/sha1_original.bc"  -disable-opt  -L/opt/Xilinx/Vivado_HLS/2016.1/lnx64/lib -lm_basic -o "/home/matt/workspace/sha1_hls/dataflow_inline_stream/.autopilot/db/a.o.pre"
+@I [HLS-0] Link time: 0 seconds per iteration
+@I [HLS-0] Linking all ...
+@I [HLS-0] exec llvm-ld  "/home/matt/workspace/sha1_hls/dataflow_inline_stream/.autopilot/db/sha1.g.bc" "/home/matt/workspace/sha1_hls/dataflow_inline_stream/.autopilot/db/sha1_original.g.bc"  -disable-opt  -L/opt/Xilinx/Vivado_HLS/2016.1/lnx64/lib -lm_basic -o "/home/matt/workspace/sha1_hls/dataflow_inline_stream/.autopilot/db/a.g.pre"
+@I [HLS-0] Link time: 0 seconds per iteration
+@I [HLS-100] Command "opt_and_import_c a -opt_level=2 -skip_syncheck=0 -ng=0 -keep_printf=0 "
+@I [HLS-100] Command "cleanup_all_models "
+@I [HLS-100] Command 'cleanup_all_models' returned 0; elapsed 3.4e-05Total elapsed time: 11.464 sec.
+@I [HLS-10] Starting code transformations ...
+@0 [HLS-0] Starting code transformations ...
+@I [HLS-0] std xform: transform -hls -share-std-xform -always-inline -promote-dbg-pointer  -interface-preproc  -scalarrepl -mem2reg -keep-read-access -instcombine -dce  -promote-dbg-pointer  -bitop-raise  -indvars -loop-simplify -xunroll  -constprop -instcombine -simplifycfg -indvars  -simplifycfg -dce -globaldce  -basicaa  -simplifycfg -mem2reg -globalopt  -global-constprop -deadargelim -instcombine -simplifycfg  -prune-eh -simplifycfg  -scalarrepl -instcombine -reassociate -licm  -simplifycfg -loop-simplify -indvars -instcombine  -simplifycfg -mem2reg -loop-simplify -indvars -instcombine  -gvn -gvn -instcombine -adce  -break-crit-edges  -simplifycfg -loop-delete  -global-array-opt -dce -dse -adce  -find-syn-modules -top SHA1ProcessMessageBlock  -deadargelim  -mem2reg -instcombine -dce  -presyn-prepare -auto-rom-infer  -interface-preproc  -syn-check -check-rec-only  -find-region -simplifycfg -func-extr -function-inline  -globaldce -mem2reg -instcombine -dce   -gvn -globaldce -adce -adse  -constprop -instcombine -bit-constprop  -instcombine -dce -simplifycfg -bitop-raise  -simplifycfg -dce -loop-delete -reassociate  -globalopt -global-privatize -mem2reg -dce  -global-constprop -pointer-simplify -constprop -dce  -func-inst -deadargelim  -promote-dbg-pointer  -norm-name   /home/matt/workspace/sha1_hls/dataflow_inline_stream/.autopilot/db/a.g.0.bc -o /home/matt/workspace/sha1_hls/dataflow_inline_stream/.autopilot/db/a.g.1.bc -f  -phase std-opt
+@I [XFORM-603] Inlining function 'SHA1CircularShift' into 'SHA1ProcessMessageBlock' (sha1_hls/sha1.c:92).
+@I [XFORM-603] Inlining function 'SHA1CircularShift' into 'SHA1ProcessMessageBlock' (sha1_hls/sha1.c:86).
+@I [XFORM-603] Inlining function 'SHA1CircularShift' into 'SHA1ProcessMessageBlock' (sha1_hls/sha1.c:80).
+@I [XFORM-603] Inlining function 'SHA1CircularShift' into 'SHA1ProcessMessageBlock' (sha1_hls/sha1.c:74).
+@I [XFORM-603] Inlining function 'SHA1CircularShift' into 'SHA1ProcessMessageBlock' (sha1_hls/sha1.c:63).
+@I [XFORM-603] Inlining function 'SHA1CircularShift' into 'Swapping' (sha1_hls/sha1.c:10).
+@I [XFORM-603] Inlining function 'Swapping' into 'SHA1ProcessMessageBlock' (sha1_hls/sha1.c:94).
+@I [XFORM-603] Inlining function 'Swapping' into 'SHA1ProcessMessageBlock' (sha1_hls/sha1.c:88).
+@I [XFORM-603] Inlining function 'Swapping' into 'SHA1ProcessMessageBlock' (sha1_hls/sha1.c:82).
+@I [XFORM-603] Inlining function 'Swapping' into 'SHA1ProcessMessageBlock' (sha1_hls/sha1.c:76).
+@I [HLS-0] Std xform time: 0 seconds per iteration
+@I [HLS-100] Command "is_encrypted /home/matt/workspace/sha1_hls/dataflow_inline_stream/.autopilot/db/a.g.1.bc "
+@I [HLS-100] Command 'is_encrypted' returned 0; elapsed 0.000196Total elapsed time: 11.879 sec.
+@I [HLS-10] Checking synthesizability ...
+@0 [HLS-0] Checking synthesizability ...
+@I [HLS-0] syn check 1/2: transform -hls -syn-check -check-rec-only -disaggr -scalarrepl -norm-name -dce  -mem2reg -instcombine  -function-uniquify -directive-preproc -mem2reg -dse -dce -auto-rom-infer -dce  -array-normalize -instcombine -dce  -array-seg-normalize -instcombine -dce  -array-flatten -instcombine -dce  -array-burst -dce  -deadargelim -promote-global-argument  -simplifycfg -mem2reg -globaldce -resolve-double-ptr  -dce -deadargelim -dce -instcombine  -function-inline -globaldce -dce  -doublePtrSimplify -doublePtrElim -dce  -doublePtrSimplify -promote-dbg-pointer  -dce -scalarrepl -dse -adse -instcombine  -ptrLegalization  -simplifycfg -dce -instcombine  -pointer-simplify -ptrArgReplace -dce -instcombine   -disaggr -scalarrepl -norm-name -dce  -mem2reg -instcombine -ptrLegalization   -simplifycfg -deadargelim  -instcombine -dce -inst-simplify  -function-uniquify -directive-preproc -mem2reg -dse -dce  -globaldce    /home/matt/workspace/sha1_hls/dataflow_inline_stream/.autopilot/db/a.g.1.bc -o /home/matt/workspace/sha1_hls/dataflow_inline_stream/.autopilot/db/a.g.2.prechk.bc -f
+@I [HLS-0] Syn check 1/2 time: 0 seconds per iteration
+@I [HLS-0] syn check 2/2: transform -syn-check   /home/matt/workspace/sha1_hls/dataflow_inline_stream/.autopilot/db/a.g.2.prechk.bc -o /home/matt/workspace/sha1_hls/dataflow_inline_stream/.autopilot/db/a.g.2.bc -f  -phase syn-check
+@I [HLS-0] Syn check 2/2 time: 0 seconds per iteration
+@I [HLS-0] Compiler optimizing ...
+@I [HLS-0] Share syncheck's 1.bc for syn flow: copy /home/matt/workspace/sha1_hls/dataflow_inline_stream/.autopilot/db/a.g.1.bc to /home/matt/workspace/sha1_hls/dataflow_inline_stream/.autopilot/db/a.o.1.bc
+@I [HLS-0] presyn 1: transform -hls -tmp /home/matt/workspace/sha1_hls/dataflow_inline_stream/.autopilot/db -type-info  -function-uniquify -directive-preproc -mem2reg -dse -dce  -disaggr -scalarrepl -norm-name -deadargelim  -mem2reg -instcombine -dce -auto-rom-infer -dce -function-uniquify  -resource-proc  -simplifycfg -mem2reg -globaldce -resolve-double-ptr -dce -deadargelim -dce -instcombine  -clib-intrinsic-prepare -dce  -func-buffer -dce -array-normalize  -func-legal -instcombine -gvn -constprop -dce   -ptrArgReplace -mem2reg -instcombine -dce  -array-seg-normalize -deadargelim  -instcombine -dce  -pointer-simplify -dce  -port-alignment -dce  -interface-preproc  -data-pack -instcombine -dce   -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn  -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce  -loop-simplify -indvars -instcombine  -gvn -loop-simplify -mem2reg -dce -simplifycfg  -find-region -instcombine  -auto-loop-pipeline  -inst-simplify  -interface-preproc  -indvars -auto-loop-unroll -loop-simplify -loop-bound -xunroll  -constprop -instcombine -simplifycfg -indvars  -simplifycfg -dce -globaldce  -attach-range  -gvn -inst-simplify  -constprop -simplifycfg -dce  -pointer-simplify -dce  -globalopt -constprop -dce  -array-promote -constprop -instcombine -dce  -ptrArgReplace -mem2reg  -instcombine -simplifycfg -dce  -auto-par -instcombine -dce  -array-transform-check  -array-reshape -instcombine -simplifycfg -dce  -ptrArgReplace -deadargelim -mem2reg  -instcombine -simplifycfg -dce   -indvars -loop-simplify -loop-bound -xunroll  -constprop -instcombine -simplifycfg -indvars  -simplifycfg -dce -globaldce  -duplicate-dataflow-processes -globaldce  -array-partition -instcombine -simplifycfg -dce  -ptrArgReplace -global-constprop -deadargelim -mem2reg  -func-legal -instcombine -dce -global-constprop -deadargelim -mem2reg  -instcombine -simplifycfg -dce   -globalopt -constprop -dce  -array-promote -constprop -instcombine -dce  -ptrArgReplace -mem2reg  -instcombine -simplifycfg -dce   -mem-intrinsic-preproc -dce  -global-privatize  -mem2reg -globaldce  -promote-global-argument  -ptrArgReplace -mem2reg -instcombine -dce  -globalopt -mergereturn -simplify-global-access -mem2reg -dce  -pointer-simplify -dce  -functionattrs  -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn  -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce  -inst-simplify -dce -norm-name  -function-inline -globaldce  -func-inst -constprop -instcombine -simplifycfg -dce  -func-legal -dce   -loop-bound  -arraycheck -bitwidthmin -on-by-dataflow  -loop-delete -instcombine -simplifycfg  -globaldce -dce -gvn -deadargelim -dce -loop-simplify -clean-region -simplifycfg -propagate-stable-arguments  -loop-stream -instcombine -simplifycfg -dce -globaldce  -stream-intrinsic-preproc -dce  -check-ap-stream -loop-simplify -eliminate-keepreads  -extract-dataflow-in-loop -loop-simplify -dce -gvn -deadargelim -dse  -check-dataflow-syntax  -legalize-stream-variable -legalize-global -legalize-global-1  -extract-subproc -dce -dead-channel-elimination  -canonicalize-gep -globaldce -dce -gvn -deadargelim  -scalar-propagation -deadargelim -globaldce -mem2reg  -check-dataflow-channels -function-stream -dce -globaldce  -prop-fifo-spec -internal-stream-gen  -canonicalize-gep -globaldce -dce -gvn -deadargelim   -mergereturn -indvars -loop-simplify -instcombine  -array-stream -instcombine -simplifycfg -dce  -bundle-memfifo-ops -deadargelim    -function-uniquify -directive-preproc -mem2reg -dse -dce  -group-axi-access    -licm -simplifycfg -dce -loop-delete  -norm-name  /home/matt/workspace/sha1_hls/dataflow_inline_stream/.autopilot/db/a.o.1.bc -o /home/matt/workspace/sha1_hls/dataflow_inline_stream/.autopilot/db/a.o.1.tmp.bc -f
+@E [XFORM-711] Reading argument 'context.Intermediate_Hash' (sha1_hls/sha1.c:37) in the middle of dataflow blocks task-level pipelining:
+               Argument 'context.Intermediate_Hash' has read and write operations in process function 'Block__proc' (sha1_hls/sha1.c:4:32).
+@I [XFORM-712] Applying dataflow to function 'SHA1ProcessMessageBlock' (sha1_hls/sha1.c:37), detected/extracted 2 process function(s):
+	 'Loop_loop1_proc'
+	 'Block__proc'.
+@I [HLS-0] Presyn 1 time: 0 seconds per iteration
+@I [HLS-0] presyn 2: transform -hls -keep-callgraph -scalarrepl -mem2reg  -port-alignment -attach-range -dce  -pipe-mux-gen  -indvars -loop-bound  -inst-simplify -instcombine -dce  -merge-array-access -mem2reg -dce  -clean-region -mergereturn -if-conv  -instcombine -dce -constprop  -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn  -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce  -scalarrepl -mem2reg  -global-constprop -deadargelim -deadargelim  -instcombine -dce -simplifycfg    -ptrArgReplace -mem2reg -function-inline  -globaldce -mem2reg -instcombine -dce -expr-balance  -instcombine -dce  -bitwidthmin  -interface-preproc -directive-preproc  -inst-rectify -instcombine -dce  -functionattrs  -constprop -instcombine -bit-constprop  -simplify-global-access  -globalopt -globaldce  -inst-simplify -instcombine -elimdeaddata -dce  -loop-delete -simplifycfg -loop-simplify -auto-burst   -norm-name /home/matt/workspace/sha1_hls/dataflow_inline_stream/.autopilot/db/a.o.1.tmp.bc -o /home/matt/workspace/sha1_hls/dataflow_inline_stream/.autopilot/db/a.o.2.bc -f  -phase presyn
+@I [XFORM-11] Balancing expressions in function 'Loop_loop1_proc' (sha1_hls/sha1.c:47)...3 expression(s) balanced.
+@I [XFORM-11] Balancing expressions in function 'Block__proc' (sha1_hls/sha1.c:4:32)...16 expression(s) balanced.
+@I [HLS-0] Presyn 2 time: 0 seconds per iteration
+@I [HLS-100] Command "is_encrypted /home/matt/workspace/sha1_hls/dataflow_inline_stream/.autopilot/db/a.o.2.bc "
+@I [HLS-100] Command 'is_encrypted' returned 0; elapsed 0.000159Total elapsed time: 13.275 sec.
+@I [HLS-0] build ssdm: transform -hls  -function-uniquify -auto-function-inline -globaldce  -ptrArgReplace -mem2reg -instcombine -dce  -reset-lda  -loop-simplify -indvars -licm -loop-dep  -loop-bound -licm -loop-simplify -flattenloopnest  -array-flatten -gvn -instcombine -dce  -array-map -dce -func-legal  -gvn -adce -instcombine -cfgopt -simplifycfg -loop-simplify   -array-burst -promote-global-argument -dce  -axi4-lower -array-seg-normalize  -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -gvn -gvn  -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -dse -adse -adce -licm  -inst-simplify -dce  -globaldce -instcombine -array-stream -eliminate-keepreads -instcombine  -dce   -deadargelim -doublePtrSimplify  -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer  -dce -scalarrepl -mem2reg -disaggr -norm-name -mem2reg  -instcombine  -dse -adse -adce -ptrLegalization -dce -auto-rom-infer -array-flatten -dce -instcombine  -loop-rot -constprop -cfgopt -simplifycfg -loop-simplify -indvars -pointer-simplify -dce -loop-bound  -loop-simplify -loop-preproc  -constprop -global-constprop -gvn -mem2reg -instcombine -dce  -loop-merge -dce  -bitwidthmin  -deadargelim -dce  -scalar-propagation -deadargelim -globaldce -mem2reg  -interface-preproc -interface-gen  -deadargelim -directive-preproc -inst-simplify -dce  -gvn -mem2reg -instcombine -dce -adse  -loop-bound  -instcombine -cfgopt -simplifycfg -loop-simplify  -clean-region -io-protocol  -find-region -mem2reg  -bitop-raise  -inst-simplify -inst-rectify -instcombine -adce -deadargelim  -loop-simplify -phi-opt -bitop-raise  -cfgopt -simplifycfg -strip-dead-prototypes  -interface-lower -bitop-lower -intrinsic-lower -auto-function-inline  -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa  -inst-simplify -simplifycfg   -mergereturn -inst-simplify -inst-rectify  -dce -bitop-lower  -loop-rewind -pointer-simplify -dce -cfgopt  -read-loop-dep -dce -bitwidth -norm-name -legalize    -cdfg-build  /home/matt/workspace/sha1_hls/dataflow_inline_stream/.autopilot/db/a.o.2.bc -o /home/matt/workspace/sha1_hls/dataflow_inline_stream/.autopilot/db/a.o.3.bc -f  -phase build-ssdm
+@I [HLS-0] Build ssdm time: 1 seconds per iteration
+@I [HLS-100] Command "is_encrypted /home/matt/workspace/sha1_hls/dataflow_inline_stream/.autopilot/db/a.o.3.bc "
+@I [HLS-100] Command 'is_encrypted' returned 0; elapsed 0.000281Total elapsed time: 14.376 sec.
+@I [HLS-0] Finish building internal data model.
+@I [HLS-100] Command 'opt_and_import_c' returned 0; elapsed 2.67941Total elapsed time: 14.457 sec.
+@I [HLS-111] Elapsed time: 5.52744 seconds; current memory usage: 76.6 MB.
+@I [HLS-100] Command 'elaborate' returned 0; elapsed 4.04715Total elapsed time: 14.459 sec.
+@I [HLS-100] Command "autosyn "
+@I [HLS-10] Starting hardware synthesis ...
+@0 [HLS-0] Starting hardware synthesis ...
+@I [HLS-0] Synthesizing C/C++ design ...
+@I [HLS-10] Synthesizing 'SHA1ProcessMessageBlock' ...
+@0 [HLS-0] Synthesizing 'SHA1ProcessMessageBlock' ...
+@I [HLS-100] Command "ap_set_top_model SHA1ProcessMessageBlock "
+@W [SYN-103] Legalizing function name 'SHA1ProcessMessageBlock_Block__proc' to 'SHA1ProcessMessageBlock_Block_proc'.
+@I [HLS-100] Command 'ap_set_top_model' returned 0; elapsed 0.000559Total elapsed time: 14.462 sec.
+@I [HLS-100] Command "get_model_list SHA1ProcessMessageBlock -filter all-wo-channel -topdown "
+@I [HLS-100] Command 'get_model_list' returned 0; elapsed 9e-05Total elapsed time: 14.463 sec.
+@I [HLS-100] Command "preproc_iomode -model SHA1ProcessMessageBlock "
+@I [HLS-100] Command 'preproc_iomode' returned 0; elapsed 0.002314Total elapsed time: 14.466 sec.
+@I [HLS-100] Command "preproc_iomode -model SHA1ProcessMessageBlock_Block__proc "
+@I [HLS-100] Command 'preproc_iomode' returned 0; elapsed 8.7e-05Total elapsed time: 14.467 sec.
+@I [HLS-100] Command "preproc_iomode -model SHA1ProcessMessageBlock_Loop_loop1_proc "
+@I [HLS-100] Command 'preproc_iomode' returned 0; elapsed 3.9e-05Total elapsed time: 14.467 sec.
+@I [HLS-100] Command "get_model_list SHA1ProcessMessageBlock -filter all-wo-channel "
+@I [HLS-100] Command 'get_model_list' returned 0; elapsed 4.8e-05Total elapsed time: 14.469 sec.
+@I [HLS-0] Model list for configure: SHA1ProcessMessageBlock_Loop_loop1_proc SHA1ProcessMessageBlock_Block__proc SHA1ProcessMessageBlock
+@I [HLS-0] Configuring Module : SHA1ProcessMessageBlock_Loop_loop1_proc ...
+@I [HLS-100] Command "set_default_model SHA1ProcessMessageBlock_Loop_loop1_proc "
+@I [HLS-100] Command 'set_default_model' returned 0; elapsed 3.2e-05Total elapsed time: 14.470 sec.
+@I [HLS-100] Command "apply_spec_resource_limit SHA1ProcessMessageBlock_Loop_loop1_proc "
+@I [HLS-100] Command 'apply_spec_resource_limit' returned 0; elapsed 4.3e-05Total elapsed time: 14.470 sec.
+@I [HLS-0] Configuring Module : SHA1ProcessMessageBlock_Block__proc ...
+@I [HLS-100] Command "set_default_model SHA1ProcessMessageBlock_Block__proc "
+@I [HLS-100] Command 'set_default_model' returned 0; elapsed 3.7e-05Total elapsed time: 14.471 sec.
+@I [HLS-100] Command "apply_spec_resource_limit SHA1ProcessMessageBlock_Block__proc "
+@I [HLS-100] Command 'apply_spec_resource_limit' returned 0; elapsed 6e-05Total elapsed time: 14.472 sec.
+@I [HLS-0] Configuring Module : SHA1ProcessMessageBlock ...
+@I [HLS-100] Command "set_default_model SHA1ProcessMessageBlock "
+@I [HLS-100] Command 'set_default_model' returned 0; elapsed 2.6e-05Total elapsed time: 14.472 sec.
+@I [HLS-100] Command "apply_spec_resource_limit SHA1ProcessMessageBlock "
+@I [HLS-100] Command 'apply_spec_resource_limit' returned 0; elapsed 2e-05Total elapsed time: 14.473 sec.
+@I [HLS-0] Model list for preprocess: SHA1ProcessMessageBlock_Loop_loop1_proc SHA1ProcessMessageBlock_Block__proc SHA1ProcessMessageBlock
+@I [HLS-0] Preprocessing Module: SHA1ProcessMessageBlock_Loop_loop1_proc ...
+@I [HLS-100] Command "set_default_model SHA1ProcessMessageBlock_Loop_loop1_proc "
+@I [HLS-100] Command 'set_default_model' returned 0; elapsed 2.2e-05Total elapsed time: 14.473 sec.
+@I [HLS-100] Command "cdfg_preprocess -model SHA1ProcessMessageBlock_Loop_loop1_proc "
+@I [HLS-100] Command 'cdfg_preprocess' returned 0; elapsed 0.000895Total elapsed time: 14.475 sec.
+@I [HLS-100] Command "rtl_gen_preprocess SHA1ProcessMessageBlock_Loop_loop1_proc "
+@I [HLS-100] Command 'rtl_gen_preprocess' returned 0; elapsed 0.001865Total elapsed time: 14.477 sec.
+@I [HLS-0] Preprocessing Module: SHA1ProcessMessageBlock_Block__proc ...
+@I [HLS-100] Command "set_default_model SHA1ProcessMessageBlock_Block__proc "
+@I [HLS-100] Command 'set_default_model' returned 0; elapsed 2.6e-05Total elapsed time: 14.478 sec.
+@I [HLS-100] Command "cdfg_preprocess -model SHA1ProcessMessageBlock_Block__proc "
+@I [HLS-100] Command 'cdfg_preprocess' returned 0; elapsed 0.001391Total elapsed time: 14.480 sec.
+@I [HLS-100] Command "rtl_gen_preprocess SHA1ProcessMessageBlock_Block__proc "
+@I [HLS-100] Command 'rtl_gen_preprocess' returned 0; elapsed 0.001737Total elapsed time: 14.482 sec.
+@I [HLS-0] Preprocessing Module: SHA1ProcessMessageBlock ...
+@I [HLS-100] Command "set_default_model SHA1ProcessMessageBlock "
+@I [HLS-100] Command 'set_default_model' returned 0; elapsed 2.8e-05Total elapsed time: 14.482 sec.
+@I [HLS-100] Command "cdfg_preprocess -model SHA1ProcessMessageBlock "
+@I [HLS-100] Command 'cdfg_preprocess' returned 0; elapsed 0.000332Total elapsed time: 14.483 sec.
+@I [HLS-100] Command "rtl_gen_preprocess SHA1ProcessMessageBlock "
+@I [HLS-100] Command 'rtl_gen_preprocess' returned 0; elapsed 0.003752Total elapsed time: 14.488 sec.
+@I [HLS-0] Model list for synthesis: SHA1ProcessMessageBlock_Loop_loop1_proc SHA1ProcessMessageBlock_Block__proc SHA1ProcessMessageBlock
+@I [HLS-10] ----------------------------------------------------------------
+@0 [HLS-0] ----------------------------------------------------------------
+@I [HLS-10] -- Scheduling module 'SHA1ProcessMessageBlock_Loop_loop1_proc' 
+@0 [HLS-0] -- Scheduling module 'SHA1ProcessMessageBlock_Loop_loop1_proc' 
+@I [HLS-10] ----------------------------------------------------------------
+@0 [HLS-0] ----------------------------------------------------------------
+@I [HLS-100] Command "set_default_model SHA1ProcessMessageBlock_Loop_loop1_proc "
+@I [HLS-100] Command 'set_default_model' returned 0; elapsed 2.7e-05Total elapsed time: 14.490 sec.
+@I [HLS-100] Command "schedule -model SHA1ProcessMessageBlock_Loop_loop1_proc "
+@I [SCHED-11] Starting scheduling ...
+@I [SCHED-11] Finished scheduling.
+@I [HLS-100] Command 'schedule' returned 0; elapsed 0.074835Total elapsed time: 14.565 sec.
+@I [HLS-111] Elapsed time: 0.107837 seconds; current memory usage: 77 MB.
+@I [HLS-100] Command "report -o /home/matt/workspace/sha1_hls/dataflow_inline_stream/.autopilot/db/SHA1ProcessMessageBlock_Loop_loop1_proc.verbose.sched.rpt -verbose -f "
+@I [HLS-100] Command 'report' returned 0; elapsed 0.008705Total elapsed time: 14.576 sec.
+@I [HLS-100] Command "db_write -o /home/matt/workspace/sha1_hls/dataflow_inline_stream/.autopilot/db/SHA1ProcessMessageBlock_Loop_loop1_proc.sched.adb -f "
+@I [HLS-100] Command 'db_write' returned 0; elapsed 0.01543Total elapsed time: 14.593 sec.
+@I [HLS-0] Finish scheduling SHA1ProcessMessageBlock_Loop_loop1_proc.
+@I [HLS-10] ----------------------------------------------------------------
+@0 [HLS-0] ----------------------------------------------------------------
+@I [HLS-10] -- Exploring micro-architecture for module 'SHA1ProcessMessageBlock_Loop_loop1_proc' 
+@0 [HLS-0] -- Exploring micro-architecture for module 'SHA1ProcessMessageBlock_Loop_loop1_proc' 
+@I [HLS-10] ----------------------------------------------------------------
+@0 [HLS-0] ----------------------------------------------------------------
+@I [HLS-100] Command "set_default_model SHA1ProcessMessageBlock_Loop_loop1_proc "
+@I [HLS-100] Command 'set_default_model' returned 0; elapsed 3.5e-05Total elapsed time: 14.596 sec.
+@I [HLS-100] Command "bind -model SHA1ProcessMessageBlock_Loop_loop1_proc "
+@I [BIND-110] clear=
+@I [BIND-110] debug=
+@I [BIND-110] drf=
+@I [BIND-110] effort=high
+@I [BIND-110] fast_refine=
+@I [BIND-110] fu_weight=[ 0.0 -- 1.0 ]
+@I [BIND-110] global_opt=
+@I [BIND-110] gsearch=
+@I [BIND-110] help=
+@I [BIND-110] help-hidden=
+@I [BIND-110] min_mem_port=
+@I [BIND-110] min_op=
+@I [BIND-110] minreg=
+@I [BIND-110] ml=
+@I [BIND-110] model=SHA1ProcessMessageBlock_Loop_loop1_proc
+@I [BIND-110] no_false_path=
+@I [BIND-110] no_min_op=
+@I [BIND-110] normalize=
+@I [BIND-110] quiet=
+@I [BIND-110] refine=
+@I [BIND-110] reg_weight=[ 0.0 -- 1.0 ]
+@I [BIND-110] search=
+@I [BIND-110] tight_delay=
+@I [BIND-110] verbose=
+@I [BIND-110] wFF=
+@I [BIND-110] wFU=
+@I [BIND-110] wMUX=
+@I [BIND-110] wNET=
+@I [BIND-100] Starting micro-architecture generation ...
+@I [BIND-101] Performing variable lifetime analysis.
+@I [BIND-101] Exploring resource sharing.
+@I [BIND-101] Binding ...
+@I [BIND-101] Start micro-architecture refinement ...
+@I [BIND-100] Current cost: 402.4
+@I [BIND-100]  Iter  Moves  Swaps Merges  Swept   Fu     Reg     Cost   
+@I [BIND-100]   0      0      0      0      0     44     19      402.4  
+@I [BIND-100]   1     13      6      0      0     44     19      405.4  
+@I [BIND-100]   2     10      6      0      0     44     19      386.4  
+@I [BIND-100]   3     12      9      0      0     44     19      380.4  
+@I [BIND-100]   4     12     11      0      0     44     19      379.4  
+@I [BIND-100]   5     13     11      0      0     44     19      373.4  
+@I [BIND-100]   6     11     10      0      0     44     19      373.4  
+@I [BIND-100]   7     11     10      0      0     44     19      373.4  
+@I [BIND-100]   8     11     10      0      0     44     19      373.4  
+@I [BIND-100] Final cost: 373.4
+@I [BIND-101] Done micro-architecture refinement; elapsed 0.434491 sec.
+@I [BIND-100] Finished micro-architecture generation.
+@I [HLS-100] Command 'bind' returned 0; elapsed 0.459251Total elapsed time: 15.56 sec.
+@I [HLS-111] Elapsed time: 0.489065 seconds; current memory usage: 77.4 MB.
+@I [HLS-100] Command "report -o /home/matt/workspace/sha1_hls/dataflow_inline_stream/.autopilot/db/SHA1ProcessMessageBlock_Loop_loop1_proc.verbose.bind.rpt -verbose -f "
+@I [HLS-100] Command 'report' returned 0; elapsed 0.048755Total elapsed time: 15.106 sec.
+@I [HLS-100] Command "db_write -o /home/matt/workspace/sha1_hls/dataflow_inline_stream/.autopilot/db/SHA1ProcessMessageBlock_Loop_loop1_proc.bind.adb -f "
+@I [HLS-100] Command 'db_write' returned 0; elapsed 0.01881Total elapsed time: 15.126 sec.
+@I [HLS-0] Finish binding SHA1ProcessMessageBlock_Loop_loop1_proc.
+@I [HLS-10] ----------------------------------------------------------------
+@0 [HLS-0] ----------------------------------------------------------------
+@I [HLS-10] -- Scheduling module 'SHA1ProcessMessageBlock_Block_proc' 
+@0 [HLS-0] -- Scheduling module 'SHA1ProcessMessageBlock_Block_proc' 
+@I [HLS-10] ----------------------------------------------------------------
+@0 [HLS-0] ----------------------------------------------------------------
+@I [HLS-100] Command "set_default_model SHA1ProcessMessageBlock_Block__proc "
+@I [HLS-100] Command 'set_default_model' returned 0; elapsed 3.8e-05Total elapsed time: 15.128 sec.
+@I [HLS-100] Command "schedule -model SHA1ProcessMessageBlock_Block__proc "
+@I [SCHED-11] Starting scheduling ...
+@I [SCHED-11] Finished scheduling.
+@I [HLS-100] Command 'schedule' returned 0; elapsed 0.132092Total elapsed time: 15.260 sec.
+@I [HLS-111] Elapsed time: 0.204413 seconds; current memory usage: 77.9 MB.
+@I [HLS-100] Command "report -o /home/matt/workspace/sha1_hls/dataflow_inline_stream/.autopilot/db/SHA1ProcessMessageBlock_Block_proc.verbose.sched.rpt -verbose -f "
+@I [HLS-100] Command 'report' returned 0; elapsed 0.013362Total elapsed time: 15.275 sec.
+@I [HLS-100] Command "db_write -o /home/matt/workspace/sha1_hls/dataflow_inline_stream/.autopilot/db/SHA1ProcessMessageBlock_Block_proc.sched.adb -f "
+@I [HLS-100] Command 'db_write' returned 0; elapsed 0.032628Total elapsed time: 15.309 sec.
+@I [HLS-0] Finish scheduling SHA1ProcessMessageBlock_Block__proc.
+@I [HLS-10] ----------------------------------------------------------------
+@0 [HLS-0] ----------------------------------------------------------------
+@I [HLS-10] -- Exploring micro-architecture for module 'SHA1ProcessMessageBlock_Block_proc' 
+@0 [HLS-0] -- Exploring micro-architecture for module 'SHA1ProcessMessageBlock_Block_proc' 
+@I [HLS-10] ----------------------------------------------------------------
+@0 [HLS-0] ----------------------------------------------------------------
+@I [HLS-100] Command "set_default_model SHA1ProcessMessageBlock_Block__proc "
+@I [HLS-100] Command 'set_default_model' returned 0; elapsed 4.3e-05Total elapsed time: 15.311 sec.
+@I [HLS-100] Command "bind -model SHA1ProcessMessageBlock_Block__proc "
+@I [BIND-110] clear=
+@I [BIND-110] debug=
+@I [BIND-110] drf=
+@I [BIND-110] effort=high
+@I [BIND-110] fast_refine=
+@I [BIND-110] fu_weight=[ 0.0 -- 1.0 ]
+@I [BIND-110] global_opt=
+@I [BIND-110] gsearch=
+@I [BIND-110] help=
+@I [BIND-110] help-hidden=
+@I [BIND-110] min_mem_port=
+@I [BIND-110] min_op=
+@I [BIND-110] minreg=
+@I [BIND-110] ml=
+@I [BIND-110] model=SHA1ProcessMessageBlock_Block__proc
+@I [BIND-110] no_false_path=
+@I [BIND-110] no_min_op=
+@I [BIND-110] normalize=
+@I [BIND-110] quiet=
+@I [BIND-110] refine=
+@I [BIND-110] reg_weight=[ 0.0 -- 1.0 ]
+@I [BIND-110] search=
+@I [BIND-110] tight_delay=
+@I [BIND-110] verbose=
+@I [BIND-110] wFF=
+@I [BIND-110] wFU=
+@I [BIND-110] wMUX=
+@I [BIND-110] wNET=
+@I [BIND-100] Starting micro-architecture generation ...
+@I [BIND-101] Performing variable lifetime analysis.
+@I [BIND-101] Exploring resource sharing.
+@I [BIND-101] Binding ...
+@I [BIND-101] Start micro-architecture refinement ...
+@I [BIND-100] Current cost: 2399.4
+@I [BIND-100]  Iter  Moves  Swaps Merges  Swept   Fu     Reg     Cost   
+@I [BIND-100]   0      0      0      0      0     105    58     2399.4  
+@I [BIND-100]   1     24      7      0      0     105    58      2323   
+@I [BIND-100]   2     22      9      0      0     105    58     2236.8  
+@I [BIND-100]   3     21     12      0      0     105    58      2238   
+@I [BIND-100]   4     17     13      0      0     105    58     2231.8  
+@I [BIND-100]   5     19     12      0      0     105    58     2225.6  
+@I [BIND-100]   6     19     12      0      0     105    58     2219.4  
+@I [BIND-100]   7     23     15      0      0     105    58     2219.4  
+@I [BIND-100]   8     23     16      0      0     105    58     2219.4  
+@I [BIND-100]   9     23     15      0      0     105    58     2219.4  
+@I [BIND-100]   10    23     15      0      0     105    58     2219.4  
+@I [BIND-100]   11    23     15      0      0     105    58     2219.4  
+@I [BIND-100] Final cost: 2219.4
+@I [BIND-101] Done micro-architecture refinement; elapsed 2.36885 sec.
+@I [BIND-100] Finished micro-architecture generation.
+@I [HLS-100] Command 'bind' returned 0; elapsed 2.42707Total elapsed time: 17.740 sec.
+@I [HLS-111] Elapsed time: 2.47814 seconds; current memory usage: 78.5 MB.
+@I [HLS-100] Command "report -o /home/matt/workspace/sha1_hls/dataflow_inline_stream/.autopilot/db/SHA1ProcessMessageBlock_Block_proc.verbose.bind.rpt -verbose -f "
+@I [HLS-100] Command 'report' returned 0; elapsed 0.142871Total elapsed time: 17.884 sec.
+@I [HLS-100] Command "db_write -o /home/matt/workspace/sha1_hls/dataflow_inline_stream/.autopilot/db/SHA1ProcessMessageBlock_Block_proc.bind.adb -f "
+@I [HLS-100] Command 'db_write' returned 0; elapsed 0.037809Total elapsed time: 17.922 sec.
+@I [HLS-0] Finish binding SHA1ProcessMessageBlock_Block__proc.
+@I [HLS-10] ----------------------------------------------------------------
+@0 [HLS-0] ----------------------------------------------------------------
+@I [HLS-10] -- Scheduling module 'SHA1ProcessMessageBlock' 
+@0 [HLS-0] -- Scheduling module 'SHA1ProcessMessageBlock' 
+@I [HLS-10] ----------------------------------------------------------------
+@0 [HLS-0] ----------------------------------------------------------------
+@I [HLS-100] Command "set_default_model SHA1ProcessMessageBlock "
+@I [HLS-100] Command 'set_default_model' returned 0; elapsed 4e-05Total elapsed time: 17.924 sec.
+@I [HLS-100] Command "schedule -model SHA1ProcessMessageBlock "
+@I [SCHED-11] Starting scheduling ...
+@I [SCHED-11] Finished scheduling.
+@I [HLS-100] Command 'schedule' returned 0; elapsed 0.013854Total elapsed time: 17.939 sec.
+@I [HLS-111] Elapsed time: 0.198697 seconds; current memory usage: 78.6 MB.
+@I [HLS-100] Command "report -o /home/matt/workspace/sha1_hls/dataflow_inline_stream/.autopilot/db/SHA1ProcessMessageBlock.verbose.sched.rpt -verbose -f "
+@I [HLS-100] Command 'report' returned 0; elapsed 0.002484Total elapsed time: 17.942 sec.
+@I [HLS-100] Command "db_write -o /home/matt/workspace/sha1_hls/dataflow_inline_stream/.autopilot/db/SHA1ProcessMessageBlock.sched.adb -f "
+@I [HLS-100] Command 'db_write' returned 0; elapsed 0.002952Total elapsed time: 17.946 sec.
+@I [HLS-0] Finish scheduling SHA1ProcessMessageBlock.
+@I [HLS-10] ----------------------------------------------------------------
+@0 [HLS-0] ----------------------------------------------------------------
+@I [HLS-10] -- Exploring micro-architecture for module 'SHA1ProcessMessageBlock' 
+@0 [HLS-0] -- Exploring micro-architecture for module 'SHA1ProcessMessageBlock' 
+@I [HLS-10] ----------------------------------------------------------------
+@0 [HLS-0] ----------------------------------------------------------------
+@I [HLS-100] Command "set_default_model SHA1ProcessMessageBlock "
+@I [HLS-100] Command 'set_default_model' returned 0; elapsed 3.2e-05Total elapsed time: 17.948 sec.
+@I [HLS-100] Command "bind -model SHA1ProcessMessageBlock "
+@I [BIND-110] clear=
+@I [BIND-110] debug=
+@I [BIND-110] drf=
+@I [BIND-110] effort=high
+@I [BIND-110] fast_refine=
+@I [BIND-110] fu_weight=[ 0.0 -- 1.0 ]
+@I [BIND-110] global_opt=
+@I [BIND-110] gsearch=
+@I [BIND-110] help=
+@I [BIND-110] help-hidden=
+@I [BIND-110] min_mem_port=
+@I [BIND-110] min_op=
+@I [BIND-110] minreg=
+@I [BIND-110] ml=
+@I [BIND-110] model=SHA1ProcessMessageBlock
+@I [BIND-110] no_false_path=
+@I [BIND-110] no_min_op=
+@I [BIND-110] normalize=
+@I [BIND-110] quiet=
+@I [BIND-110] refine=
+@I [BIND-110] reg_weight=[ 0.0 -- 1.0 ]
+@I [BIND-110] search=
+@I [BIND-110] tight_delay=
+@I [BIND-110] verbose=
+@I [BIND-110] wFF=
+@I [BIND-110] wFU=
+@I [BIND-110] wMUX=
+@I [BIND-110] wNET=
+@I [BIND-100] Starting micro-architecture generation ...
+@I [BIND-101] Performing variable lifetime analysis.
+@I [BIND-101] Exploring resource sharing.
+@I [BIND-101] Binding ...
+@I [BIND-101] Start micro-architecture refinement ...
+@I [BIND-100] Current cost: 2542.03
+@I [BIND-100]  Iter  Moves  Swaps Merges  Swept   Fu     Reg     Cost   
+@I [BIND-100]   0      0      0      0      0      3      0     2542.03 
+@I [BIND-100]   1      0      0      0      0      3      0     2542.03 
+@I [BIND-100]   2      0      0      0      0      3      0     2542.03 
+@I [BIND-100]   3      0      0      0      0      3      0     2542.03 
+@I [BIND-100] Final cost: 2542.03
+@I [BIND-101] Done micro-architecture refinement; elapsed 0.323904 sec.
+@I [BIND-100] Finished micro-architecture generation.
+@I [HLS-100] Command 'bind' returned 0; elapsed 0.439839Total elapsed time: 18.388 sec.
+@I [HLS-111] Elapsed time: 0.449407 seconds; current memory usage: 78.7 MB.
+@I [HLS-100] Command "report -o /home/matt/workspace/sha1_hls/dataflow_inline_stream/.autopilot/db/SHA1ProcessMessageBlock.verbose.bind.rpt -verbose -f "
+@I [HLS-100] Command 'report' returned 0; elapsed 0.176427Total elapsed time: 18.566 sec.
+@I [HLS-100] Command "db_write -o /home/matt/workspace/sha1_hls/dataflow_inline_stream/.autopilot/db/SHA1ProcessMessageBlock.bind.adb -f "
+@I [HLS-100] Command 'db_write' returned 0; elapsed 0.012751Total elapsed time: 18.580 sec.
+@I [HLS-0] Finish binding SHA1ProcessMessageBlock.
+@I [HLS-100] Command "get_model_list SHA1ProcessMessageBlock -filter all-wo-channel "
+@I [HLS-100] Command 'get_model_list' returned 0; elapsed 7.9e-05Total elapsed time: 18.581 sec.
+@I [HLS-0] Preprocessing for RTLGen ...
+@I [HLS-100] Command "rtl_gen_preprocess SHA1ProcessMessageBlock_Loop_loop1_proc "
+@I [HLS-100] Command 'rtl_gen_preprocess' returned 0; elapsed 0.001655Total elapsed time: 18.583 sec.
+@I [HLS-100] Command "rtl_gen_preprocess SHA1ProcessMessageBlock_Block__proc "
+@I [HLS-100] Command 'rtl_gen_preprocess' returned 0; elapsed 0.001571Total elapsed time: 18.585 sec.
+@I [HLS-100] Command "rtl_gen_preprocess SHA1ProcessMessageBlock "
+@I [HLS-100] Command 'rtl_gen_preprocess' returned 0; elapsed 0.003493Total elapsed time: 18.589 sec.
+@I [HLS-0] Model list for RTL generation: SHA1ProcessMessageBlock_Loop_loop1_proc SHA1ProcessMessageBlock_Block__proc SHA1ProcessMessageBlock
+@I [HLS-10] ----------------------------------------------------------------
+@0 [HLS-0] ----------------------------------------------------------------
+@I [HLS-10] -- Generating RTL for module 'SHA1ProcessMessageBlock_Loop_loop1_proc' 
+@0 [HLS-0] -- Generating RTL for module 'SHA1ProcessMessageBlock_Loop_loop1_proc' 
+@I [HLS-10] ----------------------------------------------------------------
+@0 [HLS-0] ----------------------------------------------------------------
+@I [HLS-100] Command "create_rtl_model SHA1ProcessMessageBlock_Loop_loop1_proc -vendor xilinx -mg_file /home/matt/workspace/sha1_hls/dataflow_inline_stream/.autopilot/db/SHA1ProcessMessageBlock_Loop_loop1_proc.compgen.tcl "
+@I [RTGEN-100] Finished creating RTL model for 'SHA1ProcessMessageBlock_Loop_loop1_proc'.
+@I [HLS-100] Command 'create_rtl_model' returned 0; elapsed 0.045146Total elapsed time: 18.638 sec.
+@I [HLS-111] Elapsed time: 0.248757 seconds; current memory usage: 79.2 MB.
+@I [HLS-100] Command "source /home/matt/workspace/sha1_hls/dataflow_inline_stream/.autopilot/db/SHA1ProcessMessageBlock.rtl_wrap.cfg.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000759Total elapsed time: 18.640 sec.
+@I [HLS-100] Command "gen_rtl SHA1ProcessMessageBlock_Loop_loop1_proc -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /home/matt/workspace/sha1_hls/dataflow_inline_stream/syn/systemc/SHA1ProcessMessageBlock_Loop_loop1_proc -synmodules SHA1ProcessMessageBlock_Loop_loop1_proc SHA1ProcessMessageBlock_Block__proc SHA1ProcessMessageBlock "
+@I [HLS-100] Command 'gen_rtl' returned 0; elapsed 0.003975Total elapsed time: 18.647 sec.
+@I [HLS-100] Command "gen_rtl SHA1ProcessMessageBlock_Loop_loop1_proc -style xilinx -f -lang vhdl -o /home/matt/workspace/sha1_hls/dataflow_inline_stream/syn/vhdl/SHA1ProcessMessageBlock_Loop_loop1_proc "
+@I [HLS-100] Command 'gen_rtl' returned 0; elapsed 0.003033Total elapsed time: 18.651 sec.
+@I [HLS-100] Command "gen_rtl SHA1ProcessMessageBlock_Loop_loop1_proc -style xilinx -f -lang vlog -o /home/matt/workspace/sha1_hls/dataflow_inline_stream/syn/verilog/SHA1ProcessMessageBlock_Loop_loop1_proc "
+@I [HLS-100] Command 'gen_rtl' returned 0; elapsed 0.003486Total elapsed time: 18.655 sec.
+@I [HLS-100] Command "gen_tb_info SHA1ProcessMessageBlock_Loop_loop1_proc -o /home/matt/workspace/sha1_hls/dataflow_inline_stream/.autopilot/db/SHA1ProcessMessageBlock_Loop_loop1_proc -p /home/matt/workspace/sha1_hls/dataflow_inline_stream/.autopilot/db "
+@I [HLS-100] Command 'gen_tb_info' returned 0; elapsed 0.022751Total elapsed time: 18.678 sec.
+@I [HLS-100] Command "report -model SHA1ProcessMessageBlock_Loop_loop1_proc -o /home/matt/workspace/sha1_hls/dataflow_inline_stream/syn/report/SHA1ProcessMessageBlock_Loop_loop1_proc_csynth.rpt -f "
+@I [HLS-100] Command 'report' returned 0; elapsed 0.029879Total elapsed time: 18.709 sec.
+@I [HLS-100] Command "report -model SHA1ProcessMessageBlock_Loop_loop1_proc -o /home/matt/workspace/sha1_hls/dataflow_inline_stream/syn/report/SHA1ProcessMessageBlock_Loop_loop1_proc_csynth.xml -f -x "
+@I [HLS-100] Command 'report' returned 0; elapsed 0.023839Total elapsed time: 18.734 sec.
+@I [HLS-100] Command "report -model SHA1ProcessMessageBlock_Loop_loop1_proc -o /home/matt/workspace/sha1_hls/dataflow_inline_stream/.autopilot/db/SHA1ProcessMessageBlock_Loop_loop1_proc.verbose.rpt -verbose -f "
+@I [HLS-100] Command 'report' returned 0; elapsed 0.079565Total elapsed time: 18.815 sec.
+@I [HLS-100] Command "db_write -model SHA1ProcessMessageBlock_Loop_loop1_proc -o /home/matt/workspace/sha1_hls/dataflow_inline_stream/.autopilot/db/SHA1ProcessMessageBlock_Loop_loop1_proc.adb -f "
+@I [HLS-100] Command 'db_write' returned 0; elapsed 0.040305Total elapsed time: 18.856 sec.
+@I [HLS-10] ----------------------------------------------------------------
+@0 [HLS-0] ----------------------------------------------------------------
+@I [HLS-10] -- Generating RTL for module 'SHA1ProcessMessageBlock_Block_proc' 
+@0 [HLS-0] -- Generating RTL for module 'SHA1ProcessMessageBlock_Block_proc' 
+@I [HLS-10] ----------------------------------------------------------------
+@0 [HLS-0] ----------------------------------------------------------------
+@I [HLS-100] Command "create_rtl_model SHA1ProcessMessageBlock_Block__proc -vendor xilinx -mg_file /home/matt/workspace/sha1_hls/dataflow_inline_stream/.autopilot/db/SHA1ProcessMessageBlock_Block_proc.compgen.tcl "
+@I [RTGEN-100] Finished creating RTL model for 'SHA1ProcessMessageBlock_Block_proc'.
+@I [HLS-100] Command 'create_rtl_model' returned 0; elapsed 0.107012Total elapsed time: 19.10 sec.
+@I [HLS-111] Elapsed time: 0.371858 seconds; current memory usage: 80.7 MB.
+@I [HLS-100] Command "source /home/matt/workspace/sha1_hls/dataflow_inline_stream/.autopilot/db/SHA1ProcessMessageBlock.rtl_wrap.cfg.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000765Total elapsed time: 19.12 sec.
+@I [HLS-100] Command "gen_rtl SHA1ProcessMessageBlock_Block__proc -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /home/matt/workspace/sha1_hls/dataflow_inline_stream/syn/systemc/SHA1ProcessMessageBlock_Block_proc -synmodules SHA1ProcessMessageBlock_Loop_loop1_proc SHA1ProcessMessageBlock_Block__proc SHA1ProcessMessageBlock "
+@I [HLS-100] Command 'gen_rtl' returned 0; elapsed 0.0078Total elapsed time: 19.21 sec.
+@I [HLS-100] Command "gen_rtl SHA1ProcessMessageBlock_Block__proc -style xilinx -f -lang vhdl -o /home/matt/workspace/sha1_hls/dataflow_inline_stream/syn/vhdl/SHA1ProcessMessageBlock_Block_proc "
+@I [HLS-100] Command 'gen_rtl' returned 0; elapsed 0.005833Total elapsed time: 19.28 sec.
+@I [HLS-100] Command "gen_rtl SHA1ProcessMessageBlock_Block__proc -style xilinx -f -lang vlog -o /home/matt/workspace/sha1_hls/dataflow_inline_stream/syn/verilog/SHA1ProcessMessageBlock_Block_proc "
+@I [HLS-100] Command 'gen_rtl' returned 0; elapsed 0.006969Total elapsed time: 19.35 sec.
+@I [HLS-100] Command "gen_tb_info SHA1ProcessMessageBlock_Block__proc -o /home/matt/workspace/sha1_hls/dataflow_inline_stream/.autopilot/db/SHA1ProcessMessageBlock_Block_proc -p /home/matt/workspace/sha1_hls/dataflow_inline_stream/.autopilot/db "
+@I [HLS-100] Command 'gen_tb_info' returned 0; elapsed 0.049996Total elapsed time: 19.86 sec.
+@I [HLS-100] Command "report -model SHA1ProcessMessageBlock_Block__proc -o /home/matt/workspace/sha1_hls/dataflow_inline_stream/syn/report/SHA1ProcessMessageBlock_Block_proc_csynth.rpt -f "
+@I [HLS-100] Command 'report' returned 0; elapsed 0.065679Total elapsed time: 19.153 sec.
+@I [HLS-100] Command "report -model SHA1ProcessMessageBlock_Block__proc -o /home/matt/workspace/sha1_hls/dataflow_inline_stream/syn/report/SHA1ProcessMessageBlock_Block_proc_csynth.xml -f -x "
+@I [HLS-100] Command 'report' returned 0; elapsed 0.05079Total elapsed time: 19.205 sec.
+@I [HLS-100] Command "report -model SHA1ProcessMessageBlock_Block__proc -o /home/matt/workspace/sha1_hls/dataflow_inline_stream/.autopilot/db/SHA1ProcessMessageBlock_Block_proc.verbose.rpt -verbose -f "
+@I [HLS-100] Command 'report' returned 0; elapsed 0.199065Total elapsed time: 19.405 sec.
+@I [HLS-100] Command "db_write -model SHA1ProcessMessageBlock_Block__proc -o /home/matt/workspace/sha1_hls/dataflow_inline_stream/.autopilot/db/SHA1ProcessMessageBlock_Block_proc.adb -f "
+@I [HLS-100] Command 'db_write' returned 0; elapsed 0.091429Total elapsed time: 19.497 sec.
+@I [HLS-10] ----------------------------------------------------------------
+@0 [HLS-0] ----------------------------------------------------------------
+@I [HLS-10] -- Generating RTL for module 'SHA1ProcessMessageBlock' 
+@0 [HLS-0] -- Generating RTL for module 'SHA1ProcessMessageBlock' 
+@I [HLS-10] ----------------------------------------------------------------
+@0 [HLS-0] ----------------------------------------------------------------
+@I [HLS-100] Command "create_rtl_model SHA1ProcessMessageBlock -vendor xilinx -mg_file /home/matt/workspace/sha1_hls/dataflow_inline_stream/.autopilot/db/SHA1ProcessMessageBlock.compgen.tcl "
+@I [RTGEN-500] Setting interface mode on port 'SHA1ProcessMessageBlock/context_Intermediate_Hash' to 'ap_memory'.
+@I [RTGEN-500] Setting interface mode on port 'SHA1ProcessMessageBlock/context_Message_Block_Index' to 'ap_vld'.
+@I [RTGEN-500] Setting interface mode on port 'SHA1ProcessMessageBlock/context_Message_Block' to 'ap_memory'.
+@I [RTGEN-500] Setting interface mode on function 'SHA1ProcessMessageBlock' to 'ap_ctrl_hs'.
+@I [RTGEN-100] Finished creating RTL model for 'SHA1ProcessMessageBlock'.
+@I [HLS-100] Command 'create_rtl_model' returned 0; elapsed 0.043947Total elapsed time: 19.639 sec.
+@I [HLS-111] Elapsed time: 0.628507 seconds; current memory usage: 83 MB.
+@I [HLS-100] Command "source /home/matt/workspace/sha1_hls/dataflow_inline_stream/.autopilot/db/SHA1ProcessMessageBlock.rtl_wrap.cfg.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000902Total elapsed time: 19.641 sec.
+@I [HLS-100] Command "gen_rtl SHA1ProcessMessageBlock -istop -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /home/matt/workspace/sha1_hls/dataflow_inline_stream/syn/systemc/SHA1ProcessMessageBlock -synmodules SHA1ProcessMessageBlock_Loop_loop1_proc SHA1ProcessMessageBlock_Block__proc SHA1ProcessMessageBlock "
+@I [HLS-100] Command 'gen_rtl' returned 0; elapsed 0.002307Total elapsed time: 19.644 sec.
+@I [HLS-100] Command "gen_rtl SHA1ProcessMessageBlock -istop -style xilinx -f -lang vhdl -o /home/matt/workspace/sha1_hls/dataflow_inline_stream/syn/vhdl/SHA1ProcessMessageBlock "
+@I [HLS-100] Command 'gen_rtl' returned 0; elapsed 0.040631Total elapsed time: 19.686 sec.
+@I [HLS-100] Command "gen_rtl SHA1ProcessMessageBlock -istop -style xilinx -f -lang vlog -o /home/matt/workspace/sha1_hls/dataflow_inline_stream/syn/verilog/SHA1ProcessMessageBlock "
+@I [HLS-100] Command 'gen_rtl' returned 0; elapsed 0.021023Total elapsed time: 19.708 sec.
+@I [HLS-100] Command "export_constraint_db -o /home/matt/workspace/sha1_hls/dataflow_inline_stream/.autopilot/db/SHA1ProcessMessageBlock.constraint.tcl -f -tool general "
+@I [HLS-100] Command 'export_constraint_db' returned 0; elapsed 0.000194Total elapsed time: 19.709 sec.
+@I [HLS-100] Command "report -model SHA1ProcessMessageBlock -o /home/matt/workspace/sha1_hls/dataflow_inline_stream/.autopilot/db/SHA1ProcessMessageBlock.design.xml -verbose -f -dv "
+@I [HLS-100] Command 'report' returned 0; elapsed 0.180158Total elapsed time: 19.890 sec.
+@I [HLS-100] Command "report -model SHA1ProcessMessageBlock -o /home/matt/workspace/sha1_hls/dataflow_inline_stream/.autopilot/db/SHA1ProcessMessageBlock.sdaccel.xml -verbose -f -sdaccel "
+@I [HLS-100] Command 'report' returned 0; elapsed 0.055752Total elapsed time: 19.947 sec.
+@I [HLS-100] Command "gen_tb_info SHA1ProcessMessageBlock -o /home/matt/workspace/sha1_hls/dataflow_inline_stream/.autopilot/db/SHA1ProcessMessageBlock -p /home/matt/workspace/sha1_hls/dataflow_inline_stream/.autopilot/db "
+@I [HLS-100] Command 'gen_tb_info' returned 0; elapsed 0.022322Total elapsed time: 19.970 sec.
+@I [HLS-100] Command "report -model SHA1ProcessMessageBlock -o /home/matt/workspace/sha1_hls/dataflow_inline_stream/syn/report/SHA1ProcessMessageBlock_csynth.rpt -f "
+@I [HLS-100] Command 'report' returned 0; elapsed 0.02563Total elapsed time: 19.997 sec.
+@I [HLS-100] Command "report -model SHA1ProcessMessageBlock -o /home/matt/workspace/sha1_hls/dataflow_inline_stream/syn/report/SHA1ProcessMessageBlock_csynth.xml -f -x "
+@I [HLS-100] Command 'report' returned 0; elapsed 0.019937Total elapsed time: 20.18 sec.
+@I [HLS-100] Command "report -model SHA1ProcessMessageBlock -o /home/matt/workspace/sha1_hls/dataflow_inline_stream/.autopilot/db/SHA1ProcessMessageBlock.verbose.rpt -verbose -f "
+@I [HLS-100] Command 'report' returned 0; elapsed 0.1946Total elapsed time: 20.213 sec.
+@I [HLS-100] Command "db_write -model SHA1ProcessMessageBlock -o /home/matt/workspace/sha1_hls/dataflow_inline_stream/.autopilot/db/SHA1ProcessMessageBlock.adb -f "
+@I [HLS-100] Command 'db_write' returned 0; elapsed 0.032499Total elapsed time: 20.247 sec.
+@I [HLS-100] Command "sc_get_clocks SHA1ProcessMessageBlock "
+@I [HLS-100] Command 'sc_get_clocks' returned 0; elapsed 2.4e-05Total elapsed time: 20.258 sec.
+@I [HLS-100] Command "sc_get_portdomain SHA1ProcessMessageBlock "
+@I [HLS-100] Command 'sc_get_portdomain' returned 0; elapsed 1.6e-05Total elapsed time: 20.259 sec.
+@I [HLS-0] Model list for RTL component generation: SHA1ProcessMessageBlock_Loop_loop1_proc SHA1ProcessMessageBlock_Block__proc SHA1ProcessMessageBlock
+@I [HLS-0] Handling components in module [SHA1ProcessMessageBlock_Loop_loop1_proc] ... 
+@I [HLS-100] Command "source /home/matt/workspace/sha1_hls/dataflow_inline_stream/.autopilot/db/SHA1ProcessMessageBlock_Loop_loop1_proc.compgen.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000446Total elapsed time: 20.262 sec.
+@I [HLS-0] Handling components in module [SHA1ProcessMessageBlock_Block_proc] ... 
+@I [HLS-100] Command "source /home/matt/workspace/sha1_hls/dataflow_inline_stream/.autopilot/db/SHA1ProcessMessageBlock_Block_proc.compgen.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.00041Total elapsed time: 20.264 sec.
+@I [HLS-0] Handling components in module [SHA1ProcessMessageBlock] ... 
+@I [HLS-100] Command "source /home/matt/workspace/sha1_hls/dataflow_inline_stream/.autopilot/db/SHA1ProcessMessageBlock.compgen.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000721Total elapsed time: 20.265 sec.
+@I [HLS-0] Append model SHA1ProcessMessageBlock_Loop_loop1_proc
+@I [HLS-0] Append model SHA1ProcessMessageBlock_Block_proc
+@I [HLS-0] Append model SHA1ProcessMessageBlock
+@I [HLS-0] Generating RTL model list ...
+@I [HLS-0] All models in this session: SHA1ProcessMessageBlock_Loop_loop1_proc SHA1ProcessMessageBlock_Block_proc SHA1ProcessMessageBlock
+@I [HLS-0] To file: write model SHA1ProcessMessageBlock_Loop_loop1_proc
+@I [HLS-0] To file: write model SHA1ProcessMessageBlock_Block_proc
+@I [HLS-0] To file: write model SHA1ProcessMessageBlock
+@I [HLS-0] Finished generating RTL model list.
+
+
+@I [HLS-0] RTL Generation done.
+@I [HLS-0] CAS Generation done.
+@I [HLS-0] CBC Generation done.
+@I [HLS-100] Command "export_ssdm /home/matt/workspace/sha1_hls/dataflow_inline_stream/.autopilot/db/a.export.ll "
+@I [HLS-100] Command 'export_ssdm' returned 0; elapsed 0.001287Total elapsed time: 20.270 sec.
+@I [HLS-100] Command "source /home/matt/workspace/sha1_hls/dataflow_inline_stream/.autopilot/db/global.setting.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000518Total elapsed time: 20.280 sec.
+@I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2016.1/common/technology/generic/autopilot/common.gen "
+@I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2016.1/common/technology/generic/autopilot/APCoreGen.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.001657Total elapsed time: 20.283 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.003623Total elapsed time: 20.285 sec.
+@I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2016.1/common/technology/generic/autopilot/op.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000899Total elapsed time: 20.286 sec.
+@I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2016.1/common/technology/generic/autopilot/op_simcore.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.002749Total elapsed time: 20.290 sec.
+@I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2016.1/common/technology/generic/autopilot/interface.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000227Total elapsed time: 20.291 sec.
+@I [HLS-100] Command "source /home/matt/workspace/sha1_hls/dataflow_inline_stream/.autopilot/db/global.setting.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000471Total elapsed time: 20.292 sec.
+@I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/zynq/zynq.gen "
+@I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/common/virtex.gen "
+@I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/common/xilinx.gen "
+@I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/interface/plb46.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.003487Total elapsed time: 20.298 sec.
+@I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/interface/fsl.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.001384Total elapsed time: 20.300 sec.
+@I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/interface/axi4.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.006818Total elapsed time: 20.307 sec.
+@I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/interface/nativeAXI4.gen "
+@I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/interface/saxilite.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.011297Total elapsed time: 20.319 sec.
+@I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/interface/maxi.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.022504Total elapsed time: 20.343 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.035342Total elapsed time: 20.343 sec.
+@I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/scripts/xilinxcoregen.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.031223Total elapsed time: 20.375 sec.
+@I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/interface/XilEDKCoreGen.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.024243Total elapsed time: 20.400 sec.
+@I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/ip/util.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000441Total elapsed time: 20.401 sec.
+@I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/ip/xfir.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.002118Total elapsed time: 20.404 sec.
+@I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/ip/dds_compiler.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.010309Total elapsed time: 20.415 sec.
+@I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/ip/xfft.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.332353Total elapsed time: 20.748 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.454464Total elapsed time: 20.748 sec.
+@I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/common/dsp48.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000395Total elapsed time: 20.754 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.461675Total elapsed time: 20.755 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.462331Total elapsed time: 20.755 sec.
+@I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/zynq/zynq_fpv6.gen "
+@I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/common/xilinx_fpv6.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.004816Total elapsed time: 20.761 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.005501Total elapsed time: 20.761 sec.
+@I [HLS-100] Command "source /home/matt/workspace/sha1_hls/dataflow_inline_stream/.autopilot/db/global.setting.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000428Total elapsed time: 20.763 sec.
+@I [HLS-100] Command "source /home/matt/workspace/sha1_hls/dataflow_inline_stream/.autopilot/db/global.setting.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000412Total elapsed time: 20.765 sec.
+@I [HLS-100] Command "source /home/matt/workspace/sha1_hls/dataflow_inline_stream/.autopilot/db/global.setting.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000408Total elapsed time: 20.767 sec.
+@I [HLS-100] Command "source /home/matt/workspace/sha1_hls/dataflow_inline_stream/.autopilot/db/global.setting.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000391Total elapsed time: 20.768 sec.
+@I [HLS-100] Command "source /home/matt/workspace/sha1_hls/dataflow_inline_stream/.autopilot/db/SHA1ProcessMessageBlock_Loop_loop1_proc.compgen.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000385Total elapsed time: 20.769 sec.
+@I [HLS-100] Command "source /home/matt/workspace/sha1_hls/dataflow_inline_stream/.autopilot/db/SHA1ProcessMessageBlock_Block_proc.compgen.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000398Total elapsed time: 20.770 sec.
+@I [HLS-100] Command "source /home/matt/workspace/sha1_hls/dataflow_inline_stream/.autopilot/db/SHA1ProcessMessageBlock.compgen.tcl "
+@I [RTMG-278] Implementing memory 'SHA1ProcessMessageBlock_W_memcore_ram' using block RAMs.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.092612Total elapsed time: 20.864 sec.
+@I [HLS-10] Finished generating all RTL models.
+@0 [HLS-0] Finished generating all RTL models.
+@I [SYSC-301] Generating SystemC RTL for SHA1ProcessMessageBlock.
+@I [VHDL-304] Generating VHDL RTL for SHA1ProcessMessageBlock.
+@I [VLOG-307] Generating Verilog RTL for SHA1ProcessMessageBlock.
+@I [HLS-100] Command 'autosyn' returned 0; elapsed 6.41463Total elapsed time: 20.875 sec.
+@I [HLS-100] Command 'csynth_design' returned 0; elapsed 10.4636Total elapsed time: 20.876 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 11.2103Total elapsed time: 20.876 sec.
+@I [HLS-100] Command "cleanup_all "
+@I [HLS-100] Command 'cleanup_all' returned 0; elapsed 0.013523Total elapsed time: 20.890 sec.

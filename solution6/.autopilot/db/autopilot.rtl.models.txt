@@ -1,2 +1,0 @@
-SHA1ProcessMessageBlock_W
-SHA1ProcessMessageBlock

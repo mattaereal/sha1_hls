@@ -1,0 +1,177 @@
+
+
+================================================================
+== Vivado HLS Report for 'SHA1ProcessMessageBlock_Loop_loop1_proc'
+================================================================
+* Date:           Tue Sep 13 00:41:00 2016
+
+* Version:        2016.1 (Build 1538259 on Fri Apr 08 16:12:49 MDT 2016)
+* Project:        sha1_hls
+* Solution:       dataflow_inline_stream
+* Product family: zynq
+* Target device:  xc7z020clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|      6.79|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |  242|  242|  242|  242|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------+-----+-----+----------+-----------+-----------+------+----------+
+        |          |  Latency  | Iteration|  Initiation Interval  | Trip |          |
+        | Loop Name| min | max |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------+-----+-----+----------+-----------+-----------+------+----------+
+        |- loop1   |   48|   48|         3|          -|          -|    16|    no    |
+        |- loop2   |  192|  192|         3|          -|          -|    64|    no    |
+        +----------+-----+-----+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+-------+
+|       Name      | BRAM_18K| DSP48E|   FF   |  LUT  |
++-----------------+---------+-------+--------+-------+
+|DSP              |        -|      -|       -|      -|
+|Expression       |        -|      -|       0|    203|
+|FIFO             |        -|      -|       -|      -|
+|Instance         |        -|      -|       -|      -|
+|Memory           |        -|      -|       -|      -|
+|Multiplexer      |        -|      -|       -|     63|
+|Register         |        -|      -|     112|      -|
++-----------------+---------+-------+--------+-------+
+|Total            |        0|      0|     112|    266|
++-----------------+---------+-------+--------+-------+
+|Available        |      280|    220|  106400|  53200|
++-----------------+---------+-------+--------+-------+
+|Utilization (%)  |        0|      0|   ~0   |   ~0  |
++-----------------+---------+-------+--------+-------+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP48: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +-------------------------+----------+-------+---+----+------------+------------+
+    |      Variable Name      | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +-------------------------+----------+-------+---+----+------------+------------+
+    |t_2_fu_342_p2            |     +    |      0|  0|   7|           1|           7|
+    |t_fu_180_p2              |     +    |      0|  0|   5|           5|           1|
+    |tmp_3_fu_256_p2          |     +    |      0|  0|   7|           3|           7|
+    |tmp_5_fu_267_p2          |     +    |      0|  0|   7|           5|           7|
+    |tmp_7_fu_278_p2          |     +    |      0|  0|   7|           5|           7|
+    |tmp_9_fu_289_p2          |     +    |      0|  0|   7|           6|           7|
+    |exitcond4_fu_250_p2      |   icmp   |      0|  0|   3|           7|           7|
+    |exitcond5_i_i_fu_174_p2  |   icmp   |      0|  0|   3|           5|           6|
+    |ap_sig_120               |    or    |      0|  0|   1|           1|           1|
+    |tmp_11_i_fu_214_p2       |    or    |      0|  0|   8|           6|           2|
+    |tmp_16_i_fu_224_p2       |    or    |      0|  0|   8|           6|           2|
+    |tmp_7_i_fu_203_p2        |    or    |      0|  0|   8|           6|           1|
+    |tmp1_fu_300_p2           |    xor   |      0|  0|  44|          32|          32|
+    |tmp2_fu_305_p2           |    xor   |      0|  0|  44|          32|          32|
+    |word_assign_fu_310_p2    |    xor   |      0|  0|  44|          32|          32|
+    +-------------------------+----------+-------+---+----+------------+------------+
+    |Total                    |          |      0|  0| 203|         152|         151|
+    +-------------------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    +--------------------------------+----+-----------+-----+-----------+
+    |              Name              | LUT| Input Size| Bits| Total Bits|
+    +--------------------------------+----+-----------+-----+-----------+
+    |W_address0                      |   7|          4|    7|         28|
+    |W_address1                      |   7|          4|    7|         28|
+    |ap_NS_fsm                       |   2|          8|    1|          8|
+    |context_Message_Block_address0  |   6|          3|    6|         18|
+    |context_Message_Block_address1  |   6|          3|    6|         18|
+    |reg_372                         |   8|          3|    8|         24|
+    |reg_395                         |   7|          4|    7|         28|
+    |reg_415                         |   8|          4|    8|         32|
+    |t_0_i_i_reg_150                 |   5|          2|    5|         10|
+    |t_1_reg_162                     |   7|          2|    7|         14|
+    +--------------------------------+----+-----------+-----+-----------+
+    |Total                           |  63|         37|   62|        208|
+    +--------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +------------------+----+----+-----+-----------+
+    |       Name       | FF | LUT| Bits| Const Bits|
+    +------------------+----+----+-----+-----------+
+    |W_load_1_reg_410  |  32|   0|   32|          0|
+    |W_load_reg_351    |  32|   0|   32|          0|
+    |ap_CS_fsm         |   7|   0|    7|          0|
+    |ap_done_reg       |   1|   0|    1|          0|
+    |reg_372           |   8|   0|    8|          0|
+    |reg_395           |   7|   0|    7|          0|
+    |reg_415           |   8|   0|    8|          0|
+    |t_0_i_i_reg_150   |   5|   0|    5|          0|
+    |t_1_reg_162       |   7|   0|    7|          0|
+    |t_reg_356         |   5|   0|    5|          0|
+    +------------------+----+----+-----+-----------+
+    |Total             | 112|   0|  112|          0|
+    +------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++--------------------------------+-----+-----+------------+-----------------------------------------+--------------+
+|            RTL Ports           | Dir | Bits|  Protocol  |              Source Object              |    C Type    |
++--------------------------------+-----+-----+------------+-----------------------------------------+--------------+
+|ap_clk                          |  in |    1| ap_ctrl_hs | SHA1ProcessMessageBlock_Loop_loop1_proc | return value |
+|ap_rst                          |  in |    1| ap_ctrl_hs | SHA1ProcessMessageBlock_Loop_loop1_proc | return value |
+|ap_start                        |  in |    1| ap_ctrl_hs | SHA1ProcessMessageBlock_Loop_loop1_proc | return value |
+|ap_done                         | out |    1| ap_ctrl_hs | SHA1ProcessMessageBlock_Loop_loop1_proc | return value |
+|ap_continue                     |  in |    1| ap_ctrl_hs | SHA1ProcessMessageBlock_Loop_loop1_proc | return value |
+|ap_idle                         | out |    1| ap_ctrl_hs | SHA1ProcessMessageBlock_Loop_loop1_proc | return value |
+|ap_ready                        | out |    1| ap_ctrl_hs | SHA1ProcessMessageBlock_Loop_loop1_proc | return value |
+|context_Message_Block_address0  | out |    6|  ap_memory |          context_Message_Block          |     array    |
+|context_Message_Block_ce0       | out |    1|  ap_memory |          context_Message_Block          |     array    |
+|context_Message_Block_q0        |  in |    8|  ap_memory |          context_Message_Block          |     array    |
+|context_Message_Block_address1  | out |    6|  ap_memory |          context_Message_Block          |     array    |
+|context_Message_Block_ce1       | out |    1|  ap_memory |          context_Message_Block          |     array    |
+|context_Message_Block_q1        |  in |    8|  ap_memory |          context_Message_Block          |     array    |
+|W_address0                      | out |    7|  ap_memory |                    W                    |     array    |
+|W_ce0                           | out |    1|  ap_memory |                    W                    |     array    |
+|W_we0                           | out |    1|  ap_memory |                    W                    |     array    |
+|W_d0                            | out |   32|  ap_memory |                    W                    |     array    |
+|W_q0                            |  in |   32|  ap_memory |                    W                    |     array    |
+|W_address1                      | out |    7|  ap_memory |                    W                    |     array    |
+|W_ce1                           | out |    1|  ap_memory |                    W                    |     array    |
+|W_we1                           | out |    1|  ap_memory |                    W                    |     array    |
+|W_d1                            | out |   32|  ap_memory |                    W                    |     array    |
+|W_q1                            |  in |   32|  ap_memory |                    W                    |     array    |
++--------------------------------+-----+-----+------------+-----------------------------------------+--------------+
+

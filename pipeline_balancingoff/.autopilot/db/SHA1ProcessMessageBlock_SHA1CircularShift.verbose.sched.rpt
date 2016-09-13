@@ -1,0 +1,135 @@
+
+
+================================================================
+== Vivado HLS Report for 'SHA1ProcessMessageBlock_SHA1CircularShift'
+================================================================
+* Date:           Mon Sep 12 23:54:50 2016
+
+* Version:        2016.1 (Build 1538259 on Fri Apr 08 16:12:49 MDT 2016)
+* Project:        sha1_hls
+* Solution:       solution2
+* Product family: zynq
+* Target device:  xc7z020clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|      4.52|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+----------+
+    |  Latency  |  Interval | Pipeline |
+    | min | max | min | max |   Type   |
+    +-----+-----+-----+-----+----------+
+    |    0|    0|    1|    1| function |
+    +-----+-----+-----+-----+----------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 0
+IsPipeline: 1
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 1
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states: 1
+* Pipeline: 1
+  Pipeline-0: II = 1, D = 1, States = { 1 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+* FSM state operations: 
+
+ <State 1>: 4.52ns
+ST_1: word_read [1/1] 0.00ns
+:0  %word_read = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %word)
+
+ST_1: bits_read [1/1] 0.00ns
+:1  %bits_read = call i6 @_ssdm_op_Read.ap_auto.i6(i6 %bits)
+
+ST_1: stg_4 [1/1] 0.00ns
+:2  call void (...)* @_ssdm_op_SpecPipeline(i32 4, i32 1, i32 1, i32 0, [1 x i8]* @p_str) nounwind
+
+ST_1: tmp [1/1] 0.00ns (grouped into LUT with out node tmp_39)
+:3  %tmp = zext i6 %bits_read to i32
+
+ST_1: tmp_s [1/1] 0.00ns (grouped into LUT with out node tmp_39)
+:4  %tmp_s = shl i32 %word_read, %tmp
+
+ST_1: tmp_37 [1/1] 1.72ns
+:5  %tmp_37 = sub i6 -32, %bits_read
+
+ST_1: tmp_61_cast [1/1] 0.00ns (grouped into LUT with out node tmp_39)
+:6  %tmp_61_cast = zext i6 %tmp_37 to i32
+
+ST_1: tmp_38 [1/1] 0.00ns (grouped into LUT with out node tmp_39)
+:7  %tmp_38 = lshr i32 %word_read, %tmp_61_cast
+
+ST_1: tmp_39 [1/1] 2.80ns (out node of the LUT)
+:8  %tmp_39 = or i32 %tmp_38, %tmp_s
+
+ST_1: stg_11 [1/1] 0.00ns
+:9  ret i32 %tmp_39
+
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ No timing violations. 
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

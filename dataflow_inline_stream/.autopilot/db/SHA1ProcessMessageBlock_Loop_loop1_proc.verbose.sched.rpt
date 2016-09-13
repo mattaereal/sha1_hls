@@ -1,0 +1,349 @@
+
+
+================================================================
+== Vivado HLS Report for 'SHA1ProcessMessageBlock_Loop_loop1_proc'
+================================================================
+* Date:           Tue Sep 13 00:40:56 2016
+
+* Version:        2016.1 (Build 1538259 on Fri Apr 08 16:12:49 MDT 2016)
+* Project:        sha1_hls
+* Solution:       dataflow_inline_stream
+* Product family: zynq
+* Target device:  xc7z020clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|      6.79|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |  242|  242|  242|  242|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------+-----+-----+----------+-----------+-----------+------+----------+
+        |          |  Latency  | Iteration|  Initiation Interval  | Trip |          |
+        | Loop Name| min | max |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------+-----+-----+----------+-----------+-----------+------+----------+
+        |- loop1   |   48|   48|         3|          -|          -|    16|    no    |
+        |- loop2   |  192|  192|         3|          -|          -|    64|    no    |
+        +----------+-----+-----+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states: 7
+* Pipeline: 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	3  / (!exitcond5_i_i)
+	5  / (exitcond5_i_i)
+3 --> 
+	4  / true
+4 --> 
+	2  / true
+5 --> 
+	6  / (!exitcond4)
+6 --> 
+	7  / true
+7 --> 
+	5  / true
+* FSM state operations: 
+
+ <State 1>: 1.57ns
+ST_1: stg_8 [1/1] 1.57ns
+newFuncRoot:0  br label %0
+
+
+ <State 2>: 3.48ns
+ST_2: t_0_i_i [1/1] 0.00ns
+:0  %t_0_i_i = phi i5 [ 0, %newFuncRoot ], [ %t, %1 ]
+
+ST_2: exitcond5_i_i [1/1] 1.91ns
+:1  %exitcond5_i_i = icmp eq i5 %t_0_i_i, -16
+
+ST_2: empty [1/1] 0.00ns
+:2  %empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 16, i64 16, i64 16)
+
+ST_2: t [1/1] 1.72ns
+:3  %t = add i5 %t_0_i_i, 1
+
+ST_2: stg_13 [1/1] 1.57ns
+:4  br i1 %exitcond5_i_i, label %.preheader8, label %1
+
+ST_2: tmp [1/1] 0.00ns
+:1  %tmp = trunc i5 %t_0_i_i to i4
+
+ST_2: tmp_2_i [1/1] 0.00ns
+:2  %tmp_2_i = call i6 @_ssdm_op_BitConcatenate.i6.i4.i2(i4 %tmp, i2 0)
+
+ST_2: tmp_3_i [1/1] 0.00ns
+:3  %tmp_3_i = zext i6 %tmp_2_i to i64
+
+ST_2: context_Message_Block_addr [1/1] 0.00ns
+:4  %context_Message_Block_addr = getelementptr [64 x i8]* %context_Message_Block, i64 0, i64 %tmp_3_i
+
+ST_2: context_Message_Block_load [2/2] 2.39ns
+:5  %context_Message_Block_load = load i8* %context_Message_Block_addr, align 1
+
+ST_2: tmp_7_i [1/1] 0.00ns
+:8  %tmp_7_i = or i6 %tmp_2_i, 1
+
+ST_2: tmp_8_i [1/1] 0.00ns
+:9  %tmp_8_i = zext i6 %tmp_7_i to i64
+
+ST_2: context_Message_Block_addr_1 [1/1] 0.00ns
+:10  %context_Message_Block_addr_1 = getelementptr [64 x i8]* %context_Message_Block, i64 0, i64 %tmp_8_i
+
+ST_2: context_Message_Block_load_1 [2/2] 2.39ns
+:11  %context_Message_Block_load_1 = load i8* %context_Message_Block_addr_1, align 1
+
+
+ <State 3>: 2.39ns
+ST_3: context_Message_Block_load [1/2] 2.39ns
+:5  %context_Message_Block_load = load i8* %context_Message_Block_addr, align 1
+
+ST_3: context_Message_Block_load_1 [1/2] 2.39ns
+:11  %context_Message_Block_load_1 = load i8* %context_Message_Block_addr_1, align 1
+
+ST_3: tmp_11_i [1/1] 0.00ns
+:12  %tmp_11_i = or i6 %tmp_2_i, 2
+
+ST_3: tmp_12_i [1/1] 0.00ns
+:13  %tmp_12_i = zext i6 %tmp_11_i to i64
+
+ST_3: context_Message_Block_addr_2 [1/1] 0.00ns
+:14  %context_Message_Block_addr_2 = getelementptr [64 x i8]* %context_Message_Block, i64 0, i64 %tmp_12_i
+
+ST_3: context_Message_Block_load_2 [2/2] 2.39ns
+:15  %context_Message_Block_load_2 = load i8* %context_Message_Block_addr_2, align 1
+
+ST_3: tmp_16_i [1/1] 0.00ns
+:16  %tmp_16_i = or i6 %tmp_2_i, 3
+
+ST_3: tmp_17_i [1/1] 0.00ns
+:17  %tmp_17_i = zext i6 %tmp_16_i to i64
+
+ST_3: context_Message_Block_addr_3 [1/1] 0.00ns
+:18  %context_Message_Block_addr_3 = getelementptr [64 x i8]* %context_Message_Block, i64 0, i64 %tmp_17_i
+
+ST_3: context_Message_Block_load_3 [2/2] 2.39ns
+:19  %context_Message_Block_load_3 = load i8* %context_Message_Block_addr_3, align 1
+
+
+ <State 4>: 5.10ns
+ST_4: stg_33 [1/1] 0.00ns
+:0  call void (...)* @_ssdm_op_SpecLoopName([6 x i8]* @p_str1) nounwind
+
+ST_4: tmp_6_i [1/1] 0.00ns
+:6  %tmp_6_i = zext i5 %t_0_i_i to i64
+
+ST_4: W_addr [1/1] 0.00ns
+:7  %W_addr = getelementptr inbounds [80 x i32]* %W, i64 0, i64 %tmp_6_i
+
+ST_4: context_Message_Block_load_2 [1/2] 2.39ns
+:15  %context_Message_Block_load_2 = load i8* %context_Message_Block_addr_2, align 1
+
+ST_4: context_Message_Block_load_3 [1/2] 2.39ns
+:19  %context_Message_Block_load_3 = load i8* %context_Message_Block_addr_3, align 1
+
+ST_4: tmp_19_i [1/1] 0.00ns
+:20  %tmp_19_i = call i32 @_ssdm_op_BitConcatenate.i32.i8.i8.i8.i8(i8 %context_Message_Block_load, i8 %context_Message_Block_load_1, i8 %context_Message_Block_load_2, i8 %context_Message_Block_load_3)
+
+ST_4: stg_39 [1/1] 2.71ns
+:21  store i32 %tmp_19_i, i32* %W_addr, align 4
+
+ST_4: stg_40 [1/1] 0.00ns
+:22  br label %0
+
+
+ <State 5>: 4.43ns
+ST_5: t_1 [1/1] 0.00ns
+.preheader8:0  %t_1 = phi i7 [ %t_2, %2 ], [ 16, %0 ]
+
+ST_5: exitcond4 [1/1] 1.97ns
+.preheader8:1  %exitcond4 = icmp eq i7 %t_1, -48
+
+ST_5: empty_32 [1/1] 0.00ns
+.preheader8:2  %empty_32 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 64, i64 64, i64 64)
+
+ST_5: stg_44 [1/1] 0.00ns
+.preheader8:3  br i1 %exitcond4, label %.exitStub, label %2
+
+ST_5: tmp_3 [1/1] 1.72ns
+:1  %tmp_3 = add i7 -3, %t_1
+
+ST_5: tmp_4 [1/1] 0.00ns
+:2  %tmp_4 = zext i7 %tmp_3 to i64
+
+ST_5: W_addr_1 [1/1] 0.00ns
+:3  %W_addr_1 = getelementptr inbounds [80 x i32]* %W, i64 0, i64 %tmp_4
+
+ST_5: W_load [2/2] 2.71ns
+:4  %W_load = load i32* %W_addr_1, align 4
+
+ST_5: tmp_5 [1/1] 1.72ns
+:5  %tmp_5 = add i7 -8, %t_1
+
+ST_5: tmp_6 [1/1] 0.00ns
+:6  %tmp_6 = zext i7 %tmp_5 to i64
+
+ST_5: W_addr_2 [1/1] 0.00ns
+:7  %W_addr_2 = getelementptr inbounds [80 x i32]* %W, i64 0, i64 %tmp_6
+
+ST_5: W_load_1 [2/2] 2.71ns
+:8  %W_load_1 = load i32* %W_addr_2, align 4
+
+ST_5: stg_53 [1/1] 0.00ns
+.exitStub:0  ret void
+
+
+ <State 6>: 4.43ns
+ST_6: W_load [1/2] 2.71ns
+:4  %W_load = load i32* %W_addr_1, align 4
+
+ST_6: W_load_1 [1/2] 2.71ns
+:8  %W_load_1 = load i32* %W_addr_2, align 4
+
+ST_6: tmp_7 [1/1] 1.72ns
+:9  %tmp_7 = add i7 -14, %t_1
+
+ST_6: tmp_8 [1/1] 0.00ns
+:10  %tmp_8 = zext i7 %tmp_7 to i64
+
+ST_6: W_addr_3 [1/1] 0.00ns
+:11  %W_addr_3 = getelementptr inbounds [80 x i32]* %W, i64 0, i64 %tmp_8
+
+ST_6: W_load_2 [2/2] 2.71ns
+:12  %W_load_2 = load i32* %W_addr_3, align 4
+
+ST_6: tmp_9 [1/1] 1.72ns
+:13  %tmp_9 = add i7 -16, %t_1
+
+ST_6: tmp_s [1/1] 0.00ns
+:14  %tmp_s = zext i7 %tmp_9 to i64
+
+ST_6: W_addr_4 [1/1] 0.00ns
+:15  %W_addr_4 = getelementptr inbounds [80 x i32]* %W, i64 0, i64 %tmp_s
+
+ST_6: W_load_3 [2/2] 2.71ns
+:16  %W_load_3 = load i32* %W_addr_4, align 4
+
+
+ <State 7>: 6.79ns
+ST_7: stg_64 [1/1] 0.00ns
+:0  call void (...)* @_ssdm_op_SpecLoopName([6 x i8]* @p_str2) nounwind
+
+ST_7: W_load_2 [1/2] 2.71ns
+:12  %W_load_2 = load i32* %W_addr_3, align 4
+
+ST_7: W_load_3 [1/2] 2.71ns
+:16  %W_load_3 = load i32* %W_addr_4, align 4
+
+ST_7: tmp1 [1/1] 0.00ns (grouped into LUT with out node word_assign)
+:17  %tmp1 = xor i32 %W_load, %W_load_2
+
+ST_7: tmp2 [1/1] 0.00ns (grouped into LUT with out node word_assign)
+:18  %tmp2 = xor i32 %W_load_1, %W_load_3
+
+ST_7: word_assign [1/1] 1.37ns (out node of the LUT)
+:19  %word_assign = xor i32 %tmp2, %tmp1
+
+ST_7: tmp_1 [1/1] 0.00ns
+:20  %tmp_1 = trunc i32 %word_assign to i31
+
+ST_7: tmp_2 [1/1] 0.00ns
+:21  %tmp_2 = call i1 @_ssdm_op_BitSelect.i1.i32.i32(i32 %word_assign, i32 31)
+
+ST_7: tmp_10 [1/1] 0.00ns
+:22  %tmp_10 = call i32 @_ssdm_op_BitConcatenate.i32.i31.i1(i31 %tmp_1, i1 %tmp_2)
+
+ST_7: tmp_11 [1/1] 0.00ns
+:23  %tmp_11 = zext i7 %t_1 to i64
+
+ST_7: W_addr_5 [1/1] 0.00ns
+:24  %W_addr_5 = getelementptr inbounds [80 x i32]* %W, i64 0, i64 %tmp_11
+
+ST_7: stg_75 [1/1] 2.71ns
+:25  store i32 %tmp_10, i32* %W_addr_5, align 4
+
+ST_7: t_2 [1/1] 1.72ns
+:26  %t_2 = add i7 1, %t_1
+
+ST_7: stg_77 [1/1] 0.00ns
+:27  br label %.preheader8
+
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ No timing violations. 
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A
