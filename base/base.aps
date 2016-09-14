@@ -49,7 +49,7 @@
         </SimFlow>
     </Simulation>
     <name>
-        <value string="solution1"/>
+        <value string="base"/>
     </name>
     <project>
         <value string="sha1_hls"/>

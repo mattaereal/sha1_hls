@@ -1,0 +1,137 @@
+
+
+================================================================
+== Vivado HLS Report for 'SHA1ProcessMessageBlock_Swapping'
+================================================================
+* Date:           Tue Sep 13 17:20:29 2016
+
+* Version:        2016.1 (Build 1538259 on Fri Apr 08 16:12:49 MDT 2016)
+* Project:        sha1_hls
+* Solution:       base
+* Product family: zynq
+* Target device:  xc7z020clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|      6.84|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |    0|    0|    0|    0|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 0
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states: 1
+* Pipeline: 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+* FSM state operations: 
+
+ <State 1>: 6.84ns
+ST_1: temp_read_1 [1/1] 1.04ns
+:0  %temp_read_1 = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %temp_read)
+
+ST_1: D_read_1 [1/1] 1.04ns
+:1  %D_read_1 = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %D_read)
+
+ST_1: C_read_1 [1/1] 1.04ns
+:2  %C_read_1 = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %C_read)
+
+ST_1: B_read_1 [1/1] 1.04ns
+:3  %B_read_1 = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %B_r)
+
+ST_1: A_read_1 [1/1] 1.04ns
+:4  %A_read_1 = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %A_read)
+
+ST_1: C_write_assign [1/1] 5.80ns
+:5  %C_write_assign = call fastcc i32 @SHA1ProcessMessageBlock_SHA1CircularShift(i6 zeroext 30, i32 %B_read_1)
+
+ST_1: mrv [1/1] 0.00ns
+:6  %mrv = insertvalue { i32, i32, i32, i32, i32 } undef, i32 %D_read_1, 0
+
+ST_1: mrv_1 [1/1] 0.00ns
+:7  %mrv_1 = insertvalue { i32, i32, i32, i32, i32 } %mrv, i32 %temp_read_1, 1
+
+ST_1: mrv_2 [1/1] 0.00ns
+:8  %mrv_2 = insertvalue { i32, i32, i32, i32, i32 } %mrv_1, i32 %A_read_1, 2
+
+ST_1: mrv_3 [1/1] 0.00ns
+:9  %mrv_3 = insertvalue { i32, i32, i32, i32, i32 } %mrv_2, i32 %C_write_assign, 3
+
+ST_1: mrv_4 [1/1] 0.00ns
+:10  %mrv_4 = insertvalue { i32, i32, i32, i32, i32 } %mrv_3, i32 %C_read_1, 4
+
+ST_1: stg_13 [1/1] 0.00ns
+:11  ret { i32, i32, i32, i32, i32 } %mrv_4
+
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ No timing violations. 
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

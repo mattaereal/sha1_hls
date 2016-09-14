@@ -1,3 +1,4 @@
-SHA1ProcessMessageBlock_K
 SHA1ProcessMessageBlock_W
+SHA1ProcessMessageBlock_SHA1CircularShift
+SHA1ProcessMessageBlock_Swapping
 SHA1ProcessMessageBlock

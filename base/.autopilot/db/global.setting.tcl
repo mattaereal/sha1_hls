@@ -41,9 +41,9 @@ set SCTraceFileName "mytrace"
 set SCTraceFileFormat "vcd"
 set SCTraceOption "all"
 set TargetInfo "xc7z020:clg484:-1"
-set SourceFiles {sc {} c {../sha1_original.c ../sha1.c}}
+set SourceFiles {sc {} c {../sha1.c ../sha1_original.c}}
 set SourceFlags {sc {} c {{} {}}}
-set DirectiveFile {/home/matt/workspace/sha1_hls/solution1/solution1.directive}
+set DirectiveFile {/home/matt/workspace/sha1_hls/base/base.directive}
 set TBFiles {verilog ../test.c bc ../test.c vhdl ../test.c sc ../test.c cas ../test.c c {}}
 set SpecLanguage "C"
 set TVInFiles {bc {} c {} sc {} cas {} vhdl {} verilog {}}
@@ -55,6 +55,6 @@ set PlatformFiles {{DefaultPlatform {xilinx/zynq/zynq xilinx/zynq/zynq_fpv6}}}
 set DefaultPlatform "DefaultPlatform"
 set TBTVFileNotFound ""
 set AppFile "../vivado_hls.app"
-set ApsFile "solution1.aps"
+set ApsFile "base.aps"
 set AvePath "../.."
 set HPFPO "0"

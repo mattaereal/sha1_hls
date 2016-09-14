@@ -158,4 +158,8 @@
 #pragma line 88 "/opt/Xilinx/Vivado_HLS/2016.1/common/technology/autopilot/ap_cint.h" ::: 6803
 #pragma line 21 "sha1_hls/sha1.h" 2 ::: 6805
 #pragma line 2 "sha1_hls/sha1.c" 2 ::: 6830
-#pragma line 43 "sha1_hls/sha1.c" ::: 6874
+#pragma line 3 "sha1_hls/sha1.c" ::: 6834
+#pragma line 7 "sha1_hls/sha1.c" ::: 6841
+#pragma line 37 "sha1_hls/sha1.c" ::: 6874
+#pragma line 37 "sha1_hls/sha1.c" ::: 6877
+#pragma line 43 "sha1_hls/sha1.c" ::: 6886

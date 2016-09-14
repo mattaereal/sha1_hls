@@ -1,11 +1,11 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'SHA1ProcessMessageBlock'" level="0">
-<item name = "Date">Mon Sep 12 19:17:32 2016
+<item name = "Date">Tue Sep 13 17:20:29 2016
 </item>
 <item name = "Version">2016.1 (Build 1538259 on Fri Apr 08 16:12:49 MDT 2016)</item>
 <item name = "Project">sha1_hls</item>
-<item name = "Solution">solution1</item>
+<item name = "Solution">base</item>
 <item name = "Product family">zynq</item>
 <item name = "Target device">xc7z020clg484-1</item>
 </section>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">10.00, 7.28, 1.25</column>
+<column name="ap_clk">10.00, 8.51, 1.25</column>
 </table>
 </item>
 </section>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="6">, min, max, min, max, Type</keys>
-<column name="">414, 414, 415, 415, none</column>
+<column name="">555, 555, 556, 556, none</column>
 </table>
 </item>
 <item name = "Detail">
@@ -36,11 +36,11 @@
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
 <column name="- loop1">48, 48, 3, -, -, 16, no</column>
-<column name="- loop2">192, 192, 3, -, -, 64, no</column>
-<column name="- loop3">40, 40, 2, -, -, 20, no</column>
-<column name="- loop4">40, 40, 2, -, -, 20, no</column>
-<column name="- loop5">40, 40, 2, -, -, 20, no</column>
-<column name="- loop6">40, 40, 2, -, -, 20, no</column>
+<column name="- loop2">256, 256, 4, -, -, 64, no</column>
+<column name="- loop3">60, 60, 3, -, -, 20, no</column>
+<column name="- loop4">60, 60, 3, -, -, 20, no</column>
+<column name="- loop5">60, 60, 3, -, -, 20, no</column>
+<column name="- loop6">60, 60, 3, -, -, 20, no</column>
 </table>
 </item>
 </section>

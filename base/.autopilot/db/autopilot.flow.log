@@ -1,269 +1,290 @@
-@I [HLS-0] Workspace /home/matt/workspace/sha1_hls/solution1 opened at Mon Sep 12 19:17:18 ART 2016
+@I [HLS-0] Workspace /home/matt/workspace/sha1_hls/base opened at Tue Sep 13 17:20:15 ART 2016
 @I [HLS-100] Command "config_clock -quiet -name default -period 10 -default=false "
 @I [SYN-201] Setting up clock 'default' with a period of 10ns.
-@I [HLS-100] Command 'config_clock' returned 0; elapsed 0.000398Total elapsed time: 0.847 sec.
+@I [HLS-100] Command 'config_clock' returned 0; elapsed 0.000403Total elapsed time: 0.867 sec.
 @I [HLS-100] Command "open_platform DefaultPlatform "
-@I [HLS-100] Command 'open_platform' returned 0; elapsed 0.000143Total elapsed time: 0.850 sec.
+@I [HLS-100] Command 'open_platform' returned 0; elapsed 0.000119Total elapsed time: 0.870 sec.
 @I [HLS-100] Command "import_lib /opt/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/zynq/zynq "
 @I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/common/xilinx.lib "
 @I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/interface/xilinx_interface.lib "
 @I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/interface/plb46.lib "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.001419Total elapsed time: 0.854 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000852Total elapsed time: 0.872 sec.
 @I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/interface/fsl.lib "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000482Total elapsed time: 0.855 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000404Total elapsed time: 0.873 sec.
 @I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/interface/axi4.lib "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000632Total elapsed time: 0.856 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.00059Total elapsed time: 0.874 sec.
 @I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/interface/maxi.lib "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000526Total elapsed time: 0.857 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000502Total elapsed time: 0.875 sec.
 @I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/interface/saxilite.lib "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.00034Total elapsed time: 0.858 sec.
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.006332Total elapsed time: 0.858 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000374Total elapsed time: 0.876 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.005238Total elapsed time: 0.876 sec.
 @I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/common/dsp48.lib "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000355Total elapsed time: 0.859 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000393Total elapsed time: 0.877 sec.
 @I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/ip/xfir.lib "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000229Total elapsed time: 0.860 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000248Total elapsed time: 0.878 sec.
 @I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/ip/dds_compiler.lib "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000205Total elapsed time: 0.861 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000209Total elapsed time: 0.879 sec.
 @I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/ip/xfft.lib "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000205Total elapsed time: 0.861 sec.
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.016487Total elapsed time: 0.868 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000199Total elapsed time: 0.879 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.015273Total elapsed time: 0.886 sec.
 @I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/common/xilinx_old.lib "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.002253Total elapsed time: 0.875 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.002186Total elapsed time: 0.893 sec.
 @I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/common/xilinx_vivado.lib "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.002109Total elapsed time: 0.878 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.002091Total elapsed time: 0.895 sec.
 @I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/common/xilinx.hlp "
 @I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/common/target_info.tcl "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000373Total elapsed time: 0.885 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000362Total elapsed time: 0.903 sec.
 @I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/interface/xilinx_interface.hlp "
 @I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/interface/maxi.hlp "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000328Total elapsed time: 0.886 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000326Total elapsed time: 0.904 sec.
 @I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/interface/saxilite.hlp "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000244Total elapsed time: 0.887 sec.
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.001552Total elapsed time: 0.887 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000243Total elapsed time: 0.904 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.001534Total elapsed time: 0.905 sec.
 @I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/common/dsp48.hlp "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.002382Total elapsed time: 0.891 sec.
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.008863Total elapsed time: 0.893 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.001654Total elapsed time: 0.908 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.007829Total elapsed time: 0.909 sec.
 @I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/zynq/dsp48e1.hlp "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000254Total elapsed time: 0.893 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000224Total elapsed time: 0.910 sec.
 @I [HLS-100] Command "get_default_platform "
-@I [HLS-100] Command 'get_default_platform' returned 0; elapsed 1.5e-05Total elapsed time: 0.894 sec.
+@I [HLS-100] Command 'get_default_platform' returned 0; elapsed 1.3e-05Total elapsed time: 0.911 sec.
 @I [HLS-100] Command "config_chip_info -quiet -resource  {SLICE 13300}  {LUT 53200}     {FF 106400} {DSP48E 220}   {BRAM 280}  "
-@I [HLS-100] Command 'config_chip_info' returned 0; elapsed 5.3e-05Total elapsed time: 0.895 sec.
+@I [HLS-100] Command 'config_chip_info' returned 0; elapsed 5.8e-05Total elapsed time: 0.912 sec.
 @I [HLS-100] Command "config_chip_info -quiet -speed medium "
-@I [HLS-100] Command 'config_chip_info' returned 0; elapsed 1.7e-05Total elapsed time: 0.896 sec.
-@I [HLS-100] Command 'import_lib' returned 0; elapsed 0.049717Total elapsed time: 0.900 sec.
+@I [HLS-100] Command 'config_chip_info' returned 0; elapsed 1.8e-05Total elapsed time: 0.912 sec.
+@I [HLS-100] Command 'import_lib' returned 0; elapsed 0.046848Total elapsed time: 0.917 sec.
 @I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/zynq/zynq.gen "
 @I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/common/virtex.gen "
 @I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/common/xilinx.gen "
 @I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/interface/plb46.gen "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.003436Total elapsed time: 0.906 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.003252Total elapsed time: 0.922 sec.
 @I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/interface/fsl.gen "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.001267Total elapsed time: 0.908 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.001184Total elapsed time: 0.924 sec.
 @I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/interface/axi4.gen "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.005991Total elapsed time: 0.915 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.005971Total elapsed time: 0.931 sec.
 @I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/interface/nativeAXI4.gen "
 @I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/interface/saxilite.gen "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.010578Total elapsed time: 0.926 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.010342Total elapsed time: 0.942 sec.
 @I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/interface/maxi.gen "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.02276Total elapsed time: 0.949 sec.
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.034661Total elapsed time: 0.950 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.02247Total elapsed time: 0.965 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.03405Total elapsed time: 0.965 sec.
 @I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/scripts/xilinxcoregen.gen "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.032961Total elapsed time: 0.983 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.029011Total elapsed time: 0.995 sec.
 @I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/interface/XilEDKCoreGen.gen "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.025709Total elapsed time: 1.10 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.024106Total elapsed time: 1.19 sec.
 @I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/ip/util.gen "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000468Total elapsed time: 1.11 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000414Total elapsed time: 1.21 sec.
 @I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/ip/xfir.gen "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.002072Total elapsed time: 1.14 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.002021Total elapsed time: 1.23 sec.
 @I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/ip/dds_compiler.gen "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.010358Total elapsed time: 1.25 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.009806Total elapsed time: 1.33 sec.
 @I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/ip/xfft.gen "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.354922Total elapsed time: 1.380 sec.
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.478358Total elapsed time: 1.381 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.346171Total elapsed time: 1.380 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.461622Total elapsed time: 1.380 sec.
 @I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/common/dsp48.gen "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000389Total elapsed time: 1.386 sec.
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.485658Total elapsed time: 1.387 sec.
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.486374Total elapsed time: 1.388 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000402Total elapsed time: 1.386 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.468803Total elapsed time: 1.387 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.469476Total elapsed time: 1.387 sec.
 @I [HLS-100] Command "open_platform DefaultPlatform "
 @I [HLS-100] Command 'open_platform' returned 0; elapsed 1.9e-05Total elapsed time: 1.388 sec.
 @I [HLS-100] Command "import_lib /opt/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/zynq/zynq_fpv6 "
 @I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/common/xilinx_fpv7.lib "
 @I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/common/xilinx_hp.lib "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.001994Total elapsed time: 1.392 sec.
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.012358Total elapsed time: 1.402 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.001959Total elapsed time: 1.391 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.011077Total elapsed time: 1.400 sec.
 @I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/common/xilinx_fpv.hlp "
 @I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/common/xilinx.hlp "
 @I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/common/target_info.tcl "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000449Total elapsed time: 1.422 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000458Total elapsed time: 1.419 sec.
 @I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/interface/xilinx_interface.hlp "
 @I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/interface/maxi.hlp "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000352Total elapsed time: 1.423 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000334Total elapsed time: 1.420 sec.
 @I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/interface/saxilite.hlp "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000254Total elapsed time: 1.424 sec.
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.001447Total elapsed time: 1.424 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000247Total elapsed time: 1.421 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.001412Total elapsed time: 1.421 sec.
 @I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/common/dsp48.hlp "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.001668Total elapsed time: 1.427 sec.
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.00764Total elapsed time: 1.428 sec.
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.009402Total elapsed time: 1.430 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.001646Total elapsed time: 1.424 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.007443Total elapsed time: 1.425 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.009345Total elapsed time: 1.427 sec.
 @I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/zynq/zynq_hp.hlp "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.002412Total elapsed time: 1.433 sec.
-@I [HLS-100] Command 'import_lib' returned 0; elapsed 0.060076Total elapsed time: 1.449 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.002403Total elapsed time: 1.429 sec.
+@I [HLS-100] Command 'import_lib' returned 0; elapsed 0.056471Total elapsed time: 1.445 sec.
 @I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/zynq/zynq_fpv6.gen "
 @I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/common/xilinx_fpv6.gen "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.004873Total elapsed time: 1.455 sec.
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.005817Total elapsed time: 1.455 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.004557Total elapsed time: 1.450 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.005271Total elapsed time: 1.450 sec.
 @I [HLS-100] Command "set_part xc7z020clg484-1 "
 @I [HLS-100] Command "add_library xilinx/zynq/zynq:xc7z020:clg484:-1 "
 @I [HLS-100] Command "get_default_platform "
-@I [HLS-100] Command 'get_default_platform' returned 0; elapsed 1.7e-05Total elapsed time: 1.468 sec.
+@I [HLS-100] Command 'get_default_platform' returned 0; elapsed 1.6e-05Total elapsed time: 1.462 sec.
 @I [HLS-100] Command "license_isbetapart xc7z020 "
-@I [HLS-100] Command 'license_isbetapart' returned 1; elapsed 0.020092Total elapsed time: 1.490 sec.
+@I [HLS-100] Command 'license_isbetapart' returned 1; elapsed 0.018678Total elapsed time: 1.482 sec.
 @I [HLS-100] Command "get_default_platform "
-@I [HLS-100] Command 'get_default_platform' returned 0; elapsed 1.8e-05Total elapsed time: 1.493 sec.
+@I [HLS-100] Command 'get_default_platform' returned 0; elapsed 1.7e-05Total elapsed time: 1.485 sec.
 @I [HLS-100] Command "config_chip_info -quiet -resource  {SLICE 13300}  {LUT 53200}     {FF 106400} {DSP48E 220}   {BRAM 280}  "
-@I [HLS-100] Command 'config_chip_info' returned 0; elapsed 4.5e-05Total elapsed time: 1.494 sec.
+@I [HLS-100] Command 'config_chip_info' returned 0; elapsed 3.8e-05Total elapsed time: 1.485 sec.
 @I [HLS-100] Command "config_chip_info -quiet -speed slow "
-@I [HLS-100] Command 'config_chip_info' returned 0; elapsed 2.9e-05Total elapsed time: 1.494 sec.
-@I [HLS-100] Command 'add_library' returned 0; elapsed 0.031901Total elapsed time: 1.498 sec.
+@I [HLS-100] Command 'config_chip_info' returned 0; elapsed 1.6e-05Total elapsed time: 1.486 sec.
+@I [HLS-100] Command 'add_library' returned 0; elapsed 0.02805Total elapsed time: 1.488 sec.
 @I [HLS-100] Command "add_library xilinx/zynq/zynq_fpv6 "
 @I [HLS-100] Command "get_default_platform "
-@I [HLS-100] Command 'get_default_platform' returned 0; elapsed 1.5e-05Total elapsed time: 1.500 sec.
-@I [HLS-100] Command 'add_library' returned 0; elapsed 0.004926Total elapsed time: 1.504 sec.
+@I [HLS-100] Command 'get_default_platform' returned 0; elapsed 1.2e-05Total elapsed time: 1.490 sec.
+@I [HLS-100] Command 'add_library' returned 0; elapsed 0.004539Total elapsed time: 1.493 sec.
 @I [HLS-10] Setting target device to 'xc7z020clg484-1'
-@I [HLS-100] Command 'set_part' returned 0; elapsed 0.047138Total elapsed time: 1.505 sec.
+@I [HLS-100] Command 'set_part' returned 0; elapsed 0.041892Total elapsed time: 1.494 sec.
 @I [HLS-100] Command "get_default_platform "
-@I [HLS-100] Command 'get_default_platform' returned 0; elapsed 1.4e-05Total elapsed time: 1.505 sec.
+@I [HLS-100] Command 'get_default_platform' returned 0; elapsed 1.5e-05Total elapsed time: 1.495 sec.
 @I [HLS-100] Command "config_chip_info -quiet -resource  {SLICE 13300}  {LUT 53200}     {FF 106400} {DSP48E 220}   {BRAM 280}  "
-@I [HLS-100] Command 'config_chip_info' returned 0; elapsed 4.9e-05Total elapsed time: 1.506 sec.
+@I [HLS-100] Command 'config_chip_info' returned 0; elapsed 3e-05Total elapsed time: 1.495 sec.
 @I [HLS-100] Command "config_chip_info -quiet -speed slow "
-@I [HLS-100] Command 'config_chip_info' returned 0; elapsed 2.5e-05Total elapsed time: 1.507 sec.
-@I [HLS-100] Command 'open_solution' returned 0; elapsed 0.682729Total elapsed time: 1.510 sec.
+@I [HLS-100] Command 'config_chip_info' returned 0; elapsed 1.6e-05Total elapsed time: 1.496 sec.
+@I [HLS-100] Command 'open_solution' returned 0; elapsed 0.647034Total elapsed time: 1.498 sec.
 @I [HLS-100] Command "set_part xc7z020clg484-1 -tool vivado "
 @I [HLS-100] Command "add_library xilinx/zynq/zynq:xc7z020:clg484:-1 "
 @I [HLS-100] Command "get_default_platform "
-@I [HLS-100] Command 'get_default_platform' returned 0; elapsed 1.8e-05Total elapsed time: 1.516 sec.
+@I [HLS-100] Command 'get_default_platform' returned 0; elapsed 1.2e-05Total elapsed time: 1.503 sec.
 @I [HLS-100] Command "license_isbetapart xc7z020 "
-@I [HLS-100] Command 'license_isbetapart' returned 1; elapsed 0.000111Total elapsed time: 1.518 sec.
+@I [HLS-100] Command 'license_isbetapart' returned 1; elapsed 9.1e-05Total elapsed time: 1.504 sec.
 @I [HLS-100] Command "get_default_platform "
-@I [HLS-100] Command 'get_default_platform' returned 0; elapsed 1.8e-05Total elapsed time: 1.520 sec.
+@I [HLS-100] Command 'get_default_platform' returned 0; elapsed 1.2e-05Total elapsed time: 1.506 sec.
 @I [HLS-100] Command "config_chip_info -quiet -resource  {SLICE 13300}  {LUT 53200}     {FF 106400} {DSP48E 220}   {BRAM 280}  "
-@I [HLS-100] Command 'config_chip_info' returned 0; elapsed 5.3e-05Total elapsed time: 1.521 sec.
+@I [HLS-100] Command 'config_chip_info' returned 0; elapsed 3.1e-05Total elapsed time: 1.507 sec.
 @I [HLS-100] Command "config_chip_info -quiet -speed slow "
-@I [HLS-100] Command 'config_chip_info' returned 0; elapsed 1.7e-05Total elapsed time: 1.521 sec.
-@I [HLS-100] Command 'add_library' returned 0; elapsed 0.009013Total elapsed time: 1.523 sec.
+@I [HLS-100] Command 'config_chip_info' returned 0; elapsed 1.5e-05Total elapsed time: 1.507 sec.
+@I [HLS-100] Command 'add_library' returned 0; elapsed 0.007564Total elapsed time: 1.509 sec.
 @I [HLS-100] Command "add_library xilinx/zynq/zynq_fpv6 "
 @I [HLS-100] Command "get_default_platform "
-@I [HLS-100] Command 'get_default_platform' returned 0; elapsed 1.9e-05Total elapsed time: 1.526 sec.
-@I [HLS-100] Command 'add_library' returned 0; elapsed 0.004762Total elapsed time: 1.529 sec.
-@I [HLS-100] Command 'set_part' returned 0; elapsed 0.020004Total elapsed time: 1.531 sec.
+@I [HLS-100] Command 'get_default_platform' returned 0; elapsed 1.2e-05Total elapsed time: 1.511 sec.
+@I [HLS-100] Command 'add_library' returned 0; elapsed 0.004532Total elapsed time: 1.514 sec.
+@I [HLS-100] Command 'set_part' returned 0; elapsed 0.017899Total elapsed time: 1.516 sec.
 @I [HLS-100] Command "create_clock -period 10 -name default "
-@I [HLS-100] Command 'create_clock' returned 0; elapsed 0.002964Total elapsed time: 1.534 sec.
+@I [HLS-100] Command 'create_clock' returned 0; elapsed 0.002852Total elapsed time: 1.519 sec.
+@I [HLS-100] Command "source ./sha1_hls/base/directives.tcl "
+@I [HLS-100] Command "set_directive_inline -off SHA1ProcessMessageBlock "
+@I [HLS-0] Setting directive 'INLINE' off=positionBoolean1 
+@I [HLS-100] Command 'set_directive_inline' returned 0; elapsed 0.00296Total elapsed time: 1.523 sec.
+@I [HLS-100] Command "set_directive_expression_balance -off SHA1ProcessMessageBlock "
+@I [HLS-0] Setting directive 'INLINE' off=positionBoolean1 
+@I [HLS-0] Setting directive 'EXPRESSION_BALANCE' balance=positionBooleanCmd off=positionBoolean1 
+@I [HLS-100] Command 'set_directive_expression_balance' returned 0; elapsed 0.001871Total elapsed time: 1.525 sec.
+@I [HLS-100] Command "set_directive_inline -off Swapping "
+@I [HLS-0] Setting directive 'INLINE' off=positionBoolean1 
+@I [HLS-0] Setting directive 'EXPRESSION_BALANCE' balance=positionBooleanCmd off=positionBoolean1 
+@I [HLS-0] Setting directive 'INLINE' off=positionBoolean1 
+@I [HLS-100] Command 'set_directive_inline' returned 0; elapsed 0.002339Total elapsed time: 1.528 sec.
+@I [HLS-100] Command "set_directive_inline -off SHA1CircularShift "
+@I [HLS-0] Setting directive 'INLINE' off=positionBoolean1 
+@I [HLS-0] Setting directive 'EXPRESSION_BALANCE' balance=positionBooleanCmd off=positionBoolean1 
+@I [HLS-0] Setting directive 'INLINE' off=positionBoolean1 
+@I [HLS-0] Setting directive 'INLINE' off=positionBoolean1 
+@I [HLS-100] Command 'set_directive_inline' returned 0; elapsed 0.002783Total elapsed time: 1.531 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.012029Total elapsed time: 1.532 sec.
 @I [HLS-100] Command "csynth_design "
 @I [HLS-100] Command "elaborate -effort=medium -skip_syncheck=0 -keep_printf=0 -lm=0 -skip_cdt=0 -skip_transform=0 -ng=0 -g=0 -opt_fp=0 "
-@I [HLS-10] Analyzing design file 'sha1_hls/sha1_original.c' ... 
-@0 [HLS-0] Analyzing design file 'sha1_hls/sha1_original.c' ... 
-@I [HLS-0] Compiling one TU...
-@I [HLS-0] 
-Checking before pre-process: exec clang -fno-limit-debug-info -gcc-toolchain "/opt/Xilinx/Vivado_HLS/2016.1/lnx64/tools/gcc" -hls    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -std=gnu89   -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/opt/Xilinx/Vivado_HLS/2016.1/common/technology/autopilot" -I "/opt/Xilinx/Vivado_HLS/2016.1/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h  "sha1_hls/sha1_original.c"  -o "/home/matt/workspace/sha1_hls/solution1/.autopilot/db/sha1_original.pp.00.o"
-
-@I [HLS-100] Command "is_encrypted /home/matt/workspace/sha1_hls/solution1/.autopilot/db/sha1_original.pp.00.o "
-@I [HLS-100] Command 'is_encrypted' returned 0; elapsed 0.000199Total elapsed time: 1.722 sec.
-@I [HLS-0] Syntax Checker time: 0 seconds per iteration
-@I [HLS-0] 
-Source preprocessing: exec clang -fno-limit-debug-info -gcc-toolchain "/opt/Xilinx/Vivado_HLS/2016.1/lnx64/tools/gcc" -hls -fno-exceptions  -D__llvm__  -CC -E "sha1_hls/sha1_original.c"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -std=gnu89   -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/opt/Xilinx/Vivado_HLS/2016.1/common/technology/autopilot" -I "/opt/Xilinx/Vivado_HLS/2016.1/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h  -o "/home/matt/workspace/sha1_hls/solution1/.autopilot/db/sha1_original.pp.0.c"
-
-@I [HLS-0] GCC PP time: 0 seconds per iteration
-@I [HLS-100] Command "list_core -type functional_unit "
-@I [HLS-100] Command 'list_core' returned 0; elapsed 0.000224Total elapsed time: 1.884 sec.
-@I [HLS-0] Marker-Pragma convertor: /home/matt/workspace/sha1_hls/solution1/.autopilot/db/sha1_original.pp.0.c /home/matt/workspace/sha1_hls/solution1/.autopilot/db/sha1_original.pp.0.c.ap-line.c /home/matt/workspace/sha1_hls/solution1/.autopilot/db/sha1_original.pp.0.c.ap-line.c.CXX 1
-@I [HLS-0] 
-Source processor: exec /opt/Xilinx/Vivado_HLS/2016.1/tps/lnx64/jre/bin/java -Xmx512m -classpath   "/opt/Xilinx/Vivado_HLS/2016.1/lib/classes/autopilot.sourceprocessor.jar:/opt/Xilinx/Vivado_HLS/2016.1/lib/classes/org.eclipse.cdt.core_5.3.0.xilinx_patch.jar:/opt/Xilinx/Vivado_HLS/2016.1/lib/classes/org.eclipse.core.runtime_3.7.0.v20110110.jar:/opt/Xilinx/Vivado_HLS/2016.1/lib/classes/org.eclipse.equinox.common_3.6.0.v20110523.jar:/opt/Xilinx/Vivado_HLS/2016.1/lib/classes/com.ibm.icu_4.4.2.v20110208.jar:/opt/Xilinx/Vivado_HLS/2016.1/lib/classes/jargs.jar:/opt/Xilinx/Vivado_HLS/2016.1/lnx64/tools/eclipse/plugins/org.eclipse.emf.common_2.10.1.v20150123-0348.jar:/opt/Xilinx/Vivado_HLS/2016.1/lnx64/tools/eclipse/plugins/org.eclipse.emf.ecore_2.10.2.v20150123-0348.jar:/opt/Xilinx/Vivado_HLS/2016.1/lnx64/tools/eclipse/plugins/org.eclipse.emf.ecore.xmi_2.10.2.v20150123-0348.jar:/opt/Xilinx/Vivado_HLS/2016.1/lnx64/tools/eclipse/plugins/com.autoesl.autopilot.ui.directiveFileModel_1.0.0.jar:/opt/Xilinx/Vivado_HLS/2016.1/lnx64/tools/eclipse/plugins/com.autoesl.autopilot.ui.common_1.0.0.jar"  autopilot.sourceprocessor.CParser  "/home/matt/workspace/sha1_hls/solution1/.autopilot/db/sha1_original.pp.0.c.ap-line.c"  -m "SHA1ProcessMessageBlock" -o "/home/matt/workspace/sha1_hls/solution1/.autopilot/db/sha1_original.pp.0.c.ap-cdt.c" -c --pp --directive /home/matt/workspace/sha1_hls/solution1/solution1.directive --source /home/matt/workspace/sha1_hls/sha1_original.c --error /home/matt/workspace/sha1_hls/solution1/.autopilot/db --funcunit "AddSub AddSub_DSP AddSubnS DAddSub_fulldsp DAddSub_nodsp DDiv DExp_fulldsp DExp_meddsp DExp_nodsp DLog_fulldsp DLog_meddsp DLog_nodsp DMul_fulldsp DMul_maxdsp DMul_meddsp DMul_nodsp DRSqrt DRecip DSqrt DivnS FAddSub_fulldsp FAddSub_nodsp FDiv FExp_fulldsp FExp_meddsp FExp_nodsp FLog_fulldsp FLog_meddsp FLog_nodsp FMul_fulldsp FMul_maxdsp FMul_meddsp FMul_nodsp FRSqrt_fulldsp FRSqrt_nodsp FRecip_fulldsp FRecip_nodsp FSqrt HAddSub_nodsp HDiv HMul_fulldsp HMul_maxdsp HMul_nodsp HSqrt Mul Mul2S Mul3S Mul4S Mul5S Mul6S Mul_LUT MulnS MuxnS" --ca --gf --pd --p2d /home/matt/workspace/sha1_hls/solution1/.autopilot/db --sd --scff /home/matt/workspace/sha1_hls/solution1/.autopilot/db/.systemc_flag --ad
-
-@I [HLS-0] Marker-Pragma convertor: /home/matt/workspace/sha1_hls/solution1/.autopilot/db/sha1_original.pp.0.c.ap-cdt.c /home/matt/workspace/sha1_hls/solution1/.autopilot/db/sha1_original.pragma.0.c /home/matt/workspace/sha1_hls/solution1/.autopilot/db/sha1_original.pragma.0.c.ap-line.CXX 0
-@I [HLS-100] Command "source /home/matt/workspace/sha1_hls/solution1/.autopilot/db/pragma.status.tcl "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000224Total elapsed time: 4.799 sec.
-@I [HLS-0] CDT processor time: 2 seconds per iteration
-@I [HLS-0] Pragma handling time: 0 seconds per iteration
-@I [HLS-0] 
-Source preprocessing: exec clang -fno-limit-debug-info -gcc-toolchain "/opt/Xilinx/Vivado_HLS/2016.1/lnx64/tools/gcc" -hls -fno-exceptions  -D__llvm__  -CC -E "/home/matt/workspace/sha1_hls/solution1/.autopilot/db/sha1_original.pragma.1.c"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -std=gnu89   -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/opt/Xilinx/Vivado_HLS/2016.1/common/technology/autopilot" -I "/opt/Xilinx/Vivado_HLS/2016.1/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h  -o "/home/matt/workspace/sha1_hls/solution1/.autopilot/db/sha1_original.pragma.2.c"
-
-@I [HLS-0] exec clang -fno-limit-debug-info -gcc-toolchain /opt/Xilinx/Vivado_HLS/2016.1/lnx64/tools/gcc -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions  -D__llvm__  -w  "/home/matt/workspace/sha1_hls/solution1/.autopilot/db/sha1_original.pragma.2.c"    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -std=gnu89  -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/opt/Xilinx/Vivado_HLS/2016.1/common/technology/autopilot" -I "/opt/Xilinx/Vivado_HLS/2016.1/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -g -o "/home/matt/workspace/sha1_hls/solution1/.autopilot/db/sha1_original.g.bc"
 @I [HLS-10] Analyzing design file 'sha1_hls/sha1.c' ... 
 @0 [HLS-0] Analyzing design file 'sha1_hls/sha1.c' ... 
 @I [HLS-0] Compiling one TU...
 @I [HLS-0] 
-Checking before pre-process: exec clang -fno-limit-debug-info -gcc-toolchain "/opt/Xilinx/Vivado_HLS/2016.1/lnx64/tools/gcc" -hls    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -std=gnu89   -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/opt/Xilinx/Vivado_HLS/2016.1/common/technology/autopilot" -I "/opt/Xilinx/Vivado_HLS/2016.1/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h  "sha1_hls/sha1.c"  -o "/home/matt/workspace/sha1_hls/solution1/.autopilot/db/sha1.pp.00.o"
+Checking before pre-process: exec clang -fno-limit-debug-info -gcc-toolchain "/opt/Xilinx/Vivado_HLS/2016.1/lnx64/tools/gcc" -hls    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -std=gnu89   -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/opt/Xilinx/Vivado_HLS/2016.1/common/technology/autopilot" -I "/opt/Xilinx/Vivado_HLS/2016.1/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h  "sha1_hls/sha1.c"  -o "/home/matt/workspace/sha1_hls/base/.autopilot/db/sha1.pp.00.o"
 
-@I [HLS-100] Command "is_encrypted /home/matt/workspace/sha1_hls/solution1/.autopilot/db/sha1.pp.00.o "
-@I [HLS-100] Command 'is_encrypted' returned 0; elapsed 0.000251Total elapsed time: 5.582 sec.
+@I [HLS-100] Command "is_encrypted /home/matt/workspace/sha1_hls/base/.autopilot/db/sha1.pp.00.o "
+@I [HLS-100] Command 'is_encrypted' returned 0; elapsed 0.000214Total elapsed time: 1.919 sec.
 @I [HLS-0] Syntax Checker time: 0 seconds per iteration
 @I [HLS-0] 
-Source preprocessing: exec clang -fno-limit-debug-info -gcc-toolchain "/opt/Xilinx/Vivado_HLS/2016.1/lnx64/tools/gcc" -hls -fno-exceptions  -D__llvm__  -CC -E "sha1_hls/sha1.c"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -std=gnu89   -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/opt/Xilinx/Vivado_HLS/2016.1/common/technology/autopilot" -I "/opt/Xilinx/Vivado_HLS/2016.1/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h  -o "/home/matt/workspace/sha1_hls/solution1/.autopilot/db/sha1.pp.0.c"
+Source preprocessing: exec clang -fno-limit-debug-info -gcc-toolchain "/opt/Xilinx/Vivado_HLS/2016.1/lnx64/tools/gcc" -hls -fno-exceptions  -D__llvm__  -CC -E "sha1_hls/sha1.c"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -std=gnu89   -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/opt/Xilinx/Vivado_HLS/2016.1/common/technology/autopilot" -I "/opt/Xilinx/Vivado_HLS/2016.1/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h  -o "/home/matt/workspace/sha1_hls/base/.autopilot/db/sha1.pp.0.c"
 
 @I [HLS-0] GCC PP time: 0 seconds per iteration
+@I [HLS-0] Setting directive 'INLINE' off=positionBoolean1 
+@I [HLS-0] Setting directive 'EXPRESSION_BALANCE' balance=positionBooleanCmd off=positionBoolean1 
+@I [HLS-0] Setting directive 'INLINE' off=positionBoolean1 
+@I [HLS-0] Setting directive 'INLINE' off=positionBoolean1 
 @I [HLS-100] Command "list_core -type functional_unit "
-@I [HLS-100] Command 'list_core' returned 0; elapsed 0.000244Total elapsed time: 5.883 sec.
-@I [HLS-0] Marker-Pragma convertor: /home/matt/workspace/sha1_hls/solution1/.autopilot/db/sha1.pp.0.c /home/matt/workspace/sha1_hls/solution1/.autopilot/db/sha1.pp.0.c.ap-line.c /home/matt/workspace/sha1_hls/solution1/.autopilot/db/sha1.pp.0.c.ap-line.c.CXX 1
+@I [HLS-100] Command 'list_core' returned 0; elapsed 0.000246Total elapsed time: 2.216 sec.
+@I [HLS-0] Marker-Pragma convertor: /home/matt/workspace/sha1_hls/base/.autopilot/db/sha1.pp.0.c /home/matt/workspace/sha1_hls/base/.autopilot/db/sha1.pp.0.c.ap-line.c /home/matt/workspace/sha1_hls/base/.autopilot/db/sha1.pp.0.c.ap-line.c.CXX 1
 @I [HLS-0] 
-Source processor: exec /opt/Xilinx/Vivado_HLS/2016.1/tps/lnx64/jre/bin/java -Xmx512m -classpath   "/opt/Xilinx/Vivado_HLS/2016.1/lib/classes/autopilot.sourceprocessor.jar:/opt/Xilinx/Vivado_HLS/2016.1/lib/classes/org.eclipse.cdt.core_5.3.0.xilinx_patch.jar:/opt/Xilinx/Vivado_HLS/2016.1/lib/classes/org.eclipse.core.runtime_3.7.0.v20110110.jar:/opt/Xilinx/Vivado_HLS/2016.1/lib/classes/org.eclipse.equinox.common_3.6.0.v20110523.jar:/opt/Xilinx/Vivado_HLS/2016.1/lib/classes/com.ibm.icu_4.4.2.v20110208.jar:/opt/Xilinx/Vivado_HLS/2016.1/lib/classes/jargs.jar:/opt/Xilinx/Vivado_HLS/2016.1/lnx64/tools/eclipse/plugins/org.eclipse.emf.common_2.10.1.v20150123-0348.jar:/opt/Xilinx/Vivado_HLS/2016.1/lnx64/tools/eclipse/plugins/org.eclipse.emf.ecore_2.10.2.v20150123-0348.jar:/opt/Xilinx/Vivado_HLS/2016.1/lnx64/tools/eclipse/plugins/org.eclipse.emf.ecore.xmi_2.10.2.v20150123-0348.jar:/opt/Xilinx/Vivado_HLS/2016.1/lnx64/tools/eclipse/plugins/com.autoesl.autopilot.ui.directiveFileModel_1.0.0.jar:/opt/Xilinx/Vivado_HLS/2016.1/lnx64/tools/eclipse/plugins/com.autoesl.autopilot.ui.common_1.0.0.jar"  autopilot.sourceprocessor.CParser  "/home/matt/workspace/sha1_hls/solution1/.autopilot/db/sha1.pp.0.c.ap-line.c"  -m "SHA1ProcessMessageBlock" -o "/home/matt/workspace/sha1_hls/solution1/.autopilot/db/sha1.pp.0.c.ap-cdt.c" -c --pp --directive /home/matt/workspace/sha1_hls/solution1/solution1.directive --source /home/matt/workspace/sha1_hls/sha1.c --error /home/matt/workspace/sha1_hls/solution1/.autopilot/db --funcunit "AddSub AddSub_DSP AddSubnS DAddSub_fulldsp DAddSub_nodsp DDiv DExp_fulldsp DExp_meddsp DExp_nodsp DLog_fulldsp DLog_meddsp DLog_nodsp DMul_fulldsp DMul_maxdsp DMul_meddsp DMul_nodsp DRSqrt DRecip DSqrt DivnS FAddSub_fulldsp FAddSub_nodsp FDiv FExp_fulldsp FExp_meddsp FExp_nodsp FLog_fulldsp FLog_meddsp FLog_nodsp FMul_fulldsp FMul_maxdsp FMul_meddsp FMul_nodsp FRSqrt_fulldsp FRSqrt_nodsp FRecip_fulldsp FRecip_nodsp FSqrt HAddSub_nodsp HDiv HMul_fulldsp HMul_maxdsp HMul_nodsp HSqrt Mul Mul2S Mul3S Mul4S Mul5S Mul6S Mul_LUT MulnS MuxnS" --ca --gf --pd --p2d /home/matt/workspace/sha1_hls/solution1/.autopilot/db --sd --scff /home/matt/workspace/sha1_hls/solution1/.autopilot/db/.systemc_flag --ad
+Source processor: exec /opt/Xilinx/Vivado_HLS/2016.1/tps/lnx64/jre/bin/java -Xmx512m -classpath   "/opt/Xilinx/Vivado_HLS/2016.1/lib/classes/autopilot.sourceprocessor.jar:/opt/Xilinx/Vivado_HLS/2016.1/lib/classes/org.eclipse.cdt.core_5.3.0.xilinx_patch.jar:/opt/Xilinx/Vivado_HLS/2016.1/lib/classes/org.eclipse.core.runtime_3.7.0.v20110110.jar:/opt/Xilinx/Vivado_HLS/2016.1/lib/classes/org.eclipse.equinox.common_3.6.0.v20110523.jar:/opt/Xilinx/Vivado_HLS/2016.1/lib/classes/com.ibm.icu_4.4.2.v20110208.jar:/opt/Xilinx/Vivado_HLS/2016.1/lib/classes/jargs.jar:/opt/Xilinx/Vivado_HLS/2016.1/lnx64/tools/eclipse/plugins/org.eclipse.emf.common_2.10.1.v20150123-0348.jar:/opt/Xilinx/Vivado_HLS/2016.1/lnx64/tools/eclipse/plugins/org.eclipse.emf.ecore_2.10.2.v20150123-0348.jar:/opt/Xilinx/Vivado_HLS/2016.1/lnx64/tools/eclipse/plugins/org.eclipse.emf.ecore.xmi_2.10.2.v20150123-0348.jar:/opt/Xilinx/Vivado_HLS/2016.1/lnx64/tools/eclipse/plugins/com.autoesl.autopilot.ui.directiveFileModel_1.0.0.jar:/opt/Xilinx/Vivado_HLS/2016.1/lnx64/tools/eclipse/plugins/com.autoesl.autopilot.ui.common_1.0.0.jar"  autopilot.sourceprocessor.CParser  "/home/matt/workspace/sha1_hls/base/.autopilot/db/sha1.pp.0.c.ap-line.c"  -m "SHA1ProcessMessageBlock" -o "/home/matt/workspace/sha1_hls/base/.autopilot/db/sha1.pp.0.c.ap-cdt.c" -c --pp --directive /home/matt/workspace/sha1_hls/base/base.directive --source /home/matt/workspace/sha1_hls/sha1.c --error /home/matt/workspace/sha1_hls/base/.autopilot/db --funcunit "AddSub AddSub_DSP AddSubnS DAddSub_fulldsp DAddSub_nodsp DDiv DExp_fulldsp DExp_meddsp DExp_nodsp DLog_fulldsp DLog_meddsp DLog_nodsp DMul_fulldsp DMul_maxdsp DMul_meddsp DMul_nodsp DRSqrt DRecip DSqrt DivnS FAddSub_fulldsp FAddSub_nodsp FDiv FExp_fulldsp FExp_meddsp FExp_nodsp FLog_fulldsp FLog_meddsp FLog_nodsp FMul_fulldsp FMul_maxdsp FMul_meddsp FMul_nodsp FRSqrt_fulldsp FRSqrt_nodsp FRecip_fulldsp FRecip_nodsp FSqrt HAddSub_nodsp HDiv HMul_fulldsp HMul_maxdsp HMul_nodsp HSqrt Mul Mul2S Mul3S Mul4S Mul5S Mul6S Mul_LUT MulnS MuxnS" --ca --gf --pd --p2d /home/matt/workspace/sha1_hls/base/.autopilot/db --sd --scff /home/matt/workspace/sha1_hls/base/.autopilot/db/.systemc_flag --ad
 
-@I [HLS-0] Marker-Pragma convertor: /home/matt/workspace/sha1_hls/solution1/.autopilot/db/sha1.pp.0.c.ap-cdt.c /home/matt/workspace/sha1_hls/solution1/.autopilot/db/sha1.pragma.0.c /home/matt/workspace/sha1_hls/solution1/.autopilot/db/sha1.pragma.0.c.ap-line.CXX 0
-@I [HLS-100] Command "source /home/matt/workspace/sha1_hls/solution1/.autopilot/db/pragma.status.tcl "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000195Total elapsed time: 10.584 sec.
+@I [HLS-0] Marker-Pragma convertor: /home/matt/workspace/sha1_hls/base/.autopilot/db/sha1.pp.0.c.ap-cdt.c /home/matt/workspace/sha1_hls/base/.autopilot/db/sha1.pragma.0.c /home/matt/workspace/sha1_hls/base/.autopilot/db/sha1.pragma.0.c.ap-line.CXX 0
+@I [HLS-100] Command "source /home/matt/workspace/sha1_hls/base/.autopilot/db/pragma.status.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.00036Total elapsed time: 6.725 sec.
 @I [HLS-0] CDT processor time: 4 seconds per iteration
 @I [HLS-0] Pragma handling time: 0 seconds per iteration
 @I [HLS-0] 
-Source preprocessing: exec clang -fno-limit-debug-info -gcc-toolchain "/opt/Xilinx/Vivado_HLS/2016.1/lnx64/tools/gcc" -hls -fno-exceptions  -D__llvm__  -CC -E "/home/matt/workspace/sha1_hls/solution1/.autopilot/db/sha1.pragma.1.c"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -std=gnu89   -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/opt/Xilinx/Vivado_HLS/2016.1/common/technology/autopilot" -I "/opt/Xilinx/Vivado_HLS/2016.1/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h  -o "/home/matt/workspace/sha1_hls/solution1/.autopilot/db/sha1.pragma.2.c"
+Source preprocessing: exec clang -fno-limit-debug-info -gcc-toolchain "/opt/Xilinx/Vivado_HLS/2016.1/lnx64/tools/gcc" -hls -fno-exceptions  -D__llvm__  -CC -E "/home/matt/workspace/sha1_hls/base/.autopilot/db/sha1.pragma.1.c"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -std=gnu89   -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/opt/Xilinx/Vivado_HLS/2016.1/common/technology/autopilot" -I "/opt/Xilinx/Vivado_HLS/2016.1/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h  -o "/home/matt/workspace/sha1_hls/base/.autopilot/db/sha1.pragma.2.c"
 
-@I [HLS-0] exec clang -fno-limit-debug-info -gcc-toolchain /opt/Xilinx/Vivado_HLS/2016.1/lnx64/tools/gcc -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions  -D__llvm__  -w  "/home/matt/workspace/sha1_hls/solution1/.autopilot/db/sha1.pragma.2.c"    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -std=gnu89  -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/opt/Xilinx/Vivado_HLS/2016.1/common/technology/autopilot" -I "/opt/Xilinx/Vivado_HLS/2016.1/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -g -o "/home/matt/workspace/sha1_hls/solution1/.autopilot/db/sha1.g.bc"
+@I [HLS-0] exec clang -fno-limit-debug-info -gcc-toolchain /opt/Xilinx/Vivado_HLS/2016.1/lnx64/tools/gcc -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions  -D__llvm__  -w  "/home/matt/workspace/sha1_hls/base/.autopilot/db/sha1.pragma.2.c"    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -std=gnu89  -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/opt/Xilinx/Vivado_HLS/2016.1/common/technology/autopilot" -I "/opt/Xilinx/Vivado_HLS/2016.1/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -g -o "/home/matt/workspace/sha1_hls/base/.autopilot/db/sha1.g.bc"
+@I [HLS-10] Analyzing design file 'sha1_hls/sha1_original.c' ... 
+@0 [HLS-0] Analyzing design file 'sha1_hls/sha1_original.c' ... 
+@I [HLS-0] Compiling one TU...
+@I [HLS-0] 
+Checking before pre-process: exec clang -fno-limit-debug-info -gcc-toolchain "/opt/Xilinx/Vivado_HLS/2016.1/lnx64/tools/gcc" -hls    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -std=gnu89   -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/opt/Xilinx/Vivado_HLS/2016.1/common/technology/autopilot" -I "/opt/Xilinx/Vivado_HLS/2016.1/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h  "sha1_hls/sha1_original.c"  -o "/home/matt/workspace/sha1_hls/base/.autopilot/db/sha1_original.pp.00.o"
+
+@I [HLS-100] Command "is_encrypted /home/matt/workspace/sha1_hls/base/.autopilot/db/sha1_original.pp.00.o "
+@I [HLS-100] Command 'is_encrypted' returned 0; elapsed 0.000181Total elapsed time: 7.665 sec.
+@I [HLS-0] Syntax Checker time: 0 seconds per iteration
+@I [HLS-0] 
+Source preprocessing: exec clang -fno-limit-debug-info -gcc-toolchain "/opt/Xilinx/Vivado_HLS/2016.1/lnx64/tools/gcc" -hls -fno-exceptions  -D__llvm__  -CC -E "sha1_hls/sha1_original.c"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -std=gnu89   -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/opt/Xilinx/Vivado_HLS/2016.1/common/technology/autopilot" -I "/opt/Xilinx/Vivado_HLS/2016.1/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h  -o "/home/matt/workspace/sha1_hls/base/.autopilot/db/sha1_original.pp.0.c"
+
+@I [HLS-0] GCC PP time: 0 seconds per iteration
+@I [HLS-0] Setting directive 'INLINE' off=positionBoolean1 
+@I [HLS-0] Setting directive 'EXPRESSION_BALANCE' balance=positionBooleanCmd off=positionBoolean1 
+@I [HLS-0] Setting directive 'INLINE' off=positionBoolean1 
+@I [HLS-0] Setting directive 'INLINE' off=positionBoolean1 
+@I [HLS-100] Command "list_core -type functional_unit "
+@I [HLS-100] Command 'list_core' returned 0; elapsed 0.000242Total elapsed time: 7.823 sec.
+@I [HLS-0] Marker-Pragma convertor: /home/matt/workspace/sha1_hls/base/.autopilot/db/sha1_original.pp.0.c /home/matt/workspace/sha1_hls/base/.autopilot/db/sha1_original.pp.0.c.ap-line.c /home/matt/workspace/sha1_hls/base/.autopilot/db/sha1_original.pp.0.c.ap-line.c.CXX 1
+@I [HLS-0] 
+Source processor: exec /opt/Xilinx/Vivado_HLS/2016.1/tps/lnx64/jre/bin/java -Xmx512m -classpath   "/opt/Xilinx/Vivado_HLS/2016.1/lib/classes/autopilot.sourceprocessor.jar:/opt/Xilinx/Vivado_HLS/2016.1/lib/classes/org.eclipse.cdt.core_5.3.0.xilinx_patch.jar:/opt/Xilinx/Vivado_HLS/2016.1/lib/classes/org.eclipse.core.runtime_3.7.0.v20110110.jar:/opt/Xilinx/Vivado_HLS/2016.1/lib/classes/org.eclipse.equinox.common_3.6.0.v20110523.jar:/opt/Xilinx/Vivado_HLS/2016.1/lib/classes/com.ibm.icu_4.4.2.v20110208.jar:/opt/Xilinx/Vivado_HLS/2016.1/lib/classes/jargs.jar:/opt/Xilinx/Vivado_HLS/2016.1/lnx64/tools/eclipse/plugins/org.eclipse.emf.common_2.10.1.v20150123-0348.jar:/opt/Xilinx/Vivado_HLS/2016.1/lnx64/tools/eclipse/plugins/org.eclipse.emf.ecore_2.10.2.v20150123-0348.jar:/opt/Xilinx/Vivado_HLS/2016.1/lnx64/tools/eclipse/plugins/org.eclipse.emf.ecore.xmi_2.10.2.v20150123-0348.jar:/opt/Xilinx/Vivado_HLS/2016.1/lnx64/tools/eclipse/plugins/com.autoesl.autopilot.ui.directiveFileModel_1.0.0.jar:/opt/Xilinx/Vivado_HLS/2016.1/lnx64/tools/eclipse/plugins/com.autoesl.autopilot.ui.common_1.0.0.jar"  autopilot.sourceprocessor.CParser  "/home/matt/workspace/sha1_hls/base/.autopilot/db/sha1_original.pp.0.c.ap-line.c"  -m "SHA1ProcessMessageBlock" -o "/home/matt/workspace/sha1_hls/base/.autopilot/db/sha1_original.pp.0.c.ap-cdt.c" -c --pp --directive /home/matt/workspace/sha1_hls/base/base.directive --source /home/matt/workspace/sha1_hls/sha1_original.c --error /home/matt/workspace/sha1_hls/base/.autopilot/db --funcunit "AddSub AddSub_DSP AddSubnS DAddSub_fulldsp DAddSub_nodsp DDiv DExp_fulldsp DExp_meddsp DExp_nodsp DLog_fulldsp DLog_meddsp DLog_nodsp DMul_fulldsp DMul_maxdsp DMul_meddsp DMul_nodsp DRSqrt DRecip DSqrt DivnS FAddSub_fulldsp FAddSub_nodsp FDiv FExp_fulldsp FExp_meddsp FExp_nodsp FLog_fulldsp FLog_meddsp FLog_nodsp FMul_fulldsp FMul_maxdsp FMul_meddsp FMul_nodsp FRSqrt_fulldsp FRSqrt_nodsp FRecip_fulldsp FRecip_nodsp FSqrt HAddSub_nodsp HDiv HMul_fulldsp HMul_maxdsp HMul_nodsp HSqrt Mul Mul2S Mul3S Mul4S Mul5S Mul6S Mul_LUT MulnS MuxnS" --ca --gf --pd --p2d /home/matt/workspace/sha1_hls/base/.autopilot/db --sd --scff /home/matt/workspace/sha1_hls/base/.autopilot/db/.systemc_flag --ad
+
+@I [HLS-0] Marker-Pragma convertor: /home/matt/workspace/sha1_hls/base/.autopilot/db/sha1_original.pp.0.c.ap-cdt.c /home/matt/workspace/sha1_hls/base/.autopilot/db/sha1_original.pragma.0.c /home/matt/workspace/sha1_hls/base/.autopilot/db/sha1_original.pragma.0.c.ap-line.CXX 0
+@I [HLS-100] Command "source /home/matt/workspace/sha1_hls/base/.autopilot/db/pragma.status.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000422Total elapsed time: 10.724 sec.
+@I [HLS-0] CDT processor time: 2 seconds per iteration
+@I [HLS-0] Pragma handling time: 0 seconds per iteration
+@I [HLS-0] 
+Source preprocessing: exec clang -fno-limit-debug-info -gcc-toolchain "/opt/Xilinx/Vivado_HLS/2016.1/lnx64/tools/gcc" -hls -fno-exceptions  -D__llvm__  -CC -E "/home/matt/workspace/sha1_hls/base/.autopilot/db/sha1_original.pragma.1.c"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -std=gnu89   -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/opt/Xilinx/Vivado_HLS/2016.1/common/technology/autopilot" -I "/opt/Xilinx/Vivado_HLS/2016.1/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h  -o "/home/matt/workspace/sha1_hls/base/.autopilot/db/sha1_original.pragma.2.c"
+
+@I [HLS-0] exec clang -fno-limit-debug-info -gcc-toolchain /opt/Xilinx/Vivado_HLS/2016.1/lnx64/tools/gcc -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions  -D__llvm__  -w  "/home/matt/workspace/sha1_hls/base/.autopilot/db/sha1_original.pragma.2.c"    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -std=gnu89  -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/opt/Xilinx/Vivado_HLS/2016.1/common/technology/autopilot" -I "/opt/Xilinx/Vivado_HLS/2016.1/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -g -o "/home/matt/workspace/sha1_hls/base/.autopilot/db/sha1_original.g.bc"
 @I [HLS-10] Validating synthesis directives ...
 @0 [HLS-0] Validating synthesis directives ...
-@I [HLS-100] Command "source /home/matt/workspace/sha1_hls/solution1/.autopilot/db/pragma.status.tcl "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000175Total elapsed time: 11.380 sec.
+@I [HLS-100] Command "source /home/matt/workspace/sha1_hls/base/.autopilot/db/pragma.status.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000579Total elapsed time: 11.99 sec.
 @I [HLS-0] Linking all ...
-@I [HLS-0] exec llvm-ld  "/home/matt/workspace/sha1_hls/solution1/.autopilot/db/sha1_original.bc" "/home/matt/workspace/sha1_hls/solution1/.autopilot/db/sha1.bc"  -disable-opt  -L/opt/Xilinx/Vivado_HLS/2016.1/lnx64/lib -lm_basic -o "/home/matt/workspace/sha1_hls/solution1/.autopilot/db/a.o.pre"
+@I [HLS-0] exec llvm-ld  "/home/matt/workspace/sha1_hls/base/.autopilot/db/sha1.bc" "/home/matt/workspace/sha1_hls/base/.autopilot/db/sha1_original.bc"  -disable-opt  -L/opt/Xilinx/Vivado_HLS/2016.1/lnx64/lib -lm_basic -o "/home/matt/workspace/sha1_hls/base/.autopilot/db/a.o.pre"
 @I [HLS-0] Link time: 0 seconds per iteration
 @I [HLS-0] Linking all ...
-@I [HLS-0] exec llvm-ld  "/home/matt/workspace/sha1_hls/solution1/.autopilot/db/sha1_original.g.bc" "/home/matt/workspace/sha1_hls/solution1/.autopilot/db/sha1.g.bc"  -disable-opt  -L/opt/Xilinx/Vivado_HLS/2016.1/lnx64/lib -lm_basic -o "/home/matt/workspace/sha1_hls/solution1/.autopilot/db/a.g.pre"
+@I [HLS-0] exec llvm-ld  "/home/matt/workspace/sha1_hls/base/.autopilot/db/sha1.g.bc" "/home/matt/workspace/sha1_hls/base/.autopilot/db/sha1_original.g.bc"  -disable-opt  -L/opt/Xilinx/Vivado_HLS/2016.1/lnx64/lib -lm_basic -o "/home/matt/workspace/sha1_hls/base/.autopilot/db/a.g.pre"
 @I [HLS-0] Link time: 0 seconds per iteration
 @I [HLS-100] Command "opt_and_import_c a -opt_level=2 -skip_syncheck=0 -ng=0 -keep_printf=0 "
 @I [HLS-100] Command "cleanup_all_models "
-@I [HLS-100] Command 'cleanup_all_models' returned 0; elapsed 3.4e-05Total elapsed time: 11.750 sec.
+@I [HLS-100] Command 'cleanup_all_models' returned 0; elapsed 3.2e-05Total elapsed time: 11.466 sec.
 @I [HLS-10] Starting code transformations ...
 @0 [HLS-0] Starting code transformations ...
-@I [HLS-0] std xform: transform -hls -share-std-xform -always-inline -promote-dbg-pointer  -interface-preproc  -scalarrepl -mem2reg -keep-read-access -instcombine -dce  -promote-dbg-pointer  -bitop-raise  -indvars -loop-simplify -xunroll  -constprop -instcombine -simplifycfg -indvars  -simplifycfg -dce -globaldce  -basicaa  -simplifycfg -mem2reg -globalopt  -global-constprop -deadargelim -instcombine -simplifycfg  -prune-eh -simplifycfg  -scalarrepl -instcombine -reassociate -licm  -simplifycfg -loop-simplify -indvars -instcombine  -simplifycfg -mem2reg -loop-simplify -indvars -instcombine  -gvn -gvn -instcombine -adce  -break-crit-edges  -simplifycfg -loop-delete  -global-array-opt -dce -dse -adce  -find-syn-modules -top SHA1ProcessMessageBlock  -deadargelim  -mem2reg -instcombine -dce  -presyn-prepare -auto-rom-infer  -interface-preproc  -syn-check -check-rec-only  -find-region -simplifycfg -func-extr -function-inline  -globaldce -mem2reg -instcombine -dce   -gvn -globaldce -adce -adse  -constprop -instcombine -bit-constprop  -instcombine -dce -simplifycfg -bitop-raise  -simplifycfg -dce -loop-delete -reassociate  -globalopt -global-privatize -mem2reg -dce  -global-constprop -pointer-simplify -constprop -dce  -func-inst -deadargelim  -promote-dbg-pointer  -norm-name   /home/matt/workspace/sha1_hls/solution1/.autopilot/db/a.g.0.bc -o /home/matt/workspace/sha1_hls/solution1/.autopilot/db/a.g.1.bc -f  -phase std-opt
+@I [HLS-0] std xform: transform -hls -share-std-xform -always-inline -promote-dbg-pointer  -interface-preproc  -scalarrepl -mem2reg -keep-read-access -instcombine -dce  -promote-dbg-pointer  -bitop-raise  -indvars -loop-simplify -xunroll  -constprop -instcombine -simplifycfg -indvars  -simplifycfg -dce -globaldce  -basicaa  -simplifycfg -mem2reg -globalopt  -global-constprop -deadargelim -instcombine -simplifycfg  -prune-eh -simplifycfg  -scalarrepl -instcombine -reassociate -licm  -simplifycfg -loop-simplify -indvars -instcombine  -simplifycfg -mem2reg -loop-simplify -indvars -instcombine  -gvn -gvn -instcombine -adce  -break-crit-edges  -simplifycfg -loop-delete  -global-array-opt -dce -dse -adce  -find-syn-modules -top SHA1ProcessMessageBlock  -deadargelim  -mem2reg -instcombine -dce  -presyn-prepare -auto-rom-infer  -interface-preproc  -syn-check -check-rec-only  -find-region -simplifycfg -func-extr -function-inline  -globaldce -mem2reg -instcombine -dce   -gvn -globaldce -adce -adse  -constprop -instcombine -bit-constprop  -instcombine -dce -simplifycfg -bitop-raise  -simplifycfg -dce -loop-delete -reassociate  -globalopt -global-privatize -mem2reg -dce  -global-constprop -pointer-simplify -constprop -dce  -func-inst -deadargelim  -promote-dbg-pointer  -norm-name   /home/matt/workspace/sha1_hls/base/.autopilot/db/a.g.0.bc -o /home/matt/workspace/sha1_hls/base/.autopilot/db/a.g.1.bc -f  -phase std-opt
 @I [HLS-0] Std xform time: 0 seconds per iteration
-@I [HLS-100] Command "is_encrypted /home/matt/workspace/sha1_hls/solution1/.autopilot/db/a.g.1.bc "
-@I [HLS-100] Command 'is_encrypted' returned 0; elapsed 0.00017Total elapsed time: 12.207 sec.
+@I [HLS-100] Command "is_encrypted /home/matt/workspace/sha1_hls/base/.autopilot/db/a.g.1.bc "
+@I [HLS-100] Command 'is_encrypted' returned 0; elapsed 0.000157Total elapsed time: 11.870 sec.
 @I [HLS-10] Checking synthesizability ...
 @0 [HLS-0] Checking synthesizability ...
-@I [HLS-0] syn check 1/2: transform -hls -syn-check -check-rec-only -disaggr -scalarrepl -norm-name -dce  -mem2reg -instcombine  -function-uniquify -directive-preproc -mem2reg -dse -dce -auto-rom-infer -dce  -array-normalize -instcombine -dce  -array-seg-normalize -instcombine -dce  -array-flatten -instcombine -dce  -array-burst -dce  -deadargelim -promote-global-argument  -simplifycfg -mem2reg -globaldce -resolve-double-ptr  -dce -deadargelim -dce -instcombine  -function-inline -globaldce -dce  -doublePtrSimplify -doublePtrElim -dce  -doublePtrSimplify -promote-dbg-pointer  -dce -scalarrepl -dse -adse -instcombine  -ptrLegalization  -simplifycfg -dce -instcombine  -pointer-simplify -ptrArgReplace -dce -instcombine   -disaggr -scalarrepl -norm-name -dce  -mem2reg -instcombine -ptrLegalization   -simplifycfg -deadargelim  -instcombine -dce -inst-simplify  -function-uniquify -directive-preproc -mem2reg -dse -dce  -globaldce    /home/matt/workspace/sha1_hls/solution1/.autopilot/db/a.g.1.bc -o /home/matt/workspace/sha1_hls/solution1/.autopilot/db/a.g.2.prechk.bc -f
-@I [XFORM-602] Inlining function 'SHA1CircularShift' into 'Swapping' (sha1_hls/sha1.c:10) automatically.
-@I [XFORM-602] Inlining function 'SHA1CircularShift' into 'SHA1ProcessMessageBlock' (sha1_hls/sha1.c:63) automatically.
-@I [XFORM-602] Inlining function 'Swapping' into 'SHA1ProcessMessageBlock' (sha1_hls/sha1.c:76) automatically.
+@I [HLS-0] syn check 1/2: transform -hls -syn-check -check-rec-only -disaggr -scalarrepl -norm-name -dce  -mem2reg -instcombine  -function-uniquify -directive-preproc -mem2reg -dse -dce -auto-rom-infer -dce  -array-normalize -instcombine -dce  -array-seg-normalize -instcombine -dce  -array-flatten -instcombine -dce  -array-burst -dce  -deadargelim -promote-global-argument  -simplifycfg -mem2reg -globaldce -resolve-double-ptr  -dce -deadargelim -dce -instcombine  -function-inline -globaldce -dce  -doublePtrSimplify -doublePtrElim -dce  -doublePtrSimplify -promote-dbg-pointer  -dce -scalarrepl -dse -adse -instcombine  -ptrLegalization  -simplifycfg -dce -instcombine  -pointer-simplify -ptrArgReplace -dce -instcombine   -disaggr -scalarrepl -norm-name -dce  -mem2reg -instcombine -ptrLegalization   -simplifycfg -deadargelim  -instcombine -dce -inst-simplify  -function-uniquify -directive-preproc -mem2reg -dse -dce  -globaldce    /home/matt/workspace/sha1_hls/base/.autopilot/db/a.g.1.bc -o /home/matt/workspace/sha1_hls/base/.autopilot/db/a.g.2.prechk.bc -f
 @I [HLS-0] Syn check 1/2 time: 0 seconds per iteration
-@I [HLS-0] syn check 2/2: transform -syn-check   /home/matt/workspace/sha1_hls/solution1/.autopilot/db/a.g.2.prechk.bc -o /home/matt/workspace/sha1_hls/solution1/.autopilot/db/a.g.2.bc -f  -phase syn-check
+@I [HLS-0] syn check 2/2: transform -syn-check   /home/matt/workspace/sha1_hls/base/.autopilot/db/a.g.2.prechk.bc -o /home/matt/workspace/sha1_hls/base/.autopilot/db/a.g.2.bc -f  -phase syn-check
 @I [HLS-0] Syn check 2/2 time: 0 seconds per iteration
 @I [HLS-0] Compiler optimizing ...
-@I [HLS-0] Share syncheck's 1.bc for syn flow: copy /home/matt/workspace/sha1_hls/solution1/.autopilot/db/a.g.1.bc to /home/matt/workspace/sha1_hls/solution1/.autopilot/db/a.o.1.bc
-@I [HLS-0] presyn 1: transform -hls -tmp /home/matt/workspace/sha1_hls/solution1/.autopilot/db -type-info  -function-uniquify -directive-preproc -mem2reg -dse -dce  -disaggr -scalarrepl -norm-name -deadargelim  -mem2reg -instcombine -dce -auto-rom-infer -dce -function-uniquify  -resource-proc  -simplifycfg -mem2reg -globaldce -resolve-double-ptr -dce -deadargelim -dce -instcombine  -clib-intrinsic-prepare -dce  -func-buffer -dce -array-normalize  -func-legal -instcombine -gvn -constprop -dce   -ptrArgReplace -mem2reg -instcombine -dce  -array-seg-normalize -deadargelim  -instcombine -dce  -pointer-simplify -dce  -port-alignment -dce  -interface-preproc  -data-pack -instcombine -dce   -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn  -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce  -loop-simplify -indvars -instcombine  -gvn -loop-simplify -mem2reg -dce -simplifycfg  -find-region -instcombine  -auto-loop-pipeline  -inst-simplify  -interface-preproc  -indvars -auto-loop-unroll -loop-simplify -loop-bound -xunroll  -constprop -instcombine -simplifycfg -indvars  -simplifycfg -dce -globaldce  -attach-range  -gvn -inst-simplify  -constprop -simplifycfg -dce  -pointer-simplify -dce  -globalopt -constprop -dce  -array-promote -constprop -instcombine -dce  -ptrArgReplace -mem2reg  -instcombine -simplifycfg -dce  -auto-par -instcombine -dce  -array-transform-check  -array-reshape -instcombine -simplifycfg -dce  -ptrArgReplace -deadargelim -mem2reg  -instcombine -simplifycfg -dce   -indvars -loop-simplify -loop-bound -xunroll  -constprop -instcombine -simplifycfg -indvars  -simplifycfg -dce -globaldce  -duplicate-dataflow-processes -globaldce  -array-partition -instcombine -simplifycfg -dce  -ptrArgReplace -global-constprop -deadargelim -mem2reg  -func-legal -instcombine -dce -global-constprop -deadargelim -mem2reg  -instcombine -simplifycfg -dce   -globalopt -constprop -dce  -array-promote -constprop -instcombine -dce  -ptrArgReplace -mem2reg  -instcombine -simplifycfg -dce   -mem-intrinsic-preproc -dce  -global-privatize  -mem2reg -globaldce  -promote-global-argument  -ptrArgReplace -mem2reg -instcombine -dce  -globalopt -mergereturn -simplify-global-access -mem2reg -dce  -pointer-simplify -dce  -functionattrs  -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn  -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce  -inst-simplify -dce -norm-name  -function-inline -globaldce  -func-inst -constprop -instcombine -simplifycfg -dce  -func-legal -dce   -loop-bound  -arraycheck -bitwidthmin -on-by-dataflow  -loop-delete -instcombine -simplifycfg  -globaldce -dce -gvn -deadargelim -dce -loop-simplify -clean-region -simplifycfg -propagate-stable-arguments  -loop-stream -instcombine -simplifycfg -dce -globaldce  -stream-intrinsic-preproc -dce  -check-ap-stream -loop-simplify -eliminate-keepreads  -extract-dataflow-in-loop -loop-simplify -dce -gvn -deadargelim -dse  -check-dataflow-syntax  -legalize-stream-variable -legalize-global -legalize-global-1  -extract-subproc -dce -dead-channel-elimination  -canonicalize-gep -globaldce -dce -gvn -deadargelim  -scalar-propagation -deadargelim -globaldce -mem2reg  -check-dataflow-channels -function-stream -dce -globaldce  -prop-fifo-spec -internal-stream-gen  -canonicalize-gep -globaldce -dce -gvn -deadargelim   -mergereturn -indvars -loop-simplify -instcombine  -array-stream -instcombine -simplifycfg -dce  -bundle-memfifo-ops -deadargelim    -function-uniquify -directive-preproc -mem2reg -dse -dce  -group-axi-access    -licm -simplifycfg -dce -loop-delete  -norm-name  /home/matt/workspace/sha1_hls/solution1/.autopilot/db/a.o.1.bc -o /home/matt/workspace/sha1_hls/solution1/.autopilot/db/a.o.1.tmp.bc -f
-@I [XFORM-602] Inlining function 'SHA1CircularShift' into 'Swapping' (sha1_hls/sha1.c:10) automatically.
-@I [XFORM-602] Inlining function 'SHA1CircularShift' into 'SHA1ProcessMessageBlock' (sha1_hls/sha1.c:63) automatically.
-@I [XFORM-602] Inlining function 'Swapping' into 'SHA1ProcessMessageBlock' (sha1_hls/sha1.c:76) automatically.
+@I [HLS-0] Share syncheck's 1.bc for syn flow: copy /home/matt/workspace/sha1_hls/base/.autopilot/db/a.g.1.bc to /home/matt/workspace/sha1_hls/base/.autopilot/db/a.o.1.bc
+@I [HLS-0] presyn 1: transform -hls -tmp /home/matt/workspace/sha1_hls/base/.autopilot/db -type-info  -function-uniquify -directive-preproc -mem2reg -dse -dce  -disaggr -scalarrepl -norm-name -deadargelim  -mem2reg -instcombine -dce -auto-rom-infer -dce -function-uniquify  -resource-proc  -simplifycfg -mem2reg -globaldce -resolve-double-ptr -dce -deadargelim -dce -instcombine  -clib-intrinsic-prepare -dce  -func-buffer -dce -array-normalize  -func-legal -instcombine -gvn -constprop -dce   -ptrArgReplace -mem2reg -instcombine -dce  -array-seg-normalize -deadargelim  -instcombine -dce  -pointer-simplify -dce  -port-alignment -dce  -interface-preproc  -data-pack -instcombine -dce   -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn  -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce  -loop-simplify -indvars -instcombine  -gvn -loop-simplify -mem2reg -dce -simplifycfg  -find-region -instcombine  -auto-loop-pipeline  -inst-simplify  -interface-preproc  -indvars -auto-loop-unroll -loop-simplify -loop-bound -xunroll  -constprop -instcombine -simplifycfg -indvars  -simplifycfg -dce -globaldce  -attach-range  -gvn -inst-simplify  -constprop -simplifycfg -dce  -pointer-simplify -dce  -globalopt -constprop -dce  -array-promote -constprop -instcombine -dce  -ptrArgReplace -mem2reg  -instcombine -simplifycfg -dce  -auto-par -instcombine -dce  -array-transform-check  -array-reshape -instcombine -simplifycfg -dce  -ptrArgReplace -deadargelim -mem2reg  -instcombine -simplifycfg -dce   -indvars -loop-simplify -loop-bound -xunroll  -constprop -instcombine -simplifycfg -indvars  -simplifycfg -dce -globaldce  -duplicate-dataflow-processes -globaldce  -array-partition -instcombine -simplifycfg -dce  -ptrArgReplace -global-constprop -deadargelim -mem2reg  -func-legal -instcombine -dce -global-constprop -deadargelim -mem2reg  -instcombine -simplifycfg -dce   -globalopt -constprop -dce  -array-promote -constprop -instcombine -dce  -ptrArgReplace -mem2reg  -instcombine -simplifycfg -dce   -mem-intrinsic-preproc -dce  -global-privatize  -mem2reg -globaldce  -promote-global-argument  -ptrArgReplace -mem2reg -instcombine -dce  -globalopt -mergereturn -simplify-global-access -mem2reg -dce  -pointer-simplify -dce  -functionattrs  -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn  -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce  -inst-simplify -dce -norm-name  -function-inline -globaldce  -func-inst -constprop -instcombine -simplifycfg -dce  -func-legal -dce   -loop-bound  -arraycheck -bitwidthmin -on-by-dataflow  -loop-delete -instcombine -simplifycfg  -globaldce -dce -gvn -deadargelim -dce -loop-simplify -clean-region -simplifycfg -propagate-stable-arguments  -loop-stream -instcombine -simplifycfg -dce -globaldce  -stream-intrinsic-preproc -dce  -check-ap-stream -loop-simplify -eliminate-keepreads  -extract-dataflow-in-loop -loop-simplify -dce -gvn -deadargelim -dse  -check-dataflow-syntax  -legalize-stream-variable -legalize-global -legalize-global-1  -extract-subproc -dce -dead-channel-elimination  -canonicalize-gep -globaldce -dce -gvn -deadargelim  -scalar-propagation -deadargelim -globaldce -mem2reg  -check-dataflow-channels -function-stream -dce -globaldce  -prop-fifo-spec -internal-stream-gen  -canonicalize-gep -globaldce -dce -gvn -deadargelim   -mergereturn -indvars -loop-simplify -instcombine  -array-stream -instcombine -simplifycfg -dce  -bundle-memfifo-ops -deadargelim    -function-uniquify -directive-preproc -mem2reg -dse -dce  -group-axi-access    -licm -simplifycfg -dce -loop-delete  -norm-name  /home/matt/workspace/sha1_hls/base/.autopilot/db/a.o.1.bc -o /home/matt/workspace/sha1_hls/base/.autopilot/db/a.o.1.tmp.bc -f
 @I [HLS-0] Presyn 1 time: 0 seconds per iteration
-@I [HLS-0] presyn 2: transform -hls -keep-callgraph -scalarrepl -mem2reg  -port-alignment -attach-range -dce  -pipe-mux-gen  -indvars -loop-bound  -inst-simplify -instcombine -dce  -merge-array-access -mem2reg -dce  -clean-region -mergereturn -if-conv  -instcombine -dce -constprop  -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn  -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce  -scalarrepl -mem2reg  -global-constprop -deadargelim -deadargelim  -instcombine -dce -simplifycfg    -ptrArgReplace -mem2reg -function-inline  -globaldce -mem2reg -instcombine -dce -expr-balance  -instcombine -dce  -bitwidthmin  -interface-preproc -directive-preproc  -inst-rectify -instcombine -dce  -functionattrs  -constprop -instcombine -bit-constprop  -simplify-global-access  -globalopt -globaldce  -inst-simplify -instcombine -elimdeaddata -dce  -loop-delete -simplifycfg -loop-simplify -auto-burst   -norm-name /home/matt/workspace/sha1_hls/solution1/.autopilot/db/a.o.1.tmp.bc -o /home/matt/workspace/sha1_hls/solution1/.autopilot/db/a.o.2.bc -f  -phase presyn
-@I [XFORM-11] Balancing expressions in function 'SHA1ProcessMessageBlock' (sha1_hls/sha1.c:37)...19 expression(s) balanced.
+@I [HLS-0] presyn 2: transform -hls -keep-callgraph -scalarrepl -mem2reg  -port-alignment -attach-range -dce  -pipe-mux-gen  -indvars -loop-bound  -inst-simplify -instcombine -dce  -merge-array-access -mem2reg -dce  -clean-region -mergereturn -if-conv  -instcombine -dce -constprop  -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn  -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce  -scalarrepl -mem2reg  -global-constprop -deadargelim -deadargelim  -instcombine -dce -simplifycfg    -ptrArgReplace -mem2reg -function-inline  -globaldce -mem2reg -instcombine -dce -expr-balance  -instcombine -dce  -bitwidthmin  -interface-preproc -directive-preproc  -inst-rectify -instcombine -dce  -functionattrs  -constprop -instcombine -bit-constprop  -simplify-global-access  -globalopt -globaldce  -inst-simplify -instcombine -elimdeaddata -dce  -loop-delete -simplifycfg -loop-simplify -auto-burst   -norm-name /home/matt/workspace/sha1_hls/base/.autopilot/db/a.o.1.tmp.bc -o /home/matt/workspace/sha1_hls/base/.autopilot/db/a.o.2.bc -f  -phase presyn
 @I [HLS-0] Presyn 2 time: 0 seconds per iteration
-@I [HLS-100] Command "is_encrypted /home/matt/workspace/sha1_hls/solution1/.autopilot/db/a.o.2.bc "
-@I [HLS-100] Command 'is_encrypted' returned 0; elapsed 0.000271Total elapsed time: 13.934 sec.
-@I [HLS-0] build ssdm: transform -hls  -function-uniquify -auto-function-inline -globaldce  -ptrArgReplace -mem2reg -instcombine -dce  -reset-lda  -loop-simplify -indvars -licm -loop-dep  -loop-bound -licm -loop-simplify -flattenloopnest  -array-flatten -gvn -instcombine -dce  -array-map -dce -func-legal  -gvn -adce -instcombine -cfgopt -simplifycfg -loop-simplify   -array-burst -promote-global-argument -dce  -axi4-lower -array-seg-normalize  -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -gvn -gvn  -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -dse -adse -adce -licm  -inst-simplify -dce  -globaldce -instcombine -array-stream -eliminate-keepreads -instcombine  -dce   -deadargelim -doublePtrSimplify  -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer  -dce -scalarrepl -mem2reg -disaggr -norm-name -mem2reg  -instcombine  -dse -adse -adce -ptrLegalization -dce -auto-rom-infer -array-flatten -dce -instcombine  -loop-rot -constprop -cfgopt -simplifycfg -loop-simplify -indvars -pointer-simplify -dce -loop-bound  -loop-simplify -loop-preproc  -constprop -global-constprop -gvn -mem2reg -instcombine -dce  -loop-merge -dce  -bitwidthmin  -deadargelim -dce  -scalar-propagation -deadargelim -globaldce -mem2reg  -interface-preproc -interface-gen  -deadargelim -directive-preproc -inst-simplify -dce  -gvn -mem2reg -instcombine -dce -adse  -loop-bound  -instcombine -cfgopt -simplifycfg -loop-simplify  -clean-region -io-protocol  -find-region -mem2reg  -bitop-raise  -inst-simplify -inst-rectify -instcombine -adce -deadargelim  -loop-simplify -phi-opt -bitop-raise  -cfgopt -simplifycfg -strip-dead-prototypes  -interface-lower -bitop-lower -intrinsic-lower -auto-function-inline  -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa  -inst-simplify -simplifycfg   -mergereturn -inst-simplify -inst-rectify  -dce -bitop-lower  -loop-rewind -pointer-simplify -dce -cfgopt  -read-loop-dep -dce -bitwidth -norm-name -legalize    -cdfg-build  /home/matt/workspace/sha1_hls/solution1/.autopilot/db/a.o.2.bc -o /home/matt/workspace/sha1_hls/solution1/.autopilot/db/a.o.3.bc -f  -phase build-ssdm
-@I [HLS-0] Build ssdm time: 1 seconds per iteration
-@I [HLS-100] Command "is_encrypted /home/matt/workspace/sha1_hls/solution1/.autopilot/db/a.o.3.bc "
-@I [HLS-100] Command 'is_encrypted' returned 0; elapsed 0.00051Total elapsed time: 15.38 sec.
+@I [HLS-100] Command "is_encrypted /home/matt/workspace/sha1_hls/base/.autopilot/db/a.o.2.bc "
+@I [HLS-100] Command 'is_encrypted' returned 0; elapsed 0.000158Total elapsed time: 13.446 sec.
+@I [HLS-0] build ssdm: transform -hls  -function-uniquify -auto-function-inline -globaldce  -ptrArgReplace -mem2reg -instcombine -dce  -reset-lda  -loop-simplify -indvars -licm -loop-dep  -loop-bound -licm -loop-simplify -flattenloopnest  -array-flatten -gvn -instcombine -dce  -array-map -dce -func-legal  -gvn -adce -instcombine -cfgopt -simplifycfg -loop-simplify   -array-burst -promote-global-argument -dce  -axi4-lower -array-seg-normalize  -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -gvn -gvn  -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -dse -adse -adce -licm  -inst-simplify -dce  -globaldce -instcombine -array-stream -eliminate-keepreads -instcombine  -dce   -deadargelim -doublePtrSimplify  -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer  -dce -scalarrepl -mem2reg -disaggr -norm-name -mem2reg  -instcombine  -dse -adse -adce -ptrLegalization -dce -auto-rom-infer -array-flatten -dce -instcombine  -loop-rot -constprop -cfgopt -simplifycfg -loop-simplify -indvars -pointer-simplify -dce -loop-bound  -loop-simplify -loop-preproc  -constprop -global-constprop -gvn -mem2reg -instcombine -dce  -loop-merge -dce  -bitwidthmin  -deadargelim -dce  -scalar-propagation -deadargelim -globaldce -mem2reg  -interface-preproc -interface-gen  -deadargelim -directive-preproc -inst-simplify -dce  -gvn -mem2reg -instcombine -dce -adse  -loop-bound  -instcombine -cfgopt -simplifycfg -loop-simplify  -clean-region -io-protocol  -find-region -mem2reg  -bitop-raise  -inst-simplify -inst-rectify -instcombine -adce -deadargelim  -loop-simplify -phi-opt -bitop-raise  -cfgopt -simplifycfg -strip-dead-prototypes  -interface-lower -bitop-lower -intrinsic-lower -auto-function-inline  -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa  -inst-simplify -simplifycfg   -mergereturn -inst-simplify -inst-rectify  -dce -bitop-lower  -loop-rewind -pointer-simplify -dce -cfgopt  -read-loop-dep -dce -bitwidth -norm-name -legalize    -cdfg-build  /home/matt/workspace/sha1_hls/base/.autopilot/db/a.o.2.bc -o /home/matt/workspace/sha1_hls/base/.autopilot/db/a.o.3.bc -f  -phase build-ssdm
+@I [HLS-0] Build ssdm time: 0 seconds per iteration
+@I [HLS-100] Command "is_encrypted /home/matt/workspace/sha1_hls/base/.autopilot/db/a.o.3.bc "
+@I [HLS-100] Command 'is_encrypted' returned 0; elapsed 0.000161Total elapsed time: 14.228 sec.
 @I [HLS-0] Finish building internal data model.
-@I [HLS-100] Command 'opt_and_import_c' returned 0; elapsed 3.0389Total elapsed time: 15.125 sec.
-@I [HLS-111] Elapsed time: 5.91993 seconds; current memory usage: 57.5 MB.
-@I [HLS-100] Command 'elaborate' returned 0; elapsed 4.41279Total elapsed time: 15.127 sec.
+@I [HLS-100] Command 'opt_and_import_c' returned 0; elapsed 2.52613Total elapsed time: 14.308 sec.
+@I [HLS-111] Elapsed time: 5.33662 seconds; current memory usage: 76.4 MB.
+@I [HLS-100] Command 'elaborate' returned 0; elapsed 3.87455Total elapsed time: 14.310 sec.
 @I [HLS-100] Command "autosyn "
 @I [HLS-10] Starting hardware synthesis ...
 @0 [HLS-0] Starting hardware synthesis ...
@@ -271,28 +292,190 @@ Source preprocessing: exec clang -fno-limit-debug-info -gcc-toolchain "/opt/Xili
 @I [HLS-10] Synthesizing 'SHA1ProcessMessageBlock' ...
 @0 [HLS-0] Synthesizing 'SHA1ProcessMessageBlock' ...
 @I [HLS-100] Command "ap_set_top_model SHA1ProcessMessageBlock "
-@I [HLS-100] Command 'ap_set_top_model' returned 0; elapsed 0.000118Total elapsed time: 15.131 sec.
+@I [HLS-100] Command 'ap_set_top_model' returned 0; elapsed 0.000183Total elapsed time: 14.314 sec.
 @I [HLS-100] Command "get_model_list SHA1ProcessMessageBlock -filter all-wo-channel -topdown "
-@I [HLS-100] Command 'get_model_list' returned 0; elapsed 8.1e-05Total elapsed time: 15.132 sec.
+@I [HLS-100] Command 'get_model_list' returned 0; elapsed 0.000125Total elapsed time: 14.315 sec.
 @I [HLS-100] Command "preproc_iomode -model SHA1ProcessMessageBlock "
-@I [HLS-100] Command 'preproc_iomode' returned 0; elapsed 0.002389Total elapsed time: 15.135 sec.
+@I [HLS-100] Command 'preproc_iomode' returned 0; elapsed 0.002449Total elapsed time: 14.318 sec.
+@I [HLS-100] Command "preproc_iomode -model SHA1ProcessMessageBlock_Swapping "
+@I [HLS-100] Command 'preproc_iomode' returned 0; elapsed 0.003226Total elapsed time: 14.322 sec.
+@I [HLS-100] Command "preproc_iomode -model SHA1ProcessMessageBlock_SHA1CircularShift "
+@I [HLS-100] Command 'preproc_iomode' returned 0; elapsed 0.001374Total elapsed time: 14.324 sec.
 @I [HLS-100] Command "get_model_list SHA1ProcessMessageBlock -filter all-wo-channel "
-@I [HLS-100] Command 'get_model_list' returned 0; elapsed 8.1e-05Total elapsed time: 15.136 sec.
-@I [HLS-0] Model list for configure: SHA1ProcessMessageBlock
+@I [HLS-100] Command 'get_model_list' returned 0; elapsed 9.3e-05Total elapsed time: 14.326 sec.
+@I [HLS-0] Model list for configure: SHA1ProcessMessageBlock_SHA1CircularShift SHA1ProcessMessageBlock_Swapping SHA1ProcessMessageBlock
+@I [HLS-0] Configuring Module : SHA1ProcessMessageBlock_SHA1CircularShift ...
+@I [HLS-100] Command "set_default_model SHA1ProcessMessageBlock_SHA1CircularShift "
+@I [HLS-100] Command 'set_default_model' returned 0; elapsed 3.4e-05Total elapsed time: 14.327 sec.
+@I [HLS-100] Command "apply_spec_resource_limit SHA1ProcessMessageBlock_SHA1CircularShift "
+@I [HLS-100] Command 'apply_spec_resource_limit' returned 0; elapsed 2.6e-05Total elapsed time: 14.328 sec.
+@I [HLS-0] Configuring Module : SHA1ProcessMessageBlock_Swapping ...
+@I [HLS-100] Command "set_default_model SHA1ProcessMessageBlock_Swapping "
+@I [HLS-100] Command 'set_default_model' returned 0; elapsed 2.8e-05Total elapsed time: 14.328 sec.
+@I [HLS-100] Command "apply_spec_resource_limit SHA1ProcessMessageBlock_Swapping "
+@I [HLS-100] Command 'apply_spec_resource_limit' returned 0; elapsed 2e-05Total elapsed time: 14.329 sec.
 @I [HLS-0] Configuring Module : SHA1ProcessMessageBlock ...
 @I [HLS-100] Command "set_default_model SHA1ProcessMessageBlock "
-@I [HLS-100] Command 'set_default_model' returned 0; elapsed 4.9e-05Total elapsed time: 15.138 sec.
+@I [HLS-100] Command 'set_default_model' returned 0; elapsed 3.7e-05Total elapsed time: 14.329 sec.
 @I [HLS-100] Command "apply_spec_resource_limit SHA1ProcessMessageBlock "
-@I [HLS-100] Command 'apply_spec_resource_limit' returned 0; elapsed 9.5e-05Total elapsed time: 15.138 sec.
-@I [HLS-0] Model list for preprocess: SHA1ProcessMessageBlock
+@I [HLS-100] Command 'apply_spec_resource_limit' returned 0; elapsed 7.2e-05Total elapsed time: 14.330 sec.
+@I [HLS-0] Model list for preprocess: SHA1ProcessMessageBlock_SHA1CircularShift SHA1ProcessMessageBlock_Swapping SHA1ProcessMessageBlock
+@I [HLS-0] Preprocessing Module: SHA1ProcessMessageBlock_SHA1CircularShift ...
+@I [HLS-100] Command "set_default_model SHA1ProcessMessageBlock_SHA1CircularShift "
+@I [HLS-100] Command 'set_default_model' returned 0; elapsed 2.3e-05Total elapsed time: 14.330 sec.
+@I [HLS-100] Command "cdfg_preprocess -model SHA1ProcessMessageBlock_SHA1CircularShift "
+@I [HLS-100] Command 'cdfg_preprocess' returned 0; elapsed 0.000253Total elapsed time: 14.331 sec.
+@I [HLS-100] Command "rtl_gen_preprocess SHA1ProcessMessageBlock_SHA1CircularShift "
+@I [HLS-100] Command 'rtl_gen_preprocess' returned 0; elapsed 0.003102Total elapsed time: 14.335 sec.
+@I [HLS-0] Preprocessing Module: SHA1ProcessMessageBlock_Swapping ...
+@I [HLS-100] Command "set_default_model SHA1ProcessMessageBlock_Swapping "
+@I [HLS-100] Command 'set_default_model' returned 0; elapsed 3.2e-05Total elapsed time: 14.335 sec.
+@I [HLS-100] Command "cdfg_preprocess -model SHA1ProcessMessageBlock_Swapping "
+@I [HLS-100] Command 'cdfg_preprocess' returned 0; elapsed 0.000261Total elapsed time: 14.336 sec.
+@I [HLS-100] Command "rtl_gen_preprocess SHA1ProcessMessageBlock_Swapping "
+@I [HLS-100] Command 'rtl_gen_preprocess' returned 0; elapsed 0.005292Total elapsed time: 14.342 sec.
 @I [HLS-0] Preprocessing Module: SHA1ProcessMessageBlock ...
 @I [HLS-100] Command "set_default_model SHA1ProcessMessageBlock "
-@I [HLS-100] Command 'set_default_model' returned 0; elapsed 2.8e-05Total elapsed time: 15.139 sec.
+@I [HLS-100] Command 'set_default_model' returned 0; elapsed 3.2e-05Total elapsed time: 14.343 sec.
 @I [HLS-100] Command "cdfg_preprocess -model SHA1ProcessMessageBlock "
-@I [HLS-100] Command 'cdfg_preprocess' returned 0; elapsed 0.017032Total elapsed time: 15.157 sec.
+@I [HLS-100] Command 'cdfg_preprocess' returned 0; elapsed 0.016051Total elapsed time: 14.359 sec.
 @I [HLS-100] Command "rtl_gen_preprocess SHA1ProcessMessageBlock "
-@I [HLS-100] Command 'rtl_gen_preprocess' returned 0; elapsed 0.003778Total elapsed time: 15.161 sec.
-@I [HLS-0] Model list for synthesis: SHA1ProcessMessageBlock
+@I [HLS-100] Command 'rtl_gen_preprocess' returned 0; elapsed 0.003661Total elapsed time: 14.363 sec.
+@I [HLS-0] Model list for synthesis: SHA1ProcessMessageBlock_SHA1CircularShift SHA1ProcessMessageBlock_Swapping SHA1ProcessMessageBlock
+@I [HLS-10] ----------------------------------------------------------------
+@0 [HLS-0] ----------------------------------------------------------------
+@I [HLS-10] -- Scheduling module 'SHA1ProcessMessageBlock_SHA1CircularShift' 
+@0 [HLS-0] -- Scheduling module 'SHA1ProcessMessageBlock_SHA1CircularShift' 
+@I [HLS-10] ----------------------------------------------------------------
+@0 [HLS-0] ----------------------------------------------------------------
+@I [HLS-100] Command "set_default_model SHA1ProcessMessageBlock_SHA1CircularShift "
+@I [HLS-100] Command 'set_default_model' returned 0; elapsed 2.6e-05Total elapsed time: 14.365 sec.
+@I [HLS-100] Command "schedule -model SHA1ProcessMessageBlock_SHA1CircularShift "
+@I [SCHED-11] Starting scheduling ...
+@I [SCHED-11] Finished scheduling.
+@I [HLS-100] Command 'schedule' returned 0; elapsed 0.034696Total elapsed time: 14.401 sec.
+@I [HLS-111] Elapsed time: 0.091262 seconds; current memory usage: 76.7 MB.
+@I [HLS-100] Command "report -o /home/matt/workspace/sha1_hls/base/.autopilot/db/SHA1ProcessMessageBlock_SHA1CircularShift.verbose.sched.rpt -verbose -f "
+@I [HLS-100] Command 'report' returned 0; elapsed 0.002567Total elapsed time: 14.405 sec.
+@I [HLS-100] Command "db_write -o /home/matt/workspace/sha1_hls/base/.autopilot/db/SHA1ProcessMessageBlock_SHA1CircularShift.sched.adb -f "
+@I [HLS-100] Command 'db_write' returned 0; elapsed 0.002712Total elapsed time: 14.408 sec.
+@I [HLS-0] Finish scheduling SHA1ProcessMessageBlock_SHA1CircularShift.
+@I [HLS-10] ----------------------------------------------------------------
+@0 [HLS-0] ----------------------------------------------------------------
+@I [HLS-10] -- Exploring micro-architecture for module 'SHA1ProcessMessageBlock_SHA1CircularShift' 
+@0 [HLS-0] -- Exploring micro-architecture for module 'SHA1ProcessMessageBlock_SHA1CircularShift' 
+@I [HLS-10] ----------------------------------------------------------------
+@0 [HLS-0] ----------------------------------------------------------------
+@I [HLS-100] Command "set_default_model SHA1ProcessMessageBlock_SHA1CircularShift "
+@I [HLS-100] Command 'set_default_model' returned 0; elapsed 4.3e-05Total elapsed time: 14.411 sec.
+@I [HLS-100] Command "bind -model SHA1ProcessMessageBlock_SHA1CircularShift "
+@I [BIND-110] clear=
+@I [BIND-110] debug=
+@I [BIND-110] drf=
+@I [BIND-110] effort=
+@I [BIND-110] fast_refine=
+@I [BIND-110] fu_weight=[ 0.0 -- 1.0 ]
+@I [BIND-110] global_opt=
+@I [BIND-110] gsearch=
+@I [BIND-110] help=
+@I [BIND-110] help-hidden=
+@I [BIND-110] min_mem_port=
+@I [BIND-110] min_op=
+@I [BIND-110] minreg=
+@I [BIND-110] ml=
+@I [BIND-110] model=SHA1ProcessMessageBlock_SHA1CircularShift
+@I [BIND-110] no_false_path=
+@I [BIND-110] no_min_op=
+@I [BIND-110] normalize=
+@I [BIND-110] quiet=
+@I [BIND-110] refine=
+@I [BIND-110] reg_weight=[ 0.0 -- 1.0 ]
+@I [BIND-110] search=
+@I [BIND-110] tight_delay=
+@I [BIND-110] verbose=
+@I [BIND-110] wFF=
+@I [BIND-110] wFU=
+@I [BIND-110] wMUX=
+@I [BIND-110] wNET=
+@I [BIND-100] Starting micro-architecture generation ...
+@I [BIND-101] Performing variable lifetime analysis.
+@I [BIND-101] Exploring resource sharing.
+@I [BIND-101] Binding ...
+@I [BIND-100] Finished micro-architecture generation.
+@I [HLS-100] Command 'bind' returned 0; elapsed 0.010581Total elapsed time: 14.422 sec.
+@I [HLS-111] Elapsed time: 0.021004 seconds; current memory usage: 76.8 MB.
+@I [HLS-100] Command "report -o /home/matt/workspace/sha1_hls/base/.autopilot/db/SHA1ProcessMessageBlock_SHA1CircularShift.verbose.bind.rpt -verbose -f "
+@I [HLS-100] Command 'report' returned 0; elapsed 0.023724Total elapsed time: 14.447 sec.
+@I [HLS-100] Command "db_write -o /home/matt/workspace/sha1_hls/base/.autopilot/db/SHA1ProcessMessageBlock_SHA1CircularShift.bind.adb -f "
+@I [HLS-100] Command 'db_write' returned 0; elapsed 0.007012Total elapsed time: 14.455 sec.
+@I [HLS-0] Finish binding SHA1ProcessMessageBlock_SHA1CircularShift.
+@I [HLS-10] ----------------------------------------------------------------
+@0 [HLS-0] ----------------------------------------------------------------
+@I [HLS-10] -- Scheduling module 'SHA1ProcessMessageBlock_Swapping' 
+@0 [HLS-0] -- Scheduling module 'SHA1ProcessMessageBlock_Swapping' 
+@I [HLS-10] ----------------------------------------------------------------
+@0 [HLS-0] ----------------------------------------------------------------
+@I [HLS-100] Command "set_default_model SHA1ProcessMessageBlock_Swapping "
+@I [HLS-100] Command 'set_default_model' returned 0; elapsed 3.2e-05Total elapsed time: 14.457 sec.
+@I [HLS-100] Command "schedule -model SHA1ProcessMessageBlock_Swapping "
+@I [SCHED-11] Starting scheduling ...
+@I [SCHED-11] Finished scheduling.
+@I [HLS-100] Command 'schedule' returned 0; elapsed 0.017431Total elapsed time: 14.475 sec.
+@I [HLS-111] Elapsed time: 0.052298 seconds; current memory usage: 76.9 MB.
+@I [HLS-100] Command "report -o /home/matt/workspace/sha1_hls/base/.autopilot/db/SHA1ProcessMessageBlock_Swapping.verbose.sched.rpt -verbose -f "
+@I [HLS-100] Command 'report' returned 0; elapsed 0.002406Total elapsed time: 14.479 sec.
+@I [HLS-100] Command "db_write -o /home/matt/workspace/sha1_hls/base/.autopilot/db/SHA1ProcessMessageBlock_Swapping.sched.adb -f "
+@I [HLS-100] Command 'db_write' returned 0; elapsed 0.003615Total elapsed time: 14.483 sec.
+@I [HLS-0] Finish scheduling SHA1ProcessMessageBlock_Swapping.
+@I [HLS-10] ----------------------------------------------------------------
+@0 [HLS-0] ----------------------------------------------------------------
+@I [HLS-10] -- Exploring micro-architecture for module 'SHA1ProcessMessageBlock_Swapping' 
+@0 [HLS-0] -- Exploring micro-architecture for module 'SHA1ProcessMessageBlock_Swapping' 
+@I [HLS-10] ----------------------------------------------------------------
+@0 [HLS-0] ----------------------------------------------------------------
+@I [HLS-100] Command "set_default_model SHA1ProcessMessageBlock_Swapping "
+@I [HLS-100] Command 'set_default_model' returned 0; elapsed 3.5e-05Total elapsed time: 14.485 sec.
+@I [HLS-100] Command "bind -model SHA1ProcessMessageBlock_Swapping "
+@I [BIND-110] clear=
+@I [BIND-110] debug=
+@I [BIND-110] drf=
+@I [BIND-110] effort=
+@I [BIND-110] fast_refine=
+@I [BIND-110] fu_weight=[ 0.0 -- 1.0 ]
+@I [BIND-110] global_opt=
+@I [BIND-110] gsearch=
+@I [BIND-110] help=
+@I [BIND-110] help-hidden=
+@I [BIND-110] min_mem_port=
+@I [BIND-110] min_op=
+@I [BIND-110] minreg=
+@I [BIND-110] ml=
+@I [BIND-110] model=SHA1ProcessMessageBlock_Swapping
+@I [BIND-110] no_false_path=
+@I [BIND-110] no_min_op=
+@I [BIND-110] normalize=
+@I [BIND-110] quiet=
+@I [BIND-110] refine=
+@I [BIND-110] reg_weight=[ 0.0 -- 1.0 ]
+@I [BIND-110] search=
+@I [BIND-110] tight_delay=
+@I [BIND-110] verbose=
+@I [BIND-110] wFF=
+@I [BIND-110] wFU=
+@I [BIND-110] wMUX=
+@I [BIND-110] wNET=
+@I [BIND-100] Starting micro-architecture generation ...
+@I [BIND-101] Performing variable lifetime analysis.
+@I [BIND-101] Exploring resource sharing.
+@I [BIND-101] Binding ...
+@I [BIND-100] Finished micro-architecture generation.
+@I [HLS-100] Command 'bind' returned 0; elapsed 0.012047Total elapsed time: 14.497 sec.
+@I [HLS-111] Elapsed time: 0.022333 seconds; current memory usage: 77 MB.
+@I [HLS-100] Command "report -o /home/matt/workspace/sha1_hls/base/.autopilot/db/SHA1ProcessMessageBlock_Swapping.verbose.bind.rpt -verbose -f "
+@I [HLS-100] Command 'report' returned 0; elapsed 0.030885Total elapsed time: 14.530 sec.
+@I [HLS-100] Command "db_write -o /home/matt/workspace/sha1_hls/base/.autopilot/db/SHA1ProcessMessageBlock_Swapping.bind.adb -f "
+@I [HLS-100] Command 'db_write' returned 0; elapsed 0.013435Total elapsed time: 14.544 sec.
+@I [HLS-0] Finish binding SHA1ProcessMessageBlock_Swapping.
 @I [HLS-10] ----------------------------------------------------------------
 @0 [HLS-0] ----------------------------------------------------------------
 @I [HLS-10] -- Scheduling module 'SHA1ProcessMessageBlock' 
@@ -300,16 +483,16 @@ Source preprocessing: exec clang -fno-limit-debug-info -gcc-toolchain "/opt/Xili
 @I [HLS-10] ----------------------------------------------------------------
 @0 [HLS-0] ----------------------------------------------------------------
 @I [HLS-100] Command "set_default_model SHA1ProcessMessageBlock "
-@I [HLS-100] Command 'set_default_model' returned 0; elapsed 4e-05Total elapsed time: 15.163 sec.
+@I [HLS-100] Command 'set_default_model' returned 0; elapsed 4.4e-05Total elapsed time: 14.546 sec.
 @I [HLS-100] Command "schedule -model SHA1ProcessMessageBlock "
 @I [SCHED-11] Starting scheduling ...
 @I [SCHED-11] Finished scheduling.
-@I [HLS-100] Command 'schedule' returned 0; elapsed 0.33566Total elapsed time: 15.500 sec.
-@I [HLS-111] Elapsed time: 0.373575 seconds; current memory usage: 58.4 MB.
-@I [HLS-100] Command "report -o /home/matt/workspace/sha1_hls/solution1/.autopilot/db/SHA1ProcessMessageBlock.verbose.sched.rpt -verbose -f "
-@I [HLS-100] Command 'report' returned 0; elapsed 0.021804Total elapsed time: 15.524 sec.
-@I [HLS-100] Command "db_write -o /home/matt/workspace/sha1_hls/solution1/.autopilot/db/SHA1ProcessMessageBlock.sched.adb -f "
-@I [HLS-100] Command 'db_write' returned 0; elapsed 0.050277Total elapsed time: 15.575 sec.
+@I [HLS-100] Command 'schedule' returned 0; elapsed 0.296762Total elapsed time: 14.844 sec.
+@I [HLS-111] Elapsed time: 0.346193 seconds; current memory usage: 77.6 MB.
+@I [HLS-100] Command "report -o /home/matt/workspace/sha1_hls/base/.autopilot/db/SHA1ProcessMessageBlock.verbose.sched.rpt -verbose -f "
+@I [HLS-100] Command 'report' returned 0; elapsed 0.018775Total elapsed time: 14.864 sec.
+@I [HLS-100] Command "db_write -o /home/matt/workspace/sha1_hls/base/.autopilot/db/SHA1ProcessMessageBlock.sched.adb -f "
+@I [HLS-100] Command 'db_write' returned 0; elapsed 0.042139Total elapsed time: 14.907 sec.
 @I [HLS-0] Finish scheduling SHA1ProcessMessageBlock.
 @I [HLS-10] ----------------------------------------------------------------
 @0 [HLS-0] ----------------------------------------------------------------
@@ -318,7 +501,7 @@ Source preprocessing: exec clang -fno-limit-debug-info -gcc-toolchain "/opt/Xili
 @I [HLS-10] ----------------------------------------------------------------
 @0 [HLS-0] ----------------------------------------------------------------
 @I [HLS-100] Command "set_default_model SHA1ProcessMessageBlock "
-@I [HLS-100] Command 'set_default_model' returned 0; elapsed 4.3e-05Total elapsed time: 15.577 sec.
+@I [HLS-100] Command 'set_default_model' returned 0; elapsed 3.5e-05Total elapsed time: 14.909 sec.
 @I [HLS-100] Command "bind -model SHA1ProcessMessageBlock "
 @I [BIND-110] clear=
 @I [BIND-110] debug=
@@ -353,74 +536,141 @@ Source preprocessing: exec clang -fno-limit-debug-info -gcc-toolchain "/opt/Xili
 @I [BIND-101] Exploring resource sharing.
 @I [BIND-101] Binding ...
 @I [BIND-100] Finished micro-architecture generation.
-@I [HLS-100] Command 'bind' returned 0; elapsed 0.139636Total elapsed time: 15.718 sec.
-@I [HLS-111] Elapsed time: 0.217282 seconds; current memory usage: 59.3 MB.
-@I [HLS-100] Command "report -o /home/matt/workspace/sha1_hls/solution1/.autopilot/db/SHA1ProcessMessageBlock.verbose.bind.rpt -verbose -f "
-@I [HLS-100] Command 'report' returned 0; elapsed 0.193836Total elapsed time: 15.913 sec.
-@I [HLS-100] Command "db_write -o /home/matt/workspace/sha1_hls/solution1/.autopilot/db/SHA1ProcessMessageBlock.bind.adb -f "
-@I [HLS-100] Command 'db_write' returned 0; elapsed 0.072807Total elapsed time: 15.987 sec.
+@I [HLS-100] Command 'bind' returned 0; elapsed 0.142602Total elapsed time: 15.52 sec.
+@I [HLS-111] Elapsed time: 0.207846 seconds; current memory usage: 78.4 MB.
+@I [HLS-100] Command "report -o /home/matt/workspace/sha1_hls/base/.autopilot/db/SHA1ProcessMessageBlock.verbose.bind.rpt -verbose -f "
+@I [HLS-100] Command 'report' returned 0; elapsed 0.221173Total elapsed time: 15.275 sec.
+@I [HLS-100] Command "db_write -o /home/matt/workspace/sha1_hls/base/.autopilot/db/SHA1ProcessMessageBlock.bind.adb -f "
+@I [HLS-100] Command 'db_write' returned 0; elapsed 0.067772Total elapsed time: 15.343 sec.
 @I [HLS-0] Finish binding SHA1ProcessMessageBlock.
 @I [HLS-100] Command "get_model_list SHA1ProcessMessageBlock -filter all-wo-channel "
-@I [HLS-100] Command 'get_model_list' returned 0; elapsed 9.1e-05Total elapsed time: 15.988 sec.
+@I [HLS-100] Command 'get_model_list' returned 0; elapsed 9.7e-05Total elapsed time: 15.344 sec.
 @I [HLS-0] Preprocessing for RTLGen ...
+@I [HLS-100] Command "rtl_gen_preprocess SHA1ProcessMessageBlock_SHA1CircularShift "
+@I [HLS-100] Command 'rtl_gen_preprocess' returned 0; elapsed 0.003078Total elapsed time: 15.348 sec.
+@I [HLS-100] Command "rtl_gen_preprocess SHA1ProcessMessageBlock_Swapping "
+@I [HLS-100] Command 'rtl_gen_preprocess' returned 0; elapsed 0.004713Total elapsed time: 15.353 sec.
 @I [HLS-100] Command "rtl_gen_preprocess SHA1ProcessMessageBlock "
-@I [HLS-100] Command 'rtl_gen_preprocess' returned 0; elapsed 0.003971Total elapsed time: 15.992 sec.
-@I [HLS-0] Model list for RTL generation: SHA1ProcessMessageBlock
+@I [HLS-100] Command 'rtl_gen_preprocess' returned 0; elapsed 0.003576Total elapsed time: 15.357 sec.
+@I [HLS-0] Model list for RTL generation: SHA1ProcessMessageBlock_SHA1CircularShift SHA1ProcessMessageBlock_Swapping SHA1ProcessMessageBlock
+@I [HLS-10] ----------------------------------------------------------------
+@0 [HLS-0] ----------------------------------------------------------------
+@I [HLS-10] -- Generating RTL for module 'SHA1ProcessMessageBlock_SHA1CircularShift' 
+@0 [HLS-0] -- Generating RTL for module 'SHA1ProcessMessageBlock_SHA1CircularShift' 
+@I [HLS-10] ----------------------------------------------------------------
+@0 [HLS-0] ----------------------------------------------------------------
+@I [HLS-100] Command "create_rtl_model SHA1ProcessMessageBlock_SHA1CircularShift -vendor xilinx -mg_file /home/matt/workspace/sha1_hls/base/.autopilot/db/SHA1ProcessMessageBlock_SHA1CircularShift.compgen.tcl "
+@I [RTGEN-100] Finished creating RTL model for 'SHA1ProcessMessageBlock_SHA1CircularShift'.
+@I [HLS-100] Command 'create_rtl_model' returned 0; elapsed 0.012939Total elapsed time: 15.374 sec.
+@I [HLS-111] Elapsed time: 0.321071 seconds; current memory usage: 78.5 MB.
+@I [HLS-100] Command "source /home/matt/workspace/sha1_hls/base/.autopilot/db/SHA1ProcessMessageBlock.rtl_wrap.cfg.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000751Total elapsed time: 15.376 sec.
+@I [HLS-100] Command "gen_rtl SHA1ProcessMessageBlock_SHA1CircularShift -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /home/matt/workspace/sha1_hls/base/syn/systemc/SHA1ProcessMessageBlock_SHA1CircularShift -synmodules SHA1ProcessMessageBlock_SHA1CircularShift SHA1ProcessMessageBlock_Swapping SHA1ProcessMessageBlock "
+@I [HLS-100] Command 'gen_rtl' returned 0; elapsed 0.000777Total elapsed time: 15.379 sec.
+@I [HLS-100] Command "gen_rtl SHA1ProcessMessageBlock_SHA1CircularShift -style xilinx -f -lang vhdl -o /home/matt/workspace/sha1_hls/base/syn/vhdl/SHA1ProcessMessageBlock_SHA1CircularShift "
+@I [HLS-100] Command 'gen_rtl' returned 0; elapsed 0.00044Total elapsed time: 15.381 sec.
+@I [HLS-100] Command "gen_rtl SHA1ProcessMessageBlock_SHA1CircularShift -style xilinx -f -lang vlog -o /home/matt/workspace/sha1_hls/base/syn/verilog/SHA1ProcessMessageBlock_SHA1CircularShift "
+@I [HLS-100] Command 'gen_rtl' returned 0; elapsed 0.000414Total elapsed time: 15.382 sec.
+@I [HLS-100] Command "gen_tb_info SHA1ProcessMessageBlock_SHA1CircularShift -o /home/matt/workspace/sha1_hls/base/.autopilot/db/SHA1ProcessMessageBlock_SHA1CircularShift -p /home/matt/workspace/sha1_hls/base/.autopilot/db "
+@I [HLS-100] Command 'gen_tb_info' returned 0; elapsed 0.013462Total elapsed time: 15.396 sec.
+@I [HLS-100] Command "report -model SHA1ProcessMessageBlock_SHA1CircularShift -o /home/matt/workspace/sha1_hls/base/syn/report/SHA1ProcessMessageBlock_SHA1CircularShift_csynth.rpt -f "
+@I [HLS-100] Command 'report' returned 0; elapsed 0.009972Total elapsed time: 15.407 sec.
+@I [HLS-100] Command "report -model SHA1ProcessMessageBlock_SHA1CircularShift -o /home/matt/workspace/sha1_hls/base/syn/report/SHA1ProcessMessageBlock_SHA1CircularShift_csynth.xml -f -x "
+@I [HLS-100] Command 'report' returned 0; elapsed 0.007445Total elapsed time: 15.415 sec.
+@I [HLS-100] Command "report -model SHA1ProcessMessageBlock_SHA1CircularShift -o /home/matt/workspace/sha1_hls/base/.autopilot/db/SHA1ProcessMessageBlock_SHA1CircularShift.verbose.rpt -verbose -f "
+@I [HLS-100] Command 'report' returned 0; elapsed 0.032008Total elapsed time: 15.448 sec.
+@I [HLS-100] Command "db_write -model SHA1ProcessMessageBlock_SHA1CircularShift -o /home/matt/workspace/sha1_hls/base/.autopilot/db/SHA1ProcessMessageBlock_SHA1CircularShift.adb -f "
+@I [HLS-100] Command 'db_write' returned 0; elapsed 0.014226Total elapsed time: 15.463 sec.
+@I [HLS-10] ----------------------------------------------------------------
+@0 [HLS-0] ----------------------------------------------------------------
+@I [HLS-10] -- Generating RTL for module 'SHA1ProcessMessageBlock_Swapping' 
+@0 [HLS-0] -- Generating RTL for module 'SHA1ProcessMessageBlock_Swapping' 
+@I [HLS-10] ----------------------------------------------------------------
+@0 [HLS-0] ----------------------------------------------------------------
+@I [HLS-100] Command "create_rtl_model SHA1ProcessMessageBlock_Swapping -vendor xilinx -mg_file /home/matt/workspace/sha1_hls/base/.autopilot/db/SHA1ProcessMessageBlock_Swapping.compgen.tcl "
+@I [RTGEN-100] Finished creating RTL model for 'SHA1ProcessMessageBlock_Swapping'.
+@I [HLS-100] Command 'create_rtl_model' returned 0; elapsed 0.03294Total elapsed time: 15.506 sec.
+@I [HLS-111] Elapsed time: 0.132108 seconds; current memory usage: 78.9 MB.
+@I [HLS-100] Command "source /home/matt/workspace/sha1_hls/base/.autopilot/db/SHA1ProcessMessageBlock.rtl_wrap.cfg.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.00075Total elapsed time: 15.508 sec.
+@I [HLS-100] Command "gen_rtl SHA1ProcessMessageBlock_Swapping -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /home/matt/workspace/sha1_hls/base/syn/systemc/SHA1ProcessMessageBlock_Swapping -synmodules SHA1ProcessMessageBlock_SHA1CircularShift SHA1ProcessMessageBlock_Swapping SHA1ProcessMessageBlock "
+@I [HLS-100] Command 'gen_rtl' returned 0; elapsed 0.000697Total elapsed time: 15.510 sec.
+@I [HLS-100] Command "gen_rtl SHA1ProcessMessageBlock_Swapping -style xilinx -f -lang vhdl -o /home/matt/workspace/sha1_hls/base/syn/vhdl/SHA1ProcessMessageBlock_Swapping "
+@I [HLS-100] Command 'gen_rtl' returned 0; elapsed 0.000425Total elapsed time: 15.511 sec.
+@I [HLS-100] Command "gen_rtl SHA1ProcessMessageBlock_Swapping -style xilinx -f -lang vlog -o /home/matt/workspace/sha1_hls/base/syn/verilog/SHA1ProcessMessageBlock_Swapping "
+@I [HLS-100] Command 'gen_rtl' returned 0; elapsed 0.000413Total elapsed time: 15.512 sec.
+@I [HLS-100] Command "gen_tb_info SHA1ProcessMessageBlock_Swapping -o /home/matt/workspace/sha1_hls/base/.autopilot/db/SHA1ProcessMessageBlock_Swapping -p /home/matt/workspace/sha1_hls/base/.autopilot/db "
+@I [HLS-100] Command 'gen_tb_info' returned 0; elapsed 0.019923Total elapsed time: 15.533 sec.
+@I [HLS-100] Command "report -model SHA1ProcessMessageBlock_Swapping -o /home/matt/workspace/sha1_hls/base/syn/report/SHA1ProcessMessageBlock_Swapping_csynth.rpt -f "
+@I [HLS-100] Command 'report' returned 0; elapsed 0.007125Total elapsed time: 15.541 sec.
+@I [HLS-100] Command "report -model SHA1ProcessMessageBlock_Swapping -o /home/matt/workspace/sha1_hls/base/syn/report/SHA1ProcessMessageBlock_Swapping_csynth.xml -f -x "
+@I [HLS-100] Command 'report' returned 0; elapsed 0.004382Total elapsed time: 15.546 sec.
+@I [HLS-100] Command "report -model SHA1ProcessMessageBlock_Swapping -o /home/matt/workspace/sha1_hls/base/.autopilot/db/SHA1ProcessMessageBlock_Swapping.verbose.rpt -verbose -f "
+@I [HLS-100] Command 'report' returned 0; elapsed 0.03853Total elapsed time: 15.585 sec.
+@I [HLS-100] Command "db_write -model SHA1ProcessMessageBlock_Swapping -o /home/matt/workspace/sha1_hls/base/.autopilot/db/SHA1ProcessMessageBlock_Swapping.adb -f "
+@I [HLS-100] Command 'db_write' returned 0; elapsed 0.016893Total elapsed time: 15.603 sec.
 @I [HLS-10] ----------------------------------------------------------------
 @0 [HLS-0] ----------------------------------------------------------------
 @I [HLS-10] -- Generating RTL for module 'SHA1ProcessMessageBlock' 
 @0 [HLS-0] -- Generating RTL for module 'SHA1ProcessMessageBlock' 
 @I [HLS-10] ----------------------------------------------------------------
 @0 [HLS-0] ----------------------------------------------------------------
-@I [HLS-100] Command "create_rtl_model SHA1ProcessMessageBlock -vendor xilinx -mg_file /home/matt/workspace/sha1_hls/solution1/.autopilot/db/SHA1ProcessMessageBlock.compgen.tcl "
+@I [HLS-100] Command "create_rtl_model SHA1ProcessMessageBlock -vendor xilinx -mg_file /home/matt/workspace/sha1_hls/base/.autopilot/db/SHA1ProcessMessageBlock.compgen.tcl "
 @I [RTGEN-500] Setting interface mode on port 'SHA1ProcessMessageBlock/context_Intermediate_Hash' to 'ap_memory'.
 @I [RTGEN-500] Setting interface mode on port 'SHA1ProcessMessageBlock/context_Message_Block_Index' to 'ap_vld'.
 @I [RTGEN-500] Setting interface mode on port 'SHA1ProcessMessageBlock/context_Message_Block' to 'ap_memory'.
 @I [RTGEN-500] Setting interface mode on function 'SHA1ProcessMessageBlock' to 'ap_ctrl_hs'.
 @I [RTGEN-100] Finished creating RTL model for 'SHA1ProcessMessageBlock'.
-@I [HLS-100] Command 'create_rtl_model' returned 0; elapsed 0.220456Total elapsed time: 16.216 sec.
-@I [HLS-111] Elapsed time: 0.498376 seconds; current memory usage: 60.4 MB.
-@I [HLS-100] Command "source /home/matt/workspace/sha1_hls/solution1/.autopilot/db/SHA1ProcessMessageBlock.rtl_wrap.cfg.tcl "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000902Total elapsed time: 16.220 sec.
-@I [HLS-100] Command "gen_rtl SHA1ProcessMessageBlock -istop -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /home/matt/workspace/sha1_hls/solution1/syn/systemc/SHA1ProcessMessageBlock -synmodules SHA1ProcessMessageBlock "
-@I [HLS-100] Command 'gen_rtl' returned 0; elapsed 0.011239Total elapsed time: 16.234 sec.
-@I [HLS-100] Command "gen_rtl SHA1ProcessMessageBlock -istop -style xilinx -f -lang vhdl -o /home/matt/workspace/sha1_hls/solution1/syn/vhdl/SHA1ProcessMessageBlock "
-@I [HLS-100] Command 'gen_rtl' returned 0; elapsed 0.165283Total elapsed time: 16.400 sec.
-@I [HLS-100] Command "gen_rtl SHA1ProcessMessageBlock -istop -style xilinx -f -lang vlog -o /home/matt/workspace/sha1_hls/solution1/syn/verilog/SHA1ProcessMessageBlock "
-@I [HLS-100] Command 'gen_rtl' returned 0; elapsed 0.087763Total elapsed time: 16.489 sec.
-@I [HLS-100] Command "export_constraint_db -o /home/matt/workspace/sha1_hls/solution1/.autopilot/db/SHA1ProcessMessageBlock.constraint.tcl -f -tool general "
-@I [HLS-100] Command 'export_constraint_db' returned 0; elapsed 0.000282Total elapsed time: 16.490 sec.
-@I [HLS-100] Command "report -model SHA1ProcessMessageBlock -o /home/matt/workspace/sha1_hls/solution1/.autopilot/db/SHA1ProcessMessageBlock.design.xml -verbose -f -dv "
-@I [HLS-100] Command 'report' returned 0; elapsed 0.156658Total elapsed time: 16.648 sec.
-@I [HLS-100] Command "report -model SHA1ProcessMessageBlock -o /home/matt/workspace/sha1_hls/solution1/.autopilot/db/SHA1ProcessMessageBlock.sdaccel.xml -verbose -f -sdaccel "
-@I [HLS-100] Command 'report' returned 0; elapsed 0.241518Total elapsed time: 16.890 sec.
-@I [HLS-100] Command "gen_tb_info SHA1ProcessMessageBlock -o /home/matt/workspace/sha1_hls/solution1/.autopilot/db/SHA1ProcessMessageBlock -p /home/matt/workspace/sha1_hls/solution1/.autopilot/db "
-@I [HLS-100] Command 'gen_tb_info' returned 0; elapsed 0.019863Total elapsed time: 16.911 sec.
-@I [HLS-100] Command "report -model SHA1ProcessMessageBlock -o /home/matt/workspace/sha1_hls/solution1/syn/report/SHA1ProcessMessageBlock_csynth.rpt -f "
-@I [HLS-100] Command 'report' returned 0; elapsed 0.107575Total elapsed time: 17.20 sec.
-@I [HLS-100] Command "report -model SHA1ProcessMessageBlock -o /home/matt/workspace/sha1_hls/solution1/syn/report/SHA1ProcessMessageBlock_csynth.xml -f -x "
-@I [HLS-100] Command 'report' returned 0; elapsed 0.079779Total elapsed time: 17.100 sec.
-@I [HLS-100] Command "report -model SHA1ProcessMessageBlock -o /home/matt/workspace/sha1_hls/solution1/.autopilot/db/SHA1ProcessMessageBlock.verbose.rpt -verbose -f "
-@I [HLS-100] Command 'report' returned 0; elapsed 0.29324Total elapsed time: 17.394 sec.
-@I [HLS-100] Command "db_write -model SHA1ProcessMessageBlock -o /home/matt/workspace/sha1_hls/solution1/.autopilot/db/SHA1ProcessMessageBlock.adb -f "
-@I [HLS-100] Command 'db_write' returned 0; elapsed 0.156893Total elapsed time: 17.552 sec.
+@I [HLS-100] Command 'create_rtl_model' returned 0; elapsed 0.263969Total elapsed time: 15.879 sec.
+@I [HLS-111] Elapsed time: 0.372471 seconds; current memory usage: 80.2 MB.
+@I [HLS-100] Command "source /home/matt/workspace/sha1_hls/base/.autopilot/db/SHA1ProcessMessageBlock.rtl_wrap.cfg.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000711Total elapsed time: 15.881 sec.
+@I [HLS-100] Command "gen_rtl SHA1ProcessMessageBlock -istop -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /home/matt/workspace/sha1_hls/base/syn/systemc/SHA1ProcessMessageBlock -synmodules SHA1ProcessMessageBlock_SHA1CircularShift SHA1ProcessMessageBlock_Swapping SHA1ProcessMessageBlock "
+@I [HLS-100] Command 'gen_rtl' returned 0; elapsed 0.010477Total elapsed time: 15.893 sec.
+@I [HLS-100] Command "gen_rtl SHA1ProcessMessageBlock -istop -style xilinx -f -lang vhdl -o /home/matt/workspace/sha1_hls/base/syn/vhdl/SHA1ProcessMessageBlock "
+@I [HLS-100] Command 'gen_rtl' returned 0; elapsed 0.158362Total elapsed time: 16.52 sec.
+@I [HLS-100] Command "gen_rtl SHA1ProcessMessageBlock -istop -style xilinx -f -lang vlog -o /home/matt/workspace/sha1_hls/base/syn/verilog/SHA1ProcessMessageBlock "
+@I [HLS-100] Command 'gen_rtl' returned 0; elapsed 0.092849Total elapsed time: 16.146 sec.
+@I [HLS-100] Command "export_constraint_db -o /home/matt/workspace/sha1_hls/base/.autopilot/db/SHA1ProcessMessageBlock.constraint.tcl -f -tool general "
+@I [HLS-100] Command 'export_constraint_db' returned 0; elapsed 0.000273Total elapsed time: 16.147 sec.
+@I [HLS-100] Command "report -model SHA1ProcessMessageBlock -o /home/matt/workspace/sha1_hls/base/.autopilot/db/SHA1ProcessMessageBlock.design.xml -verbose -f -dv "
+@I [HLS-100] Command 'report' returned 0; elapsed 0.176484Total elapsed time: 16.324 sec.
+@I [HLS-100] Command "report -model SHA1ProcessMessageBlock -o /home/matt/workspace/sha1_hls/base/.autopilot/db/SHA1ProcessMessageBlock.sdaccel.xml -verbose -f -sdaccel "
+@I [HLS-100] Command 'report' returned 0; elapsed 0.230305Total elapsed time: 16.556 sec.
+@I [HLS-100] Command "gen_tb_info SHA1ProcessMessageBlock -o /home/matt/workspace/sha1_hls/base/.autopilot/db/SHA1ProcessMessageBlock -p /home/matt/workspace/sha1_hls/base/.autopilot/db "
+@I [HLS-100] Command 'gen_tb_info' returned 0; elapsed 0.026444Total elapsed time: 16.583 sec.
+@I [HLS-100] Command "report -model SHA1ProcessMessageBlock -o /home/matt/workspace/sha1_hls/base/syn/report/SHA1ProcessMessageBlock_csynth.rpt -f "
+@I [HLS-100] Command 'report' returned 0; elapsed 0.092569Total elapsed time: 16.677 sec.
+@I [HLS-100] Command "report -model SHA1ProcessMessageBlock -o /home/matt/workspace/sha1_hls/base/syn/report/SHA1ProcessMessageBlock_csynth.xml -f -x "
+@I [HLS-100] Command 'report' returned 0; elapsed 0.076873Total elapsed time: 16.754 sec.
+@I [HLS-100] Command "report -model SHA1ProcessMessageBlock -o /home/matt/workspace/sha1_hls/base/.autopilot/db/SHA1ProcessMessageBlock.verbose.rpt -verbose -f "
+@I [HLS-100] Command 'report' returned 0; elapsed 0.318723Total elapsed time: 17.76 sec.
+@I [HLS-100] Command "db_write -model SHA1ProcessMessageBlock -o /home/matt/workspace/sha1_hls/base/.autopilot/db/SHA1ProcessMessageBlock.adb -f "
+@I [HLS-100] Command 'db_write' returned 0; elapsed 0.14952Total elapsed time: 17.227 sec.
 @I [HLS-100] Command "sc_get_clocks SHA1ProcessMessageBlock "
-@I [HLS-100] Command 'sc_get_clocks' returned 0; elapsed 1.7e-05Total elapsed time: 17.698 sec.
+@I [HLS-100] Command 'sc_get_clocks' returned 0; elapsed 1.7e-05Total elapsed time: 17.370 sec.
 @I [HLS-100] Command "sc_get_portdomain SHA1ProcessMessageBlock "
-@I [HLS-100] Command 'sc_get_portdomain' returned 0; elapsed 1.3e-05Total elapsed time: 17.699 sec.
-@I [HLS-0] Model list for RTL component generation: SHA1ProcessMessageBlock
+@I [HLS-100] Command 'sc_get_portdomain' returned 0; elapsed 1.4e-05Total elapsed time: 17.371 sec.
+@I [HLS-0] Model list for RTL component generation: SHA1ProcessMessageBlock_SHA1CircularShift SHA1ProcessMessageBlock_Swapping SHA1ProcessMessageBlock
+@I [HLS-0] Handling components in module [SHA1ProcessMessageBlock_SHA1CircularShift] ... 
+@I [HLS-100] Command "source /home/matt/workspace/sha1_hls/base/.autopilot/db/SHA1ProcessMessageBlock_SHA1CircularShift.compgen.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000316Total elapsed time: 17.375 sec.
+@I [HLS-0] Handling components in module [SHA1ProcessMessageBlock_Swapping] ... 
+@I [HLS-100] Command "source /home/matt/workspace/sha1_hls/base/.autopilot/db/SHA1ProcessMessageBlock_Swapping.compgen.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000351Total elapsed time: 17.376 sec.
 @I [HLS-0] Handling components in module [SHA1ProcessMessageBlock] ... 
-@I [HLS-100] Command "source /home/matt/workspace/sha1_hls/solution1/.autopilot/db/SHA1ProcessMessageBlock.compgen.tcl "
-@I [HLS-0] Found component SHA1ProcessMessageBlock_K.
-@I [HLS-0] Append model SHA1ProcessMessageBlock_K
+@I [HLS-100] Command "source /home/matt/workspace/sha1_hls/base/.autopilot/db/SHA1ProcessMessageBlock.compgen.tcl "
 @I [HLS-0] Found component SHA1ProcessMessageBlock_W.
 @I [HLS-0] Append model SHA1ProcessMessageBlock_W
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.00165Total elapsed time: 17.704 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000947Total elapsed time: 17.378 sec.
+@I [HLS-0] Append model SHA1ProcessMessageBlock_SHA1CircularShift
+@I [HLS-0] Append model SHA1ProcessMessageBlock_Swapping
 @I [HLS-0] Append model SHA1ProcessMessageBlock
 @I [HLS-0] Generating RTL model list ...
-@I [HLS-0] All models in this session: SHA1ProcessMessageBlock_K SHA1ProcessMessageBlock_W SHA1ProcessMessageBlock
-@I [HLS-0] To file: write model SHA1ProcessMessageBlock_K
+@I [HLS-0] All models in this session: SHA1ProcessMessageBlock_W SHA1ProcessMessageBlock_SHA1CircularShift SHA1ProcessMessageBlock_Swapping SHA1ProcessMessageBlock
 @I [HLS-0] To file: write model SHA1ProcessMessageBlock_W
+@I [HLS-0] To file: write model SHA1ProcessMessageBlock_SHA1CircularShift
+@I [HLS-0] To file: write model SHA1ProcessMessageBlock_Swapping
 @I [HLS-0] To file: write model SHA1ProcessMessageBlock
 @I [HLS-0] Finished generating RTL model list.
 
@@ -428,77 +678,80 @@ Source preprocessing: exec clang -fno-limit-debug-info -gcc-toolchain "/opt/Xili
 @I [HLS-0] RTL Generation done.
 @I [HLS-0] CAS Generation done.
 @I [HLS-0] CBC Generation done.
-@I [HLS-100] Command "export_ssdm /home/matt/workspace/sha1_hls/solution1/.autopilot/db/a.export.ll "
-@I [HLS-100] Command 'export_ssdm' returned 0; elapsed 0.001089Total elapsed time: 17.708 sec.
-@I [HLS-100] Command "source /home/matt/workspace/sha1_hls/solution1/.autopilot/db/global.setting.tcl "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000684Total elapsed time: 17.718 sec.
+@I [HLS-100] Command "export_ssdm /home/matt/workspace/sha1_hls/base/.autopilot/db/a.export.ll "
+@I [HLS-100] Command 'export_ssdm' returned 0; elapsed 0.000959Total elapsed time: 17.382 sec.
+@I [HLS-100] Command "source /home/matt/workspace/sha1_hls/base/.autopilot/db/global.setting.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000469Total elapsed time: 17.391 sec.
 @I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2016.1/common/technology/generic/autopilot/common.gen "
 @I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2016.1/common/technology/generic/autopilot/APCoreGen.gen "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.001585Total elapsed time: 17.722 sec.
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.003653Total elapsed time: 17.724 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.001636Total elapsed time: 17.395 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.003717Total elapsed time: 17.397 sec.
 @I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2016.1/common/technology/generic/autopilot/op.gen "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000941Total elapsed time: 17.725 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000949Total elapsed time: 17.399 sec.
 @I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2016.1/common/technology/generic/autopilot/op_simcore.gen "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.002728Total elapsed time: 17.729 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.002628Total elapsed time: 17.402 sec.
 @I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2016.1/common/technology/generic/autopilot/interface.gen "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000337Total elapsed time: 17.730 sec.
-@I [HLS-100] Command "source /home/matt/workspace/sha1_hls/solution1/.autopilot/db/global.setting.tcl "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000489Total elapsed time: 17.731 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000259Total elapsed time: 17.403 sec.
+@I [HLS-100] Command "source /home/matt/workspace/sha1_hls/base/.autopilot/db/global.setting.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000422Total elapsed time: 17.404 sec.
 @I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/zynq/zynq.gen "
 @I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/common/virtex.gen "
 @I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/common/xilinx.gen "
 @I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/interface/plb46.gen "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.003489Total elapsed time: 17.737 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.003446Total elapsed time: 17.410 sec.
 @I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/interface/fsl.gen "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.001336Total elapsed time: 17.739 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.001307Total elapsed time: 17.412 sec.
 @I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/interface/axi4.gen "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.006587Total elapsed time: 17.746 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.006164Total elapsed time: 17.418 sec.
 @I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/interface/nativeAXI4.gen "
 @I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/interface/saxilite.gen "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.010813Total elapsed time: 17.758 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.010486Total elapsed time: 17.430 sec.
 @I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/interface/maxi.gen "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.022549Total elapsed time: 17.781 sec.
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.034779Total elapsed time: 17.781 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.022338Total elapsed time: 17.452 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.034135Total elapsed time: 17.453 sec.
 @I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/scripts/xilinxcoregen.gen "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.029539Total elapsed time: 17.811 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.02868Total elapsed time: 17.482 sec.
 @I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/interface/XilEDKCoreGen.gen "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.025278Total elapsed time: 17.837 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.024055Total elapsed time: 17.507 sec.
 @I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/ip/util.gen "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000462Total elapsed time: 17.839 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000426Total elapsed time: 17.508 sec.
 @I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/ip/xfir.gen "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.002227Total elapsed time: 17.842 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.002153Total elapsed time: 17.511 sec.
 @I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/ip/dds_compiler.gen "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.011397Total elapsed time: 17.853 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.010351Total elapsed time: 17.521 sec.
 @I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/ip/xfft.gen "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.327554Total elapsed time: 18.182 sec.
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.449022Total elapsed time: 18.183 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.32673Total elapsed time: 17.849 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.44331Total elapsed time: 17.850 sec.
 @I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/common/dsp48.gen "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000447Total elapsed time: 18.188 sec.
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.456779Total elapsed time: 18.189 sec.
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.457408Total elapsed time: 18.190 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000406Total elapsed time: 17.855 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.450665Total elapsed time: 17.856 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.451302Total elapsed time: 17.856 sec.
 @I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/zynq/zynq_fpv6.gen "
 @I [HLS-100] Command "source /opt/Xilinx/Vivado_HLS/2016.1/common/technology/xilinx/common/xilinx_fpv6.gen "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.00493Total elapsed time: 18.195 sec.
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.005676Total elapsed time: 18.196 sec.
-@I [HLS-100] Command "source /home/matt/workspace/sha1_hls/solution1/.autopilot/db/global.setting.tcl "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000452Total elapsed time: 18.198 sec.
-@I [HLS-100] Command "source /home/matt/workspace/sha1_hls/solution1/.autopilot/db/global.setting.tcl "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000406Total elapsed time: 18.200 sec.
-@I [HLS-100] Command "source /home/matt/workspace/sha1_hls/solution1/.autopilot/db/global.setting.tcl "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000436Total elapsed time: 18.202 sec.
-@I [HLS-100] Command "source /home/matt/workspace/sha1_hls/solution1/.autopilot/db/global.setting.tcl "
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000397Total elapsed time: 18.203 sec.
-@I [HLS-100] Command "source /home/matt/workspace/sha1_hls/solution1/.autopilot/db/SHA1ProcessMessageBlock.compgen.tcl "
-@I [RTMG-279] Implementing memory 'SHA1ProcessMessageBlock_K_rom' using block ROMs.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.004786Total elapsed time: 17.862 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.00548Total elapsed time: 17.862 sec.
+@I [HLS-100] Command "source /home/matt/workspace/sha1_hls/base/.autopilot/db/global.setting.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000427Total elapsed time: 17.864 sec.
+@I [HLS-100] Command "source /home/matt/workspace/sha1_hls/base/.autopilot/db/global.setting.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000423Total elapsed time: 17.866 sec.
+@I [HLS-100] Command "source /home/matt/workspace/sha1_hls/base/.autopilot/db/global.setting.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.00041Total elapsed time: 17.868 sec.
+@I [HLS-100] Command "source /home/matt/workspace/sha1_hls/base/.autopilot/db/global.setting.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000414Total elapsed time: 17.869 sec.
+@I [HLS-100] Command "source /home/matt/workspace/sha1_hls/base/.autopilot/db/SHA1ProcessMessageBlock_SHA1CircularShift.compgen.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000269Total elapsed time: 17.870 sec.
+@I [HLS-100] Command "source /home/matt/workspace/sha1_hls/base/.autopilot/db/SHA1ProcessMessageBlock_Swapping.compgen.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000326Total elapsed time: 17.871 sec.
+@I [HLS-100] Command "source /home/matt/workspace/sha1_hls/base/.autopilot/db/SHA1ProcessMessageBlock.compgen.tcl "
 @I [RTMG-278] Implementing memory 'SHA1ProcessMessageBlock_W_ram' using block RAMs.
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.08294Total elapsed time: 18.287 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.051229Total elapsed time: 17.923 sec.
 @I [HLS-10] Finished generating all RTL models.
 @0 [HLS-0] Finished generating all RTL models.
 @I [SYSC-301] Generating SystemC RTL for SHA1ProcessMessageBlock.
 @I [VHDL-304] Generating VHDL RTL for SHA1ProcessMessageBlock.
 @I [VLOG-307] Generating Verilog RTL for SHA1ProcessMessageBlock.
-@I [HLS-100] Command 'autosyn' returned 0; elapsed 3.1705Total elapsed time: 18.299 sec.
-@I [HLS-100] Command 'csynth_design' returned 0; elapsed 7.58493Total elapsed time: 18.299 sec.
-@I [HLS-100] Command 'ap_source' returned 0; elapsed 8.33945Total elapsed time: 18.299 sec.
+@I [HLS-100] Command 'autosyn' returned 0; elapsed 3.61528Total elapsed time: 17.932 sec.
+@I [HLS-100] Command 'csynth_design' returned 0; elapsed 7.49174Total elapsed time: 17.933 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 8.21616Total elapsed time: 17.933 sec.
 @I [HLS-100] Command "cleanup_all "
-@I [HLS-100] Command 'cleanup_all' returned 0; elapsed 0.013448Total elapsed time: 18.313 sec.
+@I [HLS-100] Command 'cleanup_all' returned 0; elapsed 0.012817Total elapsed time: 17.947 sec.

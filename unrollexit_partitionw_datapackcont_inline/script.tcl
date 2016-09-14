@@ -11,7 +11,7 @@ add_files sha1_hls/sha1.h
 add_files sha1_hls/sha1.c
 add_files -tb sha1_hls/test.c
 open_solution "unrollexit_partitionw_datapackcont_inline"
-set_part {xc7z020clg484-1}
+set_part {xc7z020clg484-1} -tool vivado
 create_clock -period 10 -name default
 source "./sha1_hls/unrollexit_partitionw_datapackcont_inline/directives.tcl"
 csim_design

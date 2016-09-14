@@ -79,20 +79,39 @@ set NewPortList {[
  	{ "name": "context_Message_Block_q1", "direction": "in", "datatype": "sc_lv", "bitwidth":8, "type": "signal", "bundle":{"name": "context_Message_Block", "role": "q1" }}  ]}
 
 set RtlHierarchyInfo {[
-	{"Level" : "0", "Path" : "`AUTOTB_DUT_INST", "Parent" : "", "Child" : ["1", "2"], "CDFG" : "SHA1ProcessMessageBlock", "VariableLatency" : "1", "AlignedPipeline" : "0", "UnalignedPipeline" : "0", "ProcessNetwork" : "0", "Combinational" : "0", "ControlExist" : "1",
+	{"Level" : "0", "Path" : "`AUTOTB_DUT_INST", "Parent" : "", "Child" : ["1", "2", "4"], "CDFG" : "SHA1ProcessMessageBlock", "VariableLatency" : "1", "AlignedPipeline" : "0", "UnalignedPipeline" : "0", "ProcessNetwork" : "0", "Combinational" : "0", "ControlExist" : "1",
 		"Port" : [
 		{"Name" : "context_Intermediate_Hash", "Type" : "Memory", "Direction" : "IO", "BlockSignal" : [], "SubConnect" : []}, 
 		{"Name" : "context_Message_Block_Index", "Type" : "Vld", "Direction" : "O", "BlockSignal" : [], "SubConnect" : []}, 
-		{"Name" : "context_Message_Block", "Type" : "Memory", "Direction" : "I", "BlockSignal" : [], "SubConnect" : []}, 
-		{"Name" : "K", "Type" : "Memory", "Direction" : "I", "BlockSignal" : [], "SubConnect" : []}],
+		{"Name" : "context_Message_Block", "Type" : "Memory", "Direction" : "I", "BlockSignal" : [], "SubConnect" : []}],
 		"WaitState" : [],
 		"SubBlockPort" : []},
-	{"Level" : "1", "Path" : "`AUTOTB_DUT_INST.K_U", "Parent" : "0", "Child" : []},
-	{"Level" : "1", "Path" : "`AUTOTB_DUT_INST.W_U", "Parent" : "0", "Child" : []}]}
+	{"Level" : "1", "Path" : "`AUTOTB_DUT_INST.W_U", "Parent" : "0", "Child" : []},
+	{"Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_SHA1ProcessMessageBlock_Swapping_fu_569", "Parent" : "0", "Child" : ["3"], "CDFG" : "SHA1ProcessMessageBlock_Swapping", "VariableLatency" : "0", "AlignedPipeline" : "0", "UnalignedPipeline" : "0", "ProcessNetwork" : "0", "Combinational" : "1", "ControlExist" : "0",
+		"Port" : [
+		{"Name" : "B", "Type" : "None", "Direction" : "I", "BlockSignal" : [], "SubConnect" : []}, 
+		{"Name" : "B_r", "Type" : "None", "Direction" : "I", "BlockSignal" : [], "SubConnect" : []}, 
+		{"Name" : "D", "Type" : "None", "Direction" : "I", "BlockSignal" : [], "SubConnect" : []}, 
+		{"Name" : "E", "Type" : "None", "Direction" : "I", "BlockSignal" : [], "SubConnect" : []}, 
+		{"Name" : "A", "Type" : "None", "Direction" : "I", "BlockSignal" : [], "SubConnect" : []}],
+		"WaitState" : [],
+		"SubBlockPort" : []},
+	{"Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_SHA1ProcessMessageBlock_Swapping_fu_569.C_write_assign_SHA1ProcessMessageBlock_SHA1CircularShift_fu_48", "Parent" : "2", "Child" : [], "CDFG" : "SHA1ProcessMessageBlock_SHA1CircularShift", "VariableLatency" : "0", "AlignedPipeline" : "0", "UnalignedPipeline" : "0", "ProcessNetwork" : "0", "Combinational" : "1", "ControlExist" : "0",
+		"Port" : [
+		{"Name" : "bits", "Type" : "None", "Direction" : "I", "BlockSignal" : [], "SubConnect" : []}, 
+		{"Name" : "word", "Type" : "None", "Direction" : "I", "BlockSignal" : [], "SubConnect" : []}],
+		"WaitState" : [],
+		"SubBlockPort" : []},
+	{"Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_SHA1ProcessMessageBlock_SHA1CircularShift_fu_594", "Parent" : "0", "Child" : [], "CDFG" : "SHA1ProcessMessageBlock_SHA1CircularShift", "VariableLatency" : "0", "AlignedPipeline" : "0", "UnalignedPipeline" : "0", "ProcessNetwork" : "0", "Combinational" : "1", "ControlExist" : "0",
+		"Port" : [
+		{"Name" : "bits", "Type" : "None", "Direction" : "I", "BlockSignal" : [], "SubConnect" : []}, 
+		{"Name" : "word", "Type" : "None", "Direction" : "I", "BlockSignal" : [], "SubConnect" : []}],
+		"WaitState" : [],
+		"SubBlockPort" : []}]}
 
 set PerformanceInfo {[
-	{"Name" : "Latency", "Min" : "414", "Max" : "414"}
-	, {"Name" : "Interval", "Min" : "415", "Max" : "415"}
+	{"Name" : "Latency", "Min" : "555", "Max" : "555"}
+	, {"Name" : "Interval", "Min" : "556", "Max" : "556"}
 ]}
 
 set Spec2ImplPortList { 

@@ -6841,10 +6841,16 @@ void SHA1ProcessMessageBlock(SHA1Context *);
 #2 "sha1_hls/sha1.c" 2
 
 uint32 SHA1CircularShift(uint8 bits, uint32 word) {
+_ssdm_InlineSelf(2, "");
+#3 "sha1_hls/sha1.c"
+
     return ((word) << (bits)) | ((word) >> (32-(bits)));
 }
 
 void Swapping(uint32 *A, uint32 *B, uint32 *C, uint32 *D, uint32 *E, uint32 *temp) {
+_ssdm_InlineSelf(2, "");
+#7 "sha1_hls/sha1.c"
+
     *E = *D;
     *D = *C;
     *C = SHA1CircularShift(30, *B);
@@ -6875,6 +6881,12 @@ void Swapping(uint32 *A, uint32 *B, uint32 *C, uint32 *D, uint32 *E, uint32 *tem
  *
  */
 void SHA1ProcessMessageBlock(SHA1Context *context) {
+_ssdm_SpecExprBalance(0, "");
+#37 "sha1_hls/sha1.c"
+
+_ssdm_InlineSelf(2, "");
+#37 "sha1_hls/sha1.c"
+
     const uint32 K[] = { /* Constants defined in SHA-1   */
                             0x5A827999,
                             0x6ED9EBA1,
@@ -6884,18 +6896,18 @@ void SHA1ProcessMessageBlock(SHA1Context *context) {
 _ssdm_SpecConstant(K);
 #43 "sha1_hls/sha1.c"
 
-_ssdm_op_SpecResource(K, "", "ROM_nP_BRAM", "", -1, "", "", "", "", "");
 
-
- uint16 t; /* Loop counter                */
+    uint16 t; /* Loop counter                */
     uint32 temp; /* Temporary word value        */
-    uint32 W[80]; /* Word sequence               */
+    uint32 W[80];
+             /* Word sequence               */
     uint32 A, B, C, D, E; /* Word buffers                */
 
     /*
      *  Initialize the first 16 words in the array W
      */
     loop1: for(t = 0; t < 16; t++) {
+
         W[t] = context->Message_Block[t * 4] << 24;
         W[t] |= context->Message_Block[t * 4 + 1] << 16;
         W[t] |= context->Message_Block[t * 4 + 2] << 8;
@@ -6912,7 +6924,7 @@ _ssdm_op_SpecResource(K, "", "ROM_nP_BRAM", "", -1, "", "", "", "", "");
     D = context->Intermediate_Hash[3];
     E = context->Intermediate_Hash[4];
 
-    //
+
     loop3: for(t = 0; t < 20; t++) {
         temp = SHA1CircularShift(5,A) +
                 ((B & C) | ((~B) & D)) + E + W[t] + K[0];
@@ -6936,6 +6948,7 @@ _ssdm_op_SpecResource(K, "", "ROM_nP_BRAM", "", -1, "", "", "", "", "");
                 (B ^ C ^ D) + E + W[t] + K[3];
         Swapping(&A, &B, &C, &D, &E, &temp);
     }
+
 
     context->Intermediate_Hash[0] += A;
     context->Intermediate_Hash[1] += B;
